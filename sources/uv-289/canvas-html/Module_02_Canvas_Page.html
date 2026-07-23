@@ -1,0 +1,560 @@
+<!--
+  PROVENANCE — 26FA source ingestion (task 0.8)
+  origin: /Users/norrisa/Documents/dev/github/csc_dash/courses/CSC-289/canvas-html/Module_02_Canvas_Page.html
+  verdict: ADAPT
+  target-26FA-slot: CSC-289 P4 M2 Canvas
+  ingest-date: 2026-07-23
+  NOTE: body preserved verbatim below; defects (terminology/points/framing) are intentional evidence.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: Sprint 1 — Design Discovery</title>
+    <style>
+        /* Canvas-compatible CSS */
+        .module-header {
+            background: linear-gradient(135deg, #26A69A 0%, #00897B 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .module-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .module-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.95em;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .content-section {
+            background: #f8f9fa;
+            border-left: 5px solid #00897B;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        .content-section h2 {
+            color: #00897B;
+            margin-top: 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #00897B;
+            padding-bottom: 10px;
+        }
+
+        .learning-objectives {
+            background: #e0f2f1;
+            border-left: 5px solid #00897B;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .learning-objectives ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        .learning-objectives li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .assignment-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .assignment-card h3 {
+            color: #00897B;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .assignment-meta {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .points-badge {
+            background: #4caf50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .due-date {
+            background: #ff9800;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .role-badge {
+            background: #00897B;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .button-primary {
+            background: #00897B;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-primary:hover {
+            background: #00695C;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-secondary {
+            background: #6c757d;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-secondary:hover {
+            background: #5a6268;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-print {
+            background: #607d8b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+
+        .button-print:hover {
+            background: #546e7a;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 15px;
+            background: white;
+            margin: 5px;
+            border-radius: 5px;
+            border-top: 3px solid #00897B;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .role-box {
+            background: #e0f2f1;
+            border: 2px solid #00897B;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .role-box h4 {
+            margin-top: 0;
+            color: #00695C;
+            font-size: 1.3em;
+        }
+
+        .tip-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .tip-box h4 {
+            margin-top: 0;
+            color: #2e7d32;
+            font-size: 1.3em;
+        }
+
+        .checklist {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            color: #e65100;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ffcc80;
+        }
+
+        .checklist li:before {
+            content: "\2610 ";
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ff9800;
+        }
+
+        @media print {
+            .button-primary, .button-secondary, .button-print {
+                display: none;
+            }
+            .module-header {
+                break-inside: avoid;
+            }
+            .assignment-card {
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+            }
+            .timeline-item {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        function printModule() {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+
+<div style="text-align: right; margin-bottom: 10px;">
+    <button onclick="printModule()" class="button-print">&#128424; Print/Copy for Canvas</button>
+</div>
+
+<div class="module-header">
+    <h1>&#9889; Module 2: Sprint 1 &mdash; Design Discovery</h1>
+    <p style="font-size: 1.2em; margin: 10px 0;">Execute first autonomous sprint; identify design asset needs for GRD-242</p>
+    <div class="module-meta">
+        <div class="meta-item">&#128197; Duration: Weeks 2-3</div>
+        <div class="meta-item">&#127939; Sprint 1</div>
+        <div class="meta-item">&#128202; Points: 100</div>
+        <div class="meta-item">&#9201; Estimated Time: 16-20 hours</div>
+    </div>
+</div>
+
+<!-- Learning Objectives -->
+<div class="learning-objectives">
+    <h2>&#127919; Module Learning Outcomes</h2>
+    <p><strong>By the end of this module, you will be able to:</strong></p>
+    <ul>
+        <li><strong>MLO 2.1:</strong> Execute a complete sprint cycle autonomously (Apply) &#8594; CLO 1, 6</li>
+        <li><strong>MLO 2.2:</strong> Establish baseline velocity through story point tracking (Analyze) &#8594; CLO 1, 4</li>
+        <li><strong>MLO 2.3:</strong> Identify design requirements for cross-team collaboration brief (Analyze) &#8594; CLO 2, 3</li>
+    </ul>
+    <p><strong>CLOs Addressed:</strong> CLO 1 (Project Management), CLO 2 (Cross-Team Collaboration), CLO 3 (Stakeholder Communication), CLO 4 (Estimation & Planning), CLO 6 (Technical Execution)</p>
+</div>
+
+<!-- Week Timeline -->
+<div class="content-section">
+    <h2>&#128197; Two-Week Overview</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <strong>Week 2, Day 1</strong><br>
+            Sprint Planning: select stories from backlog, set Sprint 1 goal
+        </div>
+        <div class="timeline-item">
+            <strong>Week 2, Day 2</strong><br>
+            Velocity Estimation Lab, begin feature development
+        </div>
+        <div class="timeline-item">
+            <strong>Week 3, Day 1</strong><br>
+            Mid-sprint check-in, design needs identification
+        </div>
+        <div class="timeline-item">
+            <strong>Week 3, Day 2</strong><br>
+            Sprint Review, Retrospective, Scorecard submission
+        </div>
+    </div>
+</div>
+
+<!-- Role Focus -->
+<div class="role-box">
+    <h4>&#127939; Sprint 1: Your First Autonomous Sprint</h4>
+    <p><strong>What makes this sprint different from CTS-285?</strong></p>
+    <p>In CTS-285, sprints were guided exercises. Here, you are running the show. You select your own sprint goal, manage your own backlog, track your own velocity, and deliver working software. There's no safety net &mdash; and that's the point.</p>
+    <p><strong>Key Focus Areas:</strong></p>
+    <ul>
+        <li><strong>Autonomy:</strong> You decide what to build, how to build it, and when it's done</li>
+        <li><strong>Velocity baseline:</strong> Track actual story points completed to calibrate future sprints</li>
+        <li><strong>Design discovery:</strong> Identify which parts of your project need professional design assets from GRD-242</li>
+        <li><strong>Sacred Flow discipline:</strong> Every feature goes through branch &rarr; PR &rarr; review &rarr; merge</li>
+    </ul>
+    <p><strong>Why This Matters:</strong> Sprint 1 velocity becomes your planning baseline for the entire capstone. An honest Sprint 1 prevents catastrophic scope problems later.</p>
+</div>
+
+<!-- Assignments -->
+<div class="content-section">
+    <h2>&#128221; Assignments &amp; Assessments (100 points total)</h2>
+
+    <div class="assignment-card">
+        <h3>Learn: Entry Ticket &mdash; Sprint Planning Fundamentals</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">10 points</span>
+            <span class="due-date">Due: Day 1, Week 2</span>
+            <span class="role-badge">Learn Phase</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Quiz covering sprint planning mechanics: goal setting, story selection, capacity planning</li>
+            <li>Verify you understand the difference between sprint backlog and product backlog</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary">Take Entry Ticket</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Practice: Velocity Estimation Lab</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">15 points</span>
+            <span class="due-date">Due: End of Week 2</span>
+            <span class="role-badge">Practice Phase</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Estimate story points for your Sprint 1 backlog using planning poker or T-shirt sizing</li>
+            <li>Document your estimation rationale for each story</li>
+            <li>Set a realistic sprint velocity target based on available hours</li>
+            <li>Create a burndown chart template to track progress</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Lab Details</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Apply: Sprint 1 Execution</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">50 points</span>
+            <span class="due-date">Due: End of Week 3</span>
+            <span class="role-badge">Apply Phase</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Execute your Sprint 1 plan: build features, follow Sacred Flow, track progress</li>
+            <li>Maintain a sprint burndown chart updated at least 3 times during the sprint</li>
+            <li>Complete Sprint Review (demo working software) and Retrospective</li>
+            <li>Document actual velocity vs. estimated velocity</li>
+        </ul>
+        <p><strong>Key Deliverables:</strong></p>
+        <ul>
+            <li>Working software increment (deployed or demo-ready)</li>
+            <li>Sprint burndown chart</li>
+            <li>Sprint Review notes and Retrospective action items</li>
+            <li>GitHub commit history showing Sacred Flow compliance</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Assignment Details</a>
+        <a href="/courses/[COURSE_ID]/files/[FILE_ID]" class="button-secondary">Download Rubric</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Discussion: Design Needs Discovery</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">10 points</span>
+            <span class="due-date">Due: End of Week 3</span>
+            <span class="role-badge">Apply Phase</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Post a summary of design assets your project will need from GRD-242 (logos, UI mockups, color schemes, icons, etc.)</li>
+            <li>Explain which features are blocked without design input vs. which can proceed independently</li>
+            <li>Respond to 2 classmates with suggestions on design prioritization</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/discussion_topics/[TOPIC_ID]" class="button-primary">Go to Discussion</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Assess: Sprint 1 Scorecard</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">15 points</span>
+            <span class="due-date">Due: End of Week 3</span>
+            <span class="role-badge">Assess Phase</span>
+        </div>
+        <p><strong>Details:</strong></p>
+        <ul>
+            <li>Self-report quiz documenting Sprint 1 metrics</li>
+            <li>Planned vs. actual velocity, stories completed, blockers encountered</li>
+            <li>Honest self-assessment &mdash; accuracy matters more than perfection</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary">Submit Scorecard</a>
+    </div>
+</div>
+
+<!-- Knowledge Check -->
+<div class="content-section">
+    <h2>&#127919; Knowledge Check &amp; Entry Ticket</h2>
+    <p><strong>Entry Ticket: Sprint Planning Fundamentals (10 pts)</strong></p>
+    <p>Covers sprint goal formulation, capacity planning, and the relationship between product backlog and sprint backlog.</p>
+    <ul>
+        <li>&#9201; Duration: 10-15 minutes</li>
+        <li>&#128260; Attempts: 2</li>
+    </ul>
+    <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary">Take Entry Ticket</a>
+</div>
+
+<!-- Hands-On Activity -->
+<div class="content-section" style="background: #e1f5fe; border-left-color: #0288d1;">
+    <h2 style="color: #01579b;">&#128300; Hands-On Activity: Velocity Estimation Lab</h2>
+    <p><strong>What you'll do:</strong></p>
+    <p>Before writing a single line of code, you need to estimate how much work you can realistically complete. This lab walks you through establishing your personal velocity baseline.</p>
+    <p><strong>What You'll Practice:</strong></p>
+    <ul>
+        <li>Breaking user stories into estimable chunks (1, 2, 3, 5, 8 point scale)</li>
+        <li>Calculating available capacity (total hours minus meetings, classes, life)</li>
+        <li>Setting a sprint goal that's ambitious but achievable</li>
+        <li>Creating a burndown chart to track daily progress</li>
+    </ul>
+    <p><strong>Pro Tip:</strong> Most students overestimate their Sprint 1 velocity by 40-60%. That's normal. The goal isn't perfection &mdash; it's establishing an honest baseline you can improve from.</p>
+</div>
+
+<!-- Planning Sheets & Tools -->
+<div class="content-section">
+    <h2>&#128203; Planning Sheets &amp; Tools</h2>
+    <p>This module uses the following templates:</p>
+    <ul>
+        <li><strong>Sprint Planning Template</strong> &mdash; Sprint goal, selected stories, capacity calculation</li>
+        <li><strong>Burndown Chart Template</strong> &mdash; Daily progress tracking for story point completion</li>
+        <li><strong>Sprint Review/Retrospective Template</strong> &mdash; What went well, what to improve, action items</li>
+        <li><strong>Design Needs Inventory</strong> &mdash; Catalog of design assets needed from GRD-242</li>
+    </ul>
+    <p>Download these templates from Canvas Files &#8594; CSC-289 Templates folder.</p>
+</div>
+
+<!-- Checklist -->
+<div class="checklist">
+    <h3>&#9989; Module Completion Checklist</h3>
+    <p>Use this to track your progress through Module 2:</p>
+    <ul>
+        <li>Complete Entry Ticket: Sprint Planning Fundamentals (10 pts)</li>
+        <li>Complete Velocity Estimation Lab (15 pts)</li>
+        <li>Conduct Sprint Planning and set Sprint 1 goal</li>
+        <li>Execute Sprint 1 features using Sacred Flow</li>
+        <li>Update burndown chart at least 3 times during sprint</li>
+        <li>Complete Sprint Review (demo working increment)</li>
+        <li>Complete Sprint Retrospective with action items</li>
+        <li>Post Design Needs Discovery discussion (10 pts)</li>
+        <li>Respond to 2 classmates' design needs posts</li>
+        <li>Submit Sprint 1 Execution deliverables (50 pts)</li>
+        <li>Submit Sprint 1 Scorecard (15 pts)</li>
+    </ul>
+</div>
+
+<!-- Tips -->
+<div class="tip-box">
+    <h4>&#128161; Andrew's Tips for Success</h4>
+    <ul>
+        <li><strong>Velocity is descriptive, not prescriptive:</strong> Don't inflate your numbers to look good. An honest 15 points is more valuable than a fictional 40. You're calibrating, not competing.</li>
+        <li><strong>Ship something working:</strong> A half-finished feature is worth zero points. Prioritize completing fewer stories over starting many. "Done" means deployed or demo-ready.</li>
+        <li><strong>Design discovery is strategic:</strong> Start identifying what you need from GRD-242 now, even though the formal brief comes in Module 3. The earlier you know your design dependencies, the better your Sprint 2 planning will be.</li>
+        <li><strong>The retrospective is not optional:</strong> Write down what went wrong. Write down what you'll change. Sprint 2 should be measurably better than Sprint 1 &mdash; and that only happens through honest reflection.</li>
+        <li><strong>Commit early, commit often:</strong> Small, frequent commits through Sacred Flow are better than one massive commit at the deadline. Your GitHub history tells the story of your work ethic.</li>
+    </ul>
+</div>
+
+<!-- Andrew's Note -->
+<div class="content-section" style="background: #fff8e1; border-left-color: #fbc02d;">
+    <h2 style="color: #f57f17;">&#128227; Andrew's Note</h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        Sprint 1 is where the rubber meets the road. <strong>You have a plan from Module 1 &mdash; now execute it.</strong> I'm watching your GitHub repos. I want to see branches, PRs, and merges happening throughout the two weeks, not a panic-push on the last day.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        <strong>About velocity:</strong> Every student I've ever taught overestimates Sprint 1. That's fine. The purpose of Sprint 1 is to learn your actual pace so you can plan realistically for Sprints 2-6. If you complete 3 out of 8 planned stories, that's useful data. If you lie about completing 7, you're only hurting yourself in Sprint 2.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6; font-weight: bold;">
+        Start thinking about GRD-242 collaboration. In Module 3, you'll be writing a formal design brief. The students who start identifying their design needs now will write much stronger briefs than those who wait.
+    </p>
+</div>
+
+<!-- Preparing for Next Module -->
+<div class="content-section">
+    <h2>&#128640; Preparing for Next Module</h2>
+    <p><strong>Module 3 Preview: Sprint 2 &mdash; Design Brief Preparation</strong></p>
+    <p>In the next module, you'll continue building features while preparing your design brief for GRD-242. You'll:</p>
+    <ul>
+        <li>Apply Sprint 1 velocity data to improve Sprint 2 estimation</li>
+        <li>Compose a professional design brief for non-technical stakeholders</li>
+        <li>Deliver additional MVP features using Sacred Flow</li>
+        <li>Participate in design brief peer review</li>
+    </ul>
+    <p><strong>What to do now:</strong> Review your Sprint 1 retrospective action items. Identify the top 3 things you'll do differently in Sprint 2. Also, start listing every design element your project needs &mdash; colors, fonts, layouts, icons, imagery.</p>
+</div>
+
+<!-- Footer -->
+<div style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 10px; text-align: center;">
+    <h3 style="margin-top: 0;">Ready to Sprint?</h3>
+    <p style="font-size: 1.1em; margin: 15px 0;">Begin with the Sprint Planning Entry Ticket, then launch into your first autonomous sprint!</p>
+    <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary" style="font-size: 1.2em; padding: 15px 30px;">Start Entry Ticket</a>
+    <p style="margin-top: 30px; font-style: italic; color: #666;">
+        "Done is better than perfect." &mdash; Sheryl Sandberg
+    </p>
+</div>
+
+</body>
+</html>

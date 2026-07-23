@@ -1,0 +1,555 @@
+<!--
+  PROVENANCE — 26FA source ingestion (task 0.8)
+  origin: /Users/norrisa/Documents/dev/github/csc_dash/courses/CTS-285/canvas-html/Module_05_Canvas_Page.html
+  verdict: HARVEST
+  target-26FA-slot: CTS-285 M5 Canvas rebuild (task 3.4)
+  ingest-date: 2026-07-23
+  HARVEST: 546 lines; W9 labeled 'Sprint 2 - Development & Testing' and links a nonexistent 'Week 10: Code Review & Quality Assurance'. Shell only.
+  NOTE: body preserved verbatim below; defects (terminology/points/framing) are intentional evidence.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 5: Development & Testing</title>
+    <style>
+        /* Canvas-compatible CSS */
+        .module-header {
+            background: linear-gradient(135deg, #FF5722 0%, #d84315 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .module-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .module-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.95em;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .content-section {
+            background: #f8f9fa;
+            border-left: 5px solid #FF5722;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        .content-section h2 {
+            color: #FF5722;
+            margin-top: 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #FF5722;
+            padding-bottom: 10px;
+        }
+
+        .learning-objectives {
+            background: #fbe9e7;
+            border-left: 5px solid #FF5722;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .learning-objectives ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        .learning-objectives li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .assignment-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .assignment-card h3 {
+            color: #FF5722;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .assignment-meta {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .points-badge {
+            background: #4caf50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .due-date {
+            background: #ff9800;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .role-badge {
+            background: #FF5722;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .button-primary {
+            background: #FF5722;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-primary:hover {
+            background: #d84315;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-secondary {
+            background: #6c757d;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-secondary:hover {
+            background: #5a6268;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-print {
+            background: #607d8b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+
+        .button-print:hover {
+            background: #546e7a;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 15px;
+            background: white;
+            margin: 5px;
+            border-radius: 5px;
+            border-top: 3px solid #FF5722;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .role-box {
+            background: #fbe9e7;
+            border: 2px solid #FF5722;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .role-box h4 {
+            margin-top: 0;
+            color: #d84315;
+            font-size: 1.3em;
+        }
+
+        .tip-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .tip-box h4 {
+            margin-top: 0;
+            color: #2e7d32;
+            font-size: 1.3em;
+        }
+
+        .checklist {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            color: #e65100;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ffcc80;
+        }
+
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ff9800;
+        }
+
+        @media print {
+            .button-primary, .button-secondary, .button-print {
+                display: none;
+            }
+            .module-header {
+                break-inside: avoid;
+            }
+            .assignment-card {
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+            }
+            .timeline-item {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        function printModule() {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+
+<div style="text-align: right; margin-bottom: 10px;">
+    <button onclick="printModule()" class="button-print">🖨️ Print/Copy for Canvas</button>
+</div>
+
+<div class="module-header">
+    <h1>💻 Module 5: Development & Testing</h1>
+    <p style="font-size: 1.2em; margin: 10px 0;">Building quality software through development best practices and rigorous testing</p>
+    <div class="module-meta">
+        <div class="meta-item">📅 Duration: Weeks 9-10</div>
+        <div class="meta-item">🎭 Role Focus: Developer</div>
+        <div class="meta-item">📊 Points: 50</div>
+        <div class="meta-item">⏱️ Estimated Time: 12-15 hours</div>
+    </div>
+</div>
+
+<!-- Learning Objectives -->
+<div class="learning-objectives">
+    <h2>🎯 Module Learning Outcomes</h2>
+    <p><strong>By the end of this module, you will be able to:</strong></p>
+    <ul>
+        <li><strong>MLO 5.1:</strong> Execute Sprint 2 using development best practices (version control, branching strategies)</li>
+        <li><strong>MLO 5.2:</strong> Write and execute test cases (unit tests, integration tests, user acceptance tests)</li>
+        <li><strong>MLO 5.3:</strong> Conduct code reviews and provide constructive, actionable feedback</li>
+        <li><strong>MLO 5.4:</strong> Balance feature development velocity with technical quality and maintainability</li>
+    </ul>
+    <p><strong>CLOs Addressed:</strong> CLO2 (Develop systems), CLO3 (Apply Agile frameworks), CLO4 (Quality assurance)</p>
+</div>
+
+<!-- Week Timeline -->
+<div class="content-section">
+    <h2>📅 Two-Week Overview</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <strong>Week 9, Day 1</strong><br>
+            Developer role intro, Sprint 2 planning
+        </div>
+        <div class="timeline-item">
+            <strong>Week 9, Day 2</strong><br>
+            Sprint 2 execution begins, development work
+        </div>
+        <div class="timeline-item">
+            <strong>Week 10, Day 1</strong><br>
+            Code Review Lab, testing workshop
+        </div>
+        <div class="timeline-item">
+            <strong>Week 10, Day 2</strong><br>
+            Sprint 2 continues, quality assurance focus
+        </div>
+    </div>
+</div>
+
+<!-- Role Focus -->
+<div class="role-box">
+    <h4>🎭 Role Focus: Developer</h4>
+    <p><strong>What does a Developer do in Agile?</strong></p>
+    <p>Developers build the actual product, but in Agile, they're also responsible for quality, testing, and collaboration. Developers work closely with the Product Owner to understand requirements and with the Scrum Master to remove blockers.</p>
+    <p><strong>Key Responsibilities This Module:</strong></p>
+    <ul>
+        <li>Implement user stories selected for Sprint 2</li>
+        <li>Write test cases and ensure code is testable</li>
+        <li>Conduct code reviews for teammates (or self-review with documented criteria)</li>
+        <li>Maintain development standards (naming conventions, code structure)</li>
+        <li>Update task statuses and communicate progress in standups</li>
+        <li>Balance "getting it done" with "getting it done right"</li>
+    </ul>
+    <p><strong>Why This Matters:</strong> Technical debt compounds. Shortcuts taken today become blockers tomorrow. Learning to build quality into the development process—not bolt it on afterward—is essential for sustainable software delivery.</p>
+</div>
+
+<!-- Assignments -->
+<div class="content-section">
+    <h2>📝 Assignments (50 points total)</h2>
+
+    <div class="assignment-card">
+        <h3>Week 9: Sprint 2 - Development & Testing</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">25 points</span>
+            <span class="due-date">Due: Friday, Week 10, 11:59 PM</span>
+            <span class="role-badge">Role: Developer</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Plan Sprint 2 based on Sprint 1 retrospective improvements</li>
+            <li>Implement 3-5 user stories from Sprint 2 backlog</li>
+            <li>Write test cases for each implemented feature (minimum 3 tests per story)</li>
+            <li>Document development decisions and technical trade-offs</li>
+            <li>Track sprint progress using burndown chart</li>
+        </ul>
+        <p><strong>Key Deliverables:</strong></p>
+        <ul>
+            <li>Sprint 2 Planning document (stories, tasks, capacity)</li>
+            <li>Implemented features with working code/prototypes</li>
+            <li>Test case documentation (test name, steps, expected result)</li>
+            <li>Development log explaining technical decisions</li>
+            <li>Sprint 2 burndown chart</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Assignment Details</a>
+        <a href="/courses/[COURSE_ID]/files/[FILE_ID]" class="button-secondary">Download Rubric</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Week 10: Code Review & Quality Assurance</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">25 points</span>
+            <span class="due-date">Due: Friday, Week 10, 11:59 PM</span>
+            <span class="role-badge">Role: Developer</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Conduct code review of your own work using structured checklist</li>
+            <li>Execute all test cases and document results</li>
+            <li>Fix identified bugs or quality issues</li>
+            <li>Prepare demonstration of Sprint 2 deliverables</li>
+            <li>Document lessons learned about balancing speed and quality</li>
+        </ul>
+        <p><strong>Key Deliverables:</strong></p>
+        <ul>
+            <li>Code review checklist with findings and actions taken</li>
+            <li>Test execution report (pass/fail for each test case)</li>
+            <li>Bug log with fixes documented</li>
+            <li>Sprint 2 demo script or video walkthrough</li>
+            <li>Developer reflection (500-750 words on quality trade-offs)</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Assignment Details</a>
+        <a href="/courses/[COURSE_ID]/files/[FILE_ID]" class="button-secondary">Download Rubric</a>
+    </div>
+</div>
+
+<!-- Knowledge Check -->
+<div class="content-section">
+    <h2>🎯 Knowledge Check</h2>
+    <p><strong>Module 05 Knowledge Check</strong></p>
+    <p>12 multiple choice questions testing your understanding of testing strategies, code review practices, and development workflows.</p>
+    <ul>
+        <li>⏱️ Duration: 15-20 minutes</li>
+        <li>🔄 Attempts: Unlimited</li>
+        <li>📊 Points: 6 points (auto-graded, bonus points)</li>
+    </ul>
+    <p><strong>Topics Covered:</strong></p>
+    <ul>
+        <li>Unit testing vs. integration testing vs. UAT</li>
+        <li>Code review best practices and anti-patterns</li>
+        <li>Version control branching strategies (feature branches, trunk-based)</li>
+        <li>Technical debt and when to address it</li>
+        <li>Definition of Done (DoD) criteria</li>
+    </ul>
+    <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary">Take Knowledge Check</a>
+</div>
+
+<!-- Hands-On Activity -->
+<div class="content-section" style="background: #e1f5fe; border-left-color: #0288d1;">
+    <h2 style="color: #01579b;">🔬 Hands-On Activity: Code Review Lab (90 minutes)</h2>
+    <p><strong>What you'll experience:</strong></p>
+    <p>You'll practice code review skills using sample code from a mock project. You'll identify bugs, suggest improvements, assess maintainability, and provide feedback in a constructive format.</p>
+    <p><strong>What You'll Practice:</strong></p>
+    <ul>
+        <li>Reading code for understanding (not just looking for errors)</li>
+        <li>Identifying code smells (duplicated logic, hard-coded values, poor naming)</li>
+        <li>Providing actionable feedback (not just "this is bad")</li>
+        <li>Balancing critique with encouragement</li>
+        <li>Using code review checklists systematically</li>
+    </ul>
+    <p><strong>Review Criteria You'll Apply:</strong></p>
+    <ul>
+        <li><strong>Correctness:</strong> Does the code do what it's supposed to do?</li>
+        <li><strong>Readability:</strong> Can someone else understand this code in 6 months?</li>
+        <li><strong>Testability:</strong> Is this code easy to test?</li>
+        <li><strong>Security:</strong> Are there obvious vulnerabilities?</li>
+        <li><strong>Performance:</strong> Are there obvious inefficiencies?</li>
+    </ul>
+</div>
+
+<!-- Planning Sheets & Tools -->
+<div class="content-section">
+    <h2>📋 Planning Sheets & Tools</h2>
+    <p>This module uses the following templates:</p>
+    <ul>
+        <li><strong>Daily Standup Template</strong> - Continued from Module 4</li>
+        <li><strong>Sprint Planning Template</strong> - Updated for Sprint 2</li>
+        <li><strong>Code Review Checklist</strong> - NEW: Structured review criteria</li>
+        <li><strong>Test Case Template</strong> - NEW: Document test scenarios and expected outcomes</li>
+    </ul>
+    <p><strong>Recommended Tools:</strong></p>
+    <ul>
+        <li><strong>Version Control:</strong> Git/GitHub (branching, pull requests)</li>
+        <li><strong>Testing:</strong> JUnit, pytest, Jest (depending on your language), or manual test documentation</li>
+        <li><strong>Code Quality:</strong> ESLint, Pylint, or similar linters</li>
+    </ul>
+</div>
+
+<!-- Checklist -->
+<div class="checklist">
+    <h3>✅ Module Completion Checklist</h3>
+    <p>Use this to track your progress through Module 5:</p>
+    <ul>
+        <li>Attend Week 9 lecture on Developer role and testing strategies</li>
+        <li>Review Sprint 1 retrospective action items</li>
+        <li>Plan Sprint 2 with improvements from Sprint 1</li>
+        <li>Select and break down 3-5 user stories for Sprint 2</li>
+        <li>Begin development work on Sprint 2 stories</li>
+        <li>Write test cases for each feature (minimum 3 per story)</li>
+        <li>Participate in Code Review Lab</li>
+        <li>Conduct code review of your own work</li>
+        <li>Execute all test cases and document results</li>
+        <li>Fix identified bugs or quality issues</li>
+        <li>Prepare Sprint 2 demo</li>
+        <li>Write developer reflection on quality trade-offs</li>
+        <li>Submit both assignments by Friday, Week 10</li>
+        <li>Take Module 05 Knowledge Check</li>
+    </ul>
+</div>
+
+<!-- Tips -->
+<div class="tip-box">
+    <h4>💡 Andrew's Tips for Success</h4>
+    <ul>
+        <li><strong>Test as you go, not at the end:</strong> Write tests immediately after (or before!) implementing features. End-of-sprint testing is always rushed.</li>
+        <li><strong>Code reviews catch more than bugs:</strong> They're knowledge transfer. Document your thinking in code comments so reviewers understand your approach.</li>
+        <li><strong>Definition of Done prevents scope creep:</strong> Agree what "done" means before starting (tests written? documentation updated? peer reviewed?).</li>
+        <li><strong>Technical debt is okay—if tracked:</strong> Sometimes you need to ship fast. Document shortcuts you take so you can fix them later.</li>
+        <li><strong>Good commit messages are documentation:</strong> "Fixed bug" is useless. "Fixed off-by-one error in pagination (issue #47)" tells a story.</li>
+        <li><strong>Run your own code through the review checklist:</strong> Catch your own issues before someone else does. It's faster and less embarrassing.</li>
+    </ul>
+</div>
+
+<!-- Andrew's Note -->
+<div class="content-section" style="background: #fff8e1; border-left-color: #fbc02d;">
+    <h2 style="color: #f57f17;">📣 Andrew's Note</h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        This is where you feel the tension between <strong>shipping features</strong> and <strong>building quality</strong>. In Sprint 2, you'll be tempted to skip tests or cut corners to hit your sprint goal. Resist that urge. The point of this module is to practice sustainable pace—working in a way you could maintain for months, not just two weeks.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        <strong>Code review feels awkward at first.</strong> It's uncomfortable to critique your own work or have others critique yours. But it's essential. The best developers I know actively seek code review because they know it makes them better. Embrace the discomfort.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6; font-weight: bold;">
+        If you finish Sprint 2 without writing a single test, you didn't finish Sprint 2. Testing isn't optional—it's part of development.
+    </p>
+</div>
+
+<!-- Preparing for Next Module -->
+<div class="content-section">
+    <h2>🚀 Preparing for Next Module</h2>
+    <p><strong>Module 6 Preview: Quality Assurance & Risk Management</strong></p>
+    <p>In the next module, you'll continue in the <strong>Developer/QA</strong> hybrid role. You'll learn how to:</p>
+    <ul>
+        <li>Execute Sprint 3 with heightened focus on quality metrics</li>
+        <li>Revisit and update the risk register from Module 2</li>
+        <li>Implement risk mitigation strategies</li>
+        <li>Ensure Definition of Done criteria are consistently met</li>
+    </ul>
+    <p><strong>What to do now:</strong> Review your test execution report. Any patterns in the bugs you found? Those patterns will inform your risk mitigation strategies in Module 6.</p>
+</div>
+
+<!-- Footer -->
+<div style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 10px; text-align: center;">
+    <h3 style="margin-top: 0;">Ready to Start?</h3>
+    <p style="font-size: 1.1em; margin: 15px 0;">Begin Sprint 2 development and testing!</p>
+    <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary" style="font-size: 1.2em; padding: 15px 30px;">Start Week 9 Assignment</a>
+    <p style="margin-top: 30px; font-style: italic; color: #666;">
+        "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." – Martin Fowler
+    </p>
+</div>
+
+</body>
+</html>
