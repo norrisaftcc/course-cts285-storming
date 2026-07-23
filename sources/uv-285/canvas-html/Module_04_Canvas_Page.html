@@ -1,0 +1,552 @@
+<!--
+  PROVENANCE — 26FA source ingestion (task 0.8)
+  origin: /Users/norrisa/Documents/dev/github/csc_dash/courses/CTS-285/canvas-html/Module_04_Canvas_Page.html
+  verdict: HARVEST
+  target-26FA-slot: CTS-285 M4 Canvas rebuild (task 3.4)
+  ingest-date: 2026-07-23
+  HARVEST: 543 lines; labels weeks 7–8 as 'Sprint 1' (assignments call it Sprint 2) and links a 'Week 8: Sprint 1 Review & Retrospective' assignment that has no file. Shell only.
+  NOTE: body preserved verbatim below; defects (terminology/points/framing) are intentional evidence.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4: Sprint Planning & Execution</title>
+    <style>
+        /* Canvas-compatible CSS */
+        .module-header {
+            background: linear-gradient(135deg, #009688 0%, #00695c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .module-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .module-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.95em;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .content-section {
+            background: #f8f9fa;
+            border-left: 5px solid #009688;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        .content-section h2 {
+            color: #009688;
+            margin-top: 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #009688;
+            padding-bottom: 10px;
+        }
+
+        .learning-objectives {
+            background: #e0f2f1;
+            border-left: 5px solid #009688;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .learning-objectives ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        .learning-objectives li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .assignment-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .assignment-card h3 {
+            color: #009688;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .assignment-meta {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .points-badge {
+            background: #4caf50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .due-date {
+            background: #ff9800;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .role-badge {
+            background: #009688;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .button-primary {
+            background: #009688;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-primary:hover {
+            background: #00695c;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-secondary {
+            background: #6c757d;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-secondary:hover {
+            background: #5a6268;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-print {
+            background: #607d8b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+
+        .button-print:hover {
+            background: #546e7a;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 15px;
+            background: white;
+            margin: 5px;
+            border-radius: 5px;
+            border-top: 3px solid #009688;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .role-box {
+            background: #e0f2f1;
+            border: 2px solid #009688;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .role-box h4 {
+            margin-top: 0;
+            color: #00695c;
+            font-size: 1.3em;
+        }
+
+        .tip-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .tip-box h4 {
+            margin-top: 0;
+            color: #2e7d32;
+            font-size: 1.3em;
+        }
+
+        .checklist {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            color: #e65100;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ffcc80;
+        }
+
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ff9800;
+        }
+
+        @media print {
+            .button-primary, .button-secondary, .button-print {
+                display: none;
+            }
+            .module-header {
+                break-inside: avoid;
+            }
+            .assignment-card {
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+            }
+            .timeline-item {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        function printModule() {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+
+<div style="text-align: right; margin-bottom: 10px;">
+    <button onclick="printModule()" class="button-print">🖨️ Print/Copy for Canvas</button>
+</div>
+
+<div class="module-header">
+    <h1>🏃 Module 4: Sprint Planning & Execution</h1>
+    <p style="font-size: 1.2em; margin: 10px 0;">Facilitating Scrum ceremonies and keeping the team moving forward</p>
+    <div class="module-meta">
+        <div class="meta-item">📅 Duration: Weeks 7-8</div>
+        <div class="meta-item">🎭 Role Focus: Scrum Master</div>
+        <div class="meta-item">📊 Points: 50</div>
+        <div class="meta-item">⏱️ Estimated Time: 10-12 hours</div>
+    </div>
+</div>
+
+<!-- Learning Objectives -->
+<div class="learning-objectives">
+    <h2>🎯 Module Learning Outcomes</h2>
+    <p><strong>By the end of this module, you will be able to:</strong></p>
+    <ul>
+        <li><strong>MLO 4.1:</strong> Facilitate core Scrum ceremonies (daily standup, sprint review, sprint retrospective)</li>
+        <li><strong>MLO 4.2:</strong> Track sprint progress using burndown charts and identify velocity trends</li>
+        <li><strong>MLO 4.3:</strong> Identify and remove blockers that impede team progress</li>
+        <li><strong>MLO 4.4:</strong> Conduct effective sprint retrospectives using structured frameworks (Start/Stop/Continue, 4Ls)</li>
+    </ul>
+    <p><strong>CLOs Addressed:</strong> CLO3 (Apply Agile frameworks), CLO4 (Facilitate team processes), CLO5 (Document and reflect)</p>
+</div>
+
+<!-- Week Timeline -->
+<div class="content-section">
+    <h2>📅 Two-Week Overview</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <strong>Week 7, Day 1</strong><br>
+            Scrum Master role intro, facilitating standups
+        </div>
+        <div class="timeline-item">
+            <strong>Week 7, Day 2</strong><br>
+            Sprint 1 execution continues, track progress
+        </div>
+        <div class="timeline-item">
+            <strong>Week 8, Day 1</strong><br>
+            Sprint 1 Review, demonstrate completed work
+        </div>
+        <div class="timeline-item">
+            <strong>Week 8, Day 2</strong><br>
+            Sprint 1 Retrospective, identify improvements
+        </div>
+    </div>
+</div>
+
+<!-- Role Focus -->
+<div class="role-box">
+    <h4>🎭 Role Focus: Scrum Master</h4>
+    <p><strong>What does a Scrum Master do?</strong></p>
+    <p>The Scrum Master is the process facilitator and coach for the Scrum team. They don't manage people or dictate solutions—they remove obstacles, facilitate meetings, and help the team continuously improve.</p>
+    <p><strong>Key Responsibilities This Module:</strong></p>
+    <ul>
+        <li>Facilitate daily standup meetings (What did I do? What will I do? What's blocking me?)</li>
+        <li>Track sprint progress and maintain burndown chart</li>
+        <li>Identify and remove blockers (or help the team remove them)</li>
+        <li>Facilitate Sprint Review: Demonstrate completed work to stakeholders</li>
+        <li>Facilitate Sprint Retrospective: Reflect on what went well and what to improve</li>
+        <li>Coach team on Scrum practices and Agile principles</li>
+    </ul>
+    <p><strong>Why This Matters:</strong> Teams don't magically self-organize. The Scrum Master creates the conditions for the team to succeed by protecting them from distractions and helping them continuously improve.</p>
+</div>
+
+<!-- Assignments -->
+<div class="content-section">
+    <h2>📝 Assignments (50 points total)</h2>
+
+    <div class="assignment-card">
+        <h3>Week 7: Sprint 1 Execution & Facilitation</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">25 points</span>
+            <span class="due-date">Due: Friday, Week 8, 11:59 PM</span>
+            <span class="role-badge">Role: Scrum Master</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Conduct daily standup meetings (real or simulated) for Sprint 1</li>
+            <li>Document standup notes using Daily Standup Template</li>
+            <li>Track sprint progress using a burndown chart</li>
+            <li>Identify at least 2 blockers and document how they were resolved</li>
+            <li>Maintain sprint backlog and update task statuses</li>
+        </ul>
+        <p><strong>Key Deliverables:</strong></p>
+        <ul>
+            <li>Daily standup notes (minimum 5 standup sessions documented)</li>
+            <li>Sprint burndown chart showing remaining work over time</li>
+            <li>Blocker log with resolution strategies</li>
+            <li>Updated sprint backlog showing task completion</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Assignment Details</a>
+        <a href="/courses/[COURSE_ID]/files/[FILE_ID]" class="button-secondary">Download Rubric</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Week 8: Sprint 1 Review & Retrospective</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">25 points</span>
+            <span class="due-date">Due: Friday, Week 8, 11:59 PM</span>
+            <span class="role-badge">Role: Scrum Master</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Conduct Sprint 1 Review: Demonstrate completed user stories</li>
+            <li>Gather stakeholder feedback on delivered features</li>
+            <li>Calculate sprint velocity (story points or tasks completed)</li>
+            <li>Facilitate Sprint Retrospective using Start/Stop/Continue framework</li>
+            <li>Create action items for improving Sprint 2</li>
+        </ul>
+        <p><strong>Key Deliverables:</strong></p>
+        <ul>
+            <li>Sprint Review summary with demo notes and stakeholder feedback</li>
+            <li>Velocity calculation and comparison to planned capacity</li>
+            <li>Sprint Retrospective document (What went well? What didn't? What will we change?)</li>
+            <li>Action items for Sprint 2 with assigned owners</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Assignment Details</a>
+        <a href="/courses/[COURSE_ID]/files/[FILE_ID]" class="button-secondary">Download Rubric</a>
+    </div>
+</div>
+
+<!-- Knowledge Check -->
+<div class="content-section">
+    <h2>🎯 Knowledge Check</h2>
+    <p><strong>Module 04 Knowledge Check</strong></p>
+    <p>13 multiple choice questions testing your understanding of Scrum ceremonies, sprint metrics, and facilitation techniques.</p>
+    <ul>
+        <li>⏱️ Duration: 15-20 minutes</li>
+        <li>🔄 Attempts: Unlimited</li>
+        <li>📊 Points: 7 points (auto-graded, bonus points)</li>
+    </ul>
+    <p><strong>Topics Covered:</strong></p>
+    <ul>
+        <li>Daily standup format and anti-patterns</li>
+        <li>Sprint review vs. sprint retrospective</li>
+        <li>Burndown charts and velocity calculations</li>
+        <li>Blocker identification and resolution strategies</li>
+        <li>Retrospective frameworks (Start/Stop/Continue, 4Ls, Mad/Sad/Glad)</li>
+    </ul>
+    <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary">Take Knowledge Check</a>
+</div>
+
+<!-- Hands-On Activity -->
+<div class="content-section" style="background: #e1f5fe; border-left-color: #0288d1;">
+    <h2 style="color: #01579b;">🔬 Hands-On Activity: Sprint Planning Simulation (120 minutes)</h2>
+    <p><strong>What you'll experience:</strong></p>
+    <p>You'll participate in a full sprint cycle simulation, compressed into 2 hours. Teams will plan a mini-sprint, execute work (building something simple), hold daily standups, and conduct a review and retrospective—all in one session.</p>
+    <p><strong>What You'll Practice:</strong></p>
+    <ul>
+        <li>Facilitating a daily standup (timeboxed to 5 minutes)</li>
+        <li>Tracking progress on a physical or digital board</li>
+        <li>Identifying blockers in real-time and helping resolve them</li>
+        <li>Demonstrating completed work in a sprint review</li>
+        <li>Facilitating a retrospective with structured feedback</li>
+    </ul>
+    <p><strong>Simulation Structure:</strong></p>
+    <ul>
+        <li><strong>15 min:</strong> Sprint planning (select stories, define sprint goal)</li>
+        <li><strong>60 min:</strong> Sprint execution with 3 daily standups (every 20 min)</li>
+        <li><strong>20 min:</strong> Sprint review (demo completed work)</li>
+        <li><strong>20 min:</strong> Sprint retrospective (Start/Stop/Continue)</li>
+        <li><strong>5 min:</strong> Debrief and lessons learned</li>
+    </ul>
+</div>
+
+<!-- Planning Sheets & Tools -->
+<div class="content-section">
+    <h2>📋 Planning Sheets & Tools</h2>
+    <p>This module introduces sprint execution templates:</p>
+    <ul>
+        <li><strong>Daily Standup Template</strong> - NEW: Quick capture format for standup notes (What I did, What I'll do, Blockers)</li>
+        <li><strong>Sprint Retrospective Template</strong> - NEW: Structured reflection tool (Start/Stop/Continue, 4Ls, or Mad/Sad/Glad)</li>
+        <li><strong>Sprint Planning Template</strong> - Continued from Module 3</li>
+    </ul>
+    <p><strong>Tools for Sprint Tracking:</strong></p>
+    <ul>
+        <li><strong>Burndown Chart:</strong> Google Sheets template or Excel (provided in Canvas Files)</li>
+        <li><strong>Sprint Board:</strong> Trello (free), GitHub Projects, or physical board (photo documentation)</li>
+    </ul>
+</div>
+
+<!-- Checklist -->
+<div class="checklist">
+    <h3>✅ Module Completion Checklist</h3>
+    <p>Use this to track your progress through Module 4:</p>
+    <ul>
+        <li>Attend Week 7 lecture on Scrum Master role and facilitation techniques</li>
+        <li>Set up sprint tracking tools (burndown chart, sprint board)</li>
+        <li>Conduct daily standups for Sprint 1 (minimum 5 sessions)</li>
+        <li>Document standup notes using Daily Standup Template</li>
+        <li>Track sprint progress on burndown chart</li>
+        <li>Identify and document blockers with resolution strategies</li>
+        <li>Update sprint backlog as tasks complete</li>
+        <li>Participate in Sprint Planning Simulation</li>
+        <li>Conduct Sprint 1 Review: Demonstrate completed work</li>
+        <li>Gather stakeholder feedback on Sprint 1 deliverables</li>
+        <li>Calculate Sprint 1 velocity</li>
+        <li>Facilitate Sprint 1 Retrospective</li>
+        <li>Create action items for Sprint 2 improvements</li>
+        <li>Submit both assignments by Friday, Week 8</li>
+        <li>Take Module 04 Knowledge Check</li>
+    </ul>
+</div>
+
+<!-- Tips -->
+<div class="tip-box">
+    <h4>💡 Andrew's Tips for Success</h4>
+    <ul>
+        <li><strong>Standups are NOT status reports:</strong> They're about coordination. Keep them short (15 min max). Save detailed discussions for after the standup.</li>
+        <li><strong>Burndown charts show trends, not precision:</strong> If your burndown isn't a smooth curve, that's normal. Look for overall direction (trending down = good).</li>
+        <li><strong>Blockers have owners:</strong> Don't just document "We're blocked on API access." Who's going to resolve it? By when?</li>
+        <li><strong>Sprint reviews are demos, not presentations:</strong> Show working software. Click through features. Let stakeholders interact. PowerPoint is not a demo.</li>
+        <li><strong>Retros need psychological safety:</strong> People won't be honest if they fear blame. Focus on the process, not individual performance.</li>
+        <li><strong>Action items must be specific:</strong> "Communicate better" isn't actionable. "Send daily progress updates in Slack by 10am" is actionable.</li>
+    </ul>
+</div>
+
+<!-- Andrew's Note -->
+<div class="content-section" style="background: #fff8e1; border-left-color: #fbc02d;">
+    <h2 style="color: #f57f17;">📣 Andrew's Note</h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        The Scrum Master role is <strong>deceptively hard</strong>. It looks easy from the outside—"Just run a few meetings, right?"—but facilitating well requires emotional intelligence, pattern recognition, and the courage to speak up when the team is drifting off course.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        <strong>Sprint 1 retrospectives are always rough.</strong> You'll discover that your estimates were wildly off, that some stories were way bigger than expected, or that you didn't actually finish what you thought you'd finish. That's not failure—that's data. Use it. Your Sprint 2 planning will be much better because of what you learned in Sprint 1.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6; font-weight: bold;">
+        If your retrospective doesn't surface at least one uncomfortable truth, you're not digging deep enough. The goal isn't to feel good—it's to get better.
+    </p>
+</div>
+
+<!-- Preparing for Next Module -->
+<div class="content-section">
+    <h2>🚀 Preparing for Next Module</h2>
+    <p><strong>Module 5 Preview: Development & Testing</strong></p>
+    <p>In the next module, you'll shift to the <strong>Developer</strong> role. You'll learn how to:</p>
+    <ul>
+        <li>Execute Sprint 2 with focus on development and testing practices</li>
+        <li>Conduct code reviews and provide constructive feedback</li>
+        <li>Write and execute test cases (unit tests, integration tests)</li>
+        <li>Balance feature development with technical quality</li>
+    </ul>
+    <p><strong>What to do now:</strong> Review your Sprint 1 action items from the retrospective. Sprint 2 (Module 5) should implement those improvements.</p>
+</div>
+
+<!-- Footer -->
+<div style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 10px; text-align: center;">
+    <h3 style="margin-top: 0;">Ready to Start?</h3>
+    <p style="font-size: 1.1em; margin: 15px 0;">Begin facilitating Sprint 1 execution!</p>
+    <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary" style="font-size: 1.2em; padding: 15px 30px;">Start Week 7 Assignment</a>
+    <p style="margin-top: 30px; font-style: italic; color: #666;">
+        "Scrum is like your mother-in-law. It points out all your faults." – Ken Schwaber
+    </p>
+</div>
+
+</body>
+</html>

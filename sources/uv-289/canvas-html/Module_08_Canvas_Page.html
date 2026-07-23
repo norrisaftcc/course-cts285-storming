@@ -1,0 +1,685 @@
+<!--
+  PROVENANCE — 26FA source ingestion (task 0.8)
+  origin: /Users/norrisa/Documents/dev/github/csc_dash/courses/CSC-289/canvas-html/Module_08_Canvas_Page.html
+  verdict: ADAPT
+  target-26FA-slot: CSC-289 P4 M8 Canvas
+  ingest-date: 2026-07-23
+  NOTE: body preserved verbatim below; defects (terminology/points/framing) are intentional evidence.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 8: Sprint 8 — Final Delivery &amp; Process Portfolio</title>
+    <style>
+        /* Canvas-compatible CSS */
+        .module-header {
+            background: linear-gradient(135deg, #B71C1C 0%, #880E0E 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .module-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .module-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.95em;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .content-section {
+            background: #f8f9fa;
+            border-left: 5px solid #B71C1C;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        .content-section h2 {
+            color: #B71C1C;
+            margin-top: 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #B71C1C;
+            padding-bottom: 10px;
+        }
+
+        .learning-objectives {
+            background: #FFEBEE;
+            border-left: 5px solid #B71C1C;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .learning-objectives ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        .learning-objectives li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .assignment-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .assignment-card h3 {
+            color: #B71C1C;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .assignment-meta {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .points-badge {
+            background: #4caf50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .due-date {
+            background: #ff9800;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .role-badge {
+            background: #B71C1C;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .category-badge {
+            background: #607d8b;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+
+        .final-badge {
+            background: #B71C1C;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+
+        .button-primary {
+            background: #B71C1C;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-primary:hover {
+            background: #880E0E;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-secondary {
+            background: #6c757d;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-secondary:hover {
+            background: #5a6268;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-print {
+            background: #607d8b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+
+        .button-print:hover {
+            background: #546e7a;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 15px;
+            background: white;
+            margin: 5px;
+            border-radius: 5px;
+            border-top: 3px solid #B71C1C;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .role-box {
+            background: #FFEBEE;
+            border: 2px solid #B71C1C;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .role-box h4 {
+            margin-top: 0;
+            color: #880E0E;
+            font-size: 1.3em;
+        }
+
+        .tip-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .tip-box h4 {
+            margin-top: 0;
+            color: #2e7d32;
+            font-size: 1.3em;
+        }
+
+        .checklist {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            color: #e65100;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ffcc80;
+        }
+
+        .checklist li:before {
+            content: "\2610 ";
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ff9800;
+        }
+
+        .career-box {
+            background: #E3F2FD;
+            border: 2px solid #1565C0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .career-box h4 {
+            margin-top: 0;
+            color: #0D47A1;
+            font-size: 1.3em;
+        }
+
+        @media print {
+            .button-primary, .button-secondary, .button-print {
+                display: none;
+            }
+            .module-header {
+                break-inside: avoid;
+            }
+            .assignment-card {
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+            }
+            .timeline-item {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        function printModule() {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+
+<div style="text-align: right; margin-bottom: 10px;">
+    <button onclick="printModule()" class="button-print">&#128424; Print/Copy for Canvas</button>
+</div>
+
+<div class="module-header">
+    <h1>&#127942; Module 8: Sprint 8 — Final Delivery &amp; Process Portfolio</h1>
+    <p style="font-size: 1.2em; margin: 10px 0;">Final polish, comprehensive portfolio, professional presentation, and PM mastery reflection</p>
+    <div class="module-meta">
+        <div class="meta-item">&#128197; Duration: Weeks 15-16</div>
+        <div class="meta-item">&#127917; Sprint: 8 (Abbreviated)</div>
+        <div class="meta-item">&#128202; Points: 250</div>
+        <div class="meta-item">&#127891; Final Module — Capstone Delivery</div>
+    </div>
+</div>
+
+<!-- Learning Objectives -->
+<div class="learning-objectives">
+    <h2>&#127919; Module Learning Outcomes</h2>
+    <p><strong>By the end of this module, you will be able to:</strong></p>
+    <ul>
+        <li><strong>MLO 8.1:</strong> Deliver a functional capstone project meeting core user stories (Create) <em>&#8594; CLO 1, 3, 6</em></li>
+        <li><strong>MLO 8.2:</strong> Compile a process portfolio demonstrating PM mastery journey (Create) <em>&#8594; CLO 1, 5</em></li>
+        <li><strong>MLO 8.3:</strong> Articulate PM growth from CSC-113 through CSC-289 (Evaluate) <em>&#8594; CLO 4, 5</em></li>
+    </ul>
+    <p><strong>CLOs Addressed:</strong> CLO 1 (Project Delivery), CLO 3 (Design & Requirements), CLO 4 (Scope & Velocity), CLO 5 (Process & Documentation), CLO 6 (Technical Implementation)</p>
+</div>
+
+<!-- Week Timeline -->
+<div class="content-section">
+    <h2>&#128197; Two-Week Overview</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <strong>Week 15</strong><br>
+            Final bug fixes; process portfolio compilation; demo rehearsal
+        </div>
+        <div class="timeline-item">
+            <strong>Week 16</strong><br>
+            Final project submission; presentation; PM journey reflection
+        </div>
+    </div>
+</div>
+
+<!-- Role Focus -->
+<div class="role-box">
+    <h4>&#127917; Role Focus: Self-Organized</h4>
+    <p><strong>This is it. You own everything.</strong></p>
+    <p>There are no assigned roles in Sprint 8. You are the developer, the QA lead, the Scrum Master, and the product owner. This is intentional — in your career, you will often need to self-organize, prioritize ruthlessly, and deliver under pressure.</p>
+    <p><strong>Key Responsibilities:</strong></p>
+    <ul>
+        <li>Final bug fixes only — remember, feature freeze is in effect</li>
+        <li>Compile your process portfolio from artifacts across all 8 modules</li>
+        <li>Rehearse your demo and refine your presentation</li>
+        <li>Write your capstone self-assessment with honest reflection</li>
+        <li>Reflect on your entire PM journey from CSC-113 through CSC-289</li>
+        <li>Deliver a professional, functional capstone project</li>
+    </ul>
+    <p><strong>Sprint 8 is abbreviated.</strong> This is not a full development sprint. It exists to give you time to polish, document, and present. If you need this time for feature development, something went wrong in earlier modules — acknowledge it in your self-assessment and focus on delivering the best version of what you have.</p>
+</div>
+
+<!-- Assignments Section -->
+<div class="content-section">
+    <h2>&#128221; Assignments — Learn (10 pts)</h2>
+
+    <div class="assignment-card">
+        <h3>Entry Ticket: Professional Presentation &amp; Portfolio Readiness</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">10 points</span>
+            <span class="category-badge">Learn</span>
+            <span class="due-date">Due: Start of Week 15</span>
+        </div>
+        <p>Quiz covering professional presentation techniques, portfolio compilation best practices, and capstone delivery expectations. Ensures you are ready to present your work professionally.</p>
+        <a href="#" class="button-primary">Take Entry Ticket Quiz</a>
+    </div>
+</div>
+
+<div class="content-section">
+    <h2>&#128221; Assignments — Practice (15 pts)</h2>
+
+    <div class="assignment-card">
+        <h3>Demo Rehearsal</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">15 points</span>
+            <span class="category-badge">Practice</span>
+            <span class="due-date">Due: End of Week 15</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Record a 3-minute practice demo of your capstone project</li>
+            <li>Self-evaluate your demo against the presentation rubric</li>
+            <li>Identify areas for improvement before the final presentation</li>
+            <li>Practice narrating your technical decisions and PM process</li>
+        </ul>
+        <p><strong>Demo Structure:</strong></p>
+        <ul>
+            <li><strong>30 seconds:</strong> Project overview — what problem does it solve?</li>
+            <li><strong>90 seconds:</strong> Live walkthrough of core features</li>
+            <li><strong>30 seconds:</strong> Technical architecture highlights</li>
+            <li><strong>30 seconds:</strong> PM process highlights and lessons learned</li>
+        </ul>
+        <p>This is a rehearsal — it doesn't need to be perfect. It needs to be practiced.</p>
+        <a href="#" class="button-primary">Submit Demo Recording</a>
+    </div>
+</div>
+
+<div class="content-section">
+    <h2>&#128221; Assignments — Apply (185 pts)</h2>
+
+    <div class="assignment-card">
+        <h3>Final Project Technical Deliverable</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">100 points</span>
+            <span class="category-badge">Apply</span>
+            <span class="final-badge">FINAL DELIVERABLE</span>
+            <span class="due-date">Due: End of Week 16</span>
+        </div>
+        <p><strong>What you'll deliver:</strong></p>
+        <ul>
+            <li><strong>Live Application:</strong> Deployed to a public URL, functional, and accessible</li>
+            <li><strong>Source Code:</strong> Clean GitHub repository with meaningful commit history</li>
+            <li><strong>README:</strong> Professional README with setup instructions, screenshots, and tech stack</li>
+            <li><strong>CLAUDE.md:</strong> AI-assisted development configuration file</li>
+            <li><strong>Testing Evidence:</strong> Testing portfolio from Module 7, updated with final results</li>
+            <li><strong>Deployment Documentation:</strong> Step-by-step deployment guide</li>
+        </ul>
+        <p><strong>Evaluation Criteria:</strong></p>
+        <ul>
+            <li>Core user stories are functional and complete</li>
+            <li>Application is deployed and accessible at a live URL</li>
+            <li>Code quality: clean, documented, follows consistent conventions</li>
+            <li>Error handling: application handles edge cases gracefully</li>
+            <li>Design assets properly integrated and attributed</li>
+        </ul>
+        <a href="#" class="button-primary">Submit Final Project</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Process Portfolio &amp; Presentation</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">75 points</span>
+            <span class="category-badge">Apply</span>
+            <span class="final-badge">FINAL DELIVERABLE</span>
+            <span class="due-date">Due: End of Week 16</span>
+        </div>
+        <p><strong>What you'll compile:</strong></p>
+        <p>Your process portfolio tells the story of your capstone journey — not just what you built, but <em>how</em> you built it and <em>what you learned</em>. This portfolio demonstrates PM mastery across the entire CSC program sequence.</p>
+        <ul>
+            <li><strong>Sprint Artifacts:</strong> Selected sprint plans, burndown charts, and scorecards from each sprint</li>
+            <li><strong>Velocity Story:</strong> How your velocity changed over 8 sprints and what you learned about estimation</li>
+            <li><strong>Design Collaboration:</strong> Evidence of GRD-242 feedback cycles and integration</li>
+            <li><strong>AI-Assisted Development:</strong> Prompt log highlights showing engineering judgment</li>
+            <li><strong>Code Review Evidence:</strong> Peer reviews given and received</li>
+            <li><strong>Testing &amp; Deployment:</strong> Testing portfolio and deployment documentation</li>
+            <li><strong>Presentation:</strong> Final demo (live or recorded) with PM narrative</li>
+        </ul>
+        <a href="#" class="button-primary">Submit Portfolio &amp; Presentation</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Discussion: PM Journey Reflection</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">10 points</span>
+            <span class="category-badge">Apply</span>
+            <span class="due-date">Due: End of Week 16</span>
+        </div>
+        <p><strong>What you'll discuss:</strong></p>
+        <ul>
+            <li>How has your understanding of project management evolved from CSC-113 to CSC-289?</li>
+            <li>What PM practice had the biggest impact on your capstone success?</li>
+            <li>What would you tell a CSC-113 student about the journey ahead?</li>
+            <li>How will you apply PM principles in your career?</li>
+        </ul>
+        <p>Initial post + 2 substantive replies to classmates required. This is your final discussion — make it count.</p>
+        <a href="#" class="button-primary">Open Discussion Board</a>
+    </div>
+</div>
+
+<div class="content-section">
+    <h2>&#128221; Assignments — Assess (40 pts)</h2>
+
+    <div class="assignment-card">
+        <h3>Capstone Self-Assessment</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">25 points</span>
+            <span class="category-badge">Assess</span>
+            <span class="due-date">Due: End of Week 16</span>
+        </div>
+        <p><strong>Your final self-assessment:</strong></p>
+        <ul>
+            <li>Rate your performance against each CLO (1-6) with evidence</li>
+            <li>Identify your proudest achievement in the capstone</li>
+            <li>Identify your biggest struggle and how you handled it</li>
+            <li>Assess your growth as a developer and as a project manager</li>
+            <li>Articulate how this capstone prepared you for your career</li>
+            <li>If you could do the capstone over, what would you change?</li>
+        </ul>
+        <a href="#" class="button-primary">Submit Self-Assessment</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Sprint 8 Scorecard</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">15 points</span>
+            <span class="category-badge">Assess</span>
+            <span class="due-date">Due: End of Week 16</span>
+        </div>
+        <p>Your final sprint scorecard. Evaluate your Sprint 8 performance, final delivery quality, and overall capstone closure.</p>
+        <a href="#" class="button-primary">Submit Scorecard</a>
+    </div>
+</div>
+
+<!-- Entry Ticket Section -->
+<div class="content-section">
+    <h2>&#127919; Entry Ticket</h2>
+    <p><strong>Professional Presentation &amp; Portfolio Readiness Quiz</strong></p>
+    <p>This quiz ensures you understand presentation best practices, portfolio compilation standards, and final delivery expectations.</p>
+    <ul>
+        <li>&#9201; Duration: 15-20 minutes</li>
+        <li>&#128202; Points: 10 points</li>
+        <li>&#128260; Attempts: Unlimited</li>
+    </ul>
+    <p><strong>Topics Covered:</strong></p>
+    <ul>
+        <li>Professional demo and presentation techniques</li>
+        <li>Portfolio compilation and artifact selection</li>
+        <li>Reflective writing and self-assessment practices</li>
+        <li>Capstone delivery expectations and rubric criteria</li>
+    </ul>
+    <a href="#" class="button-primary">Take Entry Ticket</a>
+</div>
+
+<!-- Hands-On Activity -->
+<div class="content-section" style="background: #e1f5fe; border-left-color: #0288d1;">
+    <h2 style="color: #01579b;">&#128300; Hands-On Activity: Demo Rehearsal</h2>
+    <p><strong>What you'll experience:</strong></p>
+    <p>You will record a 3-minute practice demo of your capstone project, then self-evaluate against the presentation rubric. This rehearsal ensures your final presentation is polished and professional.</p>
+    <p><strong>What You'll Practice:</strong></p>
+    <ul>
+        <li>Narrating your application walkthrough clearly and concisely</li>
+        <li>Highlighting technical decisions without getting lost in code</li>
+        <li>Telling the story of your PM process — sprints, velocity, scope decisions</li>
+        <li>Staying within the 3-minute time limit</li>
+        <li>Speaking to both technical and non-technical audiences</li>
+    </ul>
+    <p><strong>Self-Evaluation Criteria:</strong></p>
+    <ul>
+        <li><strong>Clarity:</strong> Can someone who has never seen your project understand what it does?</li>
+        <li><strong>Flow:</strong> Does the demo have a logical progression?</li>
+        <li><strong>Technical Depth:</strong> Do you highlight meaningful technical decisions?</li>
+        <li><strong>PM Narrative:</strong> Do you connect your process to your product?</li>
+        <li><strong>Professionalism:</strong> Would you be comfortable showing this to an employer?</li>
+    </ul>
+</div>
+
+<!-- Discussion Board -->
+<div class="content-section">
+    <h2>&#128172; Discussion Board</h2>
+    <p><strong>PM Journey Reflection (10 pts)</strong></p>
+    <p>This is your final discussion in the CSC program sequence. Reflect on your entire journey from CSC-113 through CSC-289.</p>
+    <p><strong>Prompt:</strong> You started CSC-113 learning what Agile means. You are now delivering a complete capstone with 8 sprints of evidence. How has your understanding of project management changed? What PM practice will you carry into your career? What advice would you give to a student just starting CSC-113?</p>
+    <ul>
+        <li>Initial post: 400-500 words, due mid-Week 16</li>
+        <li>2 substantive replies to classmates, due end of Week 16</li>
+    </ul>
+</div>
+
+<!-- Planning Sheets & Tools -->
+<div class="content-section">
+    <h2>&#128203; Planning Sheets &amp; Tools</h2>
+    <p>This module uses the following templates:</p>
+    <ul>
+        <li><strong>Process Portfolio Template</strong> — NEW: Structure for compiling your capstone journey</li>
+        <li><strong>Demo Script Template</strong> — NEW: Outline for your 3-minute demo</li>
+        <li><strong>Capstone Self-Assessment Template</strong> — NEW: Structured reflection against CLOs</li>
+        <li><strong>Final Project Submission Checklist</strong> — NEW: Ensure nothing is missing</li>
+        <li><strong>Sprint Planning Template</strong> — Final sprint (abbreviated, bug fixes only)</li>
+        <li><strong>Sprint Scorecard</strong> — Final scorecard</li>
+    </ul>
+</div>
+
+<!-- Checklist -->
+<div class="checklist">
+    <h3>&#9745; Module Completion Checklist</h3>
+    <p>Use this to track your progress through Module 8:</p>
+    <ul>
+        <li>Complete Entry Ticket: Professional Presentation &amp; Portfolio Readiness quiz</li>
+        <li>Fix remaining bugs (NO new features)</li>
+        <li>Record 3-minute demo rehearsal and self-evaluate</li>
+        <li>Compile process portfolio from Modules 1-8 artifacts</li>
+        <li>Write velocity narrative — how estimation improved over 8 sprints</li>
+        <li>Finalize README and deployment documentation</li>
+        <li>Verify live URL is working and accessible</li>
+        <li>Submit Final Project Technical Deliverable</li>
+        <li>Submit Process Portfolio &amp; Presentation</li>
+        <li>Post PM Journey Reflection discussion + 2 replies</li>
+        <li>Complete Capstone Self-Assessment</li>
+        <li>Submit Sprint 8 Scorecard</li>
+        <li>Celebrate — you completed the capstone!</li>
+    </ul>
+</div>
+
+<!-- Tips -->
+<div class="tip-box">
+    <h4>&#128161; Andrew's Tips for Success</h4>
+    <ul>
+        <li><strong>Your portfolio tells a story — curate it:</strong> Don't dump every artifact from every module. Select the best examples that show your growth. Quality over quantity.</li>
+        <li><strong>The velocity narrative is gold:</strong> Show how your Sprint 1 estimates compared to Sprint 7. That improvement curve is evidence of learning that employers love.</li>
+        <li><strong>Practice your demo out loud:</strong> Reading a script sounds robotic. Practice until you can narrate naturally. Record yourself. Watch it back. Cringe. Improve. Repeat.</li>
+        <li><strong>Your README is your first impression:</strong> When an employer visits your GitHub repo, the README is the first thing they see. Make it professional, clear, and complete.</li>
+        <li><strong>Be honest in your self-assessment:</strong> Acknowledging what went wrong is more impressive than pretending everything was perfect. Employers want self-aware developers.</li>
+        <li><strong>This is not the end — it's a beginning:</strong> The capstone is your launchpad. The skills you built here — Agile, Git, testing, deployment, AI-assisted development — these are the skills that get you hired.</li>
+    </ul>
+</div>
+
+<!-- Andrew's Note -->
+<div class="content-section" style="background: #fff8e1; border-left-color: #fbc02d;">
+    <h2 style="color: #f57f17;">&#128227; Andrew's Note</h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        I want to take a moment to say something I don't say enough: <strong>I am proud of you.</strong>
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        You started this program learning what a user story is. You learned to plan sprints, estimate velocity, manage scope, collaborate with designers, review code, deploy applications, and work with AI tools. You've done something many people never do — you <strong>shipped a real project</strong> from concept to deployment.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        Your capstone is not perfect. No software is. But it's <em>yours</em>. You made every decision. You wrote (or reviewed) every line of code. You managed every sprint. That ownership — that ability to take an idea from zero to deployed — is what makes you a professional.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        The process portfolio you compile this module is more than a class assignment. It's evidence of your professional capability. When an interviewer asks "Tell me about a project you led," you have a real answer with real artifacts and real data.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6; font-weight: bold;">
+        Finish strong. Deliver something you're proud to put your name on. And then go build the next thing.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        — Drew
+    </p>
+</div>
+
+<!-- Preparing for Your Career -->
+<div class="career-box">
+    <h4>&#127775; Preparing for Your Career</h4>
+    <p>This is the final module of the final course in the CSC program sequence. There is no "next module" — there's your <strong>career</strong>. Here's how to leverage what you've built:</p>
+    <ul>
+        <li><strong>GitHub Portfolio:</strong> Your capstone repo should be pinned on your GitHub profile. Clean up the README, add screenshots, and make sure the live URL works.</li>
+        <li><strong>Resume Ready:</strong> Add your capstone to your resume. Describe it in terms of impact: "Delivered a full-stack [type] application through 8 Agile sprints, deployed to [platform], with AI-assisted development using Claude Code."</li>
+        <li><strong>Interview Prep:</strong> You can now answer questions about Agile, Git workflows, code review, deployment, testing, AI-assisted development, and cross-team collaboration with real examples.</li>
+        <li><strong>PM Skills Transfer:</strong> The project management skills you learned — sprint planning, velocity tracking, scope management, retrospectives — apply to every job in tech, not just PM roles.</li>
+        <li><strong>AI-Assisted Development:</strong> You know how to work with AI tools responsibly. You have a CLAUDE.md, prompt logs, and evidence of engineering judgment. This is a differentiator in the job market.</li>
+        <li><strong>Keep Building:</strong> The best way to stay sharp is to keep building. Start a side project. Contribute to open source. The Sacred Flow works for personal projects too.</li>
+    </ul>
+    <p><strong>You are not leaving this program as a student. You are leaving as a developer.</strong></p>
+</div>
+
+<!-- Footer -->
+<div style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 10px; text-align: center;">
+    <h3 style="margin-top: 0;">This Is Your Moment</h3>
+    <p style="font-size: 1.1em; margin: 15px 0;">Deliver your capstone. Tell your story. Launch your career.</p>
+    <a href="#" class="button-primary" style="font-size: 1.2em; padding: 15px 30px;">Begin Module 8</a>
+    <p style="margin-top: 30px; font-style: italic; color: #666;">
+        "The only way to do great work is to love what you do." — Steve Jobs
+    </p>
+    <p style="color: #999; font-size: 0.85em; margin-top: 10px;">CSC-289 Programming Capstone Project | FTCC | Instructor: Andrew (Drew) Norris</p>
+</div>
+
+</body>
+</html>

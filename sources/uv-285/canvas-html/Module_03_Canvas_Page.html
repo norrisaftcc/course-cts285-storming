@@ -1,0 +1,552 @@
+<!--
+  PROVENANCE — 26FA source ingestion (task 0.8)
+  origin: /Users/norrisa/Documents/dev/github/csc_dash/courses/CTS-285/canvas-html/Module_03_Canvas_Page.html
+  verdict: HARVEST
+  target-26FA-slot: CTS-285 M3 Canvas rebuild (task 3.4)
+  ingest-date: 2026-07-23
+  HARVEST: 543 lines; maps W5='System Design & Prototyping' and W6='Sprint 1 Planning & Kickoff' — a different week->content scheme than assignments/ (W5–6 = Sprint 1). Shell only.
+  NOTE: body preserved verbatim below; defects (terminology/points/framing) are intentional evidence.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3: System Design & Architecture</title>
+    <style>
+        /* Canvas-compatible CSS */
+        .module-header {
+            background: linear-gradient(135deg, #4CAF50 0%, #2e7d32 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .module-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .module-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.95em;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .content-section {
+            background: #f8f9fa;
+            border-left: 5px solid #4CAF50;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        .content-section h2 {
+            color: #4CAF50;
+            margin-top: 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        .learning-objectives {
+            background: #e8f5e9;
+            border-left: 5px solid #4CAF50;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .learning-objectives ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        .learning-objectives li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .assignment-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .assignment-card h3 {
+            color: #4CAF50;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .assignment-meta {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .points-badge {
+            background: #4caf50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .due-date {
+            background: #ff9800;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .role-badge {
+            background: #4CAF50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .button-primary {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-primary:hover {
+            background: #2e7d32;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-secondary {
+            background: #6c757d;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-secondary:hover {
+            background: #5a6268;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-print {
+            background: #607d8b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+
+        .button-print:hover {
+            background: #546e7a;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 15px;
+            background: white;
+            margin: 5px;
+            border-radius: 5px;
+            border-top: 3px solid #4CAF50;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .role-box {
+            background: #e8f5e9;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .role-box h4 {
+            margin-top: 0;
+            color: #2e7d32;
+            font-size: 1.3em;
+        }
+
+        .tip-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .tip-box h4 {
+            margin-top: 0;
+            color: #2e7d32;
+            font-size: 1.3em;
+        }
+
+        .checklist {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            color: #e65100;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ffcc80;
+        }
+
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ff9800;
+        }
+
+        @media print {
+            .button-primary, .button-secondary, .button-print {
+                display: none;
+            }
+            .module-header {
+                break-inside: avoid;
+            }
+            .assignment-card {
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+            }
+            .timeline-item {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        function printModule() {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+
+<div style="text-align: right; margin-bottom: 10px;">
+    <button onclick="printModule()" class="button-print">🖨️ Print/Copy for Canvas</button>
+</div>
+
+<div class="module-header">
+    <h1>🎨 Module 3: System Design & Architecture</h1>
+    <p style="font-size: 1.2em; margin: 10px 0;">Transforming requirements into technical designs and launching Sprint 1</p>
+    <div class="module-meta">
+        <div class="meta-item">📅 Duration: Weeks 5-6</div>
+        <div class="meta-item">🎭 Role Focus: Product Owner (Design)</div>
+        <div class="meta-item">📊 Points: 50</div>
+        <div class="meta-item">⏱️ Estimated Time: 12-14 hours</div>
+    </div>
+</div>
+
+<!-- Learning Objectives -->
+<div class="learning-objectives">
+    <h2>🎯 Module Learning Outcomes</h2>
+    <p><strong>By the end of this module, you will be able to:</strong></p>
+    <ul>
+        <li><strong>MLO 3.1:</strong> Create system context diagrams and data flow diagrams (DFDs) to model system architecture</li>
+        <li><strong>MLO 3.2:</strong> Design database schemas using entity-relationship (ER) diagrams</li>
+        <li><strong>MLO 3.3:</strong> Build low-fidelity wireframes/prototypes for key system interfaces</li>
+        <li><strong>MLO 3.4:</strong> Plan and launch Sprint 1 with clear sprint goal and deliverables</li>
+    </ul>
+    <p><strong>CLOs Addressed:</strong> CLO2 (Design systems), CLO3 (Apply Agile frameworks), CLO5 (Document processes)</p>
+</div>
+
+<!-- Week Timeline -->
+<div class="content-section">
+    <h2>📅 Two-Week Overview</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <strong>Week 5, Day 1</strong><br>
+            System architecture lecture, diagramming tools intro
+        </div>
+        <div class="timeline-item">
+            <strong>Week 5, Day 2</strong><br>
+            System Design Studio (hands-on), create context diagram
+        </div>
+        <div class="timeline-item">
+            <strong>Week 6, Day 1</strong><br>
+            Sprint Planning workshop, define Sprint 1 goal
+        </div>
+        <div class="timeline-item">
+            <strong>Week 6, Day 2</strong><br>
+            Sprint 1 kickoff, begin execution
+        </div>
+    </div>
+</div>
+
+<!-- Role Focus -->
+<div class="role-box">
+    <h4>🎭 Role Focus: Product Owner (Design Phase)</h4>
+    <p><strong>What changes in the design phase?</strong></p>
+    <p>You're still the Product Owner, but now you're working with <em>how</em> the system will work, not just <em>what</em> it will do. You'll create visual representations of the system architecture, database structure, and user interfaces.</p>
+    <p><strong>Key Responsibilities This Module:</strong></p>
+    <ul>
+        <li>Translate user stories into system architecture diagrams</li>
+        <li>Design database schema to support required features</li>
+        <li>Create wireframes showing user flow through the system</li>
+        <li>Plan Sprint 1: Select stories, define sprint goal, estimate effort</li>
+        <li>Ensure designs align with stakeholder needs from Module 2</li>
+    </ul>
+    <p><strong>Why This Matters:</strong> Good design catches problems before coding begins. A well-designed system is easier to build, test, and maintain.</p>
+</div>
+
+<!-- Assignments -->
+<div class="content-section">
+    <h2>📝 Assignments (50 points total)</h2>
+
+    <div class="assignment-card">
+        <h3>Week 5: System Design & Prototyping</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">25 points</span>
+            <span class="due-date">Due: Friday, Week 6, 11:59 PM</span>
+            <span class="role-badge">Role: Product Owner</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Create a system context diagram showing system boundaries and external entities</li>
+            <li>Design a Level 0 Data Flow Diagram (DFD) showing major processes</li>
+            <li>Create an Entity-Relationship (ER) diagram for your database schema</li>
+            <li>Build low-fidelity wireframes for 3-5 key screens/interfaces</li>
+            <li>Write design rationale explaining key architectural decisions</li>
+        </ul>
+        <p><strong>Key Deliverables:</strong></p>
+        <ul>
+            <li>System context diagram (using draw.io, Lucidchart, or similar)</li>
+            <li>Level 0 DFD with labeled processes, data stores, and flows</li>
+            <li>ER diagram with entities, attributes, and relationships</li>
+            <li>Wireframe mockups (Figma, Balsamiq, or hand-drawn)</li>
+            <li>Design document (1000-1500 words) explaining architectural choices</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Assignment Details</a>
+        <a href="/courses/[COURSE_ID]/files/[FILE_ID]" class="button-secondary">Download Rubric</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Week 6: Sprint 1 Planning & Kickoff</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">25 points</span>
+            <span class="due-date">Due: Friday, Week 6, 11:59 PM</span>
+            <span class="role-badge">Role: Product Owner</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Select 3-5 user stories from prioritized backlog for Sprint 1</li>
+            <li>Define a clear Sprint Goal (one sentence describing what Sprint 1 will achieve)</li>
+            <li>Break stories into tasks and estimate effort (hours or story points)</li>
+            <li>Create Sprint Planning document with capacity calculation</li>
+            <li>Document initial sprint progress and any blockers encountered</li>
+        </ul>
+        <p><strong>Key Deliverables:</strong></p>
+        <ul>
+            <li>Sprint 1 Planning Document with sprint goal, selected stories, and tasks</li>
+            <li>Sprint backlog with task estimates</li>
+            <li>Team capacity calculation (realistic hours available for sprint work)</li>
+            <li>Initial sprint update (first few days of progress)</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Assignment Details</a>
+        <a href="/courses/[COURSE_ID]/files/[FILE_ID]" class="button-secondary">Download Rubric</a>
+    </div>
+</div>
+
+<!-- Knowledge Check -->
+<div class="content-section">
+    <h2>🎯 Knowledge Check</h2>
+    <p><strong>Module 03 Knowledge Check</strong></p>
+    <p>14 multiple choice questions testing your understanding of system design tools, UML diagrams, and sprint planning concepts.</p>
+    <ul>
+        <li>⏱️ Duration: 20-25 minutes</li>
+        <li>🔄 Attempts: Unlimited</li>
+        <li>📊 Points: 7 points (auto-graded, bonus points)</li>
+    </ul>
+    <p><strong>Topics Covered:</strong></p>
+    <ul>
+        <li>Context diagrams and data flow diagrams</li>
+        <li>Entity-relationship modeling</li>
+        <li>Wireframing and prototyping techniques</li>
+        <li>Sprint planning mechanics</li>
+        <li>Sprint goals and capacity planning</li>
+    </ul>
+    <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary">Take Knowledge Check</a>
+</div>
+
+<!-- Hands-On Activity -->
+<div class="content-section" style="background: #e1f5fe; border-left-color: #0288d1;">
+    <h2 style="color: #01579b;">🔬 Hands-On Activity: System Design Studio (150 minutes)</h2>
+    <p><strong>What you'll experience:</strong></p>
+    <p>This extended hands-on session walks you through the complete design process for a sample system (e.g., "Campus Food Delivery App"). You'll work through each design artifact step-by-step, learning tools and techniques as you go.</p>
+    <p><strong>What You'll Practice:</strong></p>
+    <ul>
+        <li>Using diagramming tools (draw.io, Lucidchart) to create professional diagrams</li>
+        <li>Identifying system boundaries and external actors</li>
+        <li>Modeling data flows between processes and data stores</li>
+        <li>Designing normalized database schemas</li>
+        <li>Creating wireframes that communicate user flow</li>
+    </ul>
+    <p><strong>Session Breakdown:</strong></p>
+    <ul>
+        <li><strong>30 min:</strong> Context diagram creation (live demo + practice)</li>
+        <li><strong>40 min:</strong> Data flow diagram development</li>
+        <li><strong>30 min:</strong> ER diagram design</li>
+        <li><strong>40 min:</strong> Wireframe sketching and critique</li>
+        <li><strong>10 min:</strong> Q&A and troubleshooting</li>
+    </ul>
+</div>
+
+<!-- Planning Sheets & Tools -->
+<div class="content-section">
+    <h2>📋 Planning Sheets & Tools</h2>
+    <p>This module introduces critical sprint planning tools:</p>
+    <ul>
+        <li><strong>Sprint Planning Template</strong> - NEW: Document for sprint goal, selected stories, task breakdown, and capacity planning</li>
+        <li><strong>User Story Template</strong> - Continued use from Modules 1-2</li>
+    </ul>
+    <p><strong>Recommended Tools:</strong></p>
+    <ul>
+        <li><strong>Diagramming:</strong> draw.io (free), Lucidchart (free for students), or Microsoft Visio</li>
+        <li><strong>Wireframing:</strong> Figma (free), Balsamiq, or paper sketches (photographed)</li>
+        <li><strong>Database Design:</strong> dbdiagram.io (free), MySQL Workbench, or draw.io</li>
+    </ul>
+</div>
+
+<!-- Checklist -->
+<div class="checklist">
+    <h3>✅ Module Completion Checklist</h3>
+    <p>Use this to track your progress through Module 3:</p>
+    <ul>
+        <li>Attend Week 5 lecture on system architecture and design diagrams</li>
+        <li>Set up diagramming and wireframing tools</li>
+        <li>Participate in System Design Studio (hands-on session)</li>
+        <li>Create system context diagram for your project</li>
+        <li>Design Level 0 Data Flow Diagram</li>
+        <li>Create Entity-Relationship diagram for database</li>
+        <li>Build wireframes for 3-5 key interfaces</li>
+        <li>Write design rationale document</li>
+        <li>Review prioritized backlog from Module 2</li>
+        <li>Select user stories for Sprint 1</li>
+        <li>Define Sprint 1 goal</li>
+        <li>Break stories into tasks and estimate effort</li>
+        <li>Calculate team capacity for Sprint 1</li>
+        <li>Submit both assignments by Friday, Week 6</li>
+        <li>Take Module 03 Knowledge Check</li>
+    </ul>
+</div>
+
+<!-- Tips -->
+<div class="tip-box">
+    <h4>💡 Andrew's Tips for Success</h4>
+    <ul>
+        <li><strong>Start simple with diagrams:</strong> Context diagrams should fit on one page. If your DFD has more than 7 processes, you're going too deep.</li>
+        <li><strong>Wireframes aren't art projects:</strong> Low-fidelity is fine. Boxes and labels communicate structure. Save pretty designs for later.</li>
+        <li><strong>Normalize your database:</strong> Most systems need at least 3NF (Third Normal Form). If you're storing the same data in multiple tables, rethink your design.</li>
+        <li><strong>Sprint goals aren't lists:</strong> "Complete login, dashboard, and reports" isn't a goal. "Enable users to securely access their personalized dashboard" is a goal.</li>
+        <li><strong>Don't overcommit in Sprint 1:</strong> You're learning the process. Pick fewer stories than you think you can finish. Better to under-promise and over-deliver.</li>
+        <li><strong>Use design feedback early:</strong> Share diagrams with classmates or stakeholders before polishing them. Catching design flaws now saves coding time later.</li>
+    </ul>
+</div>
+
+<!-- Andrew's Note -->
+<div class="content-section" style="background: #fff8e1; border-left-color: #fbc02d;">
+    <h2 style="color: #f57f17;">📣 Andrew's Note</h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        This is where your project starts to feel <strong>real</strong>. You're no longer just writing about what you'll build—you're designing how it will work. That's both exciting and intimidating. Don't let perfect be the enemy of good. Your first context diagram will probably be wrong in some way. That's fine. Design is iterative.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        <strong>Sprint 1 is about learning the process, not shipping a perfect product.</strong> You're going to make mistakes with estimation. You're going to discover stories that are bigger than you thought. You might not finish everything you planned. All of that is normal and expected. The goal is to practice the sprint cycle: plan, execute, review, adapt.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6; font-weight: bold;">
+        By the end of Module 3, you should have a clear picture of what you're building and a concrete plan for Sprint 1. That foundation will carry you through the rest of the semester.
+    </p>
+</div>
+
+<!-- Preparing for Next Module -->
+<div class="content-section">
+    <h2>🚀 Preparing for Next Module</h2>
+    <p><strong>Module 4 Preview: Sprint Planning & Execution</strong></p>
+    <p>In the next module, you'll shift to the <strong>Scrum Master</strong> role. You'll learn how to:</p>
+    <ul>
+        <li>Facilitate sprint ceremonies (planning, daily standups, review, retrospective)</li>
+        <li>Remove blockers and keep the team moving forward</li>
+        <li>Track sprint progress using burndown charts</li>
+        <li>Conduct effective sprint reviews and retrospectives</li>
+    </ul>
+    <p><strong>What to do now:</strong> As Sprint 1 executes, start thinking about what's working and what's not. You'll reflect on this in your Sprint 1 Retrospective (Module 4).</p>
+</div>
+
+<!-- Footer -->
+<div style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 10px; text-align: center;">
+    <h3 style="margin-top: 0;">Ready to Start?</h3>
+    <p style="font-size: 1.1em; margin: 15px 0;">Begin designing your system architecture!</p>
+    <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary" style="font-size: 1.2em; padding: 15px 30px;">Start Week 5 Assignment</a>
+    <p style="margin-top: 30px; font-style: italic; color: #666;">
+        "Good design is obvious. Great design is transparent." – Joe Sparano
+    </p>
+</div>
+
+</body>
+</html>

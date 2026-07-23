@@ -1,0 +1,584 @@
+<!--
+  PROVENANCE — 26FA source ingestion (task 0.8)
+  origin: /Users/norrisa/Documents/dev/github/csc_dash/courses/CSC-289/canvas-html/Module_01_Canvas_Page.html
+  verdict: ADAPT
+  target-26FA-slot: CSC-289 P4 wk1 Canvas
+  ingest-date: 2026-07-23
+  NOTE: body preserved verbatim below; defects (terminology/points/framing) are intentional evidence.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Red Clearance Recertification</title>
+    <style>
+        /* Canvas-compatible CSS */
+        .module-header {
+            background: linear-gradient(135deg, #1E88E5 0%, #1565C0 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .module-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .module-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.95em;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .content-section {
+            background: #f8f9fa;
+            border-left: 5px solid #1565C0;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        .content-section h2 {
+            color: #1565C0;
+            margin-top: 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #1565C0;
+            padding-bottom: 10px;
+        }
+
+        .learning-objectives {
+            background: #e3f2fd;
+            border-left: 5px solid #1565C0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .learning-objectives ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        .learning-objectives li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .assignment-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .assignment-card h3 {
+            color: #1565C0;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .assignment-meta {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .points-badge {
+            background: #4caf50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .due-date {
+            background: #ff9800;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .role-badge {
+            background: #1565C0;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .button-primary {
+            background: #1565C0;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-primary:hover {
+            background: #0D47A1;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-secondary {
+            background: #6c757d;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-secondary:hover {
+            background: #5a6268;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-print {
+            background: #607d8b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+
+        .button-print:hover {
+            background: #546e7a;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 15px;
+            background: white;
+            margin: 5px;
+            border-radius: 5px;
+            border-top: 3px solid #1565C0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .role-box {
+            background: #e3f2fd;
+            border: 2px solid #1565C0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .role-box h4 {
+            margin-top: 0;
+            color: #0D47A1;
+            font-size: 1.3em;
+        }
+
+        .tip-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .tip-box h4 {
+            margin-top: 0;
+            color: #2e7d32;
+            font-size: 1.3em;
+        }
+
+        .checklist {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            color: #e65100;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ffcc80;
+        }
+
+        .checklist li:before {
+            content: "\2610 ";
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ff9800;
+        }
+
+        @media print {
+            .button-primary, .button-secondary, .button-print {
+                display: none;
+            }
+            .module-header {
+                break-inside: avoid;
+            }
+            .assignment-card {
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+            }
+            .timeline-item {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        function printModule() {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+
+<div style="text-align: right; margin-bottom: 10px;">
+    <button onclick="printModule()" class="button-print">&#128424; Print/Copy for Canvas</button>
+</div>
+
+<div class="module-header">
+    <h1>&#128737; Module 1: Red Clearance Recertification</h1>
+    <p style="font-size: 1.2em; margin: 10px 0;">Verify mastery of Sacred Flow and autonomous PM readiness through hands-on certification</p>
+    <div class="module-meta">
+        <div class="meta-item">&#128197; Duration: Week 1 (Compressed)</div>
+        <div class="meta-item">&#127919; Pass/Fail Checkpoint</div>
+        <div class="meta-item">&#128202; Points: 160</div>
+        <div class="meta-item">&#9201; Estimated Time: 12-15 hours</div>
+    </div>
+</div>
+
+<!-- Learning Objectives -->
+<div class="learning-objectives">
+    <h2>&#127919; Module Learning Outcomes</h2>
+    <p><strong>By the end of this module, you will be able to:</strong></p>
+    <ul>
+        <li><strong>MLO 1.1:</strong> Define capstone project scope with measurable success criteria (Create) &#8594; CLO 1, 5</li>
+        <li><strong>MLO 1.2:</strong> Construct a prioritized product backlog with estimated user stories (Create) &#8594; CLO 1, 4</li>
+        <li><strong>MLO 1.3:</strong> Develop a realistic release roadmap accounting for GRD collaboration timeline (Evaluate) &#8594; CLO 1, 4, 5</li>
+    </ul>
+    <p><strong>CLOs Addressed:</strong> CLO 1 (Project Management), CLO 4 (Estimation & Planning), CLO 5 (Professional Communication)</p>
+</div>
+
+<!-- Week Timeline -->
+<div class="content-section">
+    <h2>&#128197; Week 1 Overview (Compressed Module)</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <strong>Day 1-2</strong><br>
+            PM Readiness Check, Agile Vocabulary Review, Sacred Flow Verification
+        </div>
+        <div class="timeline-item">
+            <strong>Day 3-4</strong><br>
+            Project Charter development, WBS construction, backlog creation
+        </div>
+        <div class="timeline-item">
+            <strong>Day 5-6</strong><br>
+            Product Backlog estimation, Release Roadmap, Vision Pitch
+        </div>
+        <div class="timeline-item">
+            <strong>Day 7</strong><br>
+            Red Clearance Certification Quiz, final submissions
+        </div>
+    </div>
+</div>
+
+<!-- Role Focus -->
+<div class="role-box">
+    <h4>&#128737; Red Clearance: What This Means</h4>
+    <p><strong>This is your capstone gateway.</strong></p>
+    <p>Red Clearance is a pass/fail checkpoint that proves you have the PM fundamentals to operate autonomously. In CTS-285, you learned Agile and Sacred Flow with guided support. In CSC-289, you are the project manager. This module verifies you're ready.</p>
+    <p><strong>What You Must Demonstrate:</strong></p>
+    <ul>
+        <li>Sacred Flow mastery: repo creation, branching, PRs, and merges without hand-holding</li>
+        <li>Agile vocabulary fluency: sprint, velocity, backlog, user story, acceptance criteria</li>
+        <li>Charter-level scoping: define what your capstone will deliver and how you'll measure success</li>
+        <li>Roadmap realism: plan around the GRD-242 collaboration timeline, not in a vacuum</li>
+    </ul>
+    <p><strong>Why This Matters:</strong> Students who skip PM foundations build the wrong thing. This checkpoint ensures your capstone starts on solid ground.</p>
+</div>
+
+<!-- Assignments -->
+<div class="content-section">
+    <h2>&#128221; Assignments &amp; Assessments (160 points total)</h2>
+
+    <div class="assignment-card">
+        <h3>Learn: Entry Ticket &amp; Knowledge Check</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">25 points</span>
+            <span class="due-date">Due: Day 2, Week 1</span>
+            <span class="role-badge">Learn Phase</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Entry Ticket: PM Readiness Check (10 pts quiz) &mdash; Verify your understanding of project management fundamentals from CTS-285</li>
+            <li>Knowledge Check: Agile Vocabulary (15 pts quiz) &mdash; Correctly identify and apply sprint, velocity, backlog, user story, and acceptance criteria terminology</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary">Take Entry Ticket</a>
+        <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-secondary">Take Knowledge Check</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Practice: Sacred Flow Verification Lab</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">20 points</span>
+            <span class="due-date">Due: Day 3, Week 1</span>
+            <span class="role-badge">Practice Phase</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Create a new GitHub repository for your capstone project</li>
+            <li>Set up branch protection rules and project board</li>
+            <li>Complete a full Sacred Flow cycle: branch, commit, PR, code review, merge</li>
+            <li>Capture screenshots documenting each step</li>
+        </ul>
+        <p><strong>Key Deliverable:</strong> Screenshot document showing completed Sacred Flow cycle with timestamps</p>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Lab Details</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Apply: M01-A1 Project Charter &amp; WBS</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">50 points</span>
+            <span class="due-date">Due: Day 5, Week 1</span>
+            <span class="role-badge">Apply Phase</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Define project scope with measurable success criteria</li>
+            <li>Identify stakeholders, constraints, and assumptions</li>
+            <li>Create a Work Breakdown Structure decomposing your capstone into deliverable components</li>
+            <li>Establish communication plan for GRD-242 collaboration</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Assignment Details</a>
+        <a href="/courses/[COURSE_ID]/files/[FILE_ID]" class="button-secondary">Download Rubric</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Apply: M01-A2 Product Backlog &amp; Roadmap</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">50 points</span>
+            <span class="due-date">Due: Day 6, Week 1</span>
+            <span class="role-badge">Apply Phase</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Write and estimate user stories for your capstone MVP</li>
+            <li>Prioritize stories using MoSCoW method with justification</li>
+            <li>Build a release roadmap spanning Modules 2-8</li>
+            <li>Account for GRD-242 design collaboration milestones in your timeline</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Assignment Details</a>
+        <a href="/courses/[COURSE_ID]/files/[FILE_ID]" class="button-secondary">Download Rubric</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Discussion: Project Vision Pitch</h3>
+        <div class="assignment-meta">
+            <span class="due-date">Ungraded, Required</span>
+            <span class="role-badge">Apply Phase</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Post a 2-3 paragraph pitch of your capstone project vision</li>
+            <li>Include: problem statement, target users, and why this project matters</li>
+            <li>Respond to at least 2 classmates with constructive feedback on scope and feasibility</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/discussion_topics/[TOPIC_ID]" class="button-primary">Go to Discussion</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Assess: Red Clearance Certification Quiz</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">15 points</span>
+            <span class="due-date">Due: End of Week 1</span>
+            <span class="role-badge">Assess Phase</span>
+        </div>
+        <p><strong>Details:</strong></p>
+        <ul>
+            <li>12 questions covering PM fundamentals, Sacred Flow, and Agile planning</li>
+            <li>2 attempts allowed</li>
+            <li>Must pass to proceed to Module 2 sprints</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary">Take Certification Quiz</a>
+    </div>
+</div>
+
+<!-- Knowledge Check -->
+<div class="content-section">
+    <h2>&#127919; Knowledge Check &amp; Entry Ticket</h2>
+    <p><strong>Entry Ticket: PM Readiness Check (10 pts)</strong></p>
+    <p>Quick diagnostic to confirm you retained core PM concepts from CTS-285. Covers sprint planning, backlog grooming, and stakeholder communication basics.</p>
+    <ul>
+        <li>&#9201; Duration: 10-15 minutes</li>
+        <li>&#128260; Attempts: 2</li>
+    </ul>
+    <p><strong>Knowledge Check: Agile Vocabulary (15 pts)</strong></p>
+    <p>Deeper assessment of your Agile fluency. You should be able to define and apply these terms without looking them up.</p>
+    <ul>
+        <li>&#9201; Duration: 15-20 minutes</li>
+        <li>&#128260; Attempts: 2</li>
+    </ul>
+    <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary">Take Entry Ticket</a>
+    <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-secondary">Take Knowledge Check</a>
+</div>
+
+<!-- Hands-On Activity -->
+<div class="content-section" style="background: #e1f5fe; border-left-color: #0288d1;">
+    <h2 style="color: #01579b;">&#128300; Hands-On Activity: Sacred Flow Verification Lab</h2>
+    <p><strong>What you'll do:</strong></p>
+    <p>This lab proves you can execute the Sacred Flow workflow independently. No step-by-step instructions this time &mdash; you've done this before in CTS-285. Now demonstrate it from memory.</p>
+    <p><strong>What You'll Practice:</strong></p>
+    <ul>
+        <li>Creating a GitHub repository with proper README, .gitignore, and license</li>
+        <li>Setting up branch protection rules on main</li>
+        <li>Creating a feature branch, making commits, and opening a pull request</li>
+        <li>Writing a meaningful PR description and performing self-review</li>
+        <li>Merging via pull request (not direct push to main)</li>
+    </ul>
+    <p><strong>Success Criteria:</strong></p>
+    <ul>
+        <li>Repository exists with branch protection enabled</li>
+        <li>At least one completed PR with description and merge</li>
+        <li>Screenshots document the full Sacred Flow cycle</li>
+        <li>No direct commits to main branch</li>
+    </ul>
+</div>
+
+<!-- Planning Sheets & Tools -->
+<div class="content-section">
+    <h2>&#128203; Planning Sheets &amp; Tools</h2>
+    <p>This module uses the following templates to structure your capstone planning:</p>
+    <ul>
+        <li><strong>Project Charter Template</strong> &mdash; Scope, stakeholders, constraints, success criteria</li>
+        <li><strong>Work Breakdown Structure Template</strong> &mdash; Hierarchical decomposition of project deliverables</li>
+        <li><strong>Product Backlog Template</strong> &mdash; User story format with estimation and priority columns</li>
+        <li><strong>Release Roadmap Template</strong> &mdash; Module-by-module delivery plan with GRD-242 milestones</li>
+    </ul>
+    <p>Download these templates from Canvas Files &#8594; CSC-289 Templates folder.</p>
+</div>
+
+<!-- Checklist -->
+<div class="checklist">
+    <h3>&#9989; Module Completion Checklist</h3>
+    <p>Use this to track your progress through Module 1:</p>
+    <ul>
+        <li>Complete Entry Ticket: PM Readiness Check (10 pts)</li>
+        <li>Complete Knowledge Check: Agile Vocabulary (15 pts)</li>
+        <li>Complete Sacred Flow Verification Lab with screenshots (20 pts)</li>
+        <li>Submit M01-A1: Project Charter &amp; WBS (50 pts)</li>
+        <li>Submit M01-A2: Product Backlog &amp; Roadmap (50 pts)</li>
+        <li>Post Project Vision Pitch to discussion board</li>
+        <li>Respond to at least 2 classmates' pitches</li>
+        <li>Pass Red Clearance Certification Quiz (15 pts)</li>
+        <li>Verify GitHub repo is set up with branch protection</li>
+    </ul>
+</div>
+
+<!-- Tips -->
+<div class="tip-box">
+    <h4>&#128161; Andrew's Tips for Success</h4>
+    <ul>
+        <li><strong>This is not CTS-285 again:</strong> Red Clearance is a verification, not a tutorial. If you're struggling with Sacred Flow basics, revisit your CTS-285 materials before proceeding &mdash; you'll need these skills every single week.</li>
+        <li><strong>Scope is everything:</strong> The #1 capstone killer is scope creep. Define what your MVP is &mdash; and more importantly, what it is NOT. Write it down. Defend it.</li>
+        <li><strong>Plan around GRD-242:</strong> Your roadmap must account for design assets arriving from the graphic design students. Build in buffer time. Assume designs will be late (they often are).</li>
+        <li><strong>Your backlog is a living document:</strong> The backlog you submit this week will evolve. That's expected. But starting with a solid, estimated backlog puts you weeks ahead of teams that "figure it out as they go."</li>
+        <li><strong>Treat this like a job interview:</strong> Your Project Charter is the kind of document you'd present to a client or executive sponsor. Write it at that level. This is capstone &mdash; professional quality is the minimum standard.</li>
+    </ul>
+</div>
+
+<!-- Andrew's Note -->
+<div class="content-section" style="background: #fff8e1; border-left-color: #fbc02d;">
+    <h2 style="color: #f57f17;">&#128227; Andrew's Note</h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        Welcome to CSC-289 &mdash; the capstone. <strong>This is where everything you've learned comes together.</strong> You're not learning new frameworks this semester; you're proving you can execute. Red Clearance exists because I've seen students jump into coding without a plan and waste three weeks building something nobody asked for.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        <strong>Week 1 is intentionally intense.</strong> I'm compressing an entire planning module into one week because you should already have these skills. If the Entry Ticket or Sacred Flow lab feels easy, good &mdash; that means CTS-285 did its job. If it feels hard, come to office hours immediately. We need to fix gaps now, not in Week 5.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6; font-weight: bold;">
+        Your capstone project is your portfolio piece. Employers will see this. Treat every deliverable like it's going on your resume &mdash; because it is.
+    </p>
+</div>
+
+<!-- Preparing for Next Module -->
+<div class="content-section">
+    <h2>&#128640; Preparing for Next Module</h2>
+    <p><strong>Module 2 Preview: Sprint 1 &mdash; Design Discovery</strong></p>
+    <p>Once you clear Red Clearance, you'll launch into your first autonomous sprint. In Module 2, you'll:</p>
+    <ul>
+        <li>Execute a complete sprint cycle using your product backlog</li>
+        <li>Establish baseline velocity through story point tracking</li>
+        <li>Identify design requirements you'll need from GRD-242 collaboration</li>
+        <li>Begin building your MVP's core features</li>
+    </ul>
+    <p><strong>What to do now:</strong> Make sure your backlog's top stories are truly sprint-ready. Each story should have clear acceptance criteria and a reasonable point estimate. Your Sprint 1 goal should be achievable in two weeks.</p>
+</div>
+
+<!-- Footer -->
+<div style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 10px; text-align: center;">
+    <h3 style="margin-top: 0;">Ready to Earn Red Clearance?</h3>
+    <p style="font-size: 1.1em; margin: 15px 0;">Begin with the PM Readiness Entry Ticket and prove you're capstone-ready!</p>
+    <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary" style="font-size: 1.2em; padding: 15px 30px;">Start Entry Ticket</a>
+    <p style="margin-top: 30px; font-style: italic; color: #666;">
+        "Plans are worthless, but planning is everything." &mdash; Dwight D. Eisenhower
+    </p>
+</div>
+
+</body>
+</html>

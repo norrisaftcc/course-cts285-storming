@@ -1,0 +1,516 @@
+<!--
+  PROVENANCE — 26FA source ingestion (task 0.8)
+  origin: /Users/norrisa/Documents/dev/github/csc_dash/courses/CTS-285/canvas-html/Module_01_Canvas_Page.html
+  verdict: HARVEST
+  target-26FA-slot: CTS-285 M1 Canvas rebuild (task 3.4)
+  ingest-date: 2026-07-23
+  HARVEST: Real 507-line styled page, not a stub. Declares 'Assignments (50 points total)' + KC '6 points bonus' — a sixth point source. Harvest the CSS/structure shell; regenerate all content from finished assignments.
+  NOTE: body preserved verbatim below; defects (terminology/points/framing) are intentional evidence.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: SDLC Foundations & Agile Mindset</title>
+    <style>
+        /* Canvas-compatible CSS */
+        .module-header {
+            background: linear-gradient(135deg, #2196F3 0%, #1565c0 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .module-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .module-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.95em;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .content-section {
+            background: #f8f9fa;
+            border-left: 5px solid #2196F3;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        .content-section h2 {
+            color: #2196F3;
+            margin-top: 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #2196F3;
+            padding-bottom: 10px;
+        }
+
+        .learning-objectives {
+            background: #e3f2fd;
+            border-left: 5px solid #2196F3;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .learning-objectives ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        .learning-objectives li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .assignment-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .assignment-card h3 {
+            color: #2196F3;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .assignment-meta {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .points-badge {
+            background: #4caf50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .due-date {
+            background: #ff9800;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .role-badge {
+            background: #9c27b0;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .button-primary {
+            background: #2196F3;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-primary:hover {
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-secondary {
+            background: #6c757d;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button-secondary:hover {
+            background: #5a6268;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-print {
+            background: #607d8b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+
+        .button-print:hover {
+            background: #546e7a;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 15px;
+            background: white;
+            margin: 5px;
+            border-radius: 5px;
+            border-top: 3px solid #2196F3;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .activity-box {
+            background: #f3e5f5;
+            border: 2px solid #9c27b0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .activity-box h4 {
+            margin-top: 0;
+            color: #7b1fa2;
+            font-size: 1.3em;
+        }
+
+        .tip-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .tip-box h4 {
+            margin-top: 0;
+            color: #2e7d32;
+            font-size: 1.3em;
+        }
+
+        .checklist {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            color: #e65100;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ffcc80;
+        }
+
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ff9800;
+        }
+
+        @media print {
+            .button-primary, .button-secondary, .button-print {
+                display: none;
+            }
+            .module-header {
+                break-inside: avoid;
+            }
+            .assignment-card {
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+            }
+            .timeline-item {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        function printModule() {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+
+<div style="text-align: right; margin-bottom: 10px;">
+    <button onclick="printModule()" class="button-print">🖨️ Print/Copy for Canvas</button>
+</div>
+
+<div class="module-header">
+    <h1>🚀 Module 1: SDLC Foundations & Agile Mindset</h1>
+    <p style="font-size: 1.2em; margin: 10px 0;">Understanding software development lifecycles and embracing agile principles</p>
+    <div class="module-meta">
+        <div class="meta-item">📅 Duration: Weeks 1-2</div>
+        <div class="meta-item">🎭 Role Focus: Observer/Learner</div>
+        <div class="meta-item">📊 Points: 50</div>
+        <div class="meta-item">⏱️ Estimated Time: 8-10 hours</div>
+    </div>
+</div>
+
+<!-- Learning Objectives -->
+<div class="learning-objectives">
+    <h2>🎯 Module Learning Outcomes</h2>
+    <p><strong>By the end of this module, you will be able to:</strong></p>
+    <ul>
+        <li><strong>MLO 1.1:</strong> Compare and contrast traditional SDLC models (Waterfall, Spiral, Iterative) with Agile methodologies</li>
+        <li><strong>MLO 1.2:</strong> Identify and explain the 12 Agile principles and their practical applications</li>
+        <li><strong>MLO 1.3:</strong> Select and justify an appropriate project for semester-long systems analysis work</li>
+    </ul>
+    <p><strong>CLOs Addressed:</strong> CLO1 (Understand SDLC), CLO3 (Apply Agile frameworks)</p>
+</div>
+
+<!-- Week Timeline -->
+<div class="content-section">
+    <h2>📅 Two-Week Overview</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <strong>Week 1, Day 1</strong><br>
+            Course intro, SDLC overview lecture
+        </div>
+        <div class="timeline-item">
+            <strong>Week 1, Day 2</strong><br>
+            SDLC Simulation Lab, start Assignment 1
+        </div>
+        <div class="timeline-item">
+            <strong>Week 2, Day 1</strong><br>
+            Agile Manifesto deep dive, project brainstorming
+        </div>
+        <div class="timeline-item">
+            <strong>Week 2, Day 2</strong><br>
+            Project selection finalized, submit assignments
+        </div>
+    </div>
+</div>
+
+<!-- Assignments -->
+<div class="content-section">
+    <h2>📝 Assignments (50 points total)</h2>
+
+    <div class="assignment-card">
+        <h3>Week 1: Course Setup & SDLC Exploration</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">25 points</span>
+            <span class="due-date">Due: Friday, Week 2, 11:59 PM</span>
+            <span class="role-badge">Role: Learner</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Complete course orientation checklist (Canvas, GitHub setup)</li>
+            <li>Research 3 SDLC models and create comparison chart</li>
+            <li>Analyze a case study: Which SDLC model would you choose and why?</li>
+            <li>Participate in SDLC simulation exercise (in-class or async)</li>
+        </ul>
+        <p><strong>Key Deliverables:</strong></p>
+        <ul>
+            <li>SDLC comparison document (PDF or Markdown)</li>
+            <li>Case study analysis (500-750 words)</li>
+            <li>Simulation reflection (Exit Ticket)</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Assignment Details</a>
+        <a href="/courses/[COURSE_ID]/files/[FILE_ID]" class="button-secondary">Download Rubric</a>
+    </div>
+
+    <div class="assignment-card">
+        <h3>Week 2: Agile Simulation & Project Selection</h3>
+        <div class="assignment-meta">
+            <span class="points-badge">25 points</span>
+            <span class="due-date">Due: Friday, Week 2, 11:59 PM</span>
+            <span class="role-badge">Role: Learner</span>
+        </div>
+        <p><strong>What you'll do:</strong></p>
+        <ul>
+            <li>Complete Agile simulation activity (Paper Plane Factory or similar)</li>
+            <li>Identify the 12 Agile principles demonstrated in simulation</li>
+            <li>Propose 3 potential semester project ideas</li>
+            <li>Select and justify final project for CTS-285</li>
+        </ul>
+        <p><strong>Key Deliverables:</strong></p>
+        <ul>
+            <li>Agile simulation reflection (300-500 words)</li>
+            <li>Project proposal document with scope, stakeholders, and feasibility</li>
+            <li>Completed User Story Template (introduction exercise)</li>
+        </ul>
+        <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary">View Assignment Details</a>
+        <a href="/courses/[COURSE_ID]/files/[FILE_ID]" class="button-secondary">Download Rubric</a>
+    </div>
+</div>
+
+<!-- Knowledge Check -->
+<div class="content-section">
+    <h2>🎯 Knowledge Check</h2>
+    <p><strong>Module 01 Knowledge Check</strong></p>
+    <p>12 multiple choice questions testing your understanding of SDLC models, Agile principles, and project selection criteria.</p>
+    <ul>
+        <li>⏱️ Duration: 15-20 minutes</li>
+        <li>🔄 Attempts: Unlimited</li>
+        <li>📊 Points: 6 points (auto-graded, bonus points)</li>
+    </ul>
+    <p><strong>Topics Covered:</strong></p>
+    <ul>
+        <li>Waterfall vs. Agile characteristics</li>
+        <li>When to use each SDLC model</li>
+        <li>Agile Manifesto values and principles</li>
+        <li>Project feasibility factors</li>
+    </ul>
+    <a href="/courses/[COURSE_ID]/quizzes/[QUIZ_ID]" class="button-primary">Take Knowledge Check</a>
+</div>
+
+<!-- Hands-On Activity -->
+<div class="activity-box">
+    <h4>🔬 Hands-On Activity: SDLC Simulation Lab (120 minutes)</h4>
+    <p><strong>What you'll experience:</strong></p>
+    <p>You'll participate in a live simulation where teams build a simple product (like paper airplanes or LEGO structures) using three different approaches: Waterfall (all planning up front), Iterative (with checkpoints), and Agile (with rapid sprints and feedback).</p>
+    <p><strong>What You'll Practice:</strong></p>
+    <ul>
+        <li>Comparing delivery speed and quality across SDLC models</li>
+        <li>Understanding how customer feedback impacts development</li>
+        <li>Experiencing the frustrations of late-stage changes in Waterfall</li>
+        <li>Seeing the value of iterative delivery and adaptation</li>
+    </ul>
+    <p><strong>Reflection Questions:</strong></p>
+    <ul>
+        <li>Which approach delivered the best product? Why?</li>
+        <li>When did you receive customer feedback in each model?</li>
+        <li>How did your team adapt to changing requirements?</li>
+    </ul>
+</div>
+
+<!-- Planning Sheets & Tools -->
+<div class="content-section">
+    <h2>📋 Planning Sheets & Tools</h2>
+    <p>This module introduces fundamental templates you'll use throughout the course:</p>
+    <ul>
+        <li><strong>User Story Template</strong> - Basic format for capturing requirements from user perspective (introduced this module, mastered in Module 2)</li>
+        <li><strong>Exit Ticket Template</strong> - Quick reflection tool for capturing learning and questions after activities</li>
+    </ul>
+    <p>Download these templates from Canvas Files → CTS-285 Templates folder.</p>
+</div>
+
+<!-- Checklist -->
+<div class="checklist">
+    <h3>✅ Module Completion Checklist</h3>
+    <p>Use this to track your progress through Module 1:</p>
+    <ul>
+        <li>Complete course orientation (Canvas navigation, syllabus quiz, GitHub setup)</li>
+        <li>Attend or watch Week 1 lecture on SDLC models</li>
+        <li>Participate in SDLC Simulation Lab (in-class or async option)</li>
+        <li>Research and create SDLC comparison chart</li>
+        <li>Complete case study analysis</li>
+        <li>Attend or watch Week 2 lecture on Agile principles</li>
+        <li>Participate in Agile simulation activity</li>
+        <li>Brainstorm and select semester project</li>
+        <li>Complete project proposal document</li>
+        <li>Submit both assignments by Friday, Week 2</li>
+        <li>Take Module 01 Knowledge Check</li>
+    </ul>
+</div>
+
+<!-- Tips -->
+<div class="tip-box">
+    <h4>💡 Andrew's Tips for Success</h4>
+    <ul>
+        <li><strong>Don't overthink project selection:</strong> Choose something you're genuinely interested in. You'll be working on this for 16 weeks, so pick a problem you want to solve.</li>
+        <li><strong>SDLC models aren't "right" or "wrong":</strong> Each has appropriate use cases. Focus on understanding trade-offs, not memorizing definitions.</li>
+        <li><strong>The Agile Manifesto is only 68 words:</strong> Read it multiple times. It's the foundation of everything we'll do with Scrum and user stories.</li>
+        <li><strong>Simulations feel silly, but they work:</strong> Lean into the paper airplane exercise. The lessons are real, even if the product isn't.</li>
+        <li><strong>Talk to real stakeholders:</strong> If you're proposing a project for an actual organization, interview someone who would use your system. Real insights beat guessing.</li>
+    </ul>
+</div>
+
+<!-- Andrew's Note -->
+<div class="content-section" style="background: #fff8e1; border-left-color: #fbc02d;">
+    <h2 style="color: #f57f17;">📣 Andrew's Note</h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        Welcome to CTS-285! This course is different from traditional programming classes. We're focusing on the <strong>how</strong> and <strong>why</strong> of software development, not just the coding. Over 16 weeks, you'll experience what it's like to work on a real development team, rotating through different roles each module.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6;">
+        <strong>Module 1 is intentionally broad.</strong> We're building a shared vocabulary before diving into specific roles. Don't stress about mastering user stories this week—you'll get plenty of practice as the semester progresses. Right now, focus on understanding <em>why</em> Agile exists and <em>when</em> different SDLC models make sense.
+    </p>
+    <p style="font-size: 1.1em; line-height: 1.6; font-weight: bold;">
+        Your project choice matters. Pick something real, with real stakeholders, if possible. The best learning happens when there's actual uncertainty and real consequences for your design decisions.
+    </p>
+</div>
+
+<!-- Preparing for Next Module -->
+<div class="content-section">
+    <h2>🚀 Preparing for Next Module</h2>
+    <p><strong>Module 2 Preview: Requirements Gathering & Stakeholder Management</strong></p>
+    <p>In the next module, you'll step into the <strong>Product Owner</strong> role. You'll learn how to:</p>
+    <ul>
+        <li>Conduct stakeholder interviews and identify conflicting needs</li>
+        <li>Write detailed user stories with acceptance criteria</li>
+        <li>Prioritize features in a product backlog</li>
+        <li>Create a risk register for your project</li>
+    </ul>
+    <p><strong>What to do now:</strong> If you've selected a project with real stakeholders, reach out and schedule interviews for Weeks 3-4. Having real conversations makes the requirements work much more meaningful.</p>
+</div>
+
+<!-- Footer -->
+<div style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 10px; text-align: center;">
+    <h3 style="margin-top: 0;">Ready to Start?</h3>
+    <p style="font-size: 1.1em; margin: 15px 0;">Begin with course setup and dive into SDLC exploration!</p>
+    <a href="/courses/[COURSE_ID]/assignments/[ASSIGNMENT_ID]" class="button-primary" style="font-size: 1.2em; padding: 15px 30px;">Start Week 1 Assignment</a>
+    <p style="margin-top: 30px; font-style: italic; color: #666;">
+        "The best way to predict the future is to invent it." – Alan Kay
+    </p>
+</div>
+
+</body>
+</html>
