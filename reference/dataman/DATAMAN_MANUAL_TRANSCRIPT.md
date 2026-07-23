@@ -5,9 +5,9 @@
   original © 1977 Texas Instruments Incorporated · LCB #3051 · Printed in El Salvador · 1019557-11
   transcription method: vision read of rasterized pages (poppler pdftoppm), not OCR
   fidelity: faithful — original wording preserved; [square brackets] mark illustrations/layout, not source text
-  SCOPE (this spike): PDF pp. 1–6 and 21–25 only (the must-have set for the wk-1 analyst read + the
-    user stories we expect to use). Deferred: pp. 7–18 (per-feature story pages), p. 26 (operational
-    Appendix — battery/troubleshooting/service, a likely add for NFR stories), pp. 27–28 (warranty + back cover).
+  SCOPE (this spike): PDF pp. 1–6 and 21–26 (the must-have set for the wk-1 analyst read + the user
+    stories we expect to use, including the operational Appendix for exception/NFR stories).
+    Deferred: pp. 7–18 (per-feature story pages), pp. 27–28 (warranty + back cover).
 -->
 
 # The Story of DataMan — Manual Transcript (spike)
@@ -305,4 +305,44 @@ Then DataMan rewards you with a *light show* that varies with the score.
 
 ---
 
-*[PDF p.26 (printed p.24): operational **Appendix** — Battery Information, Low-Battery Indication, "In Case of Difficulty", Service Facilities. **Deferred but flagged as a likely add** — sources non-functional / error-handling / service user stories. PDF pp. 27–28: One-Year Limited Warranty and back cover — intentionally out of scope.]*
+## PDF p.26 (printed p.24) — Appendix (battery, error states, service)
+
+### Appendix
+
+#### BATTERY INFORMATION
+
+A standard 9-volt *alkaline* battery is recommended for maximum DataMan operating time. If another type of 9-volt battery is used, remove it immediately after it is discharged or when storing DataMan to prevent possible damage from leakage. The battery compartment is easily opened by inserting a small coin in the slot on the back of the unit and gently prying open the cover of the compartment.
+
+> [Illustration: the back of the DataMan unit, with an arrow showing the coin-slot battery-cover release.]
+
+#### LOW BATTERY INDICATION
+
+DataMan will provide approximately 15 hours of actual use when using an alkaline battery. If you observe any of the following indications, the battery should be replaced:
+1. Dim display
+2. Erratic display
+3. Pressing the activity keys has no effect
+4. Unusual or inconsistent operation
+
+#### IN CASE OF DIFFICULTY
+
+1. Check to be sure that DataMan is on.
+2. If display fails to light, check for improperly inserted or discharged battery.
+3. Review operating instructions to be certain activities are performed correctly.
+
+If none of the above procedures corrects the difficulty, return the calculator PREPAID and INSURED to the applicable SERVICE FACILITY listed on the inside back cover.
+
+*Note:* The P.O. box number listed for the Lubbock Service Facility is for United States parcel post shipments only. If you desire to use another carrier, the street address is: Texas Instruments Incorporated, 2305 University Avenue, Lubbock, TX 79415.
+
+For your protection, the DataMan must be sent insured; Texas Instruments cannot assume any responsibility for loss of or damage to uninsured shipments. Please include information on the difficulty experienced with the unit, as well as return address information including name, address, city, state, and zip code. The shipment should be carefully packaged and adequately protected against shock and rough handling.
+
+#### CALCULATOR EXCHANGE CENTERS
+
+If your DataMan requires service, instead of returning the unit to a service facility for repair, you may elect to exchange it for a factory-rebuilt unit of the SAME MODEL at one of the exchange centers which have been established across the United States. A $3.00 charge will be made by the exchange center for in-warranty exchanges. Out-of-warranty exchanges will be charged at the rates in effect at the time of the exchange. Please call the Consumer Relations Department for further details and the location of the nearest exchange center.
+
+#### IF YOU NEED SERVICE INFORMATION
+
+If you need service information about DataMan, write the Consumer Relations Department at: Texas Instruments Incorporated, P.O. Box 53, Lubbock, TX 79408, or call Consumer Relations at 800-858-1802 (toll-free within all contiguous United States except Texas) or 800-692-1353 (toll-free within Texas). If outside contiguous United States call 806-747-3841. (We regret that we cannot accept collect calls at this number.)
+
+---
+
+*[PDF pp. 27–28: One-Year Limited Warranty and back cover — intentionally out of scope for this spike.]*
