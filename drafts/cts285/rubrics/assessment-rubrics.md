@@ -109,7 +109,7 @@ Total Points: **75-100 points** depending on sprint complexity
 - Communication (10 pts): System design document (10)
 - Retrospective: +5 bonus, applied within the 75-point cap
 
-> **Flag (task 1.0b — needs instructor):** Sprint 1 is design-artifact-heavy and does **not** fit the generic 40/40/20 split. The canonical 40/40/20 check lists Sprint 1 as 35T/25P/15C, but the authoritative `Week_05` line items distribute 55T/10P/10C. This canon-vs-assignment discrepancy is recorded in `points-normalization/CONFLICT_LEDGER.md` and left for instructor reconciliation; this arithmetic sweep did not invent a 35/25/15 partition.
+> **Note (task 1.0b — resolved by ADR-002):** Sprint 1 is design-artifact-heavy and does **not** fit the generic 40/40/20 split. Per `phase0/ADR-002-points-are-header-level.md`, sub-item weightings are **descriptive**, not binding arithmetic — the assignment total (75) is the only figure that must sum to 750, and the 40/40/20 split is a course-level philosophy, not a per-sprint equation. The line items above (55T/10P/10C, copied from the authoritative `Week_05`) stand as the descriptive truth; no reconciliation to 35/25/15 is required.
 
 **Sprint 2 (Implementation)** - 100 points total:
 - PM (35 pts): Sprint planning (10), Daily standups (15), Sprint review (10)

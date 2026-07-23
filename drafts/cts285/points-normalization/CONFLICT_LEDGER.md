@@ -69,11 +69,13 @@ Every header restated `X pts (Y% of 750)`; the retired basis string `of total co
 - `pm-materials/00-PM-Integration-Overview.md:52–53` — uncited 68% / 32% statistic. *(pm-materials not in this edit set; recorded from survey.)*
 - `Week_06` — "Real Example from Past Student" reference. *(Removed only if it fell inside the deleted retrospective Part 1; otherwise remains for the honesty task — verify.)*
 
-## Canon gaps → needs-instructor (NOT decided here, Rule 8)
+## Canon gaps → RESOLVED by ADR-002 (were needs-instructor)
 
-1. **Sprint 1 T/P/C split.** Canon's 40/40/20 check characterizes Sprint 1 as **35T/25P/15C**, but the authoritative `Week_05` distributes **55T/10P/10C**. These are incompatible; the sweep copied Week_05's real items and did **not** invent a 35/25/15 partition. Needs a ruling: does the 40/40/20 check line, or Week_05, govern?
-2. **Canvas HTML (~450-pt regime).** `canvas-html/*.html` carries an independent point regime (Modules 1–7 "50 points total" each, Module 8 100, KCs 6/7/8 bonus) omitted from the canonical regeneration list. Left unedited (task 3.4); either the canonical table gains a Canvas row or 3.4 inherits an unnormalized LMS.
-3. **Knowledge checks M1/M7/M8.** No canonical row (canon allots KCs only to M2–M6). M1 superseded by the Week-1 quiz; M7/M8 (team weeks) get none — the survey's reading, not a ruling.
+`phase0/ADR-002-points-are-header-level.md` (Accepted 2026-07-23) makes assignment totals the only binding arithmetic and declares all sub-item weightings **descriptive**. That closes all three gaps below without a per-item ruling:
+
+1. **Sprint 1 T/P/C split** — canon's 40/40/20 check says **35T/25P/15C**, authoritative `Week_05` distributes **55T/10P/10C**. Under ADR-002 both are descriptions of one 75-pt assignment; the sweep's copy of Week_05's real items stands, no reconciliation needed. *Resolved.*
+2. **Canvas HTML (~450-pt regime).** `canvas-html/*.html` numbers are a non-authoritative display surface under ADR-002; they regenerate from the 750 table (task 3.4) or are ignored. *Resolved — not a canon gap.*
+3. **Knowledge checks M1/M7/M8.** The KC **total** (50, M2–M6 ×10) binds; per-module KC display is descriptive. No missing rows. *Resolved.*
 
 ## Spine decisions encountered → flagged, NOT fixed (Rule 1)
 
