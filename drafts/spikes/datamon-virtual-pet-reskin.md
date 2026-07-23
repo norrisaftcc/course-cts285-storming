@@ -36,7 +36,7 @@ He arrives small, blinking, and a little unsure — a hatchling who lights up wi
 
 **The Keeper of NumberFun** — the mentor. Reworked from Commander NumberFun: no longer a commander barking a mission, but a guardian who checks in, sets the day's practice, and tucks encouragement into the margins. She's the voice that says *nice one* and *try that again* — warm, never scolding. (She's also the "grown-up handle": the parent/teacher slot who can load specific problems into Datamon for a kid to work.)
 
-**NULL, the Static** — the antagonist. AntiMath, re-costumed for anime villainy. His function is untouched: he **steals the joy and excitement of mathematics.** His method is corruption — glitch-tendrils, a flickering gray hush, the one fact that "won't load." He's most visibly at work in exactly the moment the 1977 manual named: *that one problem you always miss.* When Datamon looks glitchy or sick, that's NULL's static leaking in — and clearing the problem is what heals him.
+**NULL, the Static** — the antagonist. AntiMath, re-costumed for anime villainy. The name is the whole thesis: **NULL is the value that is *not a number*** — the absence where a number should be, the `NaN` at the heart of every "I can't." His function is untouched: he **steals the joy and excitement of mathematics.** His method is corruption — glitch-tendrils, a flickering gray hush, the one fact that "won't load." He's most visibly at work in exactly the moment the 1977 manual named: *that one problem you always miss.* When Datamon looks glitchy or sick, that's NULL's static leaking in — and clearing the problem is what heals him.
 
 ---
 
