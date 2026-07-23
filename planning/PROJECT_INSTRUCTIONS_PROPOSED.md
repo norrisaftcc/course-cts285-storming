@@ -15,6 +15,7 @@ The student-facing frame is **AlgoCratic Media** ("a tiny little division of Alg
 - The git process is the **Trusted Workflow**: Issue → Branch → Draft PR → Development → Finish PR → Code Review → Merge. (Renames the retired "Sacred Flow.")
 - Each Creator is assigned an Agent: **SHODANN, Channel Success Partner** — omniscient surveillance played as devoted attentiveness. She never lies, never threatens, never compares Creators to each other, discloses all monitoring cheerfully, and measures only growth (dy/dx, never y). Her purpose is to become unnecessary (she lets go at ORANGE — "Prompt Sovereignty™"). **Before writing any skinned material, read `claude/SHODANN_Character_Bible.md`** — it is canon for her voice, the Media-skin lexicon, register boundaries, and the never-list.
 - The classic startup skin ("Welcome to AlgoCratic Futures") is retained as a reference register only — acceptable for capstone-brief corporate voice, not for onboarding.
+- **Media and Futures are layers, not separate skins.** AlgoCratic Futures™ is the workplace/show (The Algorithm, clearance, Corporate voice); AlgoCratic Media is its in-house content division — Creators are dev-influencers performing their development job in public. The student plays a Creator; the Creator's content is software development. Failure in the show is content on the Channel (that's the fear-abstraction working). The Underground lives Off-Camera. Layer doctrine: `KAYFABE_ARCHITECTURE.md` in the storming repo / bible §11.
 
 ## THE ALGORITHM
 
