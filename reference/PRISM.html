@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRISM — FTCC CTI/CIT Skills Progression</title>
+<meta name="description" content="A program-wide skills progression for FTCC's CTI/CIT pathway: what you can build and own at each level, and what you bank into Module Zero along the way.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#000000; --slate:#53565a; --silver:#e2e1dd; --gold:#f0b82d;
+  --paper:#ffffff; --paper-2:#faf9f6;
+  --sans:"Source Sans 3",system-ui,sans-serif;
+  --serif:"Source Serif 4",Georgia,serif;
+  --ir:#A01028; --rd:#E03131; --or:#E8590C; --yl:#F2C037; --gr:#2F9E44;
+  --bl:#1971C2; --in:#3F3CA6; --vi:#6D28D9; --uv:#3B0F73;
+  --rail:linear-gradient(to top,var(--ir),var(--rd),var(--or),var(--yl),var(--gr),var(--bl),var(--in),var(--vi),var(--uv));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(18px,4vw,40px) 64px}
+
+header.masthead{border-bottom:1px solid var(--silver);padding-bottom:22px;margin-bottom:8px}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin:0 0 10px}
+.eyebrow b{color:var(--gold);font-weight:600}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(40px,8vw,68px);line-height:.98;letter-spacing:-.01em;margin:0}
+.thesis{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);font-weight:400;color:var(--slate);max-width:62ch;margin:16px 0 0;line-height:1.45}
+.herobar{height:8px;border-radius:4px;background:var(--rail);margin:22px 0 0}
+
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:30px 0 6px}
+.lg{border:1px solid var(--silver);border-radius:10px;padding:13px 15px;background:var(--paper-2)}
+.lg h3{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin:0 0 5px}
+.lg.makers h3{color:var(--or)} .lg.pivot h3{color:var(--gr)} .lg.orch h3{color:var(--in)}
+.lg p{margin:0;font-size:13.5px;color:var(--slate);line-height:1.45}
+.m0note{font-size:13.5px;color:var(--slate);margin:14px 2px 0}
+.m0note b{color:var(--ink);font-weight:600}
+
+.ladder-shell{display:flex;gap:14px;margin-top:26px}
+.axis{display:flex;align-items:center;justify-content:center;flex:0 0 22px}
+.axis span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);white-space:nowrap}
+.rail{flex:0 0 10px;border-radius:6px;background:var(--rail);align-self:stretch}
+.ladder{flex:1;display:flex;flex-direction:column;gap:8px;min-width:0}
+
+.rung{border:1px solid var(--silver);border-radius:12px;overflow:hidden;background:var(--paper);transition:box-shadow .16s ease}
+.rung.edge{border-style:dashed}
+.rung[open]{box-shadow:-3px 0 0 0 var(--gold)}
+.rung > summary{display:flex;align-items:stretch;cursor:pointer;list-style:none;outline:none}
+.rung > summary::-webkit-details-marker{display:none}
+.rung > summary::marker{content:""}
+.rung > summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.rung[open] > summary{background:var(--paper-2)}
+.rung:hover{box-shadow:-3px 0 0 0 var(--gold)}
+.band{flex:0 0 150px;padding:13px 15px;display:flex;flex-direction:column;justify-content:center;gap:3px}
+.band-name{font-size:15px;font-weight:600;letter-spacing:.05em}
+.band-role{font-size:12.5px;font-weight:400;opacity:.95;line-height:1.2}
+.detail{flex:1;padding:12px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.scope-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.scope{font-size:14.5px;font-weight:600;color:var(--ink)}
+.tag{font-size:11.5px;padding:2px 9px;border-radius:7px;white-space:nowrap;font-weight:500}
+.lens{background:#f1f0ec;color:var(--slate)}
+.course{background:rgba(66,152,181,.12);color:#1f6b85}
+.m0{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.m0-lab{font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);white-space:nowrap}
+.chip{font-size:12.5px;padding:3px 9px;border-radius:7px;background:#f1f0ec;color:#3f4145;font-weight:400}
+.chev{flex:0 0 34px;display:flex;align-items:center;justify-content:center;color:var(--slate);font-size:18px;transition:transform .15s ease}
+.rung[open] .chev{transform:rotate(90deg)}
+
+.rung-more{padding:2px 16px 15px;border-top:1px solid var(--silver);margin:0 16px;animation:fade .18s ease}
+.rung-more p{margin:11px 0 0;font-size:14px;line-height:1.5;color:#26282b}
+.rung-more b{font-weight:600;color:var(--ink)}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+.hinge{display:flex;align-items:center;gap:10px;margin:3px 0;padding:7px 14px;font-size:12px;font-weight:500;color:var(--slate);border-top:1px dashed var(--silver);border-bottom:1px dashed var(--silver)}
+.hinge::before{content:"";flex:0 0 10px;height:10px;border-radius:50%;background:var(--gr)}
+
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--silver);font-size:13px;color:var(--slate);line-height:1.55}
+footer b{color:var(--ink);font-weight:600}
+.hint{font-size:12.5px;color:var(--slate);margin:10px 2px 0;font-style:italic}
+
+@media (max-width:680px){
+  .legend{grid-template-columns:1fr}
+  .band{flex-basis:118px}
+  .axis{display:none}
+  .chev{flex-basis:26px}
+}
+@media print{
+  body{font-size:11pt}
+  .axis,.hint,.chev{display:none}
+  .rung,.lg{break-inside:avoid}
+  .rung-more{display:block !important;animation:none}
+  .herobar,.rail,.band{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow"><b>Fayetteville Technical Community College</b> &nbsp;&middot;&nbsp; CTI / CIT pathway</p>
+  <h1>PRISM</h1>
+  <p class="thesis">From First Commit to Field Leadership — a visible progression of what you can build, own, and lead at each stage of your journey, and what you bank into your Module Zero record along the way.</p>
+  <div class="herobar" aria-hidden="true"></div>
+</header>
+
+<section class="legend" aria-label="How to read the spectrum">
+  <div class="lg makers"><h3>Warm — makers</h3><p>What you can build. Governed by Bloom's: the cognitive complexity of the work rises with the color.</p></div>
+  <div class="lg pivot"><h3>Green — the pivot</h3><p>Job-ready. The apex of making and the hinge where building starts to scale into leading.</p></div>
+  <div class="lg orch"><h3>Cool — orchestrators</h3><p>What you can coordinate. Past "create," the lens shifts from cognition to scope of ownership.</p></div>
+</section>
+<p class="m0note"><b>Module Zero +</b> is the engine: each color names what a student banks into their living competency record. Because Module Zero recurs in every course, those gains accumulate across the whole certificate.</p>
+
+<div class="ladder-shell">
+  <div class="axis"><span>scope of what you can own &amp; ship &uarr;</span></div>
+  <div class="rail" aria-hidden="true"></div>
+  <div class="ladder">
+
+    <details class="rung edge">
+      <summary>
+        <span class="band" style="background:var(--uv);color:#fff"><span class="band-name">ULTRAVIOLET</span><span class="band-role">director / principal</span></span>
+        <span class="detail"><span class="scope-row"><span class="scope">Owns an org &middot; shapes the field</span><span class="tag lens">Scope &middot; field</span><span class="tag course">beyond the certificate</span></span>
+        <span class="m0"><span class="m0-lab">Where it leads</span><span class="chip">the horizon past graduation</span></span></span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="rung-more"><p><b>In the real world:</b> sets strategy at the organization or field level — the trajectory the whole program points toward, not a rung students reach inside the certificate.</p></div>
+    </details>
+
+    <details class="rung">
+      <summary>
+        <span class="band" style="background:var(--vi);color:#fff"><span class="band-name">VIOLET</span><span class="band-role">program / eng manager</span></span>
+        <span class="detail"><span class="scope-row"><span class="scope">Owns a portfolio of projects</span><span class="tag lens">Scope &middot; program</span><span class="tag course">lead roles</span></span>
+        <span class="m0"><span class="m0-lab">Module Zero +</span><span class="chip">a roadmap</span><span class="chip">cross-team delivery record</span></span></span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="rung-more"><p><b>In the real world:</b> owns several projects and the people delivering them, balancing competing priorities across teams.</p><p><b>You've leveled up when you can:</b> set direction for an organization, not just deliver within one.</p></div>
+    </details>
+
+    <details class="rung">
+      <summary>
+        <span class="band" style="background:var(--in);color:#fff"><span class="band-name">INDIGO</span><span class="band-role">project manager</span></span>
+        <span class="detail"><span class="scope-row"><span class="scope">Owns scope, timeline &amp; risk</span><span class="tag lens">Scope &middot; project</span><span class="tag course">capstone+ / co-reqs</span></span>
+        <span class="m0"><span class="m0-lab">Module Zero +</span><span class="chip">a project plan</span><span class="chip">risk log</span><span class="chip">stakeholder comms</span></span></span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="rung-more"><p><b>In the real world:</b> owns a project end to end — defines scope, holds the schedule, manages risk, and keeps stakeholders aligned.</p><p><b>You've leveled up when you can:</b> coordinate several projects toward one shared outcome.</p></div>
+    </details>
+
+    <details class="rung">
+      <summary>
+        <span class="band" style="background:var(--bl);color:#fff"><span class="band-name">BLUE</span><span class="band-role">team lead / Scrum master</span></span>
+        <span class="detail"><span class="scope-row"><span class="scope">Owns a team's process &amp; delivery</span><span class="tag lens">Scope &middot; process</span><span class="tag course">capstone team role</span></span>
+        <span class="m0"><span class="m0-lab">Module Zero +</span><span class="chip">facilitation notes</span><span class="chip">retro outcomes</span><span class="chip">working agreement</span></span></span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="rung-more"><p><b>In the real world:</b> runs the ceremonies, clears blockers, and owns how the team delivers rather than what one person builds.</p><p><b>You've leveled up when you can:</b> own a project's scope, timeline, and risk across people.</p></div>
+    </details>
+
+    <div class="hinge" aria-hidden="true">green is the ship-it pivot &middot; makers below &middot; orchestrators above &middot; same ladder, wider scope</div>
+
+    <details class="rung" open>
+      <summary>
+        <span class="band" style="background:var(--gr);color:#fff"><span class="band-name">GREEN</span><span class="band-role">shipping engineer</span></span>
+        <span class="detail"><span class="scope-row"><span class="scope">Owns a deployed product, end-to-end</span><span class="tag lens">Bloom &middot; create</span><span class="tag course">CSC-289 capstone</span></span>
+        <span class="m0"><span class="m0-lab">Module Zero +</span><span class="chip">deployed product</span><span class="chip">CI/CD + runbook</span><span class="chip">portfolio site</span></span></span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="rung-more"><p><b>In the real world:</b> ships and operates a production app on their own — this is the job-ready bar most employers hire at.</p><p><b>You've leveled up when you can:</b> run the team's process, not just your own code.</p></div>
+    </details>
+
+    <details class="rung">
+      <summary>
+        <span class="band" style="background:var(--yl);color:#3a2d00"><span class="band-name">YELLOW</span><span class="band-role">senior dev / tech lead</span></span>
+        <span class="detail"><span class="scope-row"><span class="scope">Owns a complex system; mentors</span><span class="tag lens">Bloom &middot; analyze&rarr;evaluate</span><span class="tag course">advanced (e.g. CSC-249)</span></span>
+        <span class="m0"><span class="m0-lab">Module Zero +</span><span class="chip">architecture docs</span><span class="chip">mentoring case study</span><span class="chip">debugging writeup</span></span></span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="rung-more"><p><b>In the real world:</b> owns the architecture of a non-trivial system, reviews others' work deeply, and sets technical direction.</p><p><b>You've leveled up when you can:</b> take a product all the way to a live, monitored deployment.</p></div>
+    </details>
+
+    <details class="rung">
+      <summary>
+        <span class="band" style="background:var(--or);color:#fff"><span class="band-name">ORANGE</span><span class="band-role">developer</span></span>
+        <span class="detail"><span class="scope-row"><span class="scope">Owns a feature set under ambiguity</span><span class="tag lens">Bloom &middot; apply&rarr;analyze</span><span class="tag course">CTS-285</span></span>
+        <span class="m0"><span class="m0-lab">Module Zero +</span><span class="chip">ADRs</span><span class="chip">schema</span><span class="chip">sprint artifacts</span></span></span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="rung-more"><p><b>In the real world:</b> takes a loosely-defined feature, makes the design calls, and reviews teammates' pull requests.</p><p><b>You've leveled up when you can:</b> hold an entire system in your head and guide others through it.</p></div>
+    </details>
+
+    <details class="rung">
+      <summary>
+        <span class="band" style="background:var(--rd);color:#fff"><span class="band-name">RED</span><span class="band-role">junior developer</span></span>
+        <span class="detail"><span class="scope-row"><span class="scope">Owns one feature, solo (the Solo Burger)</span><span class="tag lens">Bloom &middot; understand&rarr;apply</span><span class="tag course">intro programming</span></span>
+        <span class="m0"><span class="m0-lab">Module Zero +</span><span class="chip">first owned feature</span><span class="chip">a PR trail</span></span></span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="rung-more"><p><b>In the real world:</b> takes one well-defined ticket and carries it solo through the full workflow — issue, branch, PR, review, merge.</p><p><b>You've leveled up when you can:</b> handle a feature whose requirements aren't fully spelled out.</p></div>
+    </details>
+
+    <details class="rung edge">
+      <summary>
+        <span class="band" style="background:var(--ir);color:#fff"><span class="band-name">INFRARED</span><span class="band-role">new intern</span></span>
+        <span class="detail"><span class="scope-row"><span class="scope">Owns a guided micro-task</span><span class="tag lens">Bloom &middot; remember</span><span class="tag course">Module Zero / onboarding</span></span>
+        <span class="m0"><span class="m0-lab">Module Zero +</span><span class="chip">working setup</span><span class="chip">first commits</span><span class="chip">vocabulary</span></span></span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="rung-more"><p><b>In the real world:</b> completes scoped tasks with guidance, asks questions early, and gets the environment and vocabulary down.</p><p><b>You've leveled up when you can:</b> build something small without step-by-step instructions.</p></div>
+    </details>
+
+  </div>
+</div>
+<p class="hint">Tap any rung to open it. Infrared and ultraviolet are dashed — the invisible ends that bookend the visible program.</p>
+
+<footer>
+  <p><b>PRISM.</b> Course placements are generic placeholders and can be aligned to specific CTI/CIT courses. The framework reframes progression as visible growth: each color represents evidence of increasing capability, ownership, and impact accumulated through authentic work. What begins as guided participation develops into independent delivery, leadership, and ultimately influence across projects, programs, and organizations.</p><p style="margin-top:16px;"><strong>PRISM Framework</strong><br>Developed by Angela Westmoreland, M.Ed.<br>Instructional Support &amp; Quality Assurance Analyst<br>Fayetteville Technical Community College</p>
+</footer>
+
+</div>
+</body>
+</html>
