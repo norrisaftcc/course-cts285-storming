@@ -11,12 +11,14 @@
 
 **This is your first complete sprint.** You're transitioning from learning *about* Agile to *doing* Agile.
 
-Over the next two weeks, you'll take your project from "good idea" to "designed system ready to build." You'll create the blueprint—UML diagrams, database schemas, wireframes—that guides your implementation in future sprints.
+Over the next two weeks, you'll take the **Dataman modernization** from "backlog of user stories" to "designed system ready to build." You'll create the blueprint—UML diagrams, an entity-relationship diagram, wireframes—that guides your implementation in future sprints.
+
+*(If you're building on the DataMon reskin per ADR-004, the exercise is identical — same diagrams, same rigor, DataMon's own entities and screens instead of Dataman's. Everything below uses Dataman as the worked example.)*
 
 **Your role this sprint: Product Owner (Design Phase)**
 
 As Product Owner, you're responsible for:
-- Translating user needs into system design
+- Translating learner and curator needs into system design
 - Creating visual representations of your system
 - Prioritizing which features get built first (MVP)
 - Preparing the backlog for development sprints
@@ -29,9 +31,9 @@ This sprint weights **technical deliverables** (design artifacts: UML, ERD, wire
 
 By completing Sprint 1, you will:
 
-1. **Create** UML diagrams (use case, class, sequence) for your information system
-2. **Design** an entity-relationship diagram (ERD) for your database
-3. **Develop** wireframes for key user interfaces
+1. **Create** UML diagrams (use case, class, sequence) for the Dataman information system
+2. **Design** an entity-relationship diagram (ERD) for the Dataman database
+3. **Develop** wireframes for key Dataman screens
 4. **Plan** a sprint using story point estimation and capacity calculation
 5. **Execute** sprint ceremonies (planning, daily standups, review, retrospective)
 6. **Document** design decisions and trade-offs made during sprint
@@ -40,7 +42,7 @@ By completing Sprint 1, you will:
 
 ## Sprint Overview
 
-**Sprint Goal**: Create complete system design ready for development
+**Sprint Goal**: Create a complete system design for the Dataman modernization, ready for development
 
 **Sprint Duration**: 2 weeks (Weeks 5-6)
 
@@ -48,7 +50,7 @@ By completing Sprint 1, you will:
 - System design document
 - 3+ UML diagrams
 - Database ERD
-- 5+ wireframes for core features
+- 5+ wireframes for core Dataman screens
 - Sprint planning document
 - 10 daily standup entries
 - Sprint retrospective
@@ -70,16 +72,16 @@ Copy `/courses/CTS-285/planning-sheets/Sprint_Planning_Template.md` into your re
 #### 1. Sprint Goal
 One sentence describing what success looks like for this sprint.
 
-Example: *"Create complete system design documentation (diagrams, wireframes, ERD) for the MVP features of the Campus Event Finder."*
+Example: *"Create complete system design documentation (diagrams, wireframes, ERD) for the MVP features of the modernized Dataman."*
 
 #### 2. Selected User Stories
-Choose 8-12 user stories from your backlog (created in Week 4) that represent your **Minimum Viable Product** (MVP).
+Choose 8-12 user stories from your Dataman backlog (built in Week 4, seeded from the manual and stakeholder transcripts) that represent your **Minimum Viable Product** (MVP).
 
 For each story, estimate story points using this scale:
-- **1 point** = Very simple (1-2 hours) - e.g., "Design login form wireframe"
-- **2 points** = Simple (2-4 hours) - e.g., "Create use case diagram for user registration"
-- **3 points** = Moderate (4-8 hours) - e.g., "Design database ERD with 5 related tables"
-- **5 points** = Complex (8-16 hours) - e.g., "Create sequence diagram for booking workflow with error handling"
+- **1 point** = Very simple (1-2 hours) - e.g., "Wireframe the Answer Checker screen"
+- **2 points** = Simple (2-4 hours) - e.g., "Create use case diagram for checking an answer"
+- **3 points** = Moderate (4-8 hours) - e.g., "Design the Dataman ERD's core scoring tables"
+- **5 points** = Complex (8-16 hours) - e.g., "Create a sequence diagram for the two-tries answer-checking flow, including the EEE error path"
 - **8 points** = Very complex (16+ hours) - Probably need to break this down
 
 **Pro Tip**: For a 2-week sprint with ~20 hours available, aim for 18-22 story points total.
@@ -87,12 +89,12 @@ For each story, estimate story points using this scale:
 #### 3. Sprint Backlog
 List the specific **tasks** needed to complete your selected stories.
 
-Example for story "As an admin, I want to manage events so that users see current offerings":
-- [ ] Create use case diagram for event management (2 pts)
-- [ ] Design event database table in ERD (1 pt)
-- [ ] Wireframe: Event creation form (2 pts)
-- [ ] Wireframe: Event list view (1 pt)
-- [ ] Document admin role permissions (1 pt)
+Example for the story "As a curator, I want to load a memory bank set so that a learner can drill the facts they keep missing":
+- [ ] Create use case diagram covering memory bank set creation and assignment (2 pts)
+- [ ] Model the memory bank set's data fields in your ERD (1 pt)
+- [ ] Wireframe: Curator Console — create/load a set (2 pts)
+- [ ] Wireframe: learner's session results view (1 pt)
+- [ ] Document curator role permissions (1 pt)
 
 #### 4. Definition of Done
 What does "complete" mean for this sprint?
@@ -121,17 +123,15 @@ How much time do you realistically have for sprint work?
 Create **three different UML diagrams** using Draw.io (free, web-based) or another diagramming tool.
 
 ### 1. Use Case Diagram (8 points)
-**Shows**: Actors (users) and what they can do with your system
+**Shows**: Actors (users) and what they can do with Dataman
 
 **Must include**:
-- At least 3 actors (e.g., Guest User, Registered User, Admin)
+- At least 3 actors (e.g., Learner, Curator, and — if you're modeling the idle-timeout auto-stop as a system behavior — a System actor)
 - At least 8 use cases (actions users perform)
 - Relationships: includes, extends (if applicable)
 - System boundary box
 
-**Example**: Campus Event Finder might have:
-- Actors: Guest, Student, Event Organizer, Admin
-- Use cases: Browse Events, Register for Event, Create Event, Manage RSVP List, etc.
+**Illustration only, not a checklist to copy**: a couple of the use cases you'll need are things like *"Check an Answer"* and *"Load a Memory Bank Set."* The manual and your Week 4 backlog (Epics 1–8) describe seven distinct games and a dozen-plus curator/learner actions — mine those sources for the rest. You need at least 8; there are more than 8 available if you look.
 
 **Export** as PNG and save to `docs/diagrams/use-case-diagram.png`
 
@@ -145,18 +145,25 @@ Create **three different UML diagrams** using Draw.io (free, web-based) or anoth
 - Relationships: associations, multiplicity (1-to-many, many-to-many)
 - Inheritance (if applicable)
 
-**Example**: Campus Event Finder might have classes:
-- User (attributes: userId, email, name; methods: register(), login())
-- Event (attributes: eventId, title, date, location; methods: create(), update(), cancel())
-- RSVP (attributes: rsvpId, userId, eventId, status; methods: confirm(), cancel())
-- Organizer (inherits from User; additional methods: createEvent(), viewAnalytics())
+**Notation example — one class only, to show the format** (this is not your starting set; design your own domain classes from the manual and your backlog):
+
+```
+Problem
+  - operand1: int
+  - operand2: int
+  - operator: string
+  - correctAnswer: int
+  + checkAnswer(entered: int): boolean
+```
+
+Your job is to figure out the rest: what other classes does a working Dataman need, what do they hold, and how do they relate? Every class you propose should trace back to something the manual describes or a backlog story asks for.
 
 **Export** as PNG to `docs/diagrams/class-diagram.png`
 
 ### 3. Sequence Diagram (7 points)
 **Shows**: Step-by-step interaction between system components for ONE specific user scenario
 
-Choose one critical user flow (e.g., "User registers for an event").
+Choose one critical user flow — for example, "Learner checks an answer" (including a wrong first try, the EEE signal, the second try, and the reveal) or "Curator loads and a learner plays a memory bank set."
 
 **Must include**:
 - Actors and system objects involved
@@ -164,15 +171,12 @@ Choose one critical user flow (e.g., "User registers for an event").
 - At least 8 interaction steps
 - Return messages showing flow
 
-**Example**: "Register for Event" sequence:
-1. User clicks "Register" button
-2. System checks if user is logged in
-3. System queries database for event availability
-4. Database returns current RSVP count
-5. System validates space available
-6. System creates RSVP record
-7. System sends confirmation email
-8. System updates UI with "Registered!" message
+**Shape only, not the finished diagram** — expand this into your full 8+ step sequence:
+1. Learner enters a problem and an answer
+2. System checks the entered answer against the expected result
+3. If correct → system shows the success signal and records the attempt
+4. If incorrect → system shows EEE and offers a second try
+5. *(you continue from here: second-try handling, the reveal-on-second-miss, recording the final result, updating the running score, ending the session)*
 
 **Export** as PNG to `docs/diagrams/sequence-diagram.png`
 
@@ -186,31 +190,25 @@ Choose one critical user flow (e.g., "User registers for an event").
 
 ## Part 2: Database Design - ERD (15 points)
 
-Create an **Entity-Relationship Diagram** for your database.
+Create an **Entity-Relationship Diagram** for the Dataman database.
 
 ### Requirements
 
 **Must include**:
 - At least **5 entities** (database tables)
-- **Primary keys** for each entity (e.g., userId, eventId)
+- **Primary keys** for each entity (e.g., learnerId, sessionId)
 - **Foreign keys** showing relationships
 - **Attributes** (columns) for each entity with data types noted
 - **Relationships** with cardinality (1:1, 1:M, M:N)
 - **Junction tables** if you have many-to-many relationships
 
-### Example: Campus Event Finder ERD
+### Notation example — one entity only, to show the format
 
-**Entities**:
-1. **Users** (userId PK, email, passwordHash, firstName, lastName, role)
-2. **Events** (eventId PK, title, description, dateTime, location, organizerId FK)
-3. **Categories** (categoryId PK, categoryName)
-4. **RSVPs** (rsvpId PK, userId FK, eventId FK, rsvpDate, status)
-5. **EventCategories** (eventCategoryId PK, eventId FK, categoryId FK) ← junction table
+**Problem** (problem_id PK, operand_1, operand_2, operator, correct_answer)
 
-**Relationships**:
-- User (1) → (M) Events (one organizer creates many events)
-- User (M) ← RSVPs → (M) Events (many users can RSVP to many events - M:N)
-- Event (M) ← EventCategories → (M) Categories (events can have multiple categories - M:N)
+That's it — a single entity, so you can see how to lay out PK/FK notation. It is **not** your starting entity list, and copying it in isn't the assignment.
+
+**Your job**: work from `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md` and your Week 4 backlog (Epics 1–8) to figure out the full set of entities Dataman needs and how they relate — what has to be tracked about who's playing, who's curating, what they're playing, and what happened when they played it. There is no single "right" ERD, but there is a defensible one: every entity and relationship you propose should trace to something the manual describes or a backlog story requires. That traceability is exactly what the "Relevance" and "Correct relationships" criteria below are grading.
 
 ### Normalization Check
 
@@ -232,7 +230,7 @@ Your ERD must be in **3rd Normal Form** (3NF):
 
 ## Part 3: Wireframes (15 points)
 
-Create **at least 5 wireframes** for your system's key screens using Figma (free for students) or Balsamiq.
+Create **at least 5 wireframes** for Dataman's key screens using Figma (free for students) or Balsamiq.
 
 ### Requirements
 
@@ -242,17 +240,17 @@ Create **at least 5 wireframes** for your system's key screens using Figma (free
 - Content placeholders (don't need real text, use "Lorem ipsum" or [Placeholder])
 - User flow connections (arrows showing what happens when user clicks)
 
-**Required wireframes** (choose what applies to your project):
-1. **Landing/Home page** (what users see first)
-2. **Main feature page** (your app's core functionality)
-3. **Create/Add form** (adding new data - event, recipe, task, etc.)
-4. **Detail/View page** (seeing individual item details)
-5. **User account/profile page** OR **Admin dashboard**
+**Required wireframes** (adapt to what your design actually needs):
+1. **Home / mode-select screen** (what a learner sees first — choose Answer Checker, Memory Bank, or a game)
+2. **Answer Checker screen** (the core loop — enter a problem and an answer, see right/wrong feedback)
+3. **Curator Console: create/load a memory bank set** (adding new data — a curator building a set of up to 10 problems for a learner)
+4. **Session results / detail view** (seeing a completed session's score, or drilling into attempt-level detail)
+5. **Curator Console: learner progress view** OR **one game screen** (Electro Flash, Number Guesser, Missing-Number Box, etc. — pick one from your backlog)
 
 ### Fidelity Level: Low to Mid-Fidelity
 - ✅ Show structure and layout
 - ✅ Label all elements clearly
-- ✅ Indicate where data comes from (e.g., "[List of events from database]")
+- ✅ Indicate where data comes from (e.g., "[List of stored problems from Memory Bank Set]")
 - ❌ Don't spend time on colors, fonts, images (that's for GRD-242 students!)
 - ❌ Don't write actual content (placeholders are fine)
 
@@ -260,7 +258,7 @@ Create **at least 5 wireframes** for your system's key screens using Figma (free
 
 ### Export
 - Save each wireframe as PNG in `docs/wireframes/`
-- Naming: `wireframe-home.png`, `wireframe-event-details.png`, etc.
+- Naming: `wireframe-answer-checker.png`, `wireframe-curator-console.png`, etc.
 
 ### Wireframes Grading Criteria
 - **Completeness** (5+ screens, all required views): 30%
@@ -277,9 +275,9 @@ Create `docs/system-design.md` that explains your design decisions.
 ### Include These Sections
 
 #### 1. Project Overview (brief - reference Week 2)
-- Project name and target users
-- Problem being solved
-- MVP feature list (what Sprint 1 covers)
+- Project name (Dataman modernization, or your chosen basis per the note above) and target users (learners; curators — parents, teachers, or friends)
+- Problem being solved (bring the 1977 Answer Checker / Memory Bank practice loop to a modern web app, faithfully)
+- MVP feature list (which backlog epics Sprint 1's design covers)
 
 #### 2. System Architecture (300-500 words)
 Describe the big picture:
@@ -292,23 +290,23 @@ Explain why you chose this stack (even if it's "because the course uses it").
 
 #### 3. Design Rationale (400-600 words)
 For each design artifact, explain:
-- **UML diagrams**: Why did you model these use cases/classes/sequences? What alternatives did you consider?
-- **Database ERD**: Why this structure? What relationships are most important?
-- **Wireframes**: Why this layout/navigation? How does it serve users?
+- **UML diagrams**: Why did you model these particular use cases/classes/sequences for Dataman? What alternatives did you consider?
+- **Database ERD**: Why this structure? Which relationship was hardest to get right, and why?
+- **Wireframes**: Why this layout/navigation? How does it serve a learner differently from how it serves a curator?
 
 #### 4. Trade-Offs and Constraints
 What did you choose NOT to build for MVP? Why?
 
 Example:
-> *"I'm NOT including a payment system in MVP because it adds complexity (PCI compliance, security) without proving core value. If users love the event discovery feature, I'll add paid premium listings in a future sprint."*
+> *"I'm NOT including the multiplayer party games (Wipe Out, Force Out) in my MVP because pass-and-play turn coordination adds real complexity without proving the core drill loop works. If Answer Checker and Memory Bank land well, I'll add them in a later sprint."*
 
 #### 5. Technical Risks
 What could go wrong during implementation? (You'll track these in your Risk Register next module)
 
 Example risks:
-- Database relationships might cause slow queries with large datasets
-- User authentication needs to be secure - vulnerability risk if implemented wrong
-- Mobile responsiveness not designed yet - might need to rework wireframes
+- The memory bank set's 10-problem cap and the curator↔learner relationship might be tricky to enforce cleanly at the database level
+- The two-tries / EEE flow needs careful state handling — a bug here breaks the core learning loop, not a side feature
+- Timer/"ticks" precision for the timed games (Electro Flash, Wipe Out, Missing-Number Box) isn't designed yet — might need rework once I get to Sprint 2
 
 ### Design Document Grading Criteria
 - **Clarity**: Explanations make sense to someone unfamiliar with your project
@@ -343,29 +341,29 @@ For EACH entry, answer these 3 questions:
 ```markdown
 ## Standup - Monday, Week 5
 
-**What I did yesterday**: Completed sprint planning, estimated 20 story points across 9 user stories
+**What I did yesterday**: Completed sprint planning, estimated 20 story points across 9 Dataman user stories
 
-**What I'm doing today**: Start use case diagram, identify all actors and main use cases
+**What I'm doing today**: Start the use case diagram — identify Learner and Curator actions from the manual and backlog
 
 **Blockers**: None
 
 
 ## Standup - Tuesday, Week 5
 
-**What I did yesterday**: Created use case diagram with 4 actors and 10 use cases
+**What I did yesterday**: Created use case diagram with actors (Learner, Curator) and use cases pulled from backlog Epics 1-4
 
-**What I'm doing today**: Begin class diagram - list entities and attributes
+**What I'm doing today**: Begin class diagram - list domain classes and their attributes
 
-**Blockers**: Unsure if User and Organizer should be separate classes or one class with a role attribute. Will research best practices.
+**Blockers**: Not sure whether Curator (parent, teacher, friend) should be one class or several. Will research inheritance vs. a role attribute before deciding.
 
 
 ## Standup - Wednesday, Week 5
 
-**What I did yesterday**: Researched inheritance vs composition. Decided on User base class with Organizer subclass. Started class diagram.
+**What I did yesterday**: Researched inheritance vs. composition for the Curator question. Sketched both options.
 
-**What I'm doing today**: Finish class diagram, start ERD
+**What I'm doing today**: Decide on the Curator design, finish class diagram, start ERD
 
-**Blockers**: None - solved yesterday's blocker through research
+**Blockers**: None - resolved yesterday's blocker through research
 ```
 
 ### Standup Grading Criteria
@@ -454,18 +452,18 @@ Before submitting, verify your repository has:
 
 ### Issue: "I don't know which UML diagram type to use when"
 **Solution**:
-- **Use Case**: WHO uses the system and WHAT they do (high-level)
-- **Class**: WHAT data/objects exist and HOW they relate (structure)
-- **Sequence**: HOW a specific interaction unfolds step-by-step (flow)
+- **Use Case**: WHO uses Dataman and WHAT they do (high-level) — Learner checks an answer, Curator loads a set
+- **Class**: WHAT data/objects exist and HOW they relate (structure) — Problem, Session, Score, and whatever else your domain needs
+- **Sequence**: HOW one specific interaction unfolds step-by-step (flow) — checking an answer, replaying a memory bank set
 
 ### Issue: "My ERD has repeating data / isn't normalized"
-**Solution**: If you find yourself storing the same data in multiple places, you need another table. Example: If "category name" appears in Events table repeatedly, create a Categories table and link via foreign key.
+**Solution**: If you find yourself storing the same data in multiple places — say, copying a problem's operands and answer into every attempt record instead of referencing it — you need another table. Pull the repeated thing out into its own entity and link back to it with a foreign key.
 
 ### Issue: "I'm spending too much time making wireframes pretty"
 **Solution**: STOP. Use grayscale boxes and placeholder text. Prettiness is not graded. Functionality is. You're not a designer (yet) - you're a systems analyst.
 
 ### Issue: "I'm way behind on my sprint plan"
-**Solution**: This is normal for Sprint 1. Document it honestly in standups. Consider descoping (cutting low-priority user stories). This is what retrospectives are for - learning to estimate better.
+**Solution**: This is normal for Sprint 1. Document it honestly in standups. Consider descoping (cutting low-priority stories — your backlog's stretch epics exist for exactly this). This is what retrospectives are for - learning to estimate better.
 
 ### Issue: "My design changed mid-sprint when I realized something wouldn't work"
 **Solution**: GOOD! That's iterative design. Document the change in your design doc ("Initial plan was X, but changed to Y because Z"). Shows thinking, not failure.
