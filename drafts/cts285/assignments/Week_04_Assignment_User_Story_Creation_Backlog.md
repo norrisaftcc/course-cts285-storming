@@ -9,11 +9,13 @@
 
 ## What You're Learning
 
-This week you'll conduct stakeholder interviews (mock interviews in class with instructor playing stakeholder) and translate what you learn into **well-formed user stories with acceptance criteria**.
+This week you'll build on the three Dataman stakeholder transcripts you analyzed in Week 3 — **Renee** (a parent), **Ms. Alvarez** (a classroom teacher), and **Dale** (a retro collector) — and translate what they need into **well-formed user stories with acceptance criteria**.
 
-By Friday, you'll have a prioritized product backlog of 15+ user stories ready for Sprint 1 design work next week.
+By Friday, you'll have a prioritized product backlog of 15+ user stories ready for Sprint 1 design work next week, built on top of the seeded Dataman backlog you initialized in Week 2.
 
 **This is the most important PM skill in the course**: Turning messy stakeholder needs into clear, actionable user stories.
+
+*A note on basis: if your semester project is DataMon rather than Dataman, the process below is identical — swap in your own transcripts, backlog, and device details where it says "your project." Every worked example in this assignment uses Dataman, since that's the shared exemplar the whole class references.*
 
 ---
 
@@ -27,25 +29,26 @@ By Friday, you'll have a prioritized product backlog of 15+ user stories ready f
 
 ---
 
-## Part 1: Stakeholder Interviews (Complete in Class)
+## Part 1: Revisit the Dataman Stakeholder Transcripts (Complete in Class)
 
 ### The Activity (60 minutes in class)
 
-You'll conduct mock interviews with instructor (I'll play your stakeholders). Bring your Week 3 interview questions.
+You already read the three Dataman stakeholder transcripts in Week 3 — Renee (a parent, at-home supervisor), Ms. Alvarez (a classroom teacher, the "power curator"), and Dale (a retro collector, the fidelity advisor). This week, in class, you'll work through them again with a sharper question in mind: *what does each person actually need, as opposed to what they literally asked for?*
 
 **Format**:
-- 15 minutes per stakeholder (you'll interview 2-3)
-- Take notes (you'll use these to write user stories)
-- Ask follow-up questions
-- Record pain points, needs, constraints
+- Work through the transcripts stakeholder by stakeholder (Renee, then Ms. Alvarez, then Dale)
+- For each one, pull out: what they need, what constraints they mentioned, and what surprised you
+- Flag anything that sounds like a specific implementation instead of a need — "put a button here" is a solution; "help me do this without waiting" is the underlying need — you'll need this distinction for user story writing
+- Flag anywhere two stakeholders seem to want conflicting things
+- Ask follow-up questions in class if a transcript leaves something ambiguous
 
 ### Post-Interview Document: `interview-notes.md` (5 points)
 
-After interviews, document what you learned:
+After you've worked through the transcripts, document what you learned:
 
-**For each stakeholder interviewed**:
+**For each of the three stakeholders**:
 
-**Stakeholder**: [Role]
+**Stakeholder**: [Renee — Parent | Ms. Alvarez — Teacher | Dale — Retro Collector]
 
 **Key Insights**:
 - [Insight 1 about their needs]
@@ -62,7 +65,7 @@ After interviews, document what you learned:
 - [New requirement you hadn't considered]
 
 **Quotes**:
-> "[Memorable quote from stakeholder]"
+> "[Memorable quote from the transcript]"
 
 ---
 
@@ -70,11 +73,11 @@ After interviews, document what you learned:
 
 ### Refine Your Backlog
 
-Take your Week 2 user stories + Week 4 interview insights and create a comprehensive product backlog.
+Take your Week 2 Dataman backlog (seeded from `Dataman_Seeded_Backlog.md`) plus the insights from this week's `interview-notes.md` and create a comprehensive, refined product backlog.
 
 ### Requirements
 
-**Create/refine 15-20 user stories** that cover your MVP.
+**Create/refine 15-20 user stories** that cover your MVP. (For Dataman, that's roughly Epics 1–4 of the seeded backlog — Answer Checker, Scoring, Memory Bank, and Curator Console — plus whatever your own transcript analysis surfaced.)
 
 Each user story must include:
 1. **User story statement** (As a [role], I want [feature], so that [benefit])
@@ -128,43 +131,47 @@ Each user story must include:
 ### Example: Well-Formed User Story
 
 ```markdown
-## User Story: Student filters events by category
+## User Story: Learner checks an answer
 
-**As a** registered student
-**I want** to filter events by category (Academic, Social, Career, Sports, Arts)
-**So that** I can quickly find events relevant to my interests without scrolling through everything
+**As a** learner
+**I want** to enter my answer to a math problem and be told right away whether I'm correct
+**So that** I can practice and check myself without an adult standing over me
 
 ### Acceptance Criteria
 
-**Given** I'm on the events browse page with 20+ events visible
-**When** I select "Career" from the category filter dropdown
-**Then** Only events tagged as "Career" category are displayed
-**And** The page shows "Showing X Career events" message
-**And** I can clear the filter to see all events again
+**Given** I have entered a problem and an answer
+**When** my answer is correct
+**Then** the system shows a positive "correct" signal (a light-show reward)
+**And** I move on to the next problem
 
-**Given** No events exist in selected category
-**When** I filter by that category
-**Then** Page displays "No events found in this category" message
-**And** Suggests browsing all events or different category
+**Given** I have entered a problem and an answer
+**When** my answer is wrong on my first try
+**Then** the system shows the "EEE" error signal
+**And** I'm given a second try at the same problem
 
-**Given** I have a category filter active
-**When** I select an additional category
-**Then** Events matching ANY selected category are shown (OR logic, not AND)
+**Given** my second answer is also wrong
+**When** the error shows a second time
+**Then** the system reveals the correct answer
+**And** does not offer a third try
 
-**Given** I'm using mobile device
-**When** I apply category filter
-**Then** Filter persists when I navigate to event details and back
+**Given** the app has just opened
+**When** I start using it
+**Then** I land in Answer Checker mode by default — no menu to dig through first
+
+**Given** an answer is incorrect
+**When** it's entered
+**Then** the system never displays it as if it were correct, even briefly
 
 ### Priority
-Must Have (Core browsing functionality)
+Must Have (the core loop — without it, there's no product to modernize)
 
 ### Story Points
-3 (Moderate - involves database query, UI dropdown, filter logic, mobile testing)
+3 (Moderate - problem entry, two-try state, correct/incorrect signal, and the "never show wrong as right" guard all touch the same small piece of logic)
 
 ### Notes
-- Categories must match what event organizers can select when creating events
-- Consider adding category icons for visual scanning
-- Risk: If we add many filters (date, location, category), need to think about filter combination logic
+- This is Epic 1 in the seeded Dataman backlog — the "soul of the device," per Dale's transcript
+- Traces to the manual's power-on default (Answer Checker mode) and the two-tries/EEE behavior
+- Watch scope: this story is about the answer-checking loop only. Memory Bank (loading specific problem sets) and the games are separate stories — don't let this one balloon into "the whole app"
 ```
 
 ### Story Point Estimation Guide
@@ -172,19 +179,19 @@ Must Have (Core browsing functionality)
 Use Fibonacci scale (reflects uncertainty in larger tasks):
 
 - **1 point**: 1-2 hours, very simple
-  - Example: "Add footer with contact link"
+  - Example: "Add a low-battery icon to the header"
 
 - **2 points**: 2-4 hours, simple
-  - Example: "Student can view event details page"
+  - Example: "Learner can view their own most recent score (right / tried)"
 
 - **3 points**: 4-8 hours, moderate complexity
-  - Example: "Student can RSVP for event"
+  - Example: "Division problems show a remainder ('r') when they don't come out even"
 
 - **5 points**: 8-16 hours, complex
-  - Example: "Event organizer dashboard with analytics"
+  - Example: "Curator Console shows attempt-level detail per student — first-try vs. second-try, across a whole class"
 
 - **8 points**: 16+ hours, very complex (consider splitting)
-  - Example: "Complete user authentication system with email verification"
+  - Example: "Full curator account system: parent and teacher roles, linking curators to learners, and permissioned access to progress history"
 
 **If story feels bigger than 8 points, split it into smaller stories.**
 
@@ -240,8 +247,8 @@ List your Must Have stories and explain why each is critical:
 **Important**: Explicitly document features you considered but decided against.
 
 Example:
-> **Story**: Social sharing to Instagram
-> **Why Won't Have**: Adds technical complexity (Instagram API), low value for MVP (students can manually share), distracts from core discovery feature. Revisit in Version 2 if adoption is strong.
+> **Story**: A collectible companion that levels up as you get facts right (the seeded backlog's "legacy entertainment module" stretch epic)
+> **Why Won't Have**: Fun idea, but it's explicitly below the MVP line — an optional homage bolted onto a different, retired project, not part of modernizing the actual device. Building it means building an entire separate save/collection/progression system on top of the real practice loop. Revisit only if the faithful MVP ships early with time to spare.
 
 ---
 
@@ -280,9 +287,9 @@ Go through your backlog and verify:
 - Won't Have: [X stories]
 
 **Section 2: User Coverage**
-- [Role 1]: [X stories]
-- [Role 2]: [X stories]
-- [Role 3]: [X stories]
+- [Role 1]: [X stories] (e.g., Learner)
+- [Role 2]: [X stories] (e.g., Curator — parent)
+- [Role 3]: [X stories] (e.g., Curator — teacher)
 
 **Section 3: Risks & Dependencies**
 - [Story A] depends on [Story B] being done first
@@ -297,12 +304,12 @@ If information is missing, note what else needs to be documented.
 
 ## Deliverables Checklist
 
-- [ ] `interview-notes.md` (stakeholder interview insights)
+- [ ] `interview-notes.md` (stakeholder transcript insights)
 - [ ] GitHub Issues updated with 15-20 user stories OR `product-backlog.md`
 - [ ] Each story has acceptance criteria, priority, story points
 - [ ] `backlog-prioritization.md` (MoSCoW rationale)
 - [ ] `backlog-review.md` (validation & statistics)
-- [ ] GitHub Project board updated (stories in Backlog column)
+- [ ] GitHub Project board updated (stories in To Do column)
 - [ ] Repository link submitted in Canvas
 
 ---
@@ -337,22 +344,21 @@ If information is missing, note what else needs to be documented.
 **Issue**: "My acceptance criteria sound like a to-do list, not Given-When-Then"
 
 Bad:
-> - User can click button
-> - System saves data
-> - Page refreshes
+> - Learner presses GO
+> - System checks answer
+> - Screen updates
 
 Good:
-> **Given** user has filled out event form with valid data
-> **When** user clicks "Create Event" button
-> **Then** event is saved to database
-> **And** user is redirected to event details page
-> **And** success message displays: "Event created successfully"
+> **Given** I have entered a problem and typed my answer
+> **When** I press GO
+> **Then** the system checks my answer against the correct answer
+> **And** shows the "correct" light-show if I'm right, or "EEE" if I'm wrong
 
 **Solution**: Always include context (Given), action (When), and observable outcome (Then).
 
 **Issue**: "I have 30 story ideas, can't cut down to 15-20"
 
-**Solution**: That's good! It means your project has legs. Ruthlessly apply MoSCoW:
+**Solution**: That's normal — the full seeded Dataman backlog (core + stretch) runs to about 30 stories itself. It means your project has legs. Ruthlessly apply MoSCoW:
 - Move less critical stories to Should/Could Have
 - Remember: You can always add more stories later
 - Better to complete 15 well than start 30 poorly
@@ -360,17 +366,17 @@ Good:
 **Issue**: "My stories all feel huge (8+ points)"
 
 **Solution**: Split them. Big story template:
-- Original: "User can manage their profile"
-- Split 1: "User can view their profile"
-- Split 2: "User can edit their profile"
-- Split 3: "User can upload profile photo"
-- Split 4: "User can change password"
+- Original: "Curator can manage Memory Bank sets"
+- Split 1: "Curator can create a new Memory Bank set"
+- Split 2: "Curator can add or remove problems in a set (up to 10)"
+- Split 3: "Curator can assign a set to a learner"
+- Split 4: "Curator can see which sets are assigned to which learners"
 
 **Issue**: "I'm not sure what story points to assign"
 
 **Solution**: It's okay to guess! You'll refine estimates during Sprint Planning next week. For now:
-- Anything touching database: At least 3 points
-- Anything with authentication: At least 5 points
+- Anything touching the database: At least 3 points
+- Anything with curator accounts or permissions: At least 5 points
 - Simple display/view: 1-2 points
 
 ---
