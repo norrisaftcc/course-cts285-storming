@@ -15,18 +15,19 @@
 | Drew Norris / Andrew (inconsistent) | per instructor preference — **one form per document type** | "Andrew's Note" is the established OOC device in the refresh; don't rename the device. |
 | SHODAN (single N, VISUAL_ROADMAP "Year 2 cybersecurity integration") | **separate thread** | Do NOT merge with SHODANN. The extra N is never explained in-world. |
 
-## The Dataman / Datamon disambiguation (search-and-replace hazard)
+## Dataman vs. DataMon — two modernization bases (search-and-replace hazard)
+
+Per **ADR-004**, the modernization spine offers **two student project bases**, meaningfully distinguished — **Data*man*** (the "man": physical product) vs **Data*Mon*** (the "mon": monster/creature reskin). The `man` / `Mon` swap is the exact search-and-replace hazard this table exists to prevent.
 
 | Term | Meaning | Where it lives |
 |---|---|---|
-| **Dataman** (also "Dataman/Datamon modernization") | The 26FA CTS-285 solo spine project: modernizing the retro handheld math toy through a full SDLC, weeks 1–12. Module 1 reads the Dataman PDF manual "like an analyst." | New 26FA material |
-| **Datamon (legacy game)** | The old week-5 creature-collection console game from the retired spine. | Legacy outline/roadmap/manifest |
-| **Datamon (2026 reskin exemplar)** | A virtual-pet anime *reskin* of the 1977 device — a **teaching exemplar** of "what a modernization/reskin looks like," kept distinct from the Dataman spine students build themselves. Villain = NULL ("the value that is *not a number*"). **Status: exploratory spike, NOT adopted product canon.** | `drafts/spikes/datamon-virtual-pet-reskin.md` |
-| Canonical interleave | Legacy Datamon *game* features (save/load, battles, encounters) are recast as **stretch-goal epics** in the week-2 seeded Dataman backlog — deliberate in-world homage, not a merge. | Wk 2 materials |
+| **Dataman** | The 1977 *physical* calculator (historical product) **and** the student modernization project based on it ("**Dataman 2.0**"). **The instructor exemplars (1.0a artifacts, worked examples) use Dataman** — teaching the refresh of a physical system into a web app. | Spine + exemplars |
+| **DataMon** | A virtual-*pet* reskin of the same idea (Digimon-adjacent; villain = NULL, "the value that is *not a number*") **and** the student project based on it ("**DataMon 2.0**"). An adopted alternative basis. | Alt basis; seed in `drafts/spikes/datamon-virtual-pet-reskin.md` |
+| Legacy "Datamon" game | The retired week-5 creature-collection console game — now **subsumed** as DataMon's historical origin (its save/load, battles, encounters seed the wk-2 stretch epics), **not** a separate live term. | Legacy outline/roadmap (historical) |
 
-There are now **three** senses: **Dataman** (the spine project students build) vs. two senses of **Datamon** (the legacy game, and the 2026 reskin exemplar). A naive re-pointing agent WILL conflate these. Every executor prompt touching either term must carry this table.
+**Rules:** the two live terms are **Dataman** and **DataMon** (not the old lowercase "Datamon"). Students choose one basis; the *exercise* is identical (modernize a legacy system → web app), only the flavor differs. **Exemplars and worked examples are Dataman.** The Week-1 analyst-read + doc-analysis quiz always read the faithful **1977 DataMan manual** regardless of a student's later basis. A naive re-pointing agent WILL conflate `man`/`Mon` — every executor prompt touching either term must carry this table.
 
-> **Adoption of the reskin is undecided (`needs-instructor`).** Whether to adopt the Datamon virtual-pet reskin (as the wk-2 stretch-epic framing, as a standalone exemplar, or shelve it) is an instructor call. If adoption would change graded content — quiz keys depend on the Dataman ≠ Datamon distinction — record it as an **ADR** first; until then the reskin stays an exploratory spike and the spine is Dataman only.
+> **Graded-content note (ADR-004):** the Dataman ≠ DataMon distinction stands, so quiz keys encoding it remain valid. Any item that assumed a *single* basis must accept either "Dataman 2.0" or "DataMon 2.0" as the student's project — flag for the quiz/KC tasks (1.2, 1.8).
 
 ## Workflow canon (graded answers depend on this)
 
