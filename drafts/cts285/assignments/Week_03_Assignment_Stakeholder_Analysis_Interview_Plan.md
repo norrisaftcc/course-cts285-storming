@@ -9,9 +9,9 @@
 
 ## What You're Learning
 
-**You're now the Product Owner.** For the next 4 weeks, you're responsible for understanding user needs and translating them into requirements.
+**You're now the Product Owner.** For the next 4 weeks, you're responsible for understanding user needs and translating them into requirements — for the **Dataman modernization**, the common project this course builds around. (If your chosen basis is DataMon instead of Dataman, apply everything below to your own stakeholders — the technique is identical, only the flavor changes. Every worked example in this assignment uses Dataman.)
 
-This week focuses on **stakeholder analysis** - identifying WHO cares about your system and WHAT they need. You'll prepare for stakeholder interviews (which happen Week 4) and refine your understanding of user roles.
+This week focuses on **stakeholder analysis** - identifying WHO cares about your system and WHAT they need. You're not starting from a blank page: you already have three stakeholder interviews to work from — a parent, a classroom teacher, and a vintage-device collector. You'll mine those transcripts for entities, needs, and conflicts, prepare deeper interview questions for Week 4 (when the instructor plays these stakeholders live), and refine your understanding of user roles into personas.
 
 **Key skill for CSC-289**: In capstone, you'll work with GRD-242 (graphic design) students. They're stakeholders with different priorities than yours. This week teaches you how to map their needs, influence levels, and communication preferences.
 
@@ -42,14 +42,14 @@ List ALL people/groups who care about your system's success or failure.
 - **Technical Team**: People who build/maintain system (you, future developers)
 - **External Dependencies**: Third parties your system integrates with
 
-**Example for Campus Event Finder**:
-- Primary: FTCC students (event attendees), club officers (event organizers)
-- Secondary: Faculty advisors (want students engaged), campus activities director
-- Decision Makers: IT department (approves deployment), student government (potential funding)
+**Example for the Dataman modernization**:
+- Primary: Learners (the children using the practice tool — someone like Tomas), Curators who load problems and check results (a parent at home, a teacher at school)
+- Secondary: Retro-collector / enthusiast community (cares about fidelity to the original device but isn't the person learning math from it)
+- Decision Makers: A parent like Renee (decides whether it's trustworthy enough to hand a 7-year-old), a teacher like Ms. Alvarez (decides whether it gets piloted at a classroom station), school/district administration (approves classroom-scale adoption, data-privacy sign-off)
 - Technical: You (developer), future maintainers
-- External: Campus calendar system (if integrating)
+- External: Hosting/app-store platform, student-data-privacy requirements (COPPA/FERPA-adjacent), possibly a "classic mode" audience if you take fidelity seriously
 
-**List 8-12 stakeholders** for your project.
+**List 8-12 stakeholders** for your project. Your three interview subjects — Renee, Ms. Alvarez, and Dale — are almost certainly on this list, but they shouldn't be the *whole* list: who else has power or interest that nobody interviewed yet?
 
 #### Section 2: Power-Interest Grid
 
@@ -76,7 +76,9 @@ Low Power, Low Interest: MONITOR
 - Who are your champions? (High interest - will advocate for you)
 
 **Example**:
-> Campus Activities Director is High Power/High Interest. I need to interview her first because she controls event calendar access (power) and wants students more engaged (interest). If she says no to my system, project is dead. Strategy: Frame my system as reducing her workload (consolidates scattered event postings).
+> Ms. Alvarez is High Power/High Interest. She controls whether the tool ever actually gets piloted (power — no classroom, no adoption) and she showed up to the interview with detailed, strongly-held opinions about how it should behave (interest). If she says no, the classroom use case is dead before it starts. Strategy: interview her early, and treat the constraints she was firm about (no public ranking, drill available without the timer) as requirements to design around, not preferences to negotiate away.
+
+Do the same reasoning for the rest of your 8-12 stakeholders — including Renee and Dale, and including the ones nobody interviewed.
 
 #### Section 3: Stakeholder Profiles
 
@@ -90,13 +92,15 @@ Choose your **3 most important stakeholders** and create detailed profiles:
 - **Communication Preference**: How do they want updates? (Email, meetings, dashboards?)
 - **Success Criteria**: How will they judge if your system works?
 
+Your three most important stakeholders will very likely draw from Renee, Ms. Alvarez, and Dale — the three people you have full transcripts for. You can add or substitute another stakeholder (the learner, a school administrator, whoever you argued belongs on your power-interest grid) if you can justify why they outrank one of the three. Whichever three you pick, every claim in the profile has to trace back to the transcripts, the manual, or a defensible inference — don't invent a goal or pain point nobody stated.
+
 ---
 
 ## Part 2: Interview Planning (10 points)
 
 ### Create `interview-plan.md` in your repository
 
-You'll conduct mock stakeholder interviews in Week 4 (instructor plays stakeholder). This week, prepare your questions.
+You'll conduct mock stakeholder interviews in Week 4 (instructor plays the stakeholder role). This isn't a blank-slate interview — you already have a first-pass transcript for each of your three main stakeholders. Week 4 is your chance to go deeper: chase down what was left vague, ask about what wasn't covered at all, and get a live answer on the places where two stakeholders clearly want different things. This week, you figure out what's actually still missing or unresolved and turn it into a question worth asking out loud.
 
 #### Section 1: Interview Objectives
 
@@ -108,20 +112,22 @@ For EACH of your 3 main stakeholders, define:
 - What constraints might they reveal?
 
 **Example**:
-> **Stakeholder**: Event Organizer (club officer)
+> **Stakeholder**: Ms. Alvarez (classroom teacher)
 >
 > **Need to learn**:
-> - How do they currently promote events? (Requirement: What channels to integrate?)
-> - What information do they need from attendees? (Requirement: RSVP form fields)
-> - How far in advance do they post events? (Constraint: System needs scheduling feature)
+> - She referred to "our district fluency standards" without naming them — which standards, specifically? (Requirement: what a curated set must actually target)
+> - She wants to load per-kid problem sets fast, before a 7:40 AM station rotation — how fast is fast enough? (Constraint: setup-time budget for the curator flow)
+> - She wants first-try-vs-second-try detail, not just a score — does she need that live during class, or is an end-of-day summary enough? (Requirement: real-time vs. batch reporting)
 >
 > **Assumptions to validate**:
-> - Assume they want RSVP lists exportable → Confirm this
-> - Assume they check attendance day-of → Might want check-in feature
+> - Assume "aligned to our standards" means grade-level fluency benchmarks in general, not one specific named framework — confirm, or get the document.
+> - Assume she wants the timed games turned *off* by default for some students, not removed from the product entirely — confirm.
 >
 > **Potential constraints**:
-> - Might need campus approval for each event (adds workflow step)
-> - Might have accessibility requirements (affects design)
+> - District data-privacy policy may limit what a teacher can see about students who aren't hers.
+> - "An app on the class iPads" may be what she's used to, not a hard platform requirement — worth probing before you treat it as one.
+
+Write a version of this for Renee and Dale too — what did each of them leave vague, assume, or not get asked about?
 
 #### Section 2: Interview Questions
 
@@ -146,12 +152,12 @@ Prepare **15-20 questions TOTAL** across your 3 stakeholders. Mix question types
 - "If you could only have 3 features, what would they be?"
 - "What would make you choose this system over [current solution]?"
 
-**Example questions for Event Organizer**:
-1. Walk me through how you currently promote an event from idea to day-of.
-2. How many events does your club host per semester?
-3. What information do you wish you had about who's attending?
-4. What's the most frustrating part of managing RSVPs currently?
-5. If the system could send automated reminders, when should they go out?
+**Example questions for Renee (parent/curator)**:
+1. Walk me through what you want Tomas to see and feel the moment he gets a problem wrong twice in a row.
+2. You said you want it to be "safe and good" — if you had to name three concrete things that would earn your trust, what would they be?
+3. How many facts do you think you'd actually load into the memory bank in a typical week?
+4. You mentioned checking in later instead of watching live — how often is "later"? Daily? Weekly? After every session?
+5. If the system could send you exactly one kind of update about Tomas, what would be most useful?
 6. [Continue for 6-8 questions total for this stakeholder]
 
 **Tips**:
@@ -207,35 +213,35 @@ Take your Week 2 user roles and expand them into **personas** - detailed descrip
 ### Example Persona
 
 ```markdown
-## Persona: Jamal - Busy Club President
+## Persona: Tomas - Elementary Learner
 
-**Photo**: 20-year-old Black male in FTCC Student Government shirt, holding laptop, looks stressed
+**Photo**: 7-year-old boy at the kitchen table after school, backpack still on, a math worksheet pushed off to the side
 
 **Demographics**:
-- Age: 19-21
-- Occupation: Full-time student, part-time job, president of Cyber Security Club
-- Technical Proficiency: 4/5 (comfortable with tech but not a power user)
+- Age: 7 (2nd grade)
+- Occupation/Status: Elementary student; practices math facts at home with a parent supervising
+- Technical Proficiency: 2/5 (comfortable tapping through a simple app; can't manage accounts or settings himself)
 
 **Goals**:
-- Get more members to club events (currently only 30% show-up rate despite RSVPs)
-- Reduce time spent on event logistics (currently 5+ hours per event)
-- Show club activity to Student Government for continued funding
+- Get through practice without feeling dumb about the same handful of facts that always trip him up
+- Finish a session feeling like he won something
+- Not be stuck at the table any longer than he has to be
 
 **Frustrations with Current Solution**:
-- Posts events in 5 different places (Discord, Instagram, email, campus bulletin, class announcements) - tedious
-- No centralized RSVP list - people say "yeah I'll come" verbally but forget
-- No way to remind attendees day before - has to manually text people
+- Flash cards drill him on the same 4-5 facts over and over with no structure — he gets frustrated and shuts down
+- Paper drills don't show him any sense of getting better, so there's no payoff
+- Nothing naturally ends a session — it just goes until a parent calls it
 
 **Typical Usage Scenario**:
-Jamal's planning a guest speaker event on ethical hacking. He opens the event system, creates event with title, date, speaker bio, and sets RSVP capacity to 30 (room limit). System posts to campus calendar automatically and generates shareable link. He posts link once in Discord and Instagram. As students RSVP, he watches list grow. System sends automatic reminder 24 hours before. Day of event, he has 28 RSVPs and 25 actually show - way better than his usual 10 attendees from 30 verbal "yes I'll be theres." He exports attendance for Student Government report in 2 clicks.
+After school, Tomas's mom has loaded five facts he's been missing — 6×6, 7+6, and three others — into his memory bank for the week. He sits down and it's already on Answer Checker, the default mode, so he just starts working through his set. He punches in an answer; if he's wrong he gets one more try before it shows him the correct one and moves on — no flashing red "you failed" moment, just the next problem. After ten problems it tallies how many he got right out of how many he tried, and runs a light-show reward that scales with how well he did. He doesn't linger — a few minutes in, he wanders off toward the kitchen, and the session just ends itself instead of sitting there waiting on him. That evening his mom checks in and sees he got 8 of 10, with the same two facts still catching him, so she'll swap those into next week's set. Tomas never saw a wrong answer marked as right, never got a lecture about it, and doesn't experience any of this as a big production — to him it's just "the thing that stops on its own."
 
 **Quote**:
-> "I spend more time managing logistics than actually planning good events. I just want people to show up when they say they will."
+> "I don't want to see the X. Just tell me the right one and let's go."
 
-**Features He Cares About Most**:
-1. Auto-reminders - Reduces no-shows without manual work
-2. Single-link RSVP - No need to post everywhere
-3. Attendance export - Student Government requires proof of engagement
+**Features They Care About Most**:
+1. Two tries before it shows the answer - Why: takes the sting out of being wrong
+2. The light show at the end - Why: it's the win he's actually practicing for
+3. Auto-stop when he wanders off - Why: he doesn't want to be the one who has to quit
 ```
 
 **Create 3 personas like this** for your different user roles.
@@ -265,13 +271,13 @@ Jamal's planning a guest speaker event on ethical hacking. He opens the event sy
 
 ## Common Issues
 
-**Issue**: "I don't have real stakeholders to interview"
+**Issue**: "I already have three full transcripts — isn't the stakeholder analysis already done for me?"
 
-**Solution**: That's okay! In Week 4, I'll role-play your stakeholders. For now, **imagine** who they'd be. Make educated guesses. This is practice for CSC-289 when you'll have real GRD-242 partners to interview.
+**Solution**: The transcripts give you what each stakeholder *said*. The analysis is what you do with it: deciding who actually has power versus who just has opinions, noticing where Renee and Ms. Alvarez want opposite things, catching the moment someone hands you a solution ("just make it an app on the iPads") instead of a need. Reading a transcript and writing a stakeholder analysis are two different skills — this assignment grades the second one.
 
 **Issue**: "My personas feel generic"
 
-**Solution**: Add specific details. "College student" is generic. "Sophomore commuter student who checks phone between classes while waiting for bus" is specific. Specificity makes personas useful.
+**Solution**: Add specific details. "Elementary student" is generic. "Second-grader who freezes on the same five multiplication facts every time and shuts down the second he sees a red X" is specific. Specificity makes personas useful.
 
 ---
 
