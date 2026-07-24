@@ -21,9 +21,12 @@
 |---|---|---|
 | **Dataman** (also "Dataman/Datamon modernization") | The 26FA CTS-285 solo spine project: modernizing the retro handheld math toy through a full SDLC, weeks 1–12. Module 1 reads the Dataman PDF manual "like an analyst." | New 26FA material |
 | **Datamon (legacy game)** | The old week-5 creature-collection console game from the retired spine. | Legacy outline/roadmap/manifest |
+| **Datamon (2026 reskin exemplar)** | A virtual-pet anime *reskin* of the 1977 device — a **teaching exemplar** of "what a modernization/reskin looks like," kept distinct from the Dataman spine students build themselves. Villain = NULL ("the value that is *not a number*"). **Status: exploratory spike, NOT adopted product canon.** | `drafts/spikes/datamon-virtual-pet-reskin.md` |
 | Canonical interleave | Legacy Datamon *game* features (save/load, battles, encounters) are recast as **stretch-goal epics** in the week-2 seeded Dataman backlog — deliberate in-world homage, not a merge. | Wk 2 materials |
 
-A naive re-pointing agent WILL conflate these. Every executor prompt touching either term must carry this table.
+There are now **three** senses: **Dataman** (the spine project students build) vs. two senses of **Datamon** (the legacy game, and the 2026 reskin exemplar). A naive re-pointing agent WILL conflate these. Every executor prompt touching either term must carry this table.
+
+> **Adoption of the reskin is undecided (`needs-instructor`).** Whether to adopt the Datamon virtual-pet reskin (as the wk-2 stretch-epic framing, as a standalone exemplar, or shelve it) is an instructor call. If adoption would change graded content — quiz keys depend on the Dataman ≠ Datamon distinction — record it as an **ADR** first; until then the reskin stays an exploratory spike and the spine is Dataman only.
 
 ## Workflow canon (graded answers depend on this)
 
