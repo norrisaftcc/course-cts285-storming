@@ -22,7 +22,7 @@ At the end of every class session with a hands-on activity or lab — roughly **
 
 1. **Complete it right after class** — reflection is freshest immediately after learning
 2. **Be specific** — "Learned about Agile" is vague; "Learned how daily standups surface blockers early" is specific
-3. **Be honest about confusion** — if something's unclear, say so. This helps Andrew adjust the next class.
+3. **Be honest about confusion** — if something's unclear, say so. This helps Teacherbot adjust the next class.
 4. **Connect it to your project** — how will today's learning apply to your Dataman build?
 5. **Submit promptly** — post to the discussion board or LMS within 24 hours
 
@@ -55,7 +55,7 @@ At the end of every class session with a hands-on activity or lab — roughly **
 
 ---
 
-#### Questions for Andrew
+#### Questions for Teacherbot
 **What do I need clarification on?**
 
 
@@ -86,7 +86,7 @@ Also learned that velocity (points completed per sprint) is a planning tool, not
 
 I'm confused about estimating when I'm learning the tech at the same time. This is my first time building this kind of app — do I inflate the story's points to cover the learning curve, or lower my overall velocity estimate for the sprint?
 
-Andrew mentioned "spikes" (research stories) but I didn't fully get when to create a spike versus just estimating a story higher.
+Teacherbot mentioned "spikes" (research stories) but I didn't fully get when to create a spike versus just estimating a story higher.
 
 Also: if I have to split a story mid-sprint because it's bigger than I thought (like pulling the ATTEMPT model out of US-1.2), do I re-estimate the split pieces, or keep the original number?
 
@@ -108,7 +108,7 @@ Also: if I have to split a story mid-sprint because it's bigger than I thought (
 
 ---
 
-#### Questions for Andrew
+#### Questions for Teacherbot
 **What do I need clarification on?**
 
 1. When I'm learning the stack as I build, do I raise story-point estimates or lower my velocity?
@@ -131,7 +131,7 @@ Also: if I have to split a story mid-sprint because it's bigger than I thought (
 
 The "so that" clause is not optional — it's the most important part. It forces you to say *why* a feature matters, not just what it does.
 
-In the lab I wrote "As a parent, I want to store problems for my child" and thought I was done. Andrew pushed back: "So that what?" When I added "So that they drill the exact facts they keep missing, not everything," it clicked — that's the parent's real need from the stakeholder interview, and it's what makes the Memory Bank's ten-problem limit make sense. If I can't articulate the value, maybe the feature isn't needed.
+In the lab I wrote "As a parent, I want to store problems for my child" and thought I was done. Teacherbot pushed back: "So that what?" When I added "So that they drill the exact facts they keep missing, not everything," it clicked — that's the parent's real need from the stakeholder interview, and it's what makes the Memory Bank's ten-problem limit make sense. If I can't articulate the value, maybe the feature isn't needed.
 
 Also learned that acceptance criteria should be Given-When-Then, not just a bullet list. Given-When-Then is testable — you can turn it straight into a test.
 
@@ -142,7 +142,7 @@ Also learned that acceptance criteria should be Given-When-Then, not just a bull
 
 How many acceptance criteria is "enough"? Today's examples had 3–5 per story. If I have 10, is the story too big and should it be split?
 
-Also: do acceptance criteria include error and edge cases, or just the happy path? Andrew's examples had both ("Given the answer is wrong on the second try..." and "Given the answer is correct on the first try..."), but I'm not sure if the edge cases are required or optional.
+Also: do acceptance criteria include error and edge cases, or just the happy path? Teacherbot's examples had both ("Given the answer is wrong on the second try..." and "Given the answer is correct on the first try..."), but I'm not sure if the edge cases are required or optional.
 
 ---
 
@@ -163,11 +163,11 @@ Better:
 - Given I've entered a problem and an answer, When my answer is correct, Then I see the positive signal
 - Given my answer is wrong twice, When the second try fails, Then the system shows the *correct* answer — never the one I entered
 
-**Specific action**: Block an hour tomorrow to refactor the backlog, then ask Andrew to sanity-check three of the rewritten stories before Sprint 1 planning.
+**Specific action**: Block an hour tomorrow to refactor the backlog, then ask Teacherbot to sanity-check three of the rewritten stories before Sprint 1 planning.
 
 ---
 
-#### Questions for Andrew
+#### Questions for Teacherbot
 **What do I need clarification on?**
 
 1. Is there a recommended number of acceptance criteria per story (3–5 good, 10 too many)?
@@ -190,7 +190,7 @@ Better:
 
 Risk management is proactive, not reactive. I'd been treating risks as problems you deal with when they hit. Today I learned it's about naming problems *before* they happen and writing the mitigation in advance.
 
-The register exercise made it concrete. I logged "the ticks-timing decision stays unresolved" as a risk in week 6 — the collector wants the Atom-Clock ticks kept deliberately imprecise as "character," the teacher wants consistent timing for a fair classroom. Mitigation: get Andrew (as the client) to rule on it early, and design the timer so the choice is a setting, not a rewrite. When that decision drags later, I won't panic — I'll execute the plan I already wrote.
+The register exercise made it concrete. I logged "the ticks-timing decision stays unresolved" as a risk in week 6 — the collector wants the Atom-Clock ticks kept deliberately imprecise as "character," the teacher wants consistent timing for a fair classroom. Mitigation: get Teacherbot (as the client) to rule on it early, and design the timer so the choice is a setting, not a rewrite. When that decision drags later, I won't panic — I'll execute the plan I already wrote.
 
 Also learned the formula: Risk Score = Likelihood × Impact. That quantifies priority so I focus on the high scores (15+) first instead of treating every risk as equally urgent.
 
@@ -201,11 +201,11 @@ Key line I'm keeping: "Hope is not a strategy." Hoping the data model won't need
 #### Still Unclear
 **What concept or skill am I still confused about?**
 
-How do you tell a "risk" from a "problem"? Andrew said risks are future problems that might happen. But when does a risk become a problem?
+How do you tell a "risk" from a "problem"? Teacherbot said risks are future problems that might happen. But when does a risk become a problem?
 
 Example: "the data model might need rework" is a risk. "The ATTEMPT model needed rework this sprint" is a problem I already hit. Do I move it from the risk register to my issue tracker at that point?
 
-Also: how often should the register be updated? Andrew said "weekly" — does that mean re-score everything every week, or just add new risks and update statuses?
+Also: how often should the register be updated? Teacherbot said "weekly" — does that mean re-score everything every week, or just add new risks and update statuses?
 
 ---
 
@@ -231,7 +231,7 @@ Also: how often should the register be updated? Andrew said "weekly" — does th
 
 ---
 
-#### Questions for Andrew
+#### Questions for Teacherbot
 **What do I need clarification on?**
 
 1. When does a "risk" become a "problem"? Do I track problems separately from risks?
@@ -255,7 +255,7 @@ Exit tickets force you to:
 
 In professional development, reflective practice is how senior engineers grow. They don't just write code and move on — they ask "What did I learn? What would I do differently? What still doesn't make sense?" Many keep some form of learning journal; exit tickets formalize that habit.
 
-For Andrew, out of character:
+For Teacherbot, out of character:
 - Exit tickets show what's landing and what's confusing
 - If ten students are stuck on the same concept, the next class adjusts
 - Your questions shape what office hours cover
@@ -276,7 +276,7 @@ For your career:
   **Better approach**: Specific learnings — "I learned the 'so that' clause explains user value, not just the feature." Specific is memorable.
 
 - **Mistake**: Saying everything was clear when it wasn't
-  **Better approach**: Honest confusion helps Andrew help you. "I'm still unsure when to use a spike versus a higher estimate" is useful feedback.
+  **Better approach**: Honest confusion helps Teacherbot help you. "I'm still unsure when to use a spike versus a higher estimate" is useful feedback.
 
 - **Mistake**: Writing the exit ticket three days after class
   **Better approach**: Reflection is freshest immediately after learning. Same day, ideally within an hour.
@@ -287,7 +287,7 @@ For your career:
 - **Mistake**: Not connecting to your project — treating learning as abstract
   **Better approach**: Every exit ticket answers "How will I use this in my Dataman project?" Make it concrete, with story IDs and specific actions.
 
-- **Mistake**: Skipping "Questions for Andrew"
+- **Mistake**: Skipping "Questions for Teacherbot"
   **Better approach**: If you truly have zero questions, you're probably not digging deep enough. There's always something to clarify. Ask.
 
 ---

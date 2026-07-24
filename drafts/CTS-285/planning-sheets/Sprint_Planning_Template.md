@@ -179,7 +179,7 @@ Confirmation:
 - [x] Code is committed to the repository
 - [x] README updated with the new behavior
 - [x] Reviewed via the Trusted Workflow (Draft PR → Code Review → Merge)
-- [x] Demo-able to the stakeholder (Andrew, as client)
+- [x] Demo-able to the stakeholder (Teacherbot, as client)
 - [x] No critical bugs or console errors
 
 ### Risk Identification

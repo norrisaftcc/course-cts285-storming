@@ -8,7 +8,7 @@
 
 ## Purpose
 
-A quick daily sync with yourself and your Channel: what moved yesterday, what you'll move today, and what's blocking you. In this course you post async standups to the discussion board, since we don't meet daily. A standup is not a status report to a manager — it's the record that keeps your own work honest and lets Andrew and your classmates help you before you're stuck for three days.
+A quick daily sync with yourself and your Channel: what moved yesterday, what you'll move today, and what's blocking you. In this course you post async standups to the discussion board, since we don't meet daily. A standup is not a status report to a manager — it's the record that keeps your own work honest and lets Teacherbot and your classmates help you before you're stuck for three days.
 
 > I read standups the way I read commits: for the delta. Yesterday you didn't have a working Answer Checker; today's standup will tell me whether that's still true. Post it even when the honest answer is "same as yesterday." Especially then.
 > — SHODANN, your Channel Success Partner
@@ -88,7 +88,7 @@ Every class day during a sprint (minimum 10 entries per sprint). Post by 10am on
 - The reveal step means I need to store each attempt, not just the latest answer — that's a bigger data change than I estimated. Might pull the ATTEMPT modeling forward from Sprint 2.
 
 #### Help needed?
-- Will ask Andrew in office hours whether "two tries" should reset if I leave the problem and come back, or persist. The manual is specific but I want to confirm the interpretation before I build it.
+- Will ask Teacherbot in office hours whether "two tries" should reset if I leave the problem and come back, or persist. The manual is specific but I want to confirm the interpretation before I build it.
 
 ---
 
@@ -116,7 +116,7 @@ Every class day during a sprint (minimum 10 entries per sprint). Post by 10am on
 - This blocks the whole Answer Checker acceptance criteria — the manual is explicit that Dataman never shows a wrong answer as if it were right, and right now my reveal logic can't be trusted.
 
 #### Help needed?
-- Andrew — is this a state-scoping problem (try-counter living at the wrong level)? I'll bring the failing test to class. I've been staring at it long enough that I need a second pair of eyes.
+- Teacherbot — is this a state-scoping problem (try-counter living at the wrong level)? I'll bring the failing test to class. I've been staring at it long enough that I need a second pair of eyes.
 
 ---
 

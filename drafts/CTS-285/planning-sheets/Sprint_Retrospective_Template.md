@@ -112,7 +112,7 @@ At the end of each sprint, after the sprint review but before the next planning 
 
 ---
 
-## Questions for Andrew
+## Questions for Teacherbot
 
 **Things I need instructor guidance on:**
 -
@@ -210,7 +210,7 @@ At the end of each sprint, after the sprint review but before the next planning 
 
 ---
 
-## Questions for Andrew
+## Questions for Teacherbot
 
 **Things I need instructor guidance on:**
 - How do experienced developers handle a story that turns out to hide a whole data model mid-sprint — re-estimate and carry, or split it on the spot?
@@ -277,7 +277,7 @@ In CTS-285, a retrospective is required after each sprint of your Dataman build:
 **Requirements**:
 - One retro per sprint (at each sprint's close — see the course schedule for the weeks)
 <!-- CADENCE: pending spine ruling — the source said "Weeks 6, 10, 14"; the concrete weeks await the spine cadence decision. See issue #5 BLOCKED-ON. -->
-- Submit to Andrew within 2 days of the sprint ending
+- Submit to Teacherbot within 2 days of the sprint ending
 - Include all sections (metrics, what went well, what didn't, action items)
 - Review the previous sprint's action items
 
