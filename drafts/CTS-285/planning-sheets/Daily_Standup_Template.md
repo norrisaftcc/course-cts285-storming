@@ -34,6 +34,9 @@ Every class day during a sprint (minimum 10 entries per sprint). Post by 10am on
 
 ## Template
 
+> **Which fields are required?** This template carries four sections. A given sprint assignment may require a subset — most commonly the three core questions (**yesterday / today / blockers**). Always follow the specific assignment for exactly which fields are graded. Even when "Help needed?" isn't explicitly required, use it — asking for help is the mechanic, and it's what the "honest" part of the grade rewards.
+<!-- RECONCILIATION (issue #5, verify step): the source Week_05 assignment (line 328, "Format (Use Daily Standup Template)") embeds a THREE-question inline format (yesterday / today / blockers) that is a subset of this template's four sections. This template is the fuller superset and produces the graded artifact; the note above bridges the gap without editing the assignment. FLAGGED for the Week_05 assignment-adaptation task: decide whether to align the assignment's embedded format to this four-section template or keep the three-question subset. Do not resolve from inside this leaf. -->
+
 ### Daily Standup — [Date]
 
 **Creator**: [Your name / channel]
@@ -74,7 +77,7 @@ Every class day during a sprint (minimum 10 entries per sprint). Post by 10am on
 #### What did I do yesterday?
 - Finished the input flow for a single problem: enter the problem, enter my answer, get a right/wrong signal (US-1.1)
 - Wrote the check-answer logic and unit tests for the correct/incorrect branches (all passing)
-- Started the "wrong answer → try again" path (about 40% done)
+- Started the "wrong answer → try again" path (roughly a third of the way in)
 
 #### What will I do today?
 - Finish the second-try path so a wrong first answer offers exactly one more try (US-1.2)
