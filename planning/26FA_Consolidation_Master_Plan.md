@@ -30,7 +30,7 @@ Four parallel assessments ran over: the legacy template repo (36 files), the UV-
 ### Pipeline Two — UV refresh, CTS-285
 - **~60% of instructional content survives with mechanical adaptation.** Weeks 5–10 (the three sprints) survive nearly intact once re-pointed at Dataman — a common project actually *improves* peer code review. The 40/40/20 grading engine and role-rotation machinery transfer unchanged.
 - **The points system is unshippable as-is:** five mutually inconsistent sources (COURSEMAP claims 700 / sums 750; README sums 800; assignment headers sum 775; internal rubrics ~2× headers on wks 2/3/4/6; three conflicting Sprint-1 breakdowns). Fix first — everything regenerates from one authoritative table.
-- **Phantom inventory:** indexes claim complete materials that don't exist — 4 of 6 planning-sheet templates (referenced by literal path in assignments), 7 of 8 knowledge checks, 5 of 8 activities, all 9 Canvas pages, glossary, troubleshooting guide, activity handouts. Students would hit dead links in week 5.
+- **~~Phantom inventory~~ → Inventory reconciled (2026-07-24, against the ingested `sources/` tree; see #14):** the original claim — that 4 of 6 planning-sheet templates, 7 of 8 knowledge checks, 5 of 8 activities, all Canvas pages, the glossary and troubleshooting guide were missing — was itself unreliable metadata (the §6.3-1 irony, applied to this plan). **Verified: all exist with real content** — 6/6 planning sheets, 8 knowledge checks (~10–12 KB ea), 6 activities (22–28 KB ea), 8 Canvas pages (~20 KB ea), and all three reference-materials. The one *real* gap was specific activity **handouts** the modules reference (stakeholder interview transcripts, role cards) — the transcripts are now supplied by **1.0a**; remaining checklists/role cards fold into 1.8. **Net effect: tasks 1.7 and 1.8 are 'adapt existing,' not 'author from scratch' — Phase 1 is smaller than originally sized.**
 - **⚠ Audit exposure — resolved by policy:** the QM audit cites a nonexistent "QM 8th Edition," covers only General Standards 1–4 while claiming full certification, cites unverifiable evidence, and is *signed with Angela's name*. QM is now being pulled program-wide (the UV provider is moving to an in-house course quality process, available next semester at the earliest), so the remedy is: retire all audit files, strip QM references everywhere, and **preserve the RSI mechanisms** (exit-ticket cadence, weekly instructor-played stakeholder interviews) — RSI is federal distance-ed compliance (34 CFR § 600.2), not a QM artifact, and it's the course's cheapest compliance evidence.
 - **Skin inversion is doctrinal, not cosmetic:** five-plus files teach "AlgoCratic is optional, earns zero credit, skip it," and week 1's only in-character insert is the old punitive-dystopia voice — the opposite of both the new-skin-primary decision and SHODANN's register.
 - Instructor guide dead-ends after Module 3; weeks 11–16 are compressed-but-functional skeletons; cutting week 13 (deployment) silently orphans CLO4 / the CCL "installation" language unless a lightweight "Dataman ships" lands in week 12.
@@ -61,7 +61,7 @@ Four parallel assessments ran over: the legacy template repo (36 files), the UV-
 |---|---|---|---|
 | 1 | M1 Onboarding & Analysis | AlgoCratic Media orientation ("Your First Stream" Day-One checklist), env setup, **read the Dataman PDF manual like an analyst** → autograded document-analysis quiz (Angela's 10–12 LTI items: personas, user roles — no T/F, limited MC, no multi-answer/text) | Orientation Guide + UV Wk1 (rewritten) + legacy 001-setup harvested |
 | 2 | M1 | Agile/Scrum foundations, paper simulation, GitHub board seeded from a **Dataman starter backlog** (project selection deleted) | UV Wk2 (rewritten) |
-| 3–4 | M2 Requirements | Stakeholder analysis, personas, interviews → user stories, MoSCoW backlog — all Dataman (parents, teachers, retro collectors, instructor-as-client) | UV Wk3–4 (re-anchored) |
+| 3–4 | M2 Requirements | Stakeholder analysis, personas, interviews → user stories, MoSCoW backlog — Dataman stakeholders per **ADR-003**'s graduated model — canned: parent + retro collector · **rehearsal**: teacher · **live** (RSI anchor): instructor-as-client | UV Wk3–4 (re-anchored) |
 | 5–6 | M3 Sprint 1: Design | UML, ERD, wireframes, standups; retro + risk register (wk-6 duplicate deliverable merged) | UV Wk5–6 (near-intact) |
 | 7–8 | M4 Sprint 2: Build | Implementation + facilitation, burndown | UV Wk7 (best-aligned file; near-intact) |
 | 9–10 | M5 Sprint 3: Quality | Development + peer code review across the common project; **ADRs formalized** (the missing PRISM-ORANGE evidence — rename the existing design-rationale sections) | UV Wk9 (expanded) |
@@ -94,18 +94,23 @@ Phases are ordered by dependency; within a phase, tasks fan out in parallel. **E
 | 0.5 | **ADR-001: CSC-289 team ruling** — ✅ DONE (`phase0/ADR-001-csc289-team-based.md`): team-based end-to-end, merged spine (canonical numbering/points + MODULE-ARCH team content + clean 2-wk cadence), GREEN Trajectory Check Week 1, AI from Sprint 1, Cold Start Track fallback for no-handoff students | — | Ends the undocumented fork |
 | 0.6 | **Naming canon table** — ✅ DONE (`phase0/NAMING_CANON.md`): Sacred Flow→Trusted Workflow, GRAY→GREY, EventPro→EventFlow, Dataman-vs-Datamon disambiguation, workflow-step + board-column canon, etc. | — | Applied mechanically by every executor; quiz keys encode these |
 | 0.7 | *Human tasks:* renegotiate GRD calendar with Jennifer Fisher (fall consults replace wk-6 first contact; define GRD-side deliverables; schedule the canned-brand-kit fallback build, not just note it); confirm Dataman PDF manual availability/rights; brief Angela on audit retirement + in-house quality process timing; **tell us which of the two Mar-13 CSC-289 dev-phase designs actually ran in Spring 2026 and what broke** — that field data exists nowhere in the repos; decide what 26FA students arrive knowing (CSC-113/114 prerequisite reality — the pipelines disagree and it sizes Week 1) | you | Fleet cannot do these |
+| 0.8 | **Curated source ingestion → `sources/`** — ✅ DONE (#2 / PR #10): 250 KEEP/ADAPT/HARVEST files pinned with provenance headers; 51 RETIRE/RELOCATE recorded; `planning/INGESTION_MANIFEST.md` regenerated from the tree | Sonnet | Net-new; makes Phase 1–4 fan-out reproducible |
+
+**Decisions of record raised during Phase 1 execution** (now folded in): **ADR-002** — points bind at the assignment-header level; rubric sub-items are *descriptive*, not required to sum; 40/40/20 is a course-level philosophy (refines 0.1). **ADR-003** — graduated wk3–4 stakeholder model (2 canned + 1 rehearsal + 1 live); preserves *and extends* RSI. **ADR-003 (instructor-as-client)** authoring of the rehearsal role-card + live client brief is delegated to 1.4.
 
 ### Phase 1 — CTS-285 weeks 1–12 (Dataman conversion)
 | # | Task | Model | Size |
 |---|---|---|---|
+| 1.0a | **Shared Dataman class artifacts** — ✅ DONE (#3 / PR #13): 3 stakeholder transcripts, reference ERD (8 entities), seeded backlog (8 core epics + stretch), grading key; all traced to the manual transcript; raised **ADR-003** | Opus | L |
+| 1.0b | **Points normalization sweep → 750 regime** — ✅ DONE (#4 / PR #11): headers→`X pts (Y% of 750)`, rubrics reconciled; raised **ADR-002**. **1.0c** (#15) finished the Wks 01/07/11 basis 1.0b left | Sonnet | M |
 | 1.1 | Rewrite Wk1 (orientation + analyst-read of Dataman manual; harvest legacy 001-setup checklist; SHODANN register) | Opus | L |
 | 1.2 | Author the 10–12 autogradable Dataman document-analysis quiz items (Angela's spec + her sample questions) | Opus | M |
 | 1.3 | Rewrite Wk2 (delete selection; paper sim + seeded backlog) | Opus | M |
 | 1.4 | Re-anchor Wk3–4 to Dataman; fix rubric/header point conflicts from 0.1 | Sonnet ×2 | M |
 | 1.5 | Wk5–10 Dataman swaps + Wk6 dedupe + Wk9–10 expansion + ADR formalization | Sonnet ×3 | M |
 | 1.6 | Expand Wk11–12 skeletons to weeks-1–7 depth; fold in lightweight deploy + grouped-presentation close | Opus | L |
-| 1.7 | Author the 4 missing planning-sheet templates (formats already embedded in assignments) | Sonnet | M |
-| 1.8 | Author missing KCs (M2–M6) + Dataman-specific M1 complement; missing activity handouts (interview transcripts → Dataman stakeholders, checklists, role cards) | Sonnet ×2 | L total |
+| 1.7 | **Verify + re-anchor** the 6 planning-sheet templates — they **exist with real content** (the 'missing' claim was false); reconcile the literal-path refs and re-point to Dataman (#5) | Sonnet | S |
+| 1.8 | **Adapt existing** M2–M6 knowledge checks (8 KCs exist, ~10–12 KB ea — re-point to Dataman; normalize points to graded-@10 per 0.1/ADR-002) + remaining activity handouts (interview transcripts ✅ done in 1.0a; author leftover checklists/role cards) | Sonnet ×2 | M |
 | 1.9 | Instructor guide: write Modules 4–8 to match Modules 1–3 quality; invert the "AlgoCratic optional" doctrine | Opus | L |
 
 ### Phase 2 — CTS-285 weeks 13–16 (net-new on-ramp; single largest build)
@@ -186,7 +191,7 @@ Full asset→week table lives in `planning/ASSESSMENT_NOTES.md`. The headline mo
 | 26FA slot | Legacy asset interleaved into the UV spine |
 |---|---|
 | Wk 1 | 001-setup issue spec (checklist + verification script) merged into the Media-skin Day-One stream |
-| Wk 2 | **Legacy Datamon *game* features become stretch-goal epics in the seeded Dataman backlog** — the name collision converted into deliberate in-world homage; survival-guide [GITGD] excerpt as underground reading |
+| Wk 2 | **Legacy Datamon *game* features become stretch-goal epics in the seeded Dataman backlog** — the name collision converted into deliberate in-world homage; survival-guide [GITGD] excerpt as underground reading. **NB:** a 2026 Datamon virtual-pet *reskin exemplar* now exists as a spike — adopting it as the stretch-epic framing is a pending `needs-instructor` call (NAMING_CANON + #16). |
 | Wk 3–4 | HiLow PRD as "what a complete PRD looks like" exemplar; mini "Dataman white-label thought experiment" foreshadows wk 14 |
 | Wk 5–12 | **Collaboration Minimum ported to a solo "Community Minimum"** (2 PR reviews / 1 ask / 1 offer per sprint, cross-repo peer review of classmates' Dataman work) — the legacy repo's best peer-pressure machinery, previously homeless in solo weeks |
 | Wk 9–10 | Emergency Debugging Protocol™ built out as the Sprint-3 quality crisis sim ("the stream went down") |
