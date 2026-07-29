@@ -70,7 +70,7 @@
 
 ## BLOCKED-ON (consumed downstream, not resolved here)
 
-- **Post-ingest path convention (spine/coursemap):** every `<!-- PATHFORM: pending spine ruling -->` above awaits the spine ruling on the 26FA course-repo relative path form. Do not invent one; do not re-use the csc_dash `/courses/CTS-285/...` form.
+- **Post-ingest path convention (spine/coursemap):** every `<!-- PATHFORM: pending spine ruling -->` above awaits the spine ruling on the 26FA course-repo relative path form. Do not invent one; do not re-use the csc_dash `/courses/CTS-285/...` form. **Now tracked as a decision of record: `phase0/ADR-006-course-repo-path-form.md` (Proposed).** The three previously-stale csc_dash references (Week_05 ×2, Week_06 ×1) were converted to the placeholder on 2026-07-29, so `grep -rn "PATHFORM: pending spine ruling"` now enumerates every substitution site.
 - **Inbound reference edits** (re-pointing Week_05/06 + adding the Week_04 / Module_02 / Week_05-standup / exit-ticket references) are owned by the per-week assignment-adaptation tasks. This task only emits this manifest.
 - **Sprint_Retrospective duplicate deliverable** (Week_05 vs Week_06) — assignment/spine decision.
 - **Daily_Standup 3-question vs 4-section format** — Week_05 assignment-adaptation decision.

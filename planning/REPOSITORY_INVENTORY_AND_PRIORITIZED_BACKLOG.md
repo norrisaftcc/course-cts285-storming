@@ -124,7 +124,10 @@ already dominant at 296 occurrences against a handful of leading-slash strays.
 
 This ruling covers **repo-internal** references only. The **course-repo** path
 form that student-facing "Copy X into your repository" lines will use is a
-separate, still-open spine decision — see `drafts/cts285/planning-sheets/WIRING_MANIFEST.md`.
+separate, still-open spine decision, now tracked as
+`phase0/ADR-006-course-repo-path-form.md` (**Proposed**). Until it is ruled,
+those lines carry the `<!-- PATHFORM: pending spine ruling -->` placeholder;
+the retired csc_dash `/courses/CTS-285/...` form no longer appears anywhere.
 
 ## 5. Gaps
 
