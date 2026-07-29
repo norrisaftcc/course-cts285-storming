@@ -7,6 +7,7 @@ This repo holds planning artifacts and net-new material drafts. Finished materia
 ## Contents
 
 - `planning/26FA_Consolidation_Master_Plan.md` — the master plan (v1.1): assessment verdicts for both pipelines, the 16-week CTS-285 spine, the phased agent-fleet execution plan, interleave map, and agent intelligence digest. **Start here.**
+- `planning/REPOSITORY_INVENTORY_AND_PRIORITIZED_BACKLOG.md` — current file-tree inventory, project history, source map, gaps, and dependency-based backlog.
 - `planning/ASSESSMENT_NOTES.md` — condensed candid findings from the four assessment agents, including the full legacy-asset → 26FA-week interleave table.
 - `phase0/` — Phase 0 foundation artifacts (all complete):
   - `CTS285_Canonical_Points_Table.md` — **the** single source of truth for CTS-285 points (750 total). Every header and rubric regenerates from this.
