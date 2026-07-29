@@ -12,7 +12,7 @@ It has four jobs:
 
 1. Record course decisions.
 2. Keep source snapshots with provenance.
-3. hold work-in-progress course material.
+3. Hold work-in-progress course material.
 4. Plan the transfer of finished material to the course repositories.
 
 Nothing in this repository is student-facing. Finished material must pass the
