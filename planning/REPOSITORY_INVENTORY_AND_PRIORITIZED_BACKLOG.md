@@ -115,9 +115,16 @@ The draft area also contains partial units:
 - `COURSEMAP.md`, `README.md`, and the rubric file are interim copies. They
   still contain retired structure or policy.
 
-There are two CTS-285 draft paths: `drafts/cts285/` and `drafts/CTS-285/`.
-The planning sheets are in the second path. The course drafts are in the first
-path. The project has not selected the final path form.
+**Resolved 2026-07-29 (B-002).** There is one CTS-285 draft path: `drafts/cts285/`.
+The planning sheets moved there from the retired `drafts/CTS-285/` (git rename,
+history preserved). The selected reference form for repo-internal paths is
+**repo-root-relative with no leading slash**, backticked — e.g.
+`drafts/cts285/planning-sheets/Sprint_Planning_Template.md`. That form was
+already dominant at 296 occurrences against a handful of leading-slash strays.
+
+This ruling covers **repo-internal** references only. The **course-repo** path
+form that student-facing "Copy X into your repository" lines will use is a
+separate, still-open spine decision — see `drafts/cts285/planning-sheets/WIRING_MANIFEST.md`.
 
 ## 5. Gaps
 
@@ -146,8 +153,10 @@ ADR-005 resolved the old prerequisite question. It is no longer a blocker.
 
 ### 5.3 Structure and control
 
-- The two CTS-285 draft paths differ only by letter case.
-- The final relative link form is not decided.
+- ~~The two CTS-285 draft paths differ only by letter case.~~ Resolved 2026-07-29 (B-002).
+- ~~The final relative link form is not decided.~~ Resolved for repo-internal
+  references 2026-07-29 (B-002). The **course-repo** form students are pointed at
+  (PATHFORM) is still open — a spine decision, tracked in `WIRING_MANIFEST.md`.
 - The master plan and root README do not show all completed work.
 - `sources/README.md` still says that `sources/` is an empty scaffold.
 - Several old task notes describe decisions that later ADRs resolved.
@@ -176,7 +185,7 @@ ADR-005 resolved the old prerequisite question. It is no longer a blocker.
 | ID | Work | Depends on | Done when |
 |---|---|---|---|
 | B-001 | Get the five human decisions in section 5.1. | Instructor and partners | Each answer has a dated record. Each blocked task has a fallback. |
-| B-002 | Select one CTS-285 draft path and one relative link form. Move the planning sheets to that path. | None | One path exists. All draft links use the selected form. |
+| ~~B-002~~ **DONE 2026-07-29** | Select one CTS-285 draft path and one relative link form. Move the planning sheets to that path. | None | ✅ One path exists (`drafts/cts285/`). ✅ Repo-internal references use the selected form (repo-root-relative, no leading slash). Course-repo PATHFORM remains open by design — see §4 note. |
 | B-003 | Reconcile the master plan, root README, source README, and old handoff notes with accepted ADRs and completed work. | B-002 | Status text matches the tree and Git history. Resolved blockers do not appear as open. |
 | B-004 | Rewrite Week 1 and create the 15-point Dataman document-analysis quiz. | ADR-005; Dataman transcript; B-001 for PDF release | The assignment uses configure-and-verify setup, the analyst read, the Media frame, and the canonical points. |
 | B-005 | Rewrite Week 2 around the paper simulation and seeded Dataman or DataMon backlog. | Shared Dataman artifacts | The assignment removes project selection and uses the canonical board and Trusted Workflow. |

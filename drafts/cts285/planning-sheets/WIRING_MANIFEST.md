@@ -2,6 +2,8 @@
 
 > **Produced by issue #5 (task 1.7 REVISED) for the per-week assignment-adaptation tasks to consume.** This task adapts the six planning-sheet *templates*; it does **not** edit any assignment or activity file (those live in read-only `../csc_dash` and are owned by the per-week tasks — Rule 1 forbids a leaf co-editing them in the same wave). This manifest tells each owning task the exact reference line to add or re-point, and where.
 
+> **Location note (B-002, 2026-07-29):** these templates now live at `drafts/cts285/planning-sheets/`; the case-variant `drafts/CTS-285/` path is retired. B-002 also fixed the **repo-internal** reference form (repo-root-relative, no leading slash). **It did not rule PATHFORM** — the course-repo prefix below remains open. The two are different questions: B-002 governs how files in *this staging repo* refer to each other; PATHFORM governs what a *student* is told to copy from a course repo that does not exist yet.
+
 ## How to read this
 
 - **Path prefix is deliberately unresolved.** Every source reference uses the csc_dash form `/courses/CTS-285/planning-sheets/X.md`, which will **not** resolve in the 26FA course repo. The final course-repo layout is undecided (nothing has graduated from this repo), and the chosen relative form is a cross-cutting convention that assignments, activities, and Canvas HTML (task 3.4) all inherit — a **spine/coursemap decision, not a leaf one**. Until the spine rules, the prefix below is the placeholder `<!-- PATHFORM: pending spine ruling -->`. The owning task substitutes the ruled prefix; it must **never** re-use the csc_dash `/courses/CTS-285/...` form.

@@ -10,8 +10,8 @@
 
 ## WRITE TOKEN
 
-**Holder:** Drew (human) — free to delegate.
-**Passed from:** cloud Cowork session (below), July 2026, via manual sync package; token released after the Phase 1 wave completed on `main`.
+**Holder:** Cloud Claude Code — session `session_015ox6hTidX21c2tnV4xT2Jo` (branch `claude/algocratic-sync-assessment-8fwtzn`).
+**Passed from:** Drew (human), 2026-07-29 — *"session that built zip is archived, you have the lead currently."* The cloud Cowork session that built the sync package is **archived** and must not be treated as a live writer. Token returns to Drew when this branch merges.
 
 > **Correction (2026-07-29):** the shipped version of this file read "*pending handoff to local Claude Code for Phase 1*." That was accurate when the sync package was built (baseline `ca36b45`) but stale on arrival — Phase 1 had already run to 12 merged PRs. See the backfill block below.
 
@@ -44,3 +44,4 @@
 | 2026-07-24 | Local Claude Code | teacherbot | #25 | `e560934`, `ddfeb01`, `d00fb1e` | Task 1.5 — adapt all 6 planning-sheet templates + wiring manifest; instructor directive: Andrew → Teacherbot |
 | 2026-07-29 | GitHub Copilot agent | copilot-swe-agent[bot] | #26 | `07c970d`, `e3b2e76` | `REPOSITORY_INVENTORY_AND_PRIORITIZED_BACKLOG.md` — file-tree inventory, source map, dependency-ordered backlog |
 | 2026-07-29 | Cloud Claude Code (remote) | Claude (this session) | *(this PR)* | *(this commit)* | Ingested `algocratic-26fa-sync.zip`; per-file fitness assessment (4 GO / 3 NO-GO / 15 no-op); applied the GO set; recorded the assessment in `alignment_ingestion/ASSESSMENT.md` |
+| 2026-07-29 | Cloud Claude Code (remote) | Claude (this session) | *(this PR)* | *(this commit)* | **B-002** — consolidated the case-variant draft paths into `drafts/cts285/` (7 planning sheets moved, git renames, history preserved); ruled the repo-internal reference form (repo-root-relative, no leading slash); took the WRITE TOKEN. Course-repo PATHFORM deliberately left open |
