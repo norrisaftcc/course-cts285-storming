@@ -84,9 +84,16 @@ Because the install is an overlay, none are deleted. But it means the package's 
 
 Line 6 reads "*Nineteen are identical … **three** carry the pending changes*" and then enumerates **four** items. The prose count is wrong; the enumeration is right. Against current `main` both are wrong anyway (15 identical, 7 changed).
 
-## Follow-up
+## Follow-up — resolved
 
-The adopted instructor amendment (1) — the Trusted Workflow gloss *"[Our Workflow is Trusted, because it has been Verified. Thank you for your cooperation.]"* — is now declared canon in `PROJECT_INSTRUCTIONS_PROPOSED.md`, but appears nowhere in `phase0/NAMING_CANON.md` §"Workflow canon", which is where executors and quiz keys read workflow canon from. Amendments (2) and (3) landed in `PRISM_Course_Mapping.md`; (1) has no canon home. Not fixed here — adding a gloss to the workflow canon that graded answers depend on is an instructor call, not an ingestion call. **Flagged for instructor sign-off.**
+The adopted instructor amendment (1) — the Trusted Workflow gloss *"[Our Workflow is Trusted, because it has been Verified. Thank you for your cooperation.]"* — is declared canon in `PROJECT_INSTRUCTIONS_PROPOSED.md` but has no counterpart in `phase0/NAMING_CANON.md` §"Workflow canon", where executors and quiz keys read from. Amendments (2) and (3) landed in `PRISM_Course_Mapping.md`; (1) did not.
+
+> **Instructor ruling (2026-07-29):** *"Trusted Workflow is fine as is; we added the verified part to avoid drift but we're managing drift more directly now."* **No canon change required** — `NAMING_CANON.md` §Workflow canon stands unmodified, and the gloss remains flavour text in the live project instructions rather than graded canon. Closed; no downstream task.
+
+## Side effects on the backlog
+
+- **B-001 item 5** ("Apply or reject `PROJECT_INSTRUCTIONS_PROPOSED.md` in the external project settings") is **closed** — the file now records ADOPTED with a dated instructor amendment set. One of the five P0 human decisions is resolved.
+- **B-003** ("Reconcile the master plan, root README, source README and old handoff notes with accepted ADRs and completed work") is **partially advanced**: `SESSIONS.md` now carries the Phase 1 record, and the two NO-GO rejections prevented the reconciliation from being undone. The remaining B-003 surface (`sources/README.md` still calling `sources/` an empty scaffold; stale handoff notes) is untouched.
 
 ## Disposition of this folder
 
