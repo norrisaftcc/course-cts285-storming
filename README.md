@@ -7,15 +7,19 @@ This repo holds planning artifacts and net-new material drafts. Finished materia
 ## Contents
 
 - `planning/26FA_Consolidation_Master_Plan.md` — the master plan (v1.1): assessment verdicts for both pipelines, the 16-week CTS-285 spine, the phased agent-fleet execution plan, interleave map, and agent intelligence digest. **Start here.**
-- `planning/REPOSITORY_INVENTORY_AND_PRIORITIZED_BACKLOG.md` — current file-tree inventory, project history, source map, gaps, and dependency-based backlog.
+- `planning/REPOSITORY_INVENTORY_AND_PRIORITIZED_BACKLOG.md` — file-tree inventory, project history, source map, gaps, and dependency-based backlog. **Counts are a snapshot (accurate as of commit `499c15e`), not a live index** — regenerate from the tree before relying on them.
 - `planning/ASSESSMENT_NOTES.md` — condensed candid findings from the four assessment agents, including the full legacy-asset → 26FA-week interleave table.
-- `phase0/` — Phase 0 foundation artifacts (all complete):
-  - `CTS285_Canonical_Points_Table.md` — **the** single source of truth for CTS-285 points (750 total). Every header and rubric regenerates from this.
+- `phase0/` — Phase 0 foundation artifacts (13 files; all Accepted except ADR-006 and ADR-007's verb lexicon, which are **Proposed**):
+  - `CTS285_Canonical_Points_Table.md` — **the** single source of truth for CTS-285 points (750 total). Assignment-header values are the binding arithmetic (ADR-002); sub-items below a header are descriptive.
   - `SHODANN_Character_Bible.md` — character canon + Media-skin voice template. Required context for every skin-pass task; §7 governs automated (velocity-bot) feedback tone.
-  - `ADR-001-csc289-team-based.md` — records the CSC-289 team ruling, merged spine, GREEN Trajectory Check Week 1, and Cold Start Track.
+  - `KAYFABE_ARCHITECTURE.md` — the two-layer world model (Futures = the show, Media = its content division; the student plays a Creator).
   - `PRISM_Course_Mapping.md` — the ladder-across-the-program canon.
-  - `NAMING_CANON.md` — mechanical rename table (Sacred Flow→Trusted Workflow, GRAY→GREY, Dataman vs Datamon, workflow-step canon, etc.).
+  - `NAMING_CANON.md` — mechanical rename table (Sacred Flow→Trusted Workflow, GRAY→GREY, Dataman vs. DataMon two-basis table, workflow-step canon, etc.).
   - `QM_Retirement_Note.md` — QM pulled program-wide; RSI retained (federal, not QM); audit disposition.
+  - Decisions of record — `ADR-001` CSC-289 team-based, merged spine, GREEN Trajectory Check, Cold Start Track · `ADR-002` points bind at the assignment header · `ADR-003` stakeholder ladder (2 canned + 1 rehearsal + 1 live) · `ADR-004` two modernization bases, Dataman and DataMon · `ADR-005` prerequisite baseline (GitHub + Python, not CSC-113/114) · `ADR-006` course-repo path form (**Proposed** — blocks graduation of student-facing material until ruled) · `ADR-007` Trusted Workflow gets dedicated UPPERCASE verbs and a checkmarked form (principle Accepted; the seven-verb lexicon is **Proposed**).
+- `sources/` — frozen mirrors of the three source corpora, ingested by task 0.8 so adaptation is reproducible without reaching outside this repo: `uv-285/` (54 files), `uv-289/` (32), `legacy/` (164, including the 26SP GRD creative briefs). Bodies are verbatim; their defects are what downstream tasks are chartered to fix.
+- `drafts/` — net-new material in progress. `cts285/` holds `assignments/` (Weeks 01–07, 09, 11, 12), `knowledge-checks/` (Modules 02–06), `planning-sheets/` (6 templates + `WIRING_MANIFEST.md`), `rubrics/`, `points-normalization/`, and `shared-dataman-artifacts/` (the 1.0a exemplar set); `spikes/` holds the DataMon reskin seed. **Regenerate this list from the tree, never from a doc's claims.**
+- `reference/` — `voice-canon/` (exported AlgoCratic voice material), `PRISM.html` (the canonical framework), and `dataman/` (the 1977 manual transcript plus historical scans).
 
 ## Rules for executor agents working in this repo
 
