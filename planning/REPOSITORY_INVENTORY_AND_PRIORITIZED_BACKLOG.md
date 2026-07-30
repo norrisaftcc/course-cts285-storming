@@ -226,8 +226,26 @@ ADR-005 resolved the old prerequisite question. It is no longer a blocker.
 | B-022 | Run the adversarial continuity review from CTS-285 Week 1 through CSC-289 Week 1. | B-021 | The review finds no broken handoff, role, tier, workflow, or project assumption. |
 | B-023 | Transfer approved material to the course repositories. | B-022 | The course repositories contain the approved files and regenerated indexes. |
 
+### Process tooling — orchestration
+
+| ID | Work | Depends on | Done when |
+|---|---|---|---|
+| B-024 | **Decide whether this repo's skills and agent definitions need adjusting to enforce Rule 1a** (fan-out size and shape, added to `CLAUDE_SUPPLEMENTARY.md` 2026-07-29). Open question, not a foregone conclusion — evaluate before building. | Rule 1a | A dated decision exists: either specific skill/agent changes are specified and made, or a written rationale for why prose doctrine is sufficient. |
+
+**Context for B-024.** Rule 1a currently lives only as prose an agent is trusted to have read. The 2026-07-29 incident happened because a fan-out was sized by estimate rather than counted, and because dead agents were filtered away silently — neither of which prose reliably prevents under time pressure. Questions worth answering:
+
+- Is a **workflow-authoring skill** warranted (a checklist that forces the agent-count arithmetic and the dispatched-vs-returned reconciliation before launch), or does that just move the prose somewhere else?
+- Should the repo define **named agent types** for its recurring roles — the continuity reviewer (Rule 7), the adversarial verifier, the mechanical propagation worker (Rule 2's Sonnet tier) — so context packages per Rule 3 are attached to the role rather than re-pasted into every prompt?
+- The **adversarial verifier role is the strongest candidate.** It has now been run twice and its highest-value behaviour is a repo-specific check that no general-purpose agent would invent: *is this passage deliberately historical?* Provenance headers, dated logs, superseded rows, and closed-task handoffs are records to be preserved, not drift to be fixed. On 2026-07-29 that check refuted **every** finding raised against the three handoff/ledger documents — the audit agent had read dated session records as live status. A reusable definition would carry that check and the "corrections get their own row" convention by default.
+- Corollary worth noting: the same run's audit stage should have been told the distinction up front. **Do not point a drift audit at a historical record without first teaching it that records are not status.** Whether that belongs in a skill, an agent definition, or Rule 3's context-package table is exactly what B-024 decides.
+
 ## 8. Next Work
 
 Start B-001 and B-002 at the same time. Then do B-004 through B-007 in one
 controlled CTS-285 spine sequence. Do not start the CSC-289 merge before B-013
 defines the handoff package.
+
+**B-002 is complete** (2026-07-29). B-003 is in progress: an audit has produced
+verified findings, but the reconciliation worklist is **not yet written** and no
+content edits have been applied. B-024 is process tooling and can run at any
+time — it does not gate course content.
