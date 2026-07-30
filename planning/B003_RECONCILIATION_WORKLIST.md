@@ -2,6 +2,13 @@
 
 *Produced 2026-07-29. Findings come from a 5-document audit against ground truth regenerated from the file tree and `git log` — never from any document's own claims (CLAUDE.md non-negotiable #6). Every finding was then put to an adversarial verifier prompted to refute it. This document lists only what survived.*
 
+> **APPLIED 2026-07-29.** All 47 confirmed edits landed: 44 across the six planning/canon documents
+> (`7660cbf`) and the 3-part atomic `WIRING_MANIFEST.md` change. Every claim was re-verified against
+> the tree and `git log` at application time rather than taken from this list on faith — two figures
+> were adapted as a result (`phase0` is 13 files, not the 12 counted before ADR-007 existed). The 20
+> refuted findings were not applied. The 4 out-of-scope items below remain open and unowned by B-003.
+> This list is retained as the record; corrections get their own row.
+
 ## Verdict against B-003's acceptance criteria
 
 B-003 is done when **(1)** *"Status text matches the tree and Git history"* and **(2)** *"Resolved blockers do not appear as open."*
