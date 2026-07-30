@@ -65,7 +65,7 @@ Before you start designing, you need to **plan the sprint**.
 
 ### Use the Sprint Planning Template
 
-Copy `/courses/CTS-285/planning-sheets/Sprint_Planning_Template.md` into your repository as `sprint-1-planning.md`.
+Copy `<!-- PATHFORM: pending spine ruling -->/Sprint_Planning_Template.md` into your repository as `sprint-1-planning.md`.
 
 ### Fill out these sections:
 
@@ -380,7 +380,7 @@ For EACH entry, answer these 3 questions:
 
 At the end of Week 6, reflect on your sprint process.
 
-Copy `/courses/CTS-285/planning-sheets/Sprint_Retrospective_Template.md` into your repo as `sprint-1-retrospective.md`.
+Copy `<!-- PATHFORM: pending spine ruling -->/Sprint_Retrospective_Template.md` into your repo as `sprint-1-retrospective.md`.
 
 ### Answer These Questions
 

@@ -2,6 +2,8 @@
 
 > **Produced by issue #5 (task 1.7 REVISED) for the per-week assignment-adaptation tasks to consume.** This task adapts the six planning-sheet *templates*; it does **not** edit any assignment or activity file (those live in read-only `../csc_dash` and are owned by the per-week tasks — Rule 1 forbids a leaf co-editing them in the same wave). This manifest tells each owning task the exact reference line to add or re-point, and where.
 
+> **Location note (B-002, 2026-07-29):** these templates now live at `drafts/cts285/planning-sheets/`; the case-variant `drafts/CTS-285/` path is retired. B-002 also fixed the **repo-internal** reference form (repo-root-relative, no leading slash). **It did not rule PATHFORM** — the course-repo prefix below remains open. The two are different questions: B-002 governs how files in *this staging repo* refer to each other; PATHFORM governs what a *student* is told to copy from a course repo that does not exist yet.
+
 ## How to read this
 
 - **Path prefix is deliberately unresolved.** Every source reference uses the csc_dash form `/courses/CTS-285/planning-sheets/X.md`, which will **not** resolve in the 26FA course repo. The final course-repo layout is undecided (nothing has graduated from this repo), and the chosen relative form is a cross-cutting convention that assignments, activities, and Canvas HTML (task 3.4) all inherit — a **spine/coursemap decision, not a leaf one**. Until the spine rules, the prefix below is the placeholder `<!-- PATHFORM: pending spine ruling -->`. The owning task substitutes the ruled prefix; it must **never** re-use the csc_dash `/courses/CTS-285/...` form.
@@ -68,7 +70,7 @@
 
 ## BLOCKED-ON (consumed downstream, not resolved here)
 
-- **Post-ingest path convention (spine/coursemap):** every `<!-- PATHFORM: pending spine ruling -->` above awaits the spine ruling on the 26FA course-repo relative path form. Do not invent one; do not re-use the csc_dash `/courses/CTS-285/...` form.
+- **Post-ingest path convention (spine/coursemap):** every `<!-- PATHFORM: pending spine ruling -->` above awaits the spine ruling on the 26FA course-repo relative path form. Do not invent one; do not re-use the csc_dash `/courses/CTS-285/...` form. **Now tracked as a decision of record: `phase0/ADR-006-course-repo-path-form.md` (Proposed).** The three previously-stale csc_dash references (Week_05 ×2, Week_06 ×1) were converted to the placeholder on 2026-07-29, so `grep -rn "PATHFORM: pending spine ruling"` now enumerates every substitution site.
 - **Inbound reference edits** (re-pointing Week_05/06 + adding the Week_04 / Module_02 / Week_05-standup / exit-ticket references) are owned by the per-week assignment-adaptation tasks. This task only emits this manifest.
 - **Sprint_Retrospective duplicate deliverable** (Week_05 vs Week_06) — assignment/spine decision.
 - **Daily_Standup 3-question vs 4-section format** — Week_05 assignment-adaptation decision.

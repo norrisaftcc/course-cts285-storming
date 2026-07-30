@@ -115,9 +115,19 @@ The draft area also contains partial units:
 - `COURSEMAP.md`, `README.md`, and the rubric file are interim copies. They
   still contain retired structure or policy.
 
-There are two CTS-285 draft paths: `drafts/cts285/` and `drafts/CTS-285/`.
-The planning sheets are in the second path. The course drafts are in the first
-path. The project has not selected the final path form.
+**Resolved 2026-07-29 (B-002).** There is one CTS-285 draft path: `drafts/cts285/`.
+The planning sheets moved there from the retired `drafts/CTS-285/` (git rename,
+history preserved). The selected reference form for repo-internal paths is
+**repo-root-relative with no leading slash**, backticked — e.g.
+`drafts/cts285/planning-sheets/Sprint_Planning_Template.md`. That form was
+already dominant at 296 occurrences against a handful of leading-slash strays.
+
+This ruling covers **repo-internal** references only. The **course-repo** path
+form that student-facing "Copy X into your repository" lines will use is a
+separate, still-open spine decision, now tracked as
+`phase0/ADR-006-course-repo-path-form.md` (**Proposed**). Until it is ruled,
+those lines carry the `<!-- PATHFORM: pending spine ruling -->` placeholder;
+the retired csc_dash `/courses/CTS-285/...` form no longer appears anywhere.
 
 ## 5. Gaps
 
@@ -146,8 +156,10 @@ ADR-005 resolved the old prerequisite question. It is no longer a blocker.
 
 ### 5.3 Structure and control
 
-- The two CTS-285 draft paths differ only by letter case.
-- The final relative link form is not decided.
+- ~~The two CTS-285 draft paths differ only by letter case.~~ Resolved 2026-07-29 (B-002).
+- ~~The final relative link form is not decided.~~ Resolved for repo-internal
+  references 2026-07-29 (B-002). The **course-repo** form students are pointed at
+  (PATHFORM) is still open — a spine decision, tracked in `WIRING_MANIFEST.md`.
 - The master plan and root README do not show all completed work.
 - `sources/README.md` still says that `sources/` is an empty scaffold.
 - Several old task notes describe decisions that later ADRs resolved.
@@ -176,7 +188,7 @@ ADR-005 resolved the old prerequisite question. It is no longer a blocker.
 | ID | Work | Depends on | Done when |
 |---|---|---|---|
 | B-001 | Get the five human decisions in section 5.1. | Instructor and partners | Each answer has a dated record. Each blocked task has a fallback. |
-| B-002 | Select one CTS-285 draft path and one relative link form. Move the planning sheets to that path. | None | One path exists. All draft links use the selected form. |
+| ~~B-002~~ **DONE 2026-07-29** | Select one CTS-285 draft path and one relative link form. Move the planning sheets to that path. | None | ✅ One path exists (`drafts/cts285/`). ✅ Repo-internal references use the selected form (repo-root-relative, no leading slash). Course-repo PATHFORM remains open by design — see §4 note. |
 | B-003 | Reconcile the master plan, root README, source README, and old handoff notes with accepted ADRs and completed work. | B-002 | Status text matches the tree and Git history. Resolved blockers do not appear as open. |
 | B-004 | Rewrite Week 1 and create the 15-point Dataman document-analysis quiz. | ADR-005; Dataman transcript; B-001 for PDF release | The assignment uses configure-and-verify setup, the analyst read, the Media frame, and the canonical points. |
 | B-005 | Rewrite Week 2 around the paper simulation and seeded Dataman or DataMon backlog. | Shared Dataman artifacts | The assignment removes project selection and uses the canonical board and Trusted Workflow. |
@@ -214,8 +226,26 @@ ADR-005 resolved the old prerequisite question. It is no longer a blocker.
 | B-022 | Run the adversarial continuity review from CTS-285 Week 1 through CSC-289 Week 1. | B-021 | The review finds no broken handoff, role, tier, workflow, or project assumption. |
 | B-023 | Transfer approved material to the course repositories. | B-022 | The course repositories contain the approved files and regenerated indexes. |
 
+### Process tooling — orchestration
+
+| ID | Work | Depends on | Done when |
+|---|---|---|---|
+| B-024 | **Decide whether this repo's skills and agent definitions need adjusting to enforce Rule 1a** (fan-out size and shape, added to `CLAUDE_SUPPLEMENTARY.md` 2026-07-29). Open question, not a foregone conclusion — evaluate before building. | Rule 1a | A dated decision exists: either specific skill/agent changes are specified and made, or a written rationale for why prose doctrine is sufficient. |
+
+**Context for B-024.** Rule 1a currently lives only as prose an agent is trusted to have read. The 2026-07-29 incident happened because a fan-out was sized by estimate rather than counted, and because dead agents were filtered away silently — neither of which prose reliably prevents under time pressure. Questions worth answering:
+
+- Is a **workflow-authoring skill** warranted (a checklist that forces the agent-count arithmetic and the dispatched-vs-returned reconciliation before launch), or does that just move the prose somewhere else?
+- Should the repo define **named agent types** for its recurring roles — the continuity reviewer (Rule 7), the adversarial verifier, the mechanical propagation worker (Rule 2's Sonnet tier) — so context packages per Rule 3 are attached to the role rather than re-pasted into every prompt?
+- The **adversarial verifier role is the strongest candidate.** It has now been run twice and its highest-value behaviour is a repo-specific check that no general-purpose agent would invent: *is this passage deliberately historical?* Provenance headers, dated logs, superseded rows, and closed-task handoffs are records to be preserved, not drift to be fixed. On 2026-07-29 that check refuted **every** finding raised against the three handoff/ledger documents — the audit agent had read dated session records as live status. A reusable definition would carry that check and the "corrections get their own row" convention by default.
+- Corollary worth noting: the same run's audit stage should have been told the distinction up front. **Do not point a drift audit at a historical record without first teaching it that records are not status.** Whether that belongs in a skill, an agent definition, or Rule 3's context-package table is exactly what B-024 decides.
+
 ## 8. Next Work
 
 Start B-001 and B-002 at the same time. Then do B-004 through B-007 in one
 controlled CTS-285 spine sequence. Do not start the CSC-289 merge before B-013
 defines the handoff package.
+
+**B-002 is complete** (2026-07-29). B-003 is in progress: an audit has produced
+verified findings, but the reconciliation worklist is **not yet written** and no
+content edits have been applied. B-024 is process tooling and can run at any
+time — it does not gate course content.

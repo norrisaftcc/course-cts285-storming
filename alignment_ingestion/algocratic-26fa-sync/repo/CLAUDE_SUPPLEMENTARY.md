@@ -5,27 +5,11 @@
 
 This project has already been burned once by uncoordinated agentic generation: on 2026-03-13, two parallel sessions produced two incompatible CSC-289 architectures (solo vs team), self-audited them the same day, and nobody noticed for four months (see ADR-001). Every rule below exists to prevent a recurrence.
 
-**Second recorded burn — 2026-07-29, over-wide fan-out.** A status-reconciliation workflow was sized at ~14 agents and launched **76**: a per-finding verification stage was nested inside a per-document audit stage, and the audits returned 67 findings instead of the assumed handful. Eighteen agents died on server overload — including the single synthesis agent, so the run returned no deliverable after 109 minutes and 3.16M tokens. Worse, the result-filter discarded findings whose verifier had died, so the run reported a confident "49 confirmed" while **17 findings had been dropped rather than judged**. The findings were recoverable from the run journal; the lesson is in Rule 1 below. Note the irony on the record: the workflow existed to catch documents making confident claims about work that hadn't happened, and its own summary did exactly that.
-
 ## Rule 1 — Spine work is single-session; leaf work fans out
 
 - **Spine tasks** (coursemaps, points propagation across files, module architecture, the 289 merge, COURSEMAP/README rebuilds) run in ONE session with ALL source documents in context. Never parallelize a spine.
-- **Leaf tasks** (skin passes on individual files, template authoring, knowledge checks, Canvas pages, per-file Dataman swaps) fan out — one file, one owner, no two agents touching the same file in a wave. **Bounded, not "freely"** — see the size and shape limits below.
+- **Leaf tasks** (skin passes on individual files, template authoring, knowledge checks, Canvas pages, per-file Dataman swaps) fan out freely — one file, one owner, no two agents touching the same file in a wave.
 - If a leaf task turns out to require a spine decision, stop and flag; don't make the decision from inside a leaf.
-
-### Rule 1a — Fan-out size and shape (instructor directive, 2026-07-29)
-
-**Hard cap: 7 agents per workflow or wave.** Not a guideline. If the work needs more, it is more than one wave — run it in sequence and read the results between rounds. A run you cannot hold in your head is a run whose failures you will not notice.
-
-**Fan out per artifact, never per finding.** The unit of parallelism is a *file or document* — the same unit Rule 1 already assigns one owner. When a stage produces findings, issues, or items, batch all of one artifact's items into that artifact's single agent. Fanning out per item makes agent count a function of what the work discovers, which you cannot size in advance.
-
-**Never nest an unbounded fan-out inside another fan-out.** `parallel()` inside a `pipeline()` stage multiplies: outer × inner. This is what produced 76 agents from a 14-agent estimate.
-
-**Count before launching.** State the arithmetic explicitly — `stages + (documents × per-document agents)` — and check it against the cap. If any factor is "however many the previous stage returns," the design is wrong; bound it first.
-
-**No silent drops.** Agents die on server overload; that is normal and must be survivable. Never filter a dead agent's work away — filter on an *explicit* verdict, then compare dispatched against returned and report the difference. A run that says "49 confirmed" while 17 items went unjudged is worse than a run that fails loudly, because the number looks like an answer. Log what was dropped, always.
-
-**Verification survives the wave.** A workflow's return value is not the record — the run journal is. Findings, verdicts, and ground truth are recoverable from it after a crash, so a synthesis step dying does not mean re-running the fan-out. Read the journal before re-dispatching anything.
 
 ## Rule 2 — Model tiering
 

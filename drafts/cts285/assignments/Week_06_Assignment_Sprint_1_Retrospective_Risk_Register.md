@@ -33,7 +33,7 @@ These aren't busywork - they're how professional teams improve and avoid disaste
 
 ### Use the Risk Register Template
 
-Copy `/courses/CTS-285/planning-sheets/Risk_Register_Template.md` into your repository as `risk-register.md`.
+Copy `<!-- PATHFORM: pending spine ruling -->/Risk_Register_Template.md` into your repository as `risk-register.md`.
 
 ### Identify Risks
 
