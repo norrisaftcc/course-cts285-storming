@@ -10,10 +10,14 @@
 
 ## WRITE TOKEN
 
-**Holder:** Cloud Claude Code — session `session_015ox6hTidX21c2tnV4xT2Jo` (branch `claude/algocratic-sync-assessment-8fwtzn`).
-**Passed from:** Drew (human), 2026-07-29 — *"session that built zip is archived, you have the lead currently."* The cloud Cowork session that built the sync package is **archived** and must not be treated as a live writer. Token returns to Drew when this branch merges.
+**Holder:** Drew (human). No session holds the token. A session that wants to write asks for it first.
+**Passed from:** returned automatically on the merge of PR #27 (`cac6def`), per the 2026-07-29 entry's own terms; re-affirmed by Drew's ruling 2026-07-31 at the close of PR #28.
 
 > **Correction (2026-07-29):** the shipped version of this file read "*pending handoff to local Claude Code for Phase 1*." That was accurate when the sync package was built (baseline `ca36b45`) but stale on arrival — Phase 1 had already run to 12 merged PRs. See the backfill block below.
+
+> **Correction (2026-07-31):** this block named Cloud Claude Code session `session_015ox6hTidX21c2tnV4xT2Jo` (branch `claude/algocratic-sync-assessment-8fwtzn`) as holder, passed from Drew 2026-07-29 — *"session that built zip is archived, you have the lead currently."* That branch merged at `cac6def`, so by the entry's own terms the token had already returned to Drew and the holder line was stale. The B-003 session measured this, declined to self-grant, and flagged it as BLOCKED-ON in PR #28; Drew ruled on 2026-07-31. **Recorded, not backdated:** the 47 B-003 edits (`3abc5f4`) were applied while the token was unheld, on a branch behind a draft PR. The reviewable path stood in for the token; it does not retroactively confer it.
+>
+> **Standing note for the next session:** a holder line that names a branch also names its own expiry. When that branch merges, the token is Drew's again and the line is stale until someone says otherwise — read the merge state of the named branch before trusting the holder.
 
 ## Ledger
 
@@ -45,3 +49,4 @@
 | 2026-07-29 | GitHub Copilot agent | copilot-swe-agent[bot] | #26 | `07c970d`, `e3b2e76` | `REPOSITORY_INVENTORY_AND_PRIORITIZED_BACKLOG.md` — file-tree inventory, source map, dependency-ordered backlog |
 | 2026-07-29 | Cloud Claude Code (remote) | Claude (this session) | *(this PR)* | *(this commit)* | Ingested `algocratic-26fa-sync.zip`; per-file fitness assessment (4 GO / 3 NO-GO / 15 no-op); applied the GO set; recorded the assessment in `alignment_ingestion/ASSESSMENT.md` |
 | 2026-07-29 | Cloud Claude Code (remote) | Claude (this session) | *(this PR)* | *(this commit)* | **B-002** — consolidated the case-variant draft paths into `drafts/cts285/` (7 planning sheets moved, git renames, history preserved); ruled the repo-internal reference form (repo-root-relative, no leading slash); took the WRITE TOKEN. Course-repo PATHFORM deliberately left open |
+| 2026-07-31 | Cloud Claude Code (remote) | Claude (this session) | *(this PR)* | *(this commit)* | **B-003** — applied the reconciliation worklist. Edits expected: 47 across 7 files. Applicators dispatched: 5, returned: 5, died: 0; applied per applicators: 47/47. Independent audit (re-derived from the diff): 47/47, matching the applicators' count — master plan 22/22, CLAUDE.md 10/10, README.md 3/3, sources/README.md 2/2, INGESTION_MANIFEST.md 1/1, ASSESSMENT_NOTES.md 6/6, WIRING_MANIFEST.md 3/3 (incl. item 47's required paired BLOCKED-ON retirement). Skipped: none; unreached-by-death: none. Only the 7 target files touched; none of the 20 refuted findings or 4 out-of-scope items applied. Audit and applicator counts agree at 47/47 — no shortfall |
