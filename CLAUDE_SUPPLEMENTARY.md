@@ -27,6 +27,18 @@ This project has already been burned once by uncoordinated agentic generation: o
 
 **Verification survives the wave.** A workflow's return value is not the record — the run journal is. Findings, verdicts, and ground truth are recoverable from it after a crash, so a synthesis step dying does not mean re-running the fan-out. Read the journal before re-dispatching anything.
 
+#### Which half of Rule 1a binds mechanically (ADR-008, 2026-07-31)
+
+A rule that does not say which of its clauses are enforced invites you to trust all of them equally. These are not equal.
+
+**Enforced — `Workflow({name: 'bounded-fanout', args: {...}})`** (`.claude/workflows/bounded-fanout.mjs`). Use it for per-file waves. It computes the agent count from your arguments and **refuses over the cap** rather than warning; it accepts only a per-artifact argument shape, so per-finding fan-out cannot be expressed; it refuses when two artifacts claim the same file; and it returns dispatched/returned/dead on every run, including successful ones. None of this depends on your having read this file.
+
+**Advisory — still only prose, still yours.** Whether a task is spine or leaf. What counts as one artifact. Whether the work is one wave or three. Whether a leaf has hit a spine decision and must stop. No mechanism makes these calls, and `bounded-fanout` will faithfully execute a badly-shaped plan that fits under the cap.
+
+**Named agent types** (`.claude/agents/`) carry role knowledge so Rule 3's context packages attach to the role instead of being re-pasted: `adversarial-verifier` (read-only; leads with *records are not status*) and `mechanical-propagation` (match by snippet, preserve deliberate history, emit real command output). `bounded-fanout` defaults its audit stage to `adversarial-verifier`.
+
+Hand-rolling a script or calling `Agent` directly bypasses all of the above. That path is doctrine only — ADR-008 does not pretend otherwise.
+
 ## Rule 2 — Model tiering
 
 - **Opus-tier work:** anything voice-sensitive (SHODANN lines, Corporate satire, Underground), net-new modules (wks 1–2 rewrite, wks 13–16 on-ramp, instructor guide M4–8), structural merges (289 spine), and the adversarial continuity review.

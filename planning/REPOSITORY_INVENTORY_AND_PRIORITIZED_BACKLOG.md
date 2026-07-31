@@ -230,7 +230,7 @@ ADR-005 resolved the old prerequisite question. It is no longer a blocker.
 
 | ID | Work | Depends on | Done when |
 |---|---|---|---|
-| B-024 | **Decide whether this repo's skills and agent definitions need adjusting to enforce Rule 1a** (fan-out size and shape, added to `CLAUDE_SUPPLEMENTARY.md` 2026-07-29). Open question, not a foregone conclusion — evaluate before building. | Rule 1a | A dated decision exists: either specific skill/agent changes are specified and made, or a written rationale for why prose doctrine is sufficient. |
+| ~~B-024~~ **DONE 2026-07-31** | **Decide whether this repo's skills and agent definitions need adjusting to enforce Rule 1a** (fan-out size and shape, added to `CLAUDE_SUPPLEMENTARY.md` 2026-07-29). Open question, not a foregone conclusion — evaluate before building. | Rule 1a | ✅ Ruled in **`phase0/ADR-008-rule-1a-enforcement.md`**. Built: `.claude/workflows/bounded-fanout.mjs` (refuses over cap, per-artifact shape only, refuses file collisions, unconditional dispatched-vs-returned) and two agent types, `adversarial-verifier` + `mechanical-propagation`. Declined with reasons: a checklist-form authoring skill, a `continuity-reviewer` definition. Rule 1a amended to mark its enforced half from its advisory half. |
 
 **Context for B-024.** Rule 1a currently lives only as prose an agent is trusted to have read. The 2026-07-29 incident happened because a fan-out was sized by estimate rather than counted, and because dead agents were filtered away silently — neither of which prose reliably prevents under time pressure. Questions worth answering:
 
@@ -245,7 +245,9 @@ Start B-001 and B-002 at the same time. Then do B-004 through B-007 in one
 controlled CTS-285 spine sequence. Do not start the CSC-289 merge before B-013
 defines the handoff package.
 
-**B-002 is complete** (2026-07-29). B-003 is in progress: an audit has produced
-verified findings, but the reconciliation worklist is **not yet written** and no
-content edits have been applied. B-024 is process tooling and can run at any
-time — it does not gate course content.
+**B-002 is complete** (2026-07-29). **B-003 is complete** (2026-07-31): the
+worklist was written, and all 47 confirmed edits were applied and independently
+audited at 47/47 (PR #28). Its audit covered the planning and canon layer only —
+`drafts/cts285/**` was never swept, so a later round or the issue #17 continuity
+audit still owes that tree. **B-024 is complete** (2026-07-31): ruled in ADR-008,
+with the enforcing workflow and two agent types built.
