@@ -10,10 +10,14 @@
 
 ## WRITE TOKEN
 
-**Holder:** Cloud Claude Code — session `session_015ox6hTidX21c2tnV4xT2Jo` (branch `claude/algocratic-sync-assessment-8fwtzn`).
-**Passed from:** Drew (human), 2026-07-29 — *"session that built zip is archived, you have the lead currently."* The cloud Cowork session that built the sync package is **archived** and must not be treated as a live writer. Token returns to Drew when this branch merges.
+**Holder:** Drew (human). No session holds the token. A session that wants to write asks for it first.
+**Passed from:** returned automatically on the merge of PR #27 (`cac6def`), per the 2026-07-29 entry's own terms; re-affirmed by Drew's ruling 2026-07-31 at the close of PR #28.
 
 > **Correction (2026-07-29):** the shipped version of this file read "*pending handoff to local Claude Code for Phase 1*." That was accurate when the sync package was built (baseline `ca36b45`) but stale on arrival — Phase 1 had already run to 12 merged PRs. See the backfill block below.
+
+> **Correction (2026-07-31):** this block named Cloud Claude Code session `session_015ox6hTidX21c2tnV4xT2Jo` (branch `claude/algocratic-sync-assessment-8fwtzn`) as holder, passed from Drew 2026-07-29 — *"session that built zip is archived, you have the lead currently."* That branch merged at `cac6def`, so by the entry's own terms the token had already returned to Drew and the holder line was stale. The B-003 session measured this, declined to self-grant, and flagged it as BLOCKED-ON in PR #28; Drew ruled on 2026-07-31. **Recorded, not backdated:** the 47 B-003 edits (`3abc5f4`) were applied while the token was unheld, on a branch behind a draft PR. The reviewable path stood in for the token; it does not retroactively confer it.
+>
+> **Standing note for the next session:** a holder line that names a branch also names its own expiry. When that branch merges, the token is Drew's again and the line is stale until someone says otherwise — read the merge state of the named branch before trusting the holder.
 
 ## Ledger
 
