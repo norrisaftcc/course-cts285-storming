@@ -31,9 +31,25 @@ Per **ADR-004**, the modernization spine offers **two student project bases**, m
 
 ## Workflow canon (graded answers depend on this)
 
-**The Trusted Workflow:** Issue → Branch → **Draft PR** → Development → Finish PR → Code Review → Merge.
+**The Trusted Workflow:** **FILE → BRANCH → DRAFT → BUILD → FINISH → REVIEW → CLEAR → MERGE.** Eight steps.
 
+Verbs ratified by **ADR-007** (2026-07-31); **CLEAR** added by **ADR-009** (2026-07-31). One word per meaning, no synonyms — "open a PR" and "start a branch" are not verbs of this workflow.
+
+| # | Verb | Means | Was called |
+|---|---|---|---|
+| 1 | **FILE** | The work is written down before it is started, with acceptance criteria. | Issue |
+| 2 | **BRANCH** | A named branch exists; `main` is not the workspace. | Branch |
+| 3 | **DRAFT** | Work in progress is visible to others *before* it is finished. | Draft PR |
+| 4 | **BUILD** | The actual work. | Development |
+| 5 | **FINISH** | The PR is marked ready and carries its handoff block. | Finish PR |
+| 6 | **REVIEW** | Another party reads it — human, or the continuity-review agent. | Code Review |
+| 7 | **CLEAR** | A live human authorizes the merge: *I accept what happens when this lands.* | *(new — was tacit)* |
+| 8 | **MERGE** | It lands. | Merge |
+
+- **CLEAR is a gate, not a check.** Only a live human clears; no agent clears its own work or another's; naming the specific PR is required; "ok", "sure", and silence do not clear. REVIEW is a *precondition* of CLEAR, never part of it — see ADR-009.
+- **CLEAR's signer is scoped.** For this repo, the instructor is the only signer. Student-held gate authority (CSC-289 teams, late-capstone marshals) is **blocked on `the-algorithm` KEEP Q4** and is not authorized by ADR-009.
 - Supersedes the entry-ticket key (Issue→Branch→Code→PR) and any doc teaching code-before-PR.
+- The **step sequence** is unchanged from the seven-step form except for the insertion of CLEAR at position 7; ADR-007 renamed labels and reordered nothing.
 - **Board columns:** To Do → In Progress → In Review → Done. ("Sprint Backlog" as a column name is retired; the *product backlog* remains a backlog.)
 - Every quiz item, rubric line, and answer key encoding workflow order or column names regenerates against this section.
 

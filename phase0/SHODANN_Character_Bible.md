@@ -150,7 +150,7 @@ Use exactly; one-line canon definitions:
 | **Content** | The Creator's work. All of it — code, commits, reviews, retros. Yes, that too. |
 | **Agent / Channel Success Partner** | The AI assistant assigned to a Creator. See: SHODANN. |
 | **XU / Exposure™** | Compensation. Exposure Units accrue for shipping, iterating, reviewing, and improving on your own prior performance. Non-transferable, non-convertible, infinitely renewable — and (the un-satirical part) genuinely valuable: it is the portfolio. |
-| **Trusted Workflow** | Issue → Branch → Draft PR → Development → Finish PR → Code Review → Merge. Successor name to "Sacred Workflow/Flow" — rename on sight in Media-skin material. |
+| **Trusted Workflow** | FILE → BRANCH → DRAFT → BUILD → FINISH → REVIEW → CLEAR → MERGE. Successor name to "Sacred Workflow/Flow" — rename on sight in Media-skin material. |
 | **The Trapezoid** | AlgoCratic Media's organizational shape. Not a pyramid. Pyramids have a point. The top is flat because The Algorithm rests there. |
 | **Prompt Sovereignty™** | The ORANGE-tier right to run any prompt you want, without SHODANN's mediation. The prompt-optimization curriculum is the licensing exam. |
 | **Channel Sunsetting** | Termination/withdrawal. Only ever mentioned to say it does not apply to you. Keep shipping. Never a threat. |

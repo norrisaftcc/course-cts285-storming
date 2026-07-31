@@ -77,7 +77,7 @@ C) To automatically fix bugs in code
 D) To replace code documentation
 
 **Correct Answer**: B
-**Explanation**: Git tracks every change, who made it, and why. On the Dataman project you work the Trusted Workflow — Issue → Branch → Draft PR → Development → Finish PR → Code Review → Merge — so you can experiment on a branch (say, adding division-with-remainder handling) without breaking main. You can revert mistakes and see exactly when the two-tries rule was introduced. In professional work, everything goes in version control: it's your safety net and collaboration platform.
+**Explanation**: Git tracks every change, who made it, and why. On the Dataman project you work the Trusted Workflow — FILE → BRANCH → DRAFT → BUILD → FINISH → REVIEW → CLEAR → MERGE — so you can experiment on a branch (say, adding division-with-remainder handling) without breaking main. You can revert mistakes and see exactly when the two-tries rule was introduced. In professional work, everything goes in version control: it's your safety net and collaboration platform.
 
 ### Question 6
 You discover a bug in the deployed Dataman build: the Memory Bank set-builder is accepting an eleventh problem into a set, violating the manual's hard cap of ten. What's the professional approach to fixing it?
@@ -88,7 +88,7 @@ C) Blame whoever wrote the buggy code
 D) Hope users don't notice it
 
 **Correct Answer**: B
-**Explanation**: Professional bug fixing is systematic. Document the bug ("MemoryBankSet accepts 11 problems; manual limit is 10, pp.6/21"), write a test that fails — proving the bug exists — fix it, verify the test passes, get code review, and merge through the Trusted Workflow's Finish PR → Code Review → Merge steps. The test prevents regression: if the cap check ever slips again, the test catches it. This discipline prevents rushed fixes that create new bugs.
+**Explanation**: Professional bug fixing is systematic. Document the bug ("MemoryBankSet accepts 11 problems; manual limit is 10, pp.6/21"), write a test that fails — proving the bug exists — fix it, verify the test passes, get code review, and merge through the Trusted Workflow's FINISH → REVIEW → CLEAR → MERGE steps. The test prevents regression: if the cap check ever slips again, the test catches it. This discipline prevents rushed fixes that create new bugs.
 
 ### Question 7
 What is regression testing?
@@ -196,6 +196,6 @@ D) Only for large teams
 - Reference: `Dataman_Seeded_Backlog.md` (epics/stories the Sprint 3 refinements trace to)
 - Canvas Reading: "Test-Driven Development Basics"
 - Canvas Reading: "Writing Architecture Decision Records"
-- Reference: Git Workflow Guide (Trusted Workflow: Issue → Branch → Draft PR → Development → Finish PR → Code Review → Merge)
+- Reference: Git Workflow Guide (Trusted Workflow: FILE → BRANCH → DRAFT → BUILD → FINISH → REVIEW → CLEAR → MERGE)
 - Reference: Code Review Checklist
 - Tool Tutorial: GitHub Pull Requests
