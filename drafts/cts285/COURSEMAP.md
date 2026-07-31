@@ -1,7 +1,7 @@
 # CTS-285 COURSEMAP
 ## Systems Analysis & Design - Certification Document
 
-**Institution**: Forsyth Technical Community College
+**Institution**: FTCC <!-- NAME: initialism only; the UV-285 source carried a wrong expansion (different college). Full legal name is an instructor call. -->
 **Instructor**: Andrew Norris
 **Term**: Fall 2026
 **Last Updated**: January 15, 2026
