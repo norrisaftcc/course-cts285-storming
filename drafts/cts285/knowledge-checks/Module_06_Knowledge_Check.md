@@ -184,7 +184,7 @@ C) To document failures for performance reviews
 D) Post-mortems aren't necessary
 
 **Correct Answer**: B
-**Explanation**: Blameless post-mortems are learning opportunities. "The deployment failed because we didn't test the Memory Bank migration in staging. Solution: add migration testing to our deployment checklist before every Finish PR → Code Review → Merge." This is organizational learning. Teams that blame people hide problems. Teams that examine systems improve. The goal is preventing repeat failures, not punishing individuals — even on a solo capstone project, the habit is the point.
+**Explanation**: Blameless post-mortems are learning opportunities. "The deployment failed because we didn't test the Memory Bank migration in staging. Solution: add migration testing to our deployment checklist before every FINISH → REVIEW → CLEAR → MERGE." This is organizational learning. Teams that blame people hide problems. Teams that examine systems improve. The goal is preventing repeat failures, not punishing individuals — even on a solo capstone project, the habit is the point.
 
 ---
 
@@ -202,4 +202,4 @@ D) Post-mortems aren't necessary
 - Canvas Reading: "Managing Technical Debt"
 - Reference: Quality Assurance Checklist
 - Reference: Common Project Risks and Mitigations
-- Reference: Git Workflow Guide (Trusted Workflow: Issue → Branch → Draft PR → Development → Finish PR → Code Review → Merge)
+- Reference: Git Workflow Guide (Trusted Workflow: FILE → BRANCH → DRAFT → BUILD → FINISH → REVIEW → CLEAR → MERGE)

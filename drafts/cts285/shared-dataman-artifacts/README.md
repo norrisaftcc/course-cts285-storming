@@ -48,7 +48,7 @@ Point figures below are from `phase0/CTS285_Canonical_Points_Table.md`; per ADR-
 | Module 3 · System Design Studio; **Sprint 1: System Design** (Wk 5–6) | 75 pts (10.0% of 750) | `Dataman_Reference_ERD.md` (incl. degraded variants for "which entity is missing?" items); `Grading_Key.md` Part 4 |
 | Module 4 · Sprint Planning Simulation | (uses Wk 2/4 outputs) | Seeded backlog as the plannable product backlog |
 
-Board columns everywhere: **To Do → In Progress → In Review → Done**. Any workflow reference uses the Trusted Workflow: **Issue → Branch → Draft PR → Development → Finish PR → Code Review → Merge**.
+Board columns everywhere: **To Do → In Progress → In Review → Done**. Any workflow reference uses the Trusted Workflow: **FILE → BRANCH → DRAFT → BUILD → FINISH → REVIEW → CLEAR → MERGE**.
 
 ---
 

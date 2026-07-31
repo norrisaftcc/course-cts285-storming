@@ -61,13 +61,16 @@ Hand-rolling a script or calling `Agent` directly bypasses all of the above. Tha
 
 Build the course the way the course teaches building. Per work item:
 
-1. **Issue** — one GitHub issue per task, titled from the master plan task ID (e.g. `1.6: Expand Wk11-12 skeletons`), carrying the context-package list and acceptance criteria.
-2. **Branch** — `task/<phase>-<id>-<slug>` (e.g. `task/1-6-wk11-12-expansion`).
-3. **Draft PR immediately** — visible work-in-progress is the point.
-4. **Develop** in `drafts/<course>/<module-or-week>/`.
-5. **Finish PR** with the handoff block (below) in the description.
-6. **Review** — human, or the continuity-review agent for leaf work.
-7. **Merge.**
+1. **FILE** — one GitHub issue per task, titled from the master plan task ID (e.g. `1.6: Expand Wk11-12 skeletons`), carrying the context-package list and acceptance criteria.
+2. **BRANCH** — `task/<phase>-<id>-<slug>` (e.g. `task/1-6-wk11-12-expansion`).
+3. **DRAFT** immediately — visible work-in-progress is the point.
+4. **BUILD** in `drafts/<course>/<category>/`.
+5. **FINISH** — mark the PR ready, with the handoff block (below) in the description.
+6. **REVIEW** — human, or the continuity-review agent for leaf work.
+7. **CLEAR** — a live human authorizes the merge: *I accept what happens when this lands.* Only the instructor clears in this repo. No agent clears its own work or another agent's; "ok", "sure", and silence do not clear. **REVIEW is a precondition, not part of it** (ADR-009).
+8. **MERGE.**
+
+Verbs are canon per ADR-007 (ratified 2026-07-31) and ADR-009 (CLEAR, 2026-07-31). `phase0/NAMING_CANON.md` §"Workflow canon" is the authority.
 
 ## Rule 5 — Session handoff block
 
@@ -94,6 +97,7 @@ A fresh session resumes from the issue + handoff block + CLAUDE.md read-first li
 4. **Voice-check:** no never-list violations (bible §9); no punitive register at students; Andrew's Notes untouched; SHODANN lines pass the §3 calibration tests; layers sorted per KAYFABE_ARCHITECTURE.
 5. **Honesty-check:** no invented testimonials, statistics, or anecdotes.
 6. **Encoding:** UTF-8, no mojibake.
+7. **Gate:** an unREVIEWed PR cannot be CLEARed. REVIEW is a precondition of the gate, so a PR that no human and no continuity-review agent has read is not eligible for CLEAR — regardless of how clean checks 1–6 come back (ADR-009).
 
 ## Rule 7 — Phase gates
 
