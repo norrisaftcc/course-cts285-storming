@@ -69,3 +69,13 @@ Recorded so a later session does not helpfully build them:
 - **B-024's fourth point is now structural.** *Do not point a drift audit at a historical record without first teaching it that records are not status.* That teaching is no longer a thing to remember to paste; it is the first section of the verifier's definition.
 - **Two data points, not a trend.** Both runs cited above are from this repo's own history and both were self-reported by the agents involved, with the 2026-07-31 numbers independently re-derived from `git diff` and then re-derived a third time by hand. That is better than assertion and weaker than a probe.
 - **This ADR governs orchestration only.** It touches no course content, no points, no voice, and no student-facing material. It is process tooling, which is why B-024 was safe to run at any time.
+
+## Correction — 2026-07-31, same day
+
+**The cap shipped caller-supplied, which made the guard theater.** As first written, `bounded-fanout.mjs` read its cap from `args.cap` and fell back to 7. An agent facing twelve artifacts could pass `cap: 12` and the refusal would never fire — and an agent who had not read Rule 1a had no reason to think 7 was special and every reason to pass whatever number fit the work.
+
+This failed the ADR's own test. A limit the caller sets does not bind an agent who has read nothing; it is the hope SPECTRUM's belief 6 names, wearing the costume of a contract.
+
+**Fixed the same day.** `RULE_1A_CAP = 7` is now a constant in the file. `args.cap` may only *lower* it, for a wave you want tighter than doctrine allows. A higher value is ignored, logged at the point of the attempt, and reported in the run's returned `cap_raise_attempted` field. Raising the real cap now means editing a tracked file under the Trusted Workflow, reviewed like any other change — which is the enforcement, not a side effect of it.
+
+Recorded rather than quietly patched, because the defect is instructive: **the first draft of a mechanism reproduced the failure the mechanism existed to prevent.** Writing the guard is easy; noticing that its limit came from the caller took a second reading. Assume the next mechanism has the same class of hole until someone looks for it.
