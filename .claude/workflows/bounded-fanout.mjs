@@ -23,7 +23,17 @@ export const meta = {
 // ---------------------------------------------------------------------------
 
 const a = args || {}
-const CAP = typeof a.cap === 'number' ? a.cap : 7
+
+// Rule 1a's cap is doctrine, not a parameter.
+//
+// It lives here as a constant because a limit the caller supplies is not a
+// limit. `args.cap` may only LOWER it, for a wave you want tighter than
+// doctrine allows; a higher value is ignored and logged, never honoured.
+// Raising the real cap means editing this line under the Trusted Workflow,
+// reviewed like any other change — which is the point.
+const RULE_1A_CAP = 7
+const requestedCap = typeof a.cap === 'number' ? a.cap : RULE_1A_CAP
+const CAP = Math.min(requestedCap, RULE_1A_CAP)
 const artifacts = Array.isArray(a.artifacts) ? a.artifacts : []
 const hasAudit = Boolean(a.audit && a.audit.prompt)
 const hasScribe = Boolean(a.scribe && a.scribe.prompt)
@@ -45,12 +55,21 @@ const planned = artifacts.length + (hasAudit ? 1 : 0) + (hasScribe ? 1 : 0)
 const arithmetic = `${artifacts.length} artifact agents + ${hasAudit ? 1 : 0} audit + ${hasScribe ? 1 : 0} scribe = ${planned} (cap ${CAP})`
 log(`Rule 1a count: ${arithmetic}`)
 
+// Never clamp silently. A caller who tried to raise the cap learns that it did
+// not work, here and in the returned value.
+if (requestedCap > RULE_1A_CAP) {
+  log(`args.cap of ${requestedCap} IGNORED — Rule 1a caps at ${RULE_1A_CAP}. Running against ${CAP}.`)
+  log('args.cap can only lower the cap. Raising it is an edit to this file, under review.')
+}
+
 if (planned > CAP) {
   return refuse(`plan of ${planned} exceeds cap ${CAP}`, {
     arithmetic,
     at: CAP + 1,
+    doctrine_cap: RULE_1A_CAP,
+    cap_raise_attempted: requestedCap > RULE_1A_CAP ? requestedCap : null,
     remedy:
-      'This is more than one wave. Split the artifact list, run the waves in sequence, and read the results between rounds. Do not raise the cap to fit the work.',
+      'This is more than one wave. Split the artifact list, run the waves in sequence, and read the results between rounds. Raising args.cap will not help — it can only lower.',
   })
 }
 
@@ -103,6 +122,8 @@ if (dead.length) {
 
 const reconciliation = {
   cap: CAP,
+  doctrine_cap: RULE_1A_CAP,
+  cap_raise_attempted: requestedCap > RULE_1A_CAP ? requestedCap : null,
   arithmetic,
   dispatched,
   returned,
