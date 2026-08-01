@@ -1,5 +1,5 @@
 # CTS-285: Systems Analysis & Design
-## Fall 2026 | Forsyth Technical Community College
+## Fall 2026 | FTCC <!-- NAME: initialism only; see COURSEMAP note -->
 
 **Instructor**: Andrew Norris
 **Credits**: 3 (2 Class | 2 Lab)
