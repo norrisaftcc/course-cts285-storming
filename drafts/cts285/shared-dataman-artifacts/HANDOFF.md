@@ -17,8 +17,18 @@ Verification run: in the shipped student-facing artifacts, `grep` confirms `Data
 
 ## REMAINING
 
-- Nothing required to close 1.0a. The instructor-as-client (fourth stakeholder) is intentionally deferred to ADR-003 and to tasks 1.3/1.4 (author it as a live-play role brief, not a canned transcript) — not this task's work.
+- The core 1.0a artifact set needs no content rework. The instructor-as-client (fourth stakeholder) is intentionally deferred to ADR-003 and to tasks 1.3/1.4 (author it as a live-play role brief, not a canned transcript) — not this task's work.
+- **Continuity audit break:** `CTS285_COURSE_OUTLINE.md`, cited by stretch stories S1.1–S1.4 and `Grading_Key.md` Part 5, is not present in this checkout. The core five guarantees are confirmed below; stretch-story traceability remains blocked until the legacy source is restored or its location is ruled.
 - Downstream (other tasks, not blockers): tasks 1.3/1.4 wire these into the Week 2/3/4 assignments; Sprint 1 (wk5–6) builds ERD knowledge-check items from the degraded variants.
+
+## CONTINUITY AUDIT — 2026-08-02
+
+- **Confirmed:** every ERD entity is implied by at least one transcript; the entity matrix and transcript language reconcile.
+- **Confirmed:** every core story has a named stakeholder trace; no core story is motivated only by the deferred instructor-as-client.
+- **Confirmed:** the ERD, transcripts, and core backlog reconcile on Learner, Curator, Game, Session, Attempt, Score, Problem, and MemoryBankSet.
+- **Confirmed:** device behaviors used by the core artifacts (answer checking, two tries, score/reward, memory bank, remainder, limits, timer, games, and power/error behavior) trace to the cited manual pages.
+- **Confirmed:** the parent leaderboard vs. teacher no-ranking conflict, Atom-Clock timing conflict, audience conflict, and identity/data-visibility conflict are explicit and keyed; planted hazards are present and keyed.
+- **Independent checks:** fictional-persona labeling, no invented real-world testimonials/statistics, naming hazards, voice/register, and UTF-8 encoding passed. The missing legacy outline is the sole unresolved traceability break.
 
 ## DECIDED (in-session micro-decisions, not in phase0/)
 

@@ -4,7 +4,7 @@ One instructor-authored source set that every 26FA CTS-285 student analyzes, and
 
 **Nothing here is student-facing until it graduates to a course repo.** These are *inputs* to the Week 1–4 assignments, not the assignments themselves.
 
-**Project framing:** the 26FA CTS-285 solo spine is **Dataman** — modernizing Texas Instruments' 1977 handheld math toy *DataMan* into a web/app learning system across a full SDLC (weeks 1–12). Every entity, stakeholder need, and backlog item in this folder traces to the transcribed manual at `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md` — the product source of truth.
+**Project framing:** the 26FA CTS-285 solo spine is **Dataman** — modernizing Texas Instruments' 1977 handheld math toy *DataMan* into a web/app learning system across a full SDLC (weeks 1–12). Device-specific claims in this folder trace to the transcribed manual at `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md`; stakeholder needs and the below-the-line stretch homage have their own sources identified in the artifacts.
 
 ---
 
@@ -59,8 +59,8 @@ The value of this set is that a rubric can point at a source for every claim. Ve
 1. **Every entity in `Dataman_Reference_ERD.md` is derivable from at least one transcript** (matrix in Grading Key Part 4 — all eight entities covered).
 2. **Every top-of-backlog (core) user story traces to a named stakeholder need** — each carries a `↳ Traces to:` line; none is motivated by device behavior with no stakeholder.
 3. **No core story is motivated only by the deferred instructor-as-client persona** — that persona is intentionally not written here (see `phase0/ADR-003-instructor-as-client-persona.md`), so nothing depends on it.
-4. **Every stretch-goal epic traces to the legacy creature-game feature list** (`CTS285_COURSE_OUTLINE.md` lines 168–185).
-5. **No orphan stories** — nothing in the backlog lacks a motivating transcript (or, for stretch, an outline line).
+4. **Stretch-goal traceability is blocked pending the legacy outline source.** The backlog cites `CTS285_COURSE_OUTLINE.md` lines 168–185, but that file is not present in this repository; do not treat the stretch citations as independently verified until the source is restored or its location is ruled.
+5. **No orphan core stories** — every core story has a motivating transcript; stretch stories remain pending the missing outline source.
 
 ---
 
