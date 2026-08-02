@@ -1,6 +1,6 @@
 # HANDOFF — Task 1.0a: Shared Dataman Class Artifacts
 
-Branch: `task/1-0a-dataman-artifacts`. Nothing committed or pushed — everything is staged in the working tree for coordinator review, per the task instruction.
+Branch: `task/1-0a-dataman-artifacts`. The original task artifacts were staged for coordinator review; the independent continuity audit is recorded in the follow-up commit.
 
 ## DONE
 
@@ -39,10 +39,10 @@ Verification run: in the shipped student-facing artifacts, `grep` confirms `Data
 
 ## BLOCKED-ON
 
-- **Instructor-as-client persona (ADR-003).** Genuine canon gap surfaced, not decided: (a) 3 vs 4 transcripts, (b) canned vs live-play, (c) L2 client vs L0 OOC register. Proposal: 3 canned + 1 live role brief, neutral L2 register, no new named persona (lexicon lock). Needs instructor ruling.
 - **Dataman manual rights/permission** — unchanged open human blocker (CLAUDE.md §Open blockers). Content existence is satisfied (manual is transcribed and was the product source of truth for this task); redistribution rights are not. No scans published from this task.
+- **Legacy outline source** — `CTS285_COURSE_OUTLINE.md` is cited by the stretch stories but absent from this checkout; restore it or rule its location before grading stretch traceability.
 - **Not blocking here, noted:** Week 1–2 module architecture and sprint/week-numbering are spine (Rule 1) and were left untouched; teacher's "aligned to district standards" and the account/permission model are open requirements deliberately surfaced (not resolved) in the artifacts.
 
 ## CANON-TOUCHED
 
-- **New file `phase0/ADR-003-instructor-as-client-persona.md`** — a *proposal* only (status: Proposed, `needs-instructor`); decides nothing until the instructor signs off. No existing phase0 doc edited. No changes proposed to NAMING_CANON, the Bible, or the points table.
+- **No canon files edited by this audit.** ADR-003 is now accepted and governs the deferred instructor-as-client live role brief; the audit preserves that ruling.
