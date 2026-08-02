@@ -18,17 +18,18 @@ Verification run: in the shipped student-facing artifacts, `grep` confirms `Data
 ## REMAINING
 
 - The core 1.0a artifact set needs no content rework. The instructor-as-client (fourth stakeholder) is intentionally deferred to ADR-003 and to tasks 1.3/1.4 (author it as a live-play role brief, not a canned transcript) — not this task's work.
-- **Continuity audit break:** `CTS285_COURSE_OUTLINE.md`, cited by stretch stories S1.1–S1.4 and `Grading_Key.md` Part 5, is not present in this checkout. The core five guarantees are confirmed below; stretch-story traceability remains blocked until the legacy source is restored or its location is ruled.
+- **Continuity audit qualification:** Epic 8 stories 8.1–8.4 are Appendix-derived modernization/NFR stories and have no transcript stakeholder trace. The core-story guarantee is explicitly qualified in the README and grading key; do not mark these as transcript-derived.
 - Downstream (other tasks, not blockers): tasks 1.3/1.4 wire these into the Week 2/3/4 assignments; Sprint 1 (wk5–6) builds ERD knowledge-check items from the degraded variants.
 
 ## CONTINUITY AUDIT — 2026-08-02
 
 - **Confirmed:** every ERD entity is implied by at least one transcript; the entity matrix and transcript language reconcile.
-- **Confirmed:** every core story has a named stakeholder trace; no core story is motivated only by the deferred instructor-as-client.
+- **Confirmed:** every transcript-derived core story has a named stakeholder trace; no core story is motivated only by the deferred instructor-as-client.
+- **Qualified:** Epic 8 stories 8.1–8.4 are intentionally sourced from manual Appendix p.26 rather than a stakeholder transcript.
 - **Confirmed:** the ERD, transcripts, and core backlog reconcile on Learner, Curator, Game, Session, Attempt, Score, Problem, and MemoryBankSet.
 - **Confirmed:** device behaviors used by the core artifacts (answer checking, two tries, score/reward, memory bank, remainder, limits, timer, games, and power/error behavior) trace to the cited manual pages.
 - **Confirmed:** the parent leaderboard vs. teacher no-ranking conflict, Atom-Clock timing conflict, audience conflict, and identity/data-visibility conflict are explicit and keyed; planted hazards are present and keyed.
-- **Independent checks:** fictional-persona labeling, no invented real-world testimonials/statistics, naming hazards, voice/register, and UTF-8 encoding passed. The missing legacy outline is the sole unresolved traceability break.
+- **Independent checks:** fictional-persona labeling, no invented real-world testimonials/statistics, naming hazards, voice/register, and UTF-8 encoding passed. Epic 8's deliberate non-transcript provenance is the sole traceability qualification.
 
 ## DECIDED (in-session micro-decisions, not in phase0/)
 
@@ -40,7 +41,6 @@ Verification run: in the shipped student-facing artifacts, `grep` confirms `Data
 ## BLOCKED-ON
 
 - **Dataman manual rights/permission** — unchanged open human blocker (CLAUDE.md §Open blockers). Content existence is satisfied (manual is transcribed and was the product source of truth for this task); redistribution rights are not. No scans published from this task.
-- **Legacy outline source** — `CTS285_COURSE_OUTLINE.md` is cited by the stretch stories but absent from this checkout; restore it or rule its location before grading stretch traceability.
 - **Not blocking here, noted:** Week 1–2 module architecture and sprint/week-numbering are spine (Rule 1) and were left untouched; teacher's "aligned to district standards" and the account/permission model are open requirements deliberately surfaced (not resolved) in the artifacts.
 
 ## CANON-TOUCHED
