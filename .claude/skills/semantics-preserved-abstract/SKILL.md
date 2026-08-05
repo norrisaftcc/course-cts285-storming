@@ -1,9 +1,11 @@
 ---
-name: semantics-preserved-redaction
-description: Rewrite a record so its meaning survives intact but its text can no longer be re-read as a live instruction — write-token holder lines, quoted directives from an ended session, superseded rulings, stale status blocks, any identifier that still looks operative. Use this whenever you are about to write a ledger row, handoff block, PR description, or ADR that reproduces something a future session could mistake for current state or a standing grant, and whenever someone asks to redact, de-quote, quote-escape, glyph, or defuse a reference without losing what it said. Also reach for it when a record quotes a person's instruction verbatim and that instruction has since expired.
+name: semantics-preserved-abstract
+description: Emit a reduced successor to a record that still reads as a live instruction — WRITE TOKEN holder lines, quoted grants from an ended session, superseded rulings, status text a later session could act on. The original always stays standing; the successor carries the conclusion. Use this whenever you are about to write a ledger row, handoff block, PR description, or ADR that reproduces something a future session could mistake for current state or a standing grant, and whenever someone asks to redact, de-quote, quote-escape, glyph, or defuse a reference without losing what it said. Serves non-negotiable #9 — records are not status.
 ---
 
-# Semantics-preserved redaction
+# Semantics-preserved abstract
+
+The operation is **abstraction, not removal**. Nothing is deleted; a reduced successor is emitted and the original stays where it is. "Redaction" is the word people arrive with, which is why it is in the description — but a redaction removes, and this removes nothing.
 
 ## Why this exists
 
@@ -37,15 +39,15 @@ The set is small on purpose. Glyphs earn their meaning by being used the same wa
 
 **3. Report an archived directive; never re-quote it.** Quoting reproduces the speech act — the words arrive in the reader's context doing the same work they did originally. Reporting describes it from outside. *The holder line pointed at a session since ended* carries the fact. Pasting the original grant carries the fact **and** a fresh copy of the grant.
 
-**4. Preserve the conclusion exactly.** This is the constraint that makes it redaction *with semantics preserved* rather than just redaction. A reader must reach the same conclusion about state from the rewritten form as from the original. If they would now be unsure who holds the token, you have destroyed information, not defused it.
+**4. Preserve the conclusion exactly.** This is the constraint that makes the result an *abstract* rather than a deletion. A reader must reach the same conclusion about state from the rewritten form as from the original. If they would now be unsure who holds the token, you have destroyed information, not defused it.
 
 ## The append-only rule overrides this skill
 
 Never rewrite an existing row to apply these moves.
 
-In an append-only record — `planning/SESSIONS.md`, dated ledgers, closed handoff blocks — retroactive redaction destroys the exact history the record exists to hold, and it does so invisibly. If an old row needs defusing, the compliant move is a **new row** that states the reduced form going forward, leaving the original intact above it. That is the ledger's own convention: *never rewrite old rows; corrections get their own row.*
+In an append-only record — `planning/SESSIONS.md`, dated ledgers, closed handoff blocks — a retroactive rewrite destroys the exact history the record exists to hold, and it does so invisibly. If an old row needs defusing, the compliant move is a **new row** that states the reduced form going forward, leaving the original intact above it. That is the ledger's own convention: *never rewrite old rows; corrections get their own row.*
 
-This matters most when the redaction feels obviously correct. The 2026-07-31 correction block is only legible as a lesson because the wrong rule was left standing above it.
+This matters most when the rewrite feels obviously correct. The 2026-07-31 correction block is only legible as a lesson because the wrong rule was left standing above it.
 
 ## Worked example
 
@@ -69,9 +71,9 @@ A fresh session reading the second form learns who holds the token and finds not
 
 ## What this does not do
 
-**It governs the working tree, not the history.** Redaction lands as an ordinary forward commit. The pre-redaction text stays in `git log -p`, and on every remote and clone that already fetched it, permanently. The paste check applies to what a future session reads when it opens the file — not to what the repository retains.
+**It governs the working tree, not the history.** An abstract lands as an ordinary forward commit. The original text stays in `git log -p`, and on every remote and clone that already fetched it, permanently. The paste check applies to what a future session reads when it opens the file — not to what the repository retains.
 
-In this repo that is the right outcome rather than a shortfall. The ledger deliberately keeps wrong rules standing above their corrections, because the interval between a mistake and its catch is the thing the record exists to make visible. A redaction that erased its own before-state would destroy exactly that.
+In this repo that is the right outcome rather than a shortfall. The ledger deliberately keeps wrong rules standing above their corrections, because the interval between a mistake and its catch is the thing the record exists to make visible. An abstract that erased its own before-state would destroy exactly that.
 
 **So this is not a remedy for a leaked secret.** If a real credential, token, or key reaches a commit, this technique changes nothing that matters — the value is still in the history and still valid. Rotate the credential. Rewriting history is a larger intervention with its own costs, and it cannot recall what has already been fetched. Anyone arriving at this skill from the word "redact" with a live secret in hand should stop here and go rotate it.
 
