@@ -5,18 +5,33 @@
 // cannot. The skill file teaches the craft; this refuses the part a machine can
 // actually decide.
 //
-// It polices ONLY what a change adds or removes — never the existing tree. That
-// is not a shortcut, it is the same doctrine the ledger runs on: the past is a
-// record, not a defect list. A guard that re-litigated history every run would
-// be doing exactly what the 2026-07-29 audit did when it read dated records as
-// live status.
+// By default it refuses on what a change adds or removes, and never on the
+// existing tree. That is not a shortcut, it is the same doctrine the ledger runs
+// on: the past is a record, not a defect list. A guard that failed on history
+// every run would be doing exactly what the 2026-07-29 audit did when it read
+// dated records as live status.
 //
-// Usage:  node .claude/tools/records-guard.mjs [base-ref]      (default origin/main)
+// --mark surveys the standing tree instead and reports proposals. It cannot
+// fail, because the append-only rule blocks the fix but never the mark.
+//
+// Usage:  node .claude/tools/records-guard.mjs [base-ref]   refuse forward (default origin/main)
+//         node .claude/tools/records-guard.mjs --mark       report backward, always exit 0
 // Exit:   0 clean · 1 violations found · 2 could not run
 
 import { execFileSync } from 'node:child_process'
 
-const BASE = process.argv[2] || 'origin/main'
+// Two postures, one per time direction.
+//
+//   default  — REFUSE forward. What this change adds or removes must be clean.
+//   --mark   — REPORT backward. What already stands is surveyed and never failed.
+//
+// The asymmetry is the doctrine, not a limitation. Refusing on existing content
+// would turn the guard into a drift audit pointed at history, which is the exact
+// mistake of 2026-07-29: records read as status and 20 findings refuted for it.
+// But the append-only rule blocks the fix, never the mark — so backward findings
+// are surfaced as proposals a human can act on when it becomes legitimate.
+const MARK_MODE = process.argv.includes('--mark')
+const BASE = process.argv.filter((a) => !a.startsWith('--'))[2] || 'origin/main'
 
 // A fabricated specimen must say so. Any line carrying this marker is exempt
 // from the handle check, which is what lets a teaching file show a "before".
@@ -25,6 +40,10 @@ const SPECIMEN_MARKER = 'EXAMPLE'
 // The guard's own source and the skill that documents it both have to spell the
 // patterns out. Scanning them would flag the definition as the offence.
 const SELF = ['.claude/tools/records-guard.mjs', '.claude/skills/semantics-preserved-abstract/SKILL.md']
+
+// A session URL in the ledger's link column is a citation and stays. A bare
+// handle in prose is the thing that reads as a live grant.
+const BARE_HANDLE = /(?<!claude\.ai\/code\/)\bsession_[A-Za-z0-9]{16,}/g
 
 const APPEND_ONLY = ['planning/SESSIONS.md']
 const ACK = 'LEDGER-REWRITE-ACK:'
@@ -51,8 +70,51 @@ function addedLines(base) {
   return out
 }
 
+// --- backward survey: what already stands, as proposals ---------------------
+// Never fails. Emits the reduced form each finding is owed, plus the condition
+// that would make applying it legitimate — per the skill's proposal template.
+function markMode() {
+  const files = git(['ls-files', '*.md']).split('\n').filter(Boolean)
+  const proposals = []
+  for (const file of files) {
+    if (SELF.includes(file)) continue
+    // sources/ and alignment_ingestion/ are frozen evidence. Their exact wording
+    // is the record; proposing an abstract over them is a category error.
+    if (file.startsWith('sources/') || file.startsWith('alignment_ingestion/')) continue
+    const lines = git(['show', `HEAD:${file}`]).split('\n')
+    lines.forEach((text, i) => {
+      if (text.includes(SPECIMEN_MARKER)) return
+      for (const m of text.matchAll(BARE_HANDLE)) {
+        proposals.push({ file, line: i + 1, handle: m[0] })
+      }
+    })
+  }
+  if (!proposals.length) {
+    console.log('records-guard --mark: no backward findings in the tracked tree')
+    return 0
+  }
+  console.log(`records-guard --mark: ${proposals.length} backward finding(s) — proposals only, nothing applied\n`)
+  for (const p of proposals) {
+    const tail = p.handle.slice(-4)
+    console.log(`Proposed abstract — ${p.file}:${p.line} (not applied)`)
+    // Carried is deliberately left blank. This tool can derive the symbolism —
+    // which handle, reduced to what — but not the conclusion a reader must still
+    // reach from that line. Filling it with a plausible sentence would be the
+    // guard asserting something it never established, which is the defect it
+    // exists to catch. The machine proposes the symbol; the meaning stays human.
+    console.log(`Carried:    [fill in — the conclusion this line's reader must still reach]`)
+    console.log(`Reduced:    \`${p.handle}\` → \`…${tail}\`, status glyphed`)
+    console.log(`Standing:   the line itself — an existing record, not this change's to rewrite`)
+    console.log(`Apply when: the token passes, the block is superseded, or a human authorises the edit\n`)
+  }
+  console.log('Regenerate this list; never check it in. The tree is the index (non-negotiable #6).')
+  return 0
+}
+
 const findings = []
 const add = (f) => findings.push(f)
+
+if (MARK_MODE) process.exit(markMode())
 
 let added
 try {
@@ -64,9 +126,6 @@ try {
 }
 
 // --- check 1: a bare handle that a later reader could act on ---------------
-// A session URL in the ledger's link column is a citation and stays. A bare
-// handle in prose is the thing that reads as a live grant.
-const BARE_HANDLE = /(?<!claude\.ai\/code\/)\bsession_[A-Za-z0-9]{16,}/g
 for (const l of added) {
   if (l.text.includes(SPECIMEN_MARKER)) continue
   for (const m of l.text.matchAll(BARE_HANDLE)) {
