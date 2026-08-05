@@ -49,6 +49,26 @@ In an append-only record — `planning/SESSIONS.md`, dated ledgers, closed hando
 
 This matters most when the rewrite feels obviously correct. The 2026-07-31 correction block is only legible as a lesson because the wrong rule was left standing above it.
 
+## When you cannot apply it: propose
+
+The append-only rule blocks the fix. So does a frozen mirror, a row that is not yours, and a block whose rewrite needs a human. None of them blocks the **mark**.
+
+An ASSAY that finds a live-reading record, and an ABSTRACT that cannot land yet, both still emit the reduced form they *would* have written — as a proposal, attached to the finding, applied to nothing. A proposal is still read-only. It supplies the symbolism without spending it.
+
+This is what lets coverage reach backwards. The originals stand untouched, and a reader who meets one also meets the successor it is owed. **Mark at the moment you notice; apply at the first moment you legitimately can** — the two do not have to happen in the same change, and usually cannot.
+
+```
+Proposed abstract — <file>:<line> (not applied)
+Carried:    [the conclusion a reader must still reach]
+Reduced:    [what would become non-working, and to what]
+Standing:   [what stays untouched, and why it cannot be touched yet]
+Apply when: [the condition that makes the fix legitimate]
+```
+
+`Apply when` is the load-bearing line. A proposal with no trigger is a wish, and it will sit unread until someone rediscovers the same defect from scratch. Name the event — *the token passes*, *the block is superseded*, *the row lands and becomes history* — so the fix has a moment to attach to.
+
+**Do not keep a stored list of proposals.** Regenerate them from the tree on demand (`node .claude/tools/records-guard.mjs --mark`). A checked-in inventory of backwards debt is exactly the artifact non-negotiable #6 warns about: it starts accurate, drifts silently, and then gets trusted. The tree is the index.
+
 ## Worked example
 
 The specimen below is fabricated. A file teaching this technique should not itself carry a real handle — that is the first mistake this skill made, and catching it is a good demonstration of the paste check.
