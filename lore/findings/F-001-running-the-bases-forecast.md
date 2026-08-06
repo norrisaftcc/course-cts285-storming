@@ -246,6 +246,73 @@ time was that every agent was told the rule before launch.
   means transcription, not composition** — this method measures fidelity, and only a cohort round
   measures understanding.
 
+## 7a. Addendum — the third rail (instructor input, received after the run)
+
+*Recorded 2026-08-06, after the 7-agent run closed. This did not come from the mappers; it is
+instructor direction, and it changes WP-3's shape. Kept as an addendum rather than folded into §2 so
+the run's output stays separable from what was added to it.*
+
+**The input.** Cross-department collaboration is a key course concept, not a garnish. The graphic
+design program can supply exemplars for **visual and workflow diagram templates**, which we can
+extrapolate from — and several of the artifacts this repo is missing could be delivered *visually*
+or as a **PDF** rather than as prose. Doing it that way demonstrates the collaboration's usefulness
+by using it.
+
+**Why this is more than a workaround.** WP-3 was scoped as a seam between two routes to one spec:
+the **document route** (read the manual, extract requirements) and the **person route** (interview
+the stakeholder, elicit them). A diagram is a *third representation of the same spec*, and it drops
+and carries different things than either:
+
+| Route | Carries well | Drops |
+|---|---|---|
+| Document | Constraints, limits, exact wording, edge cases | Intent, priority, what the author assumed |
+| Interview | Intent, priority, conflict, the unstated | Precision, testability, anything nobody thought to say |
+| **Diagram** | **Structure, sequence, state, what connects to what** | **Nuance, rationale, anything that isn't a shape** |
+
+Three rails triangulate where two only contrast. A student who has produced all three of the same
+requirement has felt, concretely, that no single representation is the spec — which is the thing the
+exemplar exists to teach and the thing hardest to teach by assertion.
+
+**What it unblocks, cheaply.** Several open gaps in this repo are shaped like diagram deliverables
+rather than prose ones:
+
+- The **Trusted Workflow's eight verbs** — currently taught as a checklist in every assignment;
+  natively a sequence diagram.
+- The **struggle-pattern template**, which has *no template file* and only two conforming
+  implementations (`F-001` §2, WP-3).
+- ADR-003's **rehearsal role card** — a role card is a designed object; prose is arguably the wrong
+  medium for it, which may be part of why two delegations failed to produce one (§2, WP-6).
+- The **board columns** and the seeded backlog's epic structure, both of which students currently
+  reconstruct from tables.
+
+**The pedagogy is that it is real.** The course already tells students they will work with graphic
+design partners as stakeholders with different priorities. A simulated version of that teaches
+nothing the syllabus doesn't already assert. **Artifacts this course actually needs, produced by the
+actual partner, and then used in the actual course** is the demonstration — and it is available
+without inventing a scenario.
+
+**What this does not decide.** It touches a standing human blocker (the GRD-242 fall consult
+calendar and deliverables, which gates week-15 finalization and has a canned brand-kit fallback as
+its scheduled mitigation). Rule 8 keeps anything involving an external party with a human. This
+addendum does **not** commit the partner, schedule anything, or alter the fallback. What it does is
+make the first ask smaller and more concrete than "consult on week 15": *a diagram template we can
+extrapolate from, in whatever medium suits you.*
+
+Two consequences to weigh before acting, neither settled here:
+
+1. **A PDF or image is not greppable.** Every mechanical check this repo has or might build —
+   points, naming, encoding, PATHFORM — reads Markdown. A visual deliverable is invisible to all of
+   them, which is fine for an exemplar and dangerous for anything carrying a point value or a
+   canonical term. The likely rule is *source of truth stays text; the diagram renders it* — but
+   that is an ADR, not an assumption.
+2. **Redistribution rights.** The Dataman manual's rights are already an open blocker; a partner's
+   design work carries its own. Whether an artifact produced in collaboration can be published in a
+   course repo is a question to ask before commissioning, not after.
+
+**If this is adopted, it also serves `F-003`.** A poster presentation is itself a design deliverable
+— so the failing-agent write-up requested for poster form is the same collaboration, exercised on a
+second artifact, with a real venue attached.
+
 ## 8. The recurrence pattern
 
 Independent of whether any package above is built, the run surfaced one defect class that recurs
