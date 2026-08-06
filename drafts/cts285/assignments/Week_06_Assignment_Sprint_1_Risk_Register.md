@@ -1,29 +1,40 @@
-# Week 6 Assignment: Sprint 1 Retrospective & Risk Register
+<!--
+  26FA CONTENT PASS — B-006, 2026-08-06
+  Renamed from Week_06_Assignment_Sprint_1_Retrospective_Risk_Register.md (real git mv, own commit).
+  The retrospective was deleted as a duplicate by the 1.0b sweep; the filename and title still named it.
+  Risks re-anchored to the Dataman 2.0 build. Header 25 pts unchanged; rubric already sums to 25.
+  Andrew's Note left in his words; one unverified past-student anecdote removed per non-negotiable #5
+  and marked for his sign-off — the surrounding note is untouched (non-negotiable #3, L0 per ADR-011).
+  status: draft; not student-facing until it graduates to a course repo.
+-->
+# Week 6 Assignment: Sprint 1 Risk Register
 ## CTS-285: Systems Analysis & Design
 
 **Due**: End of Week 6 (Friday, 11:59 PM)
 **Points**: 25 (3.3% of 750)
-**Submission**: GitHub repository with retrospective + risk register
+**Submission**: Channel (repository) link, submitted in Canvas
 
 ---
 
 ## What You're Learning
 
-Sprint 1 is complete - you have a system design package ready for implementation. But before moving to Sprint 2, you need to **reflect and plan**.
+Sprint 1 is complete. You have a design package for Dataman 2.0 — ERD, wireframes, the classified backlog — and Sprint 2 is where you start building against it.
 
-This assignment focuses on two critical PM practices:
-1. **Sprint Retrospective** - Learning from what just happened
-2. **Risk Management** - Anticipating what could go wrong
+Before that: **what could go wrong, and what will you do about it?**
 
-These aren't busywork - they're how professional teams improve and avoid disasters.
+A risk register is the artifact that separates "I hope this works" from "I know where this breaks." You are not guessing at generic project hazards. You have read the 1977 manual, classified 26 stories, and designed a schema — you already know more about where Dataman 2.0 is fragile than any checklist could tell you. This assignment makes you write it down before it bites.
+
+> Every Creator I have worked with has produced a risk register listing things that did not happen, and omitting the thing that did. This is not a failure of the exercise. The register's value is that you looked; the specific hits are a bonus.
+>
+> — SHODANN, your Channel Success Partner
 
 ---
 
 ## Learning Objectives
 
-1. **Reflect** on Sprint 1 process and identify specific improvements
-2. **Document** actionable changes for Sprint 2
-3. **Identify** project risks across technical, schedule, resource, and scope categories
+1. **Identify** risks specific to the Dataman 2.0 build, not to software projects in general
+2. **Trace** each risk to something you learned in Sprint 1 — the manual, the ERD, or your classification
+3. **Categorize** risks across technical, schedule, resource, and scope
 4. **Assess** risk likelihood and impact using quantitative methods
 5. **Create** mitigation strategies for high-priority risks
 
@@ -37,33 +48,28 @@ Copy `<!-- PATHFORM: pending spine ruling -->/Risk_Register_Template.md` into yo
 
 ### Identify Risks
 
-Brainstorm **8-12 risks** that could affect your project success. Categories:
+Brainstorm **8-12 risks** to the Dataman 2.0 build. The prompts below are starting points from the actual system — a register that could have been written before you read the manual is a register that did not use Sprint 1.
 
-**Technical Risks**:
-- Flask/Python knowledge gaps
-- Database design flaws
-- Authentication complexity
-- Deployment challenges
-- Integration with external APIs
-- Mobile responsiveness issues
+**Technical Risks** — from the device's own behavior:
+- The **two-tries-then-reveal** rule appears in Answer Checker *and* the practice games; implement it in one place or it drifts between modes
+- **Division with remainder** has no obvious single representation (quotient and remainder? decimal? refuse?) and the manual does not settle it
+- The **memory bank's ten-problem ceiling** is a hard constraint — does your schema enforce it, or discover it at runtime?
+- The manual specifies the timer as varying with **battery and room temperature**, which is not a testable requirement
+- Never showing a wrong answer as correct is the one behavior with no acceptable failure mode
+
+**Requirements Risks** — from the source document:
+- **The transcript is incomplete**: pages 7–18 are not transcribed. Anything you inferred about those modes is an assumption, not a requirement
+- The 1977 manual is a storybook; where it is silent, you decided — and your decisions are not yet validated with the client
 
 **Schedule Risks**:
-- Underestimated story points
-- Other courses have major deadlines same week
-- Sick days / life happens
-- Scope creep (adding features mid-sprint)
-
-**Resource Risks**:
-- Laptop failure
-- Lost internet access
-- GitHub goes down (unlikely but possible)
-- Free hosting tier limits reached
+- Your Week 2 Must-Have count is now Sprint 2's load; if you kept too many, this is where it lands
+- Story points estimated in Week 2 were your first estimates ever
+- Other courses, illness, life
 
 **Scope Risks**:
-- Trying to build too much
-- Unclear requirements
-- Stakeholder expectations don't match reality
-- Feature dependencies blocking progress
+- Stretch epic **S1 (the creature companion)** is below the line and remains attractive
+- Curator Console features expanding into a full gradebook
+- Building faithfully to 1977 where a modern user would expect otherwise
 
 ### Risk Assessment Matrix
 
@@ -92,20 +98,19 @@ For each risk, calculate **Risk Score = Likelihood × Impact**
 ### Example Risk Entry
 
 ```markdown
-## Risk #3: Flask Authentication Implementation Complexity
+## Risk #3: The two-tries rule is load-bearing in more than one place
 
 **Category**: Technical
-**Description**: I've never implemented user authentication. Flask-Login documentation is dense. Could implement it wrong, creating security vulnerabilities.
+**Description**: The manual gives the learner two attempts before revealing the answer. That rule appears in the Answer Checker and again in the practice games. If I implement it separately in each mode, the two copies will drift, and a learner will get three tries in one place and one in another.
 
-**Likelihood**: 4 (Likely - this is new to me)
-**Impact**: 4 (High - security flaw = project unusable, major rework)
+**Likelihood**: 4 (Likely — I already have two code paths that check answers)
+**Impact**: 4 (High — the attempt rule is the core teaching loop; inconsistency here is not cosmetic)
 **Risk Score**: 16 (CRITICAL)
 
 **Mitigation Strategy**:
-1. **Before Sprint 2**: Complete Flask-Login tutorial (2 hours, Day 1)
-2. **Week 7**: Implement auth in isolated test project before production (3 hours)
-3. **Week 8**: Get code review from instructor or peer before deploying
-4. **Backup plan**: Use simpler username/password (no encryption) for MVP, add proper auth in Sprint 3
+1. **Before Sprint 2 starts**: extract attempt-tracking into one function; no mode implements its own
+2. **Sprint 2**: one test that runs the same attempt sequence through every mode and asserts identical behavior
+3. **Fallback**: if extraction proves too large mid-sprint, ship Answer Checker only and defer the games — the rule stays correct in the one place it exists
 
 **Owner**: Me
 **Status**: Identified (not yet mitigated)
@@ -172,6 +177,36 @@ At the end of your risk register, create summary:
 
 ---
 
+## When You Get Stuck: What Week 6 Actually Feels Like
+
+Four places Creators reliably struggle here. Being in one of them is on schedule.
+
+### Struggle: "Every risk I write could apply to any project"
+
+- **Signs**: Your register says *laptop failure*, *scope creep*, *underestimated stories*. It would be equally true of a pet-grooming app. You wrote eight entries in fifteen minutes, which is the tell.
+- **Intervention**: Take each entry and ask *would I have known this before I read the 1977 manual?* If yes, it is a stock risk — keep at most two. Then go back to your ERD and your Week 2 classification and find the things only Dataman has: the ten-problem ceiling, the two-tries rule, the timer that varies with room temperature, the pages you never got to read.
+- **Success indicator**: At least five entries cite a specific manual behavior, schema decision, or story you classified.
+
+### Struggle: "Everything scores 16"
+
+- **Signs**: Almost every risk is Likelihood 4, Impact 4. Nothing is Low. Your Critical list has nine items on it.
+- **Intervention**: This is the Week 2 Must-Have problem wearing different clothes — when everything is critical, nothing is prioritized. Force the spread: exactly one risk is your worst, and say why it beats the others. Impact 5 means *the project fails*, not *this would annoy me*. A register where nine things are critical tells your future self nothing about what to do Monday morning.
+- **Success indicator**: Your scores span at least three priority bands, and you can name the single worst risk without hedging.
+
+### Struggle: "My mitigation is 'be careful'"
+
+- **Signs**: Mitigations read *research more*, *start early*, *test thoroughly*. None has a day, an hour, or a named artifact.
+- **Intervention**: A mitigation is a thing you can put on a calendar. Rewrite each one to answer: what will you do, when, and how will you know it worked? *"Extract attempt-tracking into one function before Sprint 2 starts; one test asserts identical behavior across modes"* is a mitigation. *"Be careful with the attempt logic"* is a wish.
+- **Success indicator**: Every Critical and High risk has a mitigation with a specific action and a checkable outcome.
+
+### Struggle: "The pages I can't read feel like cheating to write down"
+
+- **Signs**: You noticed pages 7–18 of the transcript are missing but left it out of the register, because it feels like the assignment's problem rather than yours.
+- **Intervention**: Write it down. An unavailable source is one of the most ordinary risks in professional work, and naming it is exactly the behavior being graded — analysts flag the gaps they inherited rather than quietly building over them. State what you assumed about those modes and what would change if the pages arrived.
+- **Success indicator**: Your register contains a requirements risk about the incomplete source, with your assumptions listed as assumptions.
+
+---
+
 ## Common Issues
 
 **Issue**: "Everything went well in Sprint 1, I have nothing for 'What Didn't Go Well'"
@@ -233,13 +268,15 @@ I can always tell which students take retrospectives seriously - their Sprint 2 
 
 Students who write generic retrospectives ("I'll try harder") make the same mistakes every sprint. Then wonder why it's not getting easier.
 
-### Real Example from Past Student:
-
-**Sprint 1 Retrospective**: "I underestimated database design. Thought 3 hours, took 9. Will research normalization before next sprint."
-
-**Sprint 2 Result**: "Researched database patterns. Designed entire schema in 4 hours with zero rework. Saved 5 hours compared to Sprint 1."
-
-**That's the power of honest retrospectives.**
+<!--
+  INSTRUCTOR SIGN-OFF NEEDED — an anecdote was removed here.
+  The block was headed "Real Example from Past Student" and gave specific hours (3 vs 9, then 4
+  with zero rework). Per non-negotiable #5 unverified past-student anecdotes are genericized or
+  flagged rather than shipped; it is removed rather than reworded because rewriting Andrew's Note
+  is forbidden (non-negotiable #3, and it is the L0 voice per ADR-011).
+  If the example is real it can be restored verbatim — nothing else in this note was touched.
+  Original text is in git history at the commit preceding this one.
+-->
 
 ### On Risk Registers:
 
