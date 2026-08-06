@@ -40,6 +40,12 @@ It is permitted, and useful, where the instructor has not yet written one. To be
 
 A bridge without a route is the dangerous case, because it looks exactly like the exit and is not one.
 
+**Register for a synthetic bridge** (instructor direction, 2026-08-06): model it on the **"Hints for Parents and Teachers"** section of the 1977 manual — `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md`, PDF p.21 onward — not on the storybook pages.
+
+The manual carries two registers and only one of them is usable here. The storybook voice (p.4, *"On my home planet we call these games and secrets NumberFun"*) is first-person, in-character, and belongs to the device; borrowing it would put a bridge into character, which is the thing §1 forbids. The Hints register is plain third person, adult to adult, patient and explanatory — and its rhetorical situation maps exactly onto ours: Texas Instruments writing to the adult *about how to help the learner*, where we are writing to the student *about their own learning*.
+
+Two constraints on the borrowing. Take the **stance** — assumes competence, explains without condescending, encourages without inflating — not the 1977 product copy; *"designed to bring extra fun, excitement, and enrichment"* is advertising and should not be imitated. And a register borrowed from the manual does not make a bridge into L0: it still needs the disclosure and the route. This clause makes a synthetic note *good*; §2's two conditions are what make it *safe*.
+
 ### 3. Therefore the rename does not proceed as specified — keep two labels
 
 `NAMING_CANON` already says *"don't rename the device."* That instruction survives this ADR, and #36's sweep of the four canon files and nine remaining assignments **should not be executed as a blanket replacement.**
