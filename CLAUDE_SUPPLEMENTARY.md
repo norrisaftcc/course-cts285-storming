@@ -111,6 +111,6 @@ At the end of each master-plan phase, before the next fans out: run the **contin
 
 ## Current status (update this section as phases close)
 
-- **Phase 0: COMPLETE** (all foundation artifacts in `phase0/`).
-- **Phase 1 (CTS-285 wks 1–12 Dataman conversion): OPEN.** Recommended first wave: (a) shared Dataman class artifacts — stakeholder transcripts, reference ERD, seeded backlog with Datamon-game stretch epics (unblocks most other Phase 1 tasks and doubles as grading keys); (b) points normalization sweep (pure Sonnet-mechanical); (c) the four missing planning-sheet templates. Wk-1 content waits on the Dataman PDF if it's not yet in `reference/`.
-- Phases 2–5: see master plan §3 for the full breakdown and sequencing (0 → (1 ∥ 2) → 3 → 4 → 5).
+- **Phase 0: COMPLETE** (all foundation artifacts in `phase0/`; ADR-006 and ADR-010 remain *Proposed* and block what they govern).
+- **Phase 1 (CTS-285 wks 1–12 Dataman conversion): IN PROGRESS.** The recommended first wave is done — shared Dataman class artifacts (1.0a), the points normalization sweep (1.0b/c), all six planning-sheet templates, M2–M6 knowledge checks, and the Dataman re-anchoring of Weeks 03, 04, 05, 07. Week 1 and the M1 document-analysis quiz landed 2026-08-01 (B-004). Remaining spine sequence: **B-005** (Week 2 on the seeded backlog) → **B-006** (Weeks 6 and 9) → **B-007** (Weeks 11–12). `drafts/cts285/**` has never had a reconciliation sweep — B-003's audit covered the planning and canon layer only.
+- Phases 2–5: see master plan §3 for the full breakdown and sequencing (0 → (1 ∥ 2) → 3 → 4 → 5), and the backlog's B-IDs for dispatchable units.

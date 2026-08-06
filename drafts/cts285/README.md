@@ -37,7 +37,7 @@ Upon successful completion of this course, students will be able to:
 
 | Module | Weeks | SDLC Phase | Role Focus | Theme |
 |--------|-------|------------|------------|-------|
-| **1** | 1-2 | Initiation | Observer | SDLC foundations, Agile introduction, project selection |
+| **1** | 1-2 | Initiation | Observer | SDLC foundations, Agile introduction, Dataman backlog initialization |
 | **2** | 3-4 | Requirements | Product Owner | Stakeholder analysis, user stories, requirements documentation |
 | **3** | 5-6 | Design | Product Owner | System design, UML diagrams, ERDs, wireframes, Sprint 1 |
 | **4** | 7-8 | Planning | Scrum Master | Sprint ceremonies, estimation, backlog management, Sprint 2 |
@@ -254,7 +254,7 @@ All FREE through GitHub Education:
 | Week | Dates | Module | Assignment Due |
 |------|-------|--------|----------------|
 | 1 | Aug 18-22 | Module 1 | Week 1: Course Setup & SDLC Exploration |
-| 2 | Aug 25-29 | Module 1 | Week 2: Agile Simulation & Project Selection |
+| 2 | Aug 25-29 | Module 1 | Week 2: Agile Simulation & Dataman Backlog Initialization |
 | 3 | Sep 1-5 | Module 2 | Week 3: Stakeholder Analysis & Interview Plan |
 | 4 | Sep 8-12 | Module 2 | Week 4: User Story Creation & Backlog |
 | 5 | Sep 15-19 | Module 3 | (Sprint 1 starts) |
