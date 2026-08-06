@@ -110,7 +110,7 @@ CTS-285 supports Drew Norris AI/IT Program outcomes:
 
 **Assessments**:
 - Week 1: Course Setup & SDLC Exploration (25 pts)
-- Week 2: Agile Simulation & Project Selection (25 pts)
+- Week 2: Agile Simulation & Dataman Backlog Initialization (35 pts)
 - Knowledge Check 1 (6 pts bonus)
 
 **Materials**:

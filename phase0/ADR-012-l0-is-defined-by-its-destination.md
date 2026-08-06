@@ -1,4 +1,4 @@
-# ADR-011: L0 Is Defined by Who Is at the Other End
+# ADR-012: L0 Is Defined by Who Is at the Other End
 
 **Status**: **Accepted** — 2026-08-06, instructor instruction (*"rule on the L0 question in #36"*). One clause is marked as not self-acceptable; see §"Ruling note".
 **Deciders**: A. Norris (instructor). Drafted by the cloud Claude Code session, on the question raised in issue #36.
