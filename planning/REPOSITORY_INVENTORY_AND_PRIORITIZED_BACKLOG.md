@@ -183,17 +183,21 @@ ADR-005 resolved the old prerequisite question. It is no longer a blocker.
 
 ## 7. Prioritized Backlog
 
+> **This is a plan, not a status board.** Rows record what was *scoped*. They are marked done by hand after work merges, so a row can lag reality by days — on 2026-08-06 the table still showed B-003 and B-004 open, five days and one day after they merged.
+>
+> **Before starting any B-item, check the open pull requests.** A row reading "open" is not evidence that nobody is working on it. On 2026-08-06 that assumption produced PR #44, a full duplicate of work already in flight as #37, which was closed unmerged. Checking the PR list first costs one call.
+
 ### P0 — Control the baseline
 
 | ID | Work | Depends on | Done when |
 |---|---|---|---|
 | B-001 | Get the five human decisions in section 5.1. | Instructor and partners | Each answer has a dated record. Each blocked task has a fallback. |
 | ~~B-002~~ **DONE 2026-07-29** | Select one CTS-285 draft path and one relative link form. Move the planning sheets to that path. | None | ✅ One path exists (`drafts/cts285/`). ✅ Repo-internal references use the selected form (repo-root-relative, no leading slash). Course-repo PATHFORM remains open by design — see §4 note. |
-| B-003 | Reconcile the master plan, root README, source README, and old handoff notes with accepted ADRs and completed work. | B-002 | Status text matches the tree and Git history. Resolved blockers do not appear as open. |
-| B-004 | Rewrite Week 1 and create the 15-point Dataman document-analysis quiz. | ADR-005; Dataman transcript; B-001 for PDF release | The assignment uses configure-and-verify setup, the analyst read, the Media frame, and the canonical points. |
+| ~~B-003~~ **DONE 2026-07-31** | Reconcile the master plan, root README, source README, and old handoff notes with accepted ADRs and completed work. | B-002 | ✅ 47 confirmed edits applied and independently audited at 47/47 (PR #28). ⚠️ Scope caveat retained: the audit covered the planning and canon layer only — `drafts/cts285/**` was never swept, so "status text matches the tree" is established for that layer alone. |
+| ~~B-004~~ **DONE 2026-08-01** | Rewrite Week 1 and create the 15-point Dataman document-analysis quiz. | ADR-005; Dataman transcript; B-001 for PDF release | ✅ Week 1 rewritten on the Dataman spine — configure-and-verify setup per ADR-005, the analyst read, the Media frame, canonical 25 pts (PR #34). ✅ `Module_01_Dataman_Document_Analysis_Quiz.md`, 15 pts, 12 autograded items, every item answerable from the transcribed pages only. |
 | B-005 | Rewrite Week 2 around the paper simulation and seeded Dataman or DataMon backlog. | Shared Dataman artifacts | The assignment removes project selection and uses the canonical board and Trusted Workflow. |
-| B-006 | Finish Weeks 6 and 9. Add Dataman risks, shared review mechanics, and ORANGE ADR evidence. | B-002 | Both assignments use the common project and have no invented anecdotes. |
-| B-007 | Expand Weeks 11–12. Add QA, deploy, launch content, the incident exercise, and grouped presentations. | B-002 | Week 12 has no stubs. Both files use the struggle-pattern format. |
+| ~~B-006~~ **DONE 2026-08-06** | Finish Weeks 6 and 9. Add Dataman risks, shared review mechanics, and ORANGE ADR evidence. | B-002 | ✅ Both re-anchored to the common project (0 → 6 Dataman references each). ✅ Week 6 risks come from the device — attempt-rule duplication, the ten-problem ceiling, the untestable timer, the untranscribed pages. ✅ Week 9 code review is comparative because everyone builds the same stories; ADRs folded into Part 4 as the PRISM-ORANGE evidence. ✅ One unverified past-student anecdote removed, flagged for instructor sign-off. Week 6 renamed (real `git mv`) — the retro it advertised was cut by 1.0b (PR #50). |
+| ~~B-007~~ **DONE 2026-08-06** | Expand Weeks 11–12. Add QA, deploy, launch content, the incident exercise, and grouped presentations. | B-002 | ✅ Week 12's two placeholder blocks authored — zero stubs remain. ✅ Struggle-pattern format in both (5 and 4). ✅ Incident exercise absorbed into Wk11 Part 2 (file is KEEP at 25/25); deploy scoped to *installation* verified by the Week 9 review partner; presentation is comparative and seeds Wk13 team formation. ✅ Backlog **refinement** added to Wk11 Part 1 on instructor direction — re-ranking under evidence, appended not overwritten, 8-Must-Have cap still binding (PR #51). |
 
 ### P1 — Complete CTS-285
 
