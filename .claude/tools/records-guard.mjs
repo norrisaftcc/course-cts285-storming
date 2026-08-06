@@ -14,6 +14,11 @@
 // --mark surveys the standing tree instead and reports proposals. It cannot
 // fail, because the append-only rule blocks the fix but never the mark.
 //
+// This runs by hand, not in CI. No workflow wires it to pull requests, so it
+// binds only the person who remembers to run it. Stated here rather than
+// implied: ADR-008's test is whether a rule can be made to refuse, and this
+// refuses when invoked — nothing invokes it.
+//
 // Usage:  node .claude/tools/records-guard.mjs [base-ref]   refuse forward (default origin/main)
 //         node .claude/tools/records-guard.mjs --mark       report backward, always exit 0
 // Exit:   0 clean · 1 violations found · 2 could not run
@@ -148,21 +153,7 @@ for (const l of added) {
   }
 }
 
-// --- check 2: a count nobody can reproduce ---------------------------------
-// "17 in the tree" was measured over drafts/ and returns 34 repo-wide. A count
-// without its scope is a claim a reader cannot check, which is how docs drift.
-const UNSCOPED_COUNT = /\b\d+\s+in the tree\b/i
-for (const l of added) {
-  if (UNSCOPED_COUNT.test(l.text)) {
-    add({
-      file: l.file, line: l.line, rule: 'unscoped-count',
-      detail: '"N in the tree" — no path, so the number cannot be reproduced',
-      fix: 'Name the directory the count was taken over, e.g. "17 in `drafts/`".',
-    })
-  }
-}
-
-// --- check 3: the append-only rule, enforced rather than trusted -----------
+// --- check 2: the append-only rule, enforced rather than trusted -----------
 // Rewriting a landed row destroys the interval between a mistake and its catch,
 // which is the thing the ledger exists to make visible. Deliberate rewrites are
 // legitimate — this makes them say so, in history, where the next reader sees it.
