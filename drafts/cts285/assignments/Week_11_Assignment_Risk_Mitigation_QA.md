@@ -5,6 +5,11 @@
   are KEEP per the canonical points table, so it is absorbed, not appended.
   Continuity: Week 6's risk register is the input here; Risk #3 (attempt-rule duplication) is the worked
   example, closed the same way Week 9 logged it as technical debt.
+  Part 1 also carries backlog REFINEMENT (instructor direction): the Week 2 classification is re-ranked
+  under three sprints of evidence, appended not overwritten, with Week 2's 8-Must-Have cap still binding
+  so promotion is a forced trade. Ranking was assessed once and never revisited; refinement is where it
+  gets hard, and Week 11 is where evidence exists and two weeks remain to act on it.
+  Split is descriptive (ADR-002): Part 1 = 15 + 10, header and the 25/25 Part split unchanged (KEEP).
   Andrew's Note carried over verbatim (non-negotiables #3, #5; L0 per ADR-011).
   status: draft; not student-facing until it graduates to a course repo.
 -->
@@ -22,7 +27,9 @@
 
 **Role: Developer / QA.** Module 6 is *Ship It*, and shipping has a precondition nobody enjoys: finding out what is actually wrong with your build before someone else does.
 
-Two halves this week. First, you close the loop on Week 6 — every Critical and High risk you wrote down gets a verdict, and "I never got to it" is one of the legitimate verdicts. Second, you test Dataman 2.0 against the document that specifies it.
+Three things this week. You close the loop on Week 6 — every Critical and High risk you wrote down gets a verdict, and "I never got to it" is one of the legitimate ones. You **re-rank the backlog you classified in Week 2**, now that you have three sprints of evidence instead of none. And you test Dataman 2.0 against the document that specifies it.
+
+The middle one is the skill that keeps paying. Anyone can rank a backlog once. Ranking it again, after being proved wrong in places, is the part that separates a plan from a wish.
 
 You have an advantage most QA work does not: **a written standard from 1977.** Most testers have to negotiate what correct means. You can look it up.
 
@@ -38,12 +45,17 @@ You have an advantage most QA work does not: **a written standard from 1977.** M
 2. **Test** an implementation against a primary source document
 3. **Respond** to an incident under time pressure and document the response
 4. **Distinguish** a defect from an undocumented decision
+5. **Re-rank** a backlog under evidence that did not exist when it was first ranked
 
 ---
 
-## Part 1: Risk Mitigation (25 points)
+## Part 1: Risk Mitigation & Backlog Refinement (25 points)
 
-### Update `risk-register.md`
+Two halves, and they are connected: a risk that actually happened should change what you build next. That connection is the reason these sit together rather than in separate parts.
+
+### A. Risk verdicts (15 points)
+
+#### Update `risk-register.md`
 
 For each **Critical and High** risk from Week 6, add an update block. Four verdicts are available and all four are acceptable:
 
@@ -78,6 +90,47 @@ that worked was not the one I planned.
 ```
 
 That last line is the kind of entry worth writing. A lesson that says *"my plan was wrong in an interesting way"* is more useful to future-you than *"went as expected."*
+
+### B. Refine the backlog (10 points)
+
+You classified 26 stories in Week 2, with almost no information. You now have three sprints of it.
+
+Re-open `dataman-backlog-classification.md` and refine it.
+
+#### Append — do not overwrite
+
+Add a `## Refinement — Week 11` section **below** your Week 2 table. The original stays exactly as written.
+
+This matters more than it looks. Two rankings side by side, five weeks apart, is a record of your judgment changing under evidence — and that record is the point of the exercise. A file that silently becomes correct teaches nobody anything, least of all you.
+
+#### Change at least two priorities
+
+Each change cites evidence that did not exist in Week 2:
+
+| Evidence | What it tells you |
+|---|---|
+| **Velocity** — your actual effort against your Week 2 estimates | which stories you systematically under- or over-sized |
+| **The Week 9 code review** | where your build and a peer's diverged, and which of you had it right |
+| **This week's incident** | what actually broke, versus what you predicted would |
+| **Your ADRs** | where the manual was silent and the decision turned out to be load-bearing |
+
+Format each change as: story ID, Week 2 priority → new priority, and the evidence in one sentence.
+
+#### The cap still binds
+
+**No more than 8 Must-Haves — the same ceiling as Week 2.** So promoting a story into Must means demoting one out of it.
+
+That constraint is the whole exercise. Without it, refinement is a wishlist: everything you have since decided matters gets added and nothing leaves. With it, you have to say *what this is more important than*, which is the only form of prioritisation that means anything.
+
+#### Say what did not change, and why
+
+A priority that survived contact with three sprints is evidence too. Name one and say why it held.
+
+#### Calibration paragraph
+
+Close with one paragraph: **what did Week-2-you get wrong, and could you have known at the time?**
+
+Often the honest answer is *no* — the information arrived in Sprint 2 and no amount of care in Week 2 would have produced it. That is a perfectly good answer and it is the one this asks for. The goal is calibration, not retroactive self-criticism. An estimator who knows which of their errors were knowable is worth considerably more than one who is simply sorry.
 
 ---
 
@@ -126,6 +179,9 @@ Work the incident and write it up in `incident-log.md`:
 ## Deliverables Checklist
 
 - [ ] Updated `risk-register.md` — every Critical/High risk carries one of the four verdicts
+- [ ] `dataman-backlog-classification.md` — a `Refinement — Week 11` section appended, Week 2 table intact
+- [ ] At least two priority changes, each with evidence, and the Must-Have count still at or under 8
+- [ ] One priority that held, with reasoning; one calibration paragraph
 - [ ] `qa-test-plan.md` — manual-cited tests (A) and break-it findings (B)
 - [ ] `incident-log.md` — the six steps, including the prevention test
 - [ ] The prevention test committed and passing
@@ -137,7 +193,7 @@ Work the incident and write it up in `incident-log.md`:
 
 | Component | Points | Criteria |
 |---|---|---|
-| **Risk Mitigation** | 25 | Every Critical/High risk has a verdict and evidence; lessons are specific; a materialised risk is reported honestly rather than hidden |
+| **Risk Mitigation & Backlog Refinement** | 25 | Verdicts (15): every Critical/High risk has one, with evidence; a materialised risk is reported honestly rather than hidden. Refinement (10): appended not overwritten, two changes evidenced, the cap respected as a trade, calibration paragraph present |
 | **QA Testing** | 25 | Manual-cited tests (10), deliberate breakage with expected-vs-actual (5), incident response with timeline and prevention test (10) |
 | **Total** | 50 | Header value is binding; component rows are descriptive (ADR-002) |
 
@@ -158,6 +214,12 @@ Four places Creators reliably struggle here. Being in one of them is on schedule
 - **Signs**: You are looking at a register of eight risks, seven of which are still theoretical, and it feels like the exercise was pointless.
 - **Intervention**: Mark them honestly — most will be *Accepted* or *Mitigated* — and then do the more useful thing: name the problem that **did** cost you time this term and check whether it appears in the register at all. It usually does not. That is the real finding, and writing it down is worth more than the seven verdicts. Registers are graded on the looking, not on the hit rate.
 - **Success indicator**: Every risk has a verdict, and you can name at least one real problem the register missed.
+
+### Struggle: "Nothing changed — my Week 2 ranking was fine"
+
+- **Signs**: You re-read the classification, felt broadly satisfied, and wrote that no changes were needed. It took four minutes.
+- **Intervention**: Possibly true, and worth testing before you accept it. Use the cap as a lever: if you *had* to promote one story into Must, which is it, and what would you demote to make room? Answer that and you usually discover the ranking was not as settled as it felt. Note also that changing a priority is not an admission that Week-2-you was careless — Week-2-you had no velocity data, no code review, and no incident. Being wrong with less information is not the same as being wrong.
+- **Success indicator**: Either two changes with evidence, or a defended statement of what held and why — and you can say which of the two you are claiming.
 
 ### Struggle: "My tests all pass and I don't believe them"
 

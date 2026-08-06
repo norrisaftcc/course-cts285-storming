@@ -172,7 +172,7 @@ Everyone in your group built Dataman 2.0 from the same manual and the same seede
 
 **1. One decision you made that your group did not** (3 min)
 
-Pull it from your Week 9 ADRs. What did the manual leave open, what did you choose, and what did it cost you? This is the comparative core, and it is the reason the presentations are grouped: you will discover that four people reading the same 1977 document built four different products, and that all four can be defensible.
+Pull it from your Week 9 ADRs, or from your Week 11 backlog refinement — a re-rank is a decision too, and it lands well in a room that ranked differently. What did the manual leave open, or what did the evidence change, and what did it cost you? This is the comparative core, and it is the reason the presentations are grouped: you will discover that four people reading the same 1977 document built four different products, and that all four can be defensible.
 
 **2. One thing that broke** (2 min)
 
