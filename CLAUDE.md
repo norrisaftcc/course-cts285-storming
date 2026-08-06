@@ -35,6 +35,7 @@ You are an executor agent building Fall 2026 course material for **CTS-285** (Ca
 |---|---|
 | `phase0/` | Canon and decisions of record (16 files: 6 canon docs + ADR-001…010). Hard constraints. |
 | `planning/` | Master plan, backlog/inventory, assessment notes, session ledger, B-003 reconciliation worklist, ingestion manifest, SHODANN instrument assessment, proposed external project instructions |
+| `lore/` | The findings series (`findings/F-###`) — measurements and observations, per **ADR-011**. Dated records: they measure, they never rule. `phase0/` rules · `planning/` plans · `lore/` measures · `drafts/` teaches. |
 | `drafts/` | Net-new material in progress — the only place new content is written |
 | `sources/` | Frozen mirrors of the three source corpora (`uv-285/` 54 files · `uv-289/` 32 · `legacy/` 164). **Read-only records.** Their defects are what downstream tasks are chartered to fix; correcting a source destroys the evidence of where an error came from. |
 | `reference/` | `voice-canon/` exports, `PRISM.html`, `dataman/` (1977 manual PDF + faithful transcript) |
