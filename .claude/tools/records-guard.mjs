@@ -37,9 +37,21 @@ const BASE = process.argv.filter((a) => !a.startsWith('--'))[2] || 'origin/main'
 // from the handle check, which is what lets a teaching file show a "before".
 const SPECIMEN_MARKER = 'EXAMPLE'
 
-// The guard's own source and the skill that documents it both have to spell the
-// patterns out. Scanning them would flag the definition as the offence.
-const SELF = ['.claude/tools/records-guard.mjs', '.claude/skills/semantics-preserved-abstract/SKILL.md']
+// There is deliberately no path allowlist here.
+//
+// Review suggested exempting `.claude/skills/` wholesale so teaching files are
+// never flagged. Declined: two mechanisms already cover it more precisely, and a
+// directory-wide exemption would wave through a future skill doc carrying a real
+// handle — the one file where an unreduced handle is most likely to be copied
+// from.
+//
+//   1. Both scans are restricted to *.md, so this script can never scan itself.
+//   2. A specimen marked EXAMPLE is exempt line-by-line, so a teaching file shows
+//      its "before" without the whole file going unchecked.
+//
+// The earlier allowlist was also mostly unreachable: it named a .mjs path that
+// neither scan could reach, and a SKILL.md whose only specimen was already
+// EXAMPLE-marked. Shrinking it removes dead code rather than loosening a check.
 
 // A session URL in the ledger's link column is a citation and stays. A bare
 // handle in prose is the thing that reads as a live grant.
@@ -63,7 +75,7 @@ function addedLines(base) {
     const hunk = raw.match(/^@@ -\d+(?:,\d+)? \+(\d+)(?:,\d+)? @@/)
     if (hunk) { lineNo = parseInt(hunk[1], 10); continue }
     if (raw.startsWith('+') && !raw.startsWith('+++')) {
-      if (file && !SELF.includes(file)) out.push({ file, line: lineNo, text: raw.slice(1) })
+      if (file) out.push({ file, line: lineNo, text: raw.slice(1) })
       lineNo++
     }
   }
@@ -77,7 +89,6 @@ function markMode() {
   const files = git(['ls-files', '*.md']).split('\n').filter(Boolean)
   const proposals = []
   for (const file of files) {
-    if (SELF.includes(file)) continue
     // sources/ and alignment_ingestion/ are frozen evidence. Their exact wording
     // is the record; proposing an abstract over them is a category error.
     if (file.startsWith('sources/') || file.startsWith('alignment_ingestion/')) continue
@@ -190,5 +201,5 @@ for (const f of findings) {
 }
 console.error('These are the checks a machine can decide. The judgment calls —')
 console.error('whether meaning survived, whether a record still reads as live —')
-console.error('stay in .claude/skills/semantics-preserved-abstract/.')
+console.error('stay in the semantics-preserved-abstract skill under .claude/skills/.')
 process.exit(1)
