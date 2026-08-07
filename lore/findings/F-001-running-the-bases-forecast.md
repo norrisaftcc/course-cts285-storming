@@ -112,13 +112,13 @@ transcription and the headline number is worthless.
 The strongest finding in the run; the verifier attacked it and could not dent it. Two promises
 referenced from many places and implemented in none:
 
-- **ADR-003's rehearsal role card and live instructor-as-client brief.** Nine reference sites.
+- **ADR-003's rehearsal role card and live instructor-as-client brief.** Nine reference sites. *(Corrected 2026-08-07: "nine" is not reproducible — best reconstruction is 19 sites across 9 files, a file count reported as a site count; and the remainder is two artifacts, not one. Superseded by `F-004` §2. Original sentence left as written.)*
   Delegated to task 1.4; master plan `:99`/`:109` record the carry verbatim — *"1.4 shipped without
   it, so it now sits with 1.3"* — and 1.3 (B-005, `601a214`) shipped without it too.
   `grep -rn "rehears|instructor-as-client|role card" drafts/cts285/assignments/Week_0[34]*` returns
   **zero**.
 - **The ADR rail.** `PRISM_Course_Mapping.md:12,:23` define CTS-285's exit tier as banking ADRs;
-  `Week_05:291` still reads "Design Rationale (400–600 words)"; `grep ADR-lite drafts/` returns 0.
+  `Week_05:291` still reads "Design Rationale (400–600 words)"; `grep ADR-lite drafts/` returns 0. *(Corrected 2026-08-07: the rail is half-built — B-006 shipped Sprint 3 in full and Weeks 11–12 consume it; only the Sprint 1 rung is missing, across 2 sites against 2 promises. Superseded by `F-004` §3.)*
 
 Week 04 has also replaced its graded live interview with a transcript re-read (`:32`, `:36`) under a
 vestigial "Post-Interview Document" header (`:45`) while learning objective 1 still says *"**Conduct**

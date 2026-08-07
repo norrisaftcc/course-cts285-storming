@@ -407,15 +407,15 @@ Each story carries `↳ Traces to:` — the stakeholder(s) and manual/device beh
 
 # STRETCH-GOAL EPICS — Below the line (beyond MVP; in-world homage)
 
-> **Not part of the faithful-Dataman MVP.** These epics recast features of the retired legacy **Datamon** creature-collection console game (`CTS285_COURSE_OUTLINE.md` lines 168–185: text-based creature collection, save/load game state, turn-based battle system, random encounters and progression) as an **optional legacy entertainment module** — a deliberate in-world homage, *not* a merge of the two projects and *not* something students are expected to build. They gesture at an aspirational engagement / virtual-pet direction (explored separately in `drafts/spikes/datamon-virtual-pet-reskin.md`) that must stay clearly beyond the MVP and must not contaminate the faithful-Dataman core above. Treat these as **Won't-Have-this-semester** by default.
+> **Not part of the faithful-Dataman MVP.** These epics recast features of the retired legacy creature-collection console game — **text-based creature collection, save/load game state, turn-based battle system, random encounters and progression**, the four named in `phase0/NAMING_CANON.md` §"Dataman vs. DataMon" (legacy-game row) and ruled subsumed by `ADR-004` — as an **optional legacy entertainment module** — a deliberate in-world homage, *not* a merge of the two projects and *not* something students are expected to build. They gesture at an aspirational engagement / virtual-pet direction (explored separately in `drafts/spikes/datamon-virtual-pet-reskin.md`) that must stay clearly beyond the MVP and must not contaminate the faithful-Dataman core above. Treat these as **Won't-Have-this-semester** by default.
 
 ## Stretch Epic S1 — Legacy Entertainment Module: creature companion
 *An optional unlockable that turns correct-answer practice into progression for a collectible math companion. Aspirational; below the line.*
 
-- **S1.1 — Save/load progress.** As a learner, I want my companion's progress saved between sessions, so that raising it persists over time. `↳ Homage to:` legacy save/load game state (outline l.171).
-- **S1.2 — Turn-based challenge.** As a learner, I want a turn-based challenge where correct answers power my moves, so that math drives the game. `↳ Homage to:` legacy turn-based battle system (outline l.172).
-- **S1.3 — Random encounters & progression.** As a learner, I want occasional surprise challenges and a sense of progression, so that practice stays fresh. `↳ Homage to:` legacy random encounters and progression (outline l.173).
-- **S1.4 — Collection.** As a learner, I want to collect companions as I master more facts, so that mastery is visibly rewarded. `↳ Homage to:` legacy text-based creature collection (outline l.170).
+- **S1.1 — Save/load progress.** As a learner, I want my companion's progress saved between sessions, so that raising it persists over time. `↳ Homage to:` legacy save/load game state (NAMING_CANON, legacy-game row).
+- **S1.2 — Turn-based challenge.** As a learner, I want a turn-based challenge where correct answers power my moves, so that math drives the game. `↳ Homage to:` legacy turn-based battle system (NAMING_CANON, legacy-game row).
+- **S1.3 — Random encounters & progression.** As a learner, I want occasional surprise challenges and a sense of progression, so that practice stays fresh. `↳ Homage to:` legacy random encounters and progression (NAMING_CANON, legacy-game row).
+- **S1.4 — Collection.** As a learner, I want to collect companions as I master more facts, so that mastery is visibly rewarded. `↳ Homage to:` legacy text-based creature collection (NAMING_CANON, legacy-game row).
 
 **Priority:** Won't Have (this semester) — stretch/homage, explicitly below the MVP line.
 **Notes:** These are engagement wrappers over the *unchanged* faithful practice loop; the math, the two-tries, the memory bank, and the positive-only reinforcement above remain the real product. Adopting any of this as product canon would be an ADR-level decision, not a backlog choice.
