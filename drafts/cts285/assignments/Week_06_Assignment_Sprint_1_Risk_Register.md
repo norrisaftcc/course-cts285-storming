@@ -4,7 +4,7 @@
   The retrospective was deleted as a duplicate by the 1.0b sweep; the filename and title still named it.
   Risks re-anchored to the Dataman 2.0 build. Header 25 pts unchanged; rubric already sums to 25.
   Andrew's Note left in his words; one unverified past-student anecdote removed per non-negotiable #5
-  and marked for his sign-off — the surrounding note is untouched (non-negotiable #3, L0 per ADR-011).
+  and marked for his sign-off — the surrounding note is untouched (non-negotiable #3, L0 per ADR-012).
   status: draft; not student-facing until it graduates to a course repo.
 -->
 # Week 6 Assignment: Sprint 1 Risk Register
@@ -273,7 +273,7 @@ Students who write generic retrospectives ("I'll try harder") make the same mist
   The block was headed "Real Example from Past Student" and gave specific hours (3 vs 9, then 4
   with zero rework). Per non-negotiable #5 unverified past-student anecdotes are genericized or
   flagged rather than shipped; it is removed rather than reworded because rewriting Andrew's Note
-  is forbidden (non-negotiable #3, and it is the L0 voice per ADR-011).
+  is forbidden (non-negotiable #3, and it is the L0 voice per ADR-012).
   If the example is real it can be restored verbatim — nothing else in this note was touched.
   Original text is in git history at the commit preceding this one.
 -->

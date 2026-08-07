@@ -1,11 +1,13 @@
 # ADR-012: L0 Is Defined by Who Is at the Other End
 
-**Status**: **Accepted** — 2026-08-06, instructor instruction (*"rule on the L0 question in #36"*). One clause is marked as not self-acceptable; see §"Ruling note".
+**Status**: **Accepted** — 2026-08-06, instructor ruling (*"This meets institutional standards: live human escalation is available by email or office hours."*). §4, the clause an agent must not self-accept, is stamped by that ruling. Renumbered from ADR-011 on 2026-08-06 — that number was taken the same day by the findings series.
 **Deciders**: A. Norris (instructor). Drafted by the cloud Claude Code session, on the question raised in issue #36.
 **Governs**: what may occupy the L0 margin; the scope of the "Andrew's Note" → "Teacherbot's Note" rename
 **Related**: `KAYFABE_ARCHITECTURE.md` §layer table + failure physics, `SHODANN_Character_Bible.md` §6 register table and §9, `NAMING_CANON.md` §naming table (*"don't rename the device"*), issue #36, PR #37 (ships the first simulated note), PR #25 (the 2026-07-24 "Andrew → Teacherbot" directive, which addressed a different question)
 
-> **Ruling note.** The instructor asked for a ruling and this ADR gives one. The single clause an agent must not self-accept is §4 — *where a student in real distress is sent* — because `CLAUDE_SUPPLEMENTARY.md` Rule 8 puts student welfare with a human. It is written as a ruling rather than a question so that accepting it is a stamp rather than more work, and it is marked here so the stamp is deliberate.
+> **Ruling note.** The instructor asked for a ruling and this ADR gives one. The single clause an agent must not self-accept is §4 — *where a student in real distress is sent* — because `CLAUDE_SUPPLEMENTARY.md` Rule 8 puts student welfare with a human. It was written as a ruling rather than a question so that accepting it would be a stamp rather than more work, and marked so the stamp would be deliberate.
+>
+> **Stamped 2026-08-06.** The instructor accepted §4 on the stated ground that *live human escalation is available by email or office hours* — which is the destination test being satisfied in practice, not merely in principle. §2's requirement that a bridge carry an unconditional route to a named human is therefore already met by the institution's own channels; what a bridge still owes is **naming them in the note itself**, rather than leaving a student to find them.
 
 ## Context
 
