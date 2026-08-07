@@ -42,6 +42,10 @@ editing these files must carry that table.
 | `Stakeholder_Transcript_Parent.md` | Fictional parent interview (at-home buyer/supervisor). Analyst source. |
 | `Stakeholder_Transcript_Teacher.md` | Fictional classroom-teacher interview (power curator, classroom scale). Analyst source. |
 | `Stakeholder_Transcript_Retro_Collector.md` | Fictional vintage-collector interview (fidelity advisor, secondary audience). Analyst source. |
+| `Role_Card_Parent_Renee.md` | **Instructor-facing.** Play sheet for Renee. Zone A playable/leak-free; Zone B is the answer key. |
+| `Role_Card_Teacher_Alvarez.md` | **Instructor-facing.** The **rehearsal** round (ADR-003). Transcript not handed out for this round. |
+| `Role_Card_Collector_Dale.md` | **Instructor-facing.** Play sheet for Dale. |
+| `Client_Brief_Instructor_As_Client.md` | **Instructor-facing.** The live client, played not distributed — the graded RSI anchor. Adds no core story by design. |
 | `Dataman_Reference_ERD.md` | Known-correct data model (Mermaid + prose table) + degraded variants with keys. |
 | `Dataman_Seeded_Backlog.md` | Seeded epics → user stories → acceptance criteria; core MVP + below-the-line stretch. |
 | `Grading_Key.md` | **Instructor-only.** Planted hazards, cross-transcript conflicts, intended MoSCoW, entity implications, traceability guarantees. |
@@ -73,7 +77,7 @@ The value of this set is that a rubric can point at a source for every claim. Ve
 
 1. **Every entity in `Dataman_Reference_ERD.md` is derivable from at least one transcript** (matrix in Grading Key Part 4 — all eight entities covered).
 2. **Every top-of-backlog (core) user story traces to a named stakeholder need** — each carries a `↳ Traces to:` line; none is motivated by device behavior with no stakeholder.
-3. **No core story is motivated only by the deferred instructor-as-client persona** — that persona is intentionally not written here (see `phase0/ADR-003-instructor-as-client-persona.md`), so nothing depends on it.
+3. **No core story is motivated only by the instructor-as-client persona** — the brief exists as of 2026-08-07 (`Client_Brief_Instructor_As_Client.md`) and is written to commission the modernization without requesting features, so the guarantee holds by construction rather than by the persona's absence. See `Grading_Key.md` Part 5 and `ADR-003:48`.
 4. **Every stretch-goal epic traces to the legacy creature-game feature list** (`CTS285_COURSE_OUTLINE.md` lines 168–185).
 5. **No orphan stories** — nothing in the backlog lacks a motivating transcript (or, for stretch, an outline line).
 
@@ -83,7 +87,7 @@ The value of this set is that a rubric can point at a source for every claim. Ve
 
 - The three stakeholders are **fictional in-world personas**, each labeled a class artifact in its own header. No real person, family, semester, or "past student" is referenced. No invented statistics or testimonials appear. No claim is made about real TI sales/production/history beyond what the manual and period ad support.
 - Every device-specific claim traces to `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md`; there are no unverifiable hardware claims to hedge.
-- **Not decided here (out of scope):** the Week 1–2 module architecture, the wk-1/wk-2 assignment split, and sprint/week-numbering are spine decisions (Rule 1) and are deliberately untouched. The instructor-as-client stakeholder is deferred to an ADR (Rule 8).
+- **Not decided here (out of scope):** the Week 1–2 module architecture, the wk-1/wk-2 assignment split, and sprint/week-numbering are spine decisions (Rule 1) and are deliberately untouched. ~~The instructor-as-client stakeholder is deferred to an ADR (Rule 8).~~ **Resolved:** ruled by `ADR-003` (2026-07-23) and authored 2026-08-07 as `Client_Brief_Instructor_As_Client.md`; rehearsal staging ruled **low-stakes instructor** for 26FA.
 
 ---
 

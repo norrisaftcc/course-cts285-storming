@@ -52,6 +52,27 @@ be read *instead of* read down.
 A record is never edited after its session ends. A run that contradicts an earlier one gets its own
 record. This is `planning/SESSIONS.md`'s convention, extended a second time.
 
+## Classroom runs are in scope (2026-08-07)
+
+The corpus is **not** limited to workflow runs. Live class sessions count — the instructor plays
+stakeholders jeepform-style and builds missing material live with agents, which is exactly the
+condition `ADR-008:18` says prose discipline fails under, and therefore the richest drift signal
+available.
+
+The objection to including them was that capturing something mid-scene, in character, is a very
+different ask from appending a block to a PR. **That objection is answered by mechanical capture** —
+session transcripts are recorded by the instructor's own tooling, so the classroom record costs
+nothing during the scene. A classroom run gets the same eleven fields; `context_loaded` becomes the
+role card and artifacts in play, and `agents` counts whatever was invoked live.
+
+> **Two things a classroom record must respect, and neither is settled here.** Recordings of a live
+> class contain **student voices**, which puts them under the privacy rule — `CLAUDE_SUPPLEMENTARY.md`
+> Rule 8 keeps anything touching real students, grades, or privacy with a human. And a transcript of
+> an improvised scene is **not** automatically course material: the fictional personas in
+> `shared-dataman-artifacts/` are labeled fictional precisely so nothing is mistaken for a record of
+> a real person. Promoting anything out of a classroom transcript into `drafts/` is a human call with
+> a privacy question attached, and this convention does not authorize it.
+
 ## Mechanization
 
 **Not local.** The question of whether any of this should be enforced by a mechanism rather than a
