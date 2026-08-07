@@ -79,8 +79,8 @@ The value of this set is that a rubric can point at a source for every claim. Ve
 1. **Every entity in `Dataman_Reference_ERD.md` is derivable from at least one transcript** (matrix in Grading Key Part 4 — all eight entities covered).
 2. **Every top-of-backlog (core) user story traces to a named stakeholder need** — each carries a `↳ Traces to:` line; none is motivated by device behavior with no stakeholder.
 3. **No core story is motivated only by the instructor-as-client persona** — the brief exists as of 2026-08-07 (`Client_Brief_Instructor_As_Client.md`) and is written to commission the modernization without requesting features, so the guarantee holds by construction rather than by the persona's absence. See `Grading_Key.md` Part 5 and `ADR-003:48`.
-4. **Every stretch-goal epic traces to the legacy creature-game feature list** (`CTS285_COURSE_OUTLINE.md` lines 168–185).
-5. **No orphan stories** — nothing in the backlog lacks a motivating transcript (or, for stretch, an outline line).
+4. **Every stretch-goal epic traces to a named feature of the legacy creature-collection game** — recorded in `phase0/NAMING_CANON.md` §"Dataman vs. DataMon" (legacy-game row), ruled by `ADR-004`. *(Re-pointed 2026-08-07 from the retired `CTS285_COURSE_OUTLINE.md`, which exists nowhere in the tree.)*
+5. **No orphan stories** — nothing in the backlog lacks a motivating transcript (or, for stretch, a named legacy-game feature).
 
 ---
 
