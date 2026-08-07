@@ -36,6 +36,16 @@
     drafts/cts285/activities/handouts/Incident_Reports_Week11.md
   This is B-009's stated dependency on B-008 showing up as a link check, not a defect. Merge #56
   first. If #56 is ever abandoned, these eight references become dangling and must be revisited.
+
+  RESOLVED 2026-08-07: #56 merged as caca87b and all eight references were re-checked against it -
+  they resolve. The block above is left as written; it was correct while it was true, and this line
+  records the change rather than editing the record of it (non-negotiable #8).
+  Module 7 updated in the same pass: B-010 landed, so Week 13 exists and the section now says so.
+  It stays a PLACEHOLDER because Week 14 does not exist - teaching notes covering one week of a
+  two-week module read as complete and are not.
+  NOTE the same forward-reference condition now applies once more: Module 7 cites
+  Week_13_Assignment_Team_Formation_Engine_Selection.md and shared-platform-artifacts/, which live
+  in PR #61. Correct against the post-#61 tree; #61 merges before this.
   status: draft; not student-facing (and not instructor-facing) until it graduates to a course repo.
 -->
 # CTS-285 Instructor Guide
@@ -596,11 +606,15 @@ Definition of Done, acceptance testing, a lightweight deploy, and a grouped pres
 
 ### Module 7: Deployment & Documentation (Weeks 13–14) — 70 pts
 
-> **NOT YET WRITTEN.** Weeks 13–14 are **B-010** (team formation, engine/skin selection) and **B-011** (terminology discovery, spring user stories). Neither is started, so there are no assignments to write teaching notes against. This section is a placeholder rather than a gap in the guide, and it is deliberately empty rather than filled with plausible material.
+> **PARTIALLY WRITTEN.** Weeks 13–14 are **B-010** (team formation, engine/skin selection) and **B-011** (terminology discovery, spring user stories).
 >
-> When those weeks exist, this section needs: learning objectives, session notes, **per-student RSI actions** (the obligation does not become per-team just because the work does), struggles in the four-part format, and grading guidance.
+> **Week 13 now exists** — `drafts/cts285/assignments/Week_13_Assignment_Team_Formation_Engine_Selection.md` <!-- PATHFORM: pending spine ruling -->, 30 pts, with `drafts/cts285/shared-platform-artifacts/` supplying its two required readings. **Week 14 does not.** So this section stays a placeholder rather than being half-filled: teaching notes that cover one week of a two-week module read as complete and are not.
+>
+> When Week 14 lands, this section needs: learning objectives, session notes, **per-student RSI actions** (the obligation does not become per-team just because the work does), struggles in the four-part format, and grading guidance.
 >
 > **The RSI point is the one to carry forward.** Weeks 13–16 are the team on-ramp, and per-team interaction does not discharge a per-student obligation. Whoever writes this section should treat that as a hard requirement, not a note.
+>
+> **What Week 13 already establishes, so the eventual notes do not contradict it:** the team charter's escalation numbers are agreed *before* anyone disappears, and telling you about a silent teammate is framed to students as how help arrives rather than as reporting them — expect to be told, and treat the first such message as the charter working. The four failure patterns are **self-named only**; a student diagnosing a teammate has misread the exercise. And engine is chosen before skin, which is the rule most teams will break.
 
 **What is already decided and should not be re-litigated here:** the module is worth **70 points** — Team Formation Charter and Engine/Skin Selection (30), Terminology Discovery and Spring User Stories (40). No knowledge check; Modules 7–8 have none by design.
 
