@@ -115,7 +115,8 @@ The **client** role is the one new instructors underuse. It is also the one carr
 ### The week before classes (roughly 8 hours of prep)
 
 - [ ] Read the **Dataman manual transcript** yourself (`reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md`). You will be asked about it constantly. **Only pages 1–6 and 21–26 are transcribed** — see the note below, because it changes what you can grade.
-- [ ] Read the **three stakeholder transcripts** in `drafts/cts285/shared-dataman-artifacts/` (parent, teacher, retro collector). Two are handed to students; one becomes a role card. ADR-003 governs which.
+- [ ] Read the **three stakeholder transcripts** in `drafts/cts285/shared-dataman-artifacts/` (parent, teacher, retro collector). Two are handed to students; one is run as a rehearsal interview instead. ADR-003 governs which.
+- [ ] Read `Role_Card_HOWTO.md` and the **live client brief** in the same directory. The brief is **instructor-only** — students never hold it, and it is never handed out or written down as a transcript.
 - [ ] Read the **seeded backlog** (26 core stories, 8 epics). Students receive this in Week 2.
 - [ ] Skim the **reference ERD**. Do not hand it out — it is the instructor grading key for Weeks 5–6, and distributing it early spoils that assessment.
 - [ ] Verify your Canvas shell imports and that every linked file resolves.
@@ -163,12 +164,24 @@ Three properties matter, and each one is a way instructors accidentally fail the
 Requirements elicitation is taught as a competence ladder across four stakeholders, and **two of the four rungs are your RSI touchpoints**:
 
 1. **Canned ×2 — read and analyze.** The parent and retro-collector transcripts. Students mine finished text solo. No interaction; this rung teaches reading.
-2. **Rehearsal ×1 — practice conducting.** The teacher, delivered as a **role card** rather than a transcript. Students interview, low-stakes and formative. Staging is yours to choose: peer pairs, a TA, or a low-stakes round with you.
+2. **Rehearsal ×1 — practice conducting.** A stakeholder students *interview* rather than read, worked from a **role card**. Low-stakes and formative — reps before it counts.
 3. **Live ×1 — elicit for real.** You, playing the party who commissioned the modernization. Graded. **This is the RSI anchor.**
 
 The live interview is never written as a canned transcript. If it were, it could quietly substitute for the interaction, and the compliance value would drain out of it without anyone noticing.
 
-**Register note:** play the client in the neutral in-world voice. Do not coin a named client persona — the lexicon is locked. You may drop to plain out-of-character speech at your discretion; the brief supplies the client, and you decide how far to stay in it.
+### Running the cards
+
+The artifacts are in `drafts/cts285/shared-dataman-artifacts/`: three stakeholder cards (`Role_Card_Parent_Renee.md`, `Role_Card_Teacher_Alvarez.md`, `Role_Card_Collector_Dale.md`), the instructor-only `Client_Brief_Instructor_As_Client.md`, and `Role_Card_HOWTO.md`, which carries the mechanics once so the cards cannot drift apart from each other.
+
+**Read the HOWTO before you run this the first time.** Three things in it change how the week works, and none of them are obvious from the cards alone:
+
+- **The cards are control panels, not scripts** — levers you set before the scene, buttons you press when a trigger fires, constraints you never cross. That shape is what makes a stakeholder playable by someone who does not want to act, and consistent across a dozen pairs running simultaneously.
+- **Acting is opt-in, and the three paths are equal.** A student can play it, hand it to a voice agent as a prompt, or take the interviewer seat instead. Treat the voice-agent path as first-class rather than as an accommodation — the card is written to be pasted.
+- **Playing the customer is not the soft version.** It is the half of the exercise that is normally invisible: watching an interview happen *to* you is the fastest way to learn what a bad question feels like. Say this out loud, because students assume the opposite.
+
+**The live client is never played by a student.** That round is yours. The value is that a real human with authority is in the seat, which is also precisely what makes it the RSI anchor.
+
+**Register:** neutral in-world client voice, and **do not coin a named client persona** — the lexicon is locked and the client is simply *the client*. You may drop to plain out-of-character speech at your discretion; the brief supplies the character, and you decide how far to stay in it.
 
 ### The failure mode to watch in yourself
 
