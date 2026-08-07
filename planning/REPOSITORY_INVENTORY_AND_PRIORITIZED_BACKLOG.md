@@ -183,7 +183,7 @@ ADR-005 resolved the old prerequisite question. It is no longer a blocker.
 
 ## 7. Prioritized Backlog
 
-> **This is a plan, not a status board.** Rows record what was *scoped*. They are marked done by hand after work merges, so a row can lag reality by days — on 2026-08-06 the table still showed B-003 and B-004 open, five days and one day after they merged.
+> **This is a plan, not a status board.** Rows record what was *scoped*. They are marked done by hand after work merges, so a row can lag reality by days — on 2026-08-06 the table still showed B-003 and B-004 open, six days and five days after they merged.
 >
 > **Before starting any B-item, check the open pull requests.** A row reading "open" is not evidence that nobody is working on it. On 2026-08-06 that assumption produced PR #44, a full duplicate of work already in flight as #37, which was closed unmerged. Checking the PR list first costs one call.
 
