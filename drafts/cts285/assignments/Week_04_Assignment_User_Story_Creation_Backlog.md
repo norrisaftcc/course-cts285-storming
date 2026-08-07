@@ -29,22 +29,49 @@ By Friday, you'll have a prioritized product backlog of 15+ user stories ready f
 
 ---
 
-## Part 1: Revisit the Dataman Stakeholder Transcripts (Complete in Class)
+## Part 1: The Rehearsal Interview (Complete in Class)
 
 ### The Activity (60 minutes in class)
 
-You already read the three Dataman stakeholder transcripts in Week 3 — Renee (a parent, at-home supervisor), Ms. Alvarez (a classroom teacher, the "power curator"), and Dale (a retro collector, the fidelity advisor). This week, in class, you'll work through them again with a sharper question in mind: *what does each person actually need, as opposed to what they literally asked for?*
+Last week you wrote `interview-plan.md` — objectives and questions for the places the transcripts left vague or unresolved. **This week you ask them out loud.**
 
-**Format**:
-- Work through the transcripts stakeholder by stakeholder (Renee, then Ms. Alvarez, then Dale)
-- For each one, pull out: what they need, what constraints they mentioned, and what surprised you
-- Flag anything that sounds like a specific implementation instead of a need — "put a button here" is a solution; "help me do this without waiting" is the underlying need — you'll need this distinction for user story writing
-- Flag anywhere two stakeholders seem to want conflicting things
-- Ask follow-up questions in class if a transcript leaves something ambiguous
+Two of your three stakeholders stay on the page. **Ms. Alvarez does not.**
+
+**A. The two you re-read (about 20 minutes).** Work through Renee's and Dale's transcripts again with a sharper question in mind: *what does each person actually need, as opposed to what they literally asked for?*
+
+- Pull out what they need, what constraints they mentioned, and what surprised you
+- Flag anything that sounds like a specific implementation instead of a need — "put a button here" is a solution; "help me do this without waiting" is the underlying need. You will need that distinction for user-story writing
+- Flag anywhere the two of them want conflicting things
+
+**B. The rehearsal (about 40 minutes).** Ms. Alvarez is played live, and **you do not get her transcript for this round.** Everything you learn about her, you learn by asking. Bring your `interview-plan.md` questions and use them.
+
+This is a **rehearsal** — low stakes, formative, and ungraded as a performance. The point is reps before it counts. Expect the first few questions to land badly; that is the exercise working.
+
+Three things worth knowing before you start:
+
+- **She answers what she is asked.** She will not volunteer a requirement you did not ask for, and she will not summarize her own needs at the end. An interviewer who does not ask, does not learn — that is the whole lesson and she will not rescue you from it.
+- **A question that can only be answered "yes" costs you a turn.** *"Would reporting be useful?"* gets you *"Yes."* Ask what she would need to **see**, and when.
+- **Write it down as you go.** Anything said in the room that nobody records did not happen, as far as your backlog is concerned. This is the same rule your Sprint work runs on.
+
+**If you would rather not be interviewed than interview** — some rounds run peer-to-peer, and playing a stakeholder is opt-in. Taking the interviewer seat both rounds is a full participation path, and so is handing the character to a voice agent. Ask; nobody is required to perform.
+
+<!--
+  26FA FIX 2026-08-07 — Week_03:103 promised students a live Week 4 interview and this Part
+  delivered a transcript re-read, while learning objective 1 still read "Conduct structured
+  stakeholder interviews." The promise is now kept, via the rehearsal tier ADR-003:23 already
+  specifies. Played from drafts/cts285/shared-dataman-artifacts/Role_Card_Teacher_Alvarez.md
+  (Zone A only — Zone B is the answer key and never enters the room).
+  Scope held to ADR-003's ladder: 2 canned (Renee, Dale) + 1 rehearsal (Alvarez) + 1 live
+  instructor-as-client later. Week_03 was narrowed in the same change — it promised live
+  interviews with all three, which the ladder does not provide.
+  Points untouched: header 50, Interview Notes row stays 5 (ADR-002).
+-->
+
+**Instructor note:** the rehearsal runs from `drafts/cts285/shared-dataman-artifacts/Role_Card_Teacher_Alvarez.md` <!-- PATHFORM: pending spine ruling -->, Zone A only. See `Role_Card_HOWTO.md` for staging and the voice-agent path.
 
 ### Post-Interview Document: `interview-notes.md` (5 points)
 
-After you've worked through the transcripts, document what you learned:
+After the re-read and the rehearsal, document what you learned. **Mark which of the three you learned by reading and which you learned by asking** — the difference is the point of this week.
 
 **For each of the three stakeholders**:
 
@@ -318,7 +345,7 @@ If information is missing, note what else needs to be documented.
 
 | Component | Points | Criteria |
 |-----------|--------|----------|
-| **Interview Notes** | 5 | Key insights captured, requirements identified, surprises noted |
+| **Interview Notes** | 5 | Key insights captured, requirements identified, surprises noted; read-vs-asked marked, and the rehearsal produced at least one thing no transcript contains |
 | **User Stories** | 30 | 15-20 stories, proper format, 3-5 acceptance criteria each, estimated, prioritized |
 | **Prioritization** | 10 | Clear MoSCoW categories, rationale for Must Haves, Won't Haves documented |
 | **Backlog Review** | 5 | Statistics accurate, validation checklist completed, risks identified |

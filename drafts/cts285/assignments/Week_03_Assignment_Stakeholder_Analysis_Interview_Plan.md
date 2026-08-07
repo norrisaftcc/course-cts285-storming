@@ -100,7 +100,7 @@ Your three most important stakeholders will very likely draw from Renee, Ms. Alv
 
 ### Create `interview-plan.md` in your repository
 
-You'll conduct mock stakeholder interviews in Week 4 (instructor plays the stakeholder role). This isn't a blank-slate interview — you already have a first-pass transcript for each of your three main stakeholders. Week 4 is your chance to go deeper: chase down what was left vague, ask about what wasn't covered at all, and get a live answer on the places where two stakeholders clearly want different things. This week, you figure out what's actually still missing or unresolved and turn it into a question worth asking out loud.
+**In Week 4 you interview Ms. Alvarez live** — played in the room, and you will *not* have her transcript for that round. Renee and Dale stay on the page; you already have a first-pass transcript for each of them. A fourth stakeholder, the client commissioning the modernization, is interviewed live later in the course and that one is graded. <!-- SCOPE 2026-08-07: narrowed from "mock interviews ... for each of your three main stakeholders", which over-promised against ADR-003's ladder (2 canned + 1 rehearsal + 1 live client). Week_04 Part 1 now delivers the rehearsal. --> Week 4 is your chance to go deeper: chase down what was left vague, ask about what wasn't covered at all, and get a live answer on the places where two stakeholders clearly want different things. This week, you figure out what's actually still missing or unresolved and turn it into a question worth asking out loud.
 
 #### Section 1: Interview Objectives
 
