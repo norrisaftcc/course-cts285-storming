@@ -22,7 +22,20 @@ export const meta = {
 // An agent that never read Rule 1a still cannot exceed the cap through here.
 // ---------------------------------------------------------------------------
 
-const a = args || {}
+// `args` normally arrives as an object, but some call paths deliver it as a
+// JSON string. Left unhandled that produced a confusing failure: `a.artifacts`
+// came back undefined and the workflow refused with "no artifacts given" while
+// the caller was staring at a perfectly good artifact list.
+//
+// Parsing here rather than trusting the caller keeps the refusal honest — it
+// should fire when the PLAN is wrong, not when the transport reshaped it.
+// A string that will not parse still falls through to the same refusal.
+const a = (() => {
+  if (typeof args === 'string') {
+    try { return JSON.parse(args) } catch { return {} }
+  }
+  return args || {}
+})()
 
 // Rule 1a's cap is doctrine, not a parameter.
 //
