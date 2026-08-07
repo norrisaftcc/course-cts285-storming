@@ -47,5 +47,8 @@ The short version: **`phase0/` rules, `planning/` plans, `lore/` measures, `draf
 |---|---|---|---|
 | `F-001` | [Running the Bases — work-breakdown forecast](findings/F-001-running-the-bases-forecast.md) | 2026-08-06 | Recorded. Forecast only; nothing built. 8 decisions open for a human. |
 | `F-002` | [Confident status outrunning its coverage](findings/F-002-status-outruns-coverage.md) | 2026-08-06 | Recorded. 12 instances, 6 layers; **7 still open**. |
+| `F-003` | [The failing-agent runs — evidence inventory](findings/F-003-failing-agent-runs.md) | 2026-08-06 | Recorded. 4 runs, 1 with primary evidence. Untrimmed long form at `563b6df`. |
+| `F-004` | [State corrections at `1079aba`](findings/F-004-state-corrections-at-1079aba.md) | 2026-08-07 | Recorded. Supersedes two claims in F-001/F-002. One item flagged unexecuted. |
+| `F-005` | [Open notes](findings/F-005-open-notes.md) | 2026-08-07 | **Live register.** Open questions with their discussion. Largest item: students speaking in character. |
 
 *Regenerate this index from the directory, never from its own previous contents.*

@@ -10,7 +10,7 @@
   so promotion is a forced trade. Ranking was assessed once and never revisited; refinement is where it
   gets hard, and Week 11 is where evidence exists and two weeks remain to act on it.
   Split is descriptive (ADR-002): Part 1 = 15 + 10, header and the 25/25 Part split unchanged (KEEP).
-  Andrew's Note carried over verbatim (non-negotiables #3, #5; L0 per ADR-011).
+  Andrew's Note carried over verbatim (non-negotiables #3, #5; L0 per ADR-012).
   status: draft; not student-facing until it graduates to a course repo.
 -->
 # Week 11 Assignment: Risk Mitigation & Quality Assurance

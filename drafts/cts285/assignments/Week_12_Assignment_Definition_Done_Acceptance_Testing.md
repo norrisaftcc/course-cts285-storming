@@ -7,7 +7,7 @@
   Creator on a machine that is not the author's — reusing the Week 9 review pairing.
   Grouped presentation is comparative by design and seeds Week 13 team formation.
   Internals stay 15/15/10/10 per the canonical points table; header 50 unchanged.
-  Andrew's Note carried over verbatim (non-negotiables #3, #5; L0 per ADR-011).
+  Andrew's Note carried over verbatim (non-negotiables #3, #5; L0 per ADR-012).
   status: draft; not student-facing until it graduates to a course repo.
 -->
 # Week 12 Assignment: Definition of Done & Acceptance Testing
