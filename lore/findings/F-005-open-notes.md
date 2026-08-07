@@ -184,7 +184,13 @@ instructor performing on record.
 - **Design-partner scope and rights.** Two items unruled at `F-001` §7a: whether source of truth stays
   text (with the designed card rendering it), and whether redistribution rights are settled **before**
   commissioning rather than after.
-- **ADR-012 is reserved** for the floor-test lexicon question (`F-001` WP-2) and unwritten.
+- **ADR-012 is NOT free — corrected 2026-08-07.** `F-001` WP-2 names ADR-012 as the next free number
+  for the floor-test lexicon question. It is not: a parallel session took **ADR-012** for *L0 is
+  defined by its destination* (`phase0/ADR-012-l0-is-defined-by-its-destination.md`, merged at
+  `acd55fa`). **The next free number is ADR-013.** Noted here rather than edited into `F-001`, which
+  is merged. Third instance in three days of a number asserted as free by a document that could not
+  see a parallel branch — read "next free ADR" off `phase0/` at write time, never quote it from a
+  finding.
 - **The run-record five-minute budget.** The first record blew it, and said so. Whether the cap or the
   schema gives is a question for the second or third record.
 - **PATHFORM counts keep moving** — 3, then 39/6, now 50 lines across 14 files by a different measure.
