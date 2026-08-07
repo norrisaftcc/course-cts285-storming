@@ -41,13 +41,13 @@
 - Your own Sprint 3 checkpoint code (whatever stories you've implemented so far — this does not need to be finished)
 - Your partner's Sprint 3 checkpoint code
 - Your own test functions from Week 9's testing requirement (the ones asserting manual behavior, not your own behavior)
-- `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md` <!-- PATHFORM: pending spine ruling -->, pp.1–6 and 21–26
+- `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md` <!-- PATHFORM: pending spine ruling -->, PDF pp.1–6 and 21–26 (printed: cover matter, pp.2–4, and pp.19–24)
 - `Code Review Checklist` handout (`activities/handouts/Code_Review_Checklist.md`)
 - Laptop with IDE and Git
 
 **Learning Objectives**:
 - Conduct a code review that compares two implementations of the same stories, not just one implementation against general quality standards
-- Distinguish three outcomes for any behavioral disagreement: the manual settles it (cite the page), the manual is silent (flag as an ADR subject), or the manual's transcript doesn't reach that far (pp.7–18 are untranscribed — say so)
+- Distinguish three outcomes for any behavioral disagreement: the manual settles it (cite the page), the manual is silent (flag as an ADR subject), or the manual's transcript doesn't reach that far (PDF pp.7–18 are untranscribed — say so)
 - Run your own test cases against a peer's implementation to surface behavioral differences fast, instead of reading code and guessing
 - Provide feedback that is specific, prioritized, and — critically — sorts disagreements out of the defect pile
 - Respond to feedback professionally, including feedback you disagree with
@@ -101,7 +101,7 @@ You'll leave with practice comments, at least one real ADR candidate, and a part
 
 3. **Have your materials open**:
    - Your own checkpoint code and test functions
-   - `DATAMAN_MANUAL_TRANSCRIPT.md` pp.1–6 and 21–26
+   - `DATAMAN_MANUAL_TRANSCRIPT.md` PDF pp.1–6 and 21–26 (printed: cover matter, pp.2–4, and pp.19–24)
    - The `Code Review Checklist` handout
 
 4. **Review today's lab deliverables** (practice, not the graded submission):
@@ -166,7 +166,7 @@ They disagree. Is this a bug in B, a bug in A, or an ADR subject?
 
 **Step 3: Go to the manual before arguing about it (8 minutes)**
 
-Open `DATAMAN_MANUAL_TRANSCRIPT.md`. The manual states plainly: **two tries, then the answer is shown** (pp.4–5, detailed pp.20, 22 — "If after two tries the answer entered is still wrong, DataMan will display the problem with the correct result").
+Open `DATAMAN_MANUAL_TRANSCRIPT.md`. The manual states plainly: **two tries, then the answer is shown** (PDF p.5, printed p.3; detailed at PDF p.22, printed p.20 — "If after two tries the answer entered is still wrong, DataMan will display the problem with the correct result").
 
 The manual settles this one. Implementation B is wrong — it counts the correct-on-third-try as still possible, which the 1977 device never allowed. **This is a defect report, with a citation, not an ADR.**
 
@@ -176,7 +176,7 @@ Instructor shows a second pair of snippets — this time, two defensible ways of
 
 ### Expected Output
 
-- Understanding of the three-way sort: manual settles it / manual is silent / manual doesn't reach it (pp.7–18)
+- Understanding of the three-way sort: manual settles it / manual is silent / manual doesn't reach it (PDF pp.7–18)
 - A worked example of citing a page to close a disagreement
 - A worked example of a disagreement that stays open because the manual never ruled
 
@@ -234,7 +234,7 @@ For every story you both implemented, feed both versions the same inputs by hand
 For every difference, open the manual and sort it:
 - **Manual settles it** → cite the page, name which implementation is wrong
 - **Manual is silent** → flag it as an ADR subject; do not file it as a bug
-- **Manual doesn't reach it** (pp.7–18, untranscribed) → say so; neither of you can cite a page that doesn't exist yet
+- **Manual doesn't reach it** (PDF pp.7–18, untranscribed) → say so; neither of you can cite a page that doesn't exist yet
 
 **Step 5: Write your review comments (3 minutes)**
 
@@ -280,7 +280,7 @@ Open the comments your partner wrote. Note which are: general-quality feedback, 
 
 For a settled defect:
 ```
-Good catch — the manual (p.20) is clear that it's two tries, not three. I'll fix the
+Good catch — the manual (PDF p.22, printed p.20) is clear that it's two tries, not three. I'll fix the
 off-by-one in the attempt counter.
 ```
 
@@ -293,7 +293,7 @@ changing either implementation. I'll draft it and tag you.
 
 For genuine disagreement:
 ```
-I read p.22 differently — it shows the remainder as a separate field, not folded into
+I read PDF p.22 (printed p.20) differently — it shows the remainder as a separate field, not folded into
 the same value. I think your version actually contradicts that. Can we look at it
 together before I change anything?
 ```
@@ -365,7 +365,7 @@ Decide who finishes this ADR for their own graded submission — or whether you'
 - **Fix**: If you can't name something you decided *against*, it isn't a decision yet. Go back to Step 1 and find the actual fork in the road.
 
 **Issue**: Pairs can't find any disagreement the manual didn't settle
-- **Fix**: That's a real outcome, not a failure — some stories genuinely have one correct reading. If it happens today, look again once you've both implemented more stories; Week 9's own notes point at division-with-remainder, the memory-bank cap's enforcement point, and anything in pp.7–18 as reliable sources of real ADR subjects.
+- **Fix**: That's a real outcome, not a failure — some stories genuinely have one correct reading. If it happens today, look again once you've both implemented more stories; Week 9's own notes point at division-with-remainder, the memory-bank cap's enforcement point, and anything in PDF pp.7–18 as reliable sources of real ADR subjects.
 
 ---
 
@@ -379,7 +379,7 @@ Decide who finishes this ADR for their own graded submission — or whether you'
 
 **2. Settled vs. silent**: Did you and your partner disagree about whether something was a bug or an ADR subject before you opened the manual? What changed once you looked?
 
-**3. The untranscribed pages**: If your disagreement had landed in pp.7–18, what would you have done differently? Is "we can't settle this by reading" itself useful information?
+**3. The untranscribed pages**: If your disagreement had landed in PDF pp.7–18, what would you have done differently? Is "we can't settle this by reading" itself useful information?
 
 **4. Giving vs. receiving**: Which was harder today — finding a real behavioral difference in someone else's code, or hearing that your own implementation was the one the manual disagreed with?
 
@@ -448,7 +448,7 @@ Draft a 4–6 rule style guide specific to Dataman code — for example, "every 
 - [ ] Confirm pairs are set — ideally the same pairing that will do the graded Week 9–10 review, so today's cycle isn't wasted context
 - [ ] Prepare the two contrasting sample implementations for Part 1 (a settled-by-the-manual pair and a manual-silent pair)
 - [ ] Print or project `Code_Review_Checklist.md`
-- [ ] Have `DATAMAN_MANUAL_TRANSCRIPT.md` pp.1–6 and 21–26 ready to project
+- [ ] Have `DATAMAN_MANUAL_TRANSCRIPT.md` PDF pp.1–6 and 21–26 (printed: cover matter, pp.2–4, and pp.19–24) ready to project
 
 **During Class:**
 - [ ] Demonstrate the comparative pass live in Part 1 before pairs attempt it themselves
@@ -476,7 +476,7 @@ Generic code review teaches students to evaluate code against abstract quality s
 
 Because every Creator built the same product against the same source document, this lab can teach something a generic-scenario review cannot: the difference between *a bug* and *a decision nobody made yet*. That distinction is professional-grade thinking — every real system has both, and confusing one for the other either files false defect reports or lets real ambiguity sit unrecorded.
 
-The manual is the load-bearing piece. It is what makes "which of us is wrong" answerable at all in most cases, and its silence — including the literal gap at pp.7–18 — is what makes the ADR mechanism necessary rather than decorative. Students who leave this lab reaching for the manual before arguing with their partner have learned the actual lesson.
+The manual is the load-bearing piece. It is what makes "which of us is wrong" answerable at all in most cases, and its silence — including the literal gap at PDF pp.7–18 — is what makes the ADR mechanism necessary rather than decorative. Students who leave this lab reaching for the manual before arguing with their partner have learned the actual lesson.
 
 ---
 

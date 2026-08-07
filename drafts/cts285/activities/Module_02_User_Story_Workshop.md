@@ -10,7 +10,7 @@
   material is drawn from: the two-tries-then-reveal rule, the ten-problem Memory Bank ceiling,
   division with remainder, the Curator Console (Epic 4), and the Atom-Clock "ticks" timer — all
   traceable to reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md [PATHFORM: pending spine ruling]
-  pp.21–26 and to drafts/cts285/shared-dataman-artifacts/Dataman_Seeded_Backlog.md
+  PDF pp.21–26 (printed pp.19–24) and to drafts/cts285/shared-dataman-artifacts/Dataman_Seeded_Backlog.md
   [PATHFORM: pending spine ruling], the Week 2 seed of 26 core stories across 8 epics.
   UNGRADED — this is an in-class activity. No row in CTS285_Canonical_Points_Table.md; no rubric,
   no grade points are introduced here. Story points (Fibonacci) are the one numeric scale used,
@@ -36,7 +36,7 @@
 - The three Dataman stakeholder transcripts (Renee — parent; Ms. Alvarez — teacher; Dale — retro collector), already read in Week 3 — `drafts/cts285/shared-dataman-artifacts/Stakeholder_Transcript_Parent.md`, `..._Teacher.md`, `..._Retro_Collector.md` <!-- PATHFORM: pending spine ruling -->
 - `Dataman_Seeded_Backlog.md` <!-- PATHFORM: pending spine ruling --> (your Week 2 seed — 26 core stories across 8 epics)
 - `Story Quality Checklist` handout (`activities/handouts/Story_Quality_Checklist.md`)
-- `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md` <!-- PATHFORM: pending spine ruling -->, pp.21–26 (Hints for Parents and Teachers through the Appendix) — bring it up on a second screen or print those six pages
+- `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md` <!-- PATHFORM: pending spine ruling -->, PDF pp.21–26 (printed pp.19–24) (Hints for Parents and Teachers through the Appendix) — bring it up on a second screen or print those six pages
 - Index cards, or your Channel's issue tracker / board (To Do → In Progress → In Review → Done)
 
 **Learning Objectives**:
@@ -80,7 +80,7 @@ By the end of the 90 minutes, you'll have:
    - [ ] The three Dataman stakeholder transcripts (reread, don't just recall)
    - [ ] `Dataman_Seeded_Backlog.md` open in front of you
    - [ ] `Story Quality Checklist` handout
-   - [ ] DATAMAN_MANUAL_TRANSCRIPT.md pp.21–26 available
+   - [ ] DATAMAN_MANUAL_TRANSCRIPT.md PDF pp.21–26 (printed pp.19–24) available
    - [ ] Index cards, or your board open
 
 2. **Remember where you are in the story**:
@@ -256,8 +256,8 @@ Think about:
 
 Pick **Story 1.4 (division with remainder)** or **Story 3.1 (Memory Bank, ten-problem ceiling)**. Add 2–3 acceptance criteria covering a boundary the current story doesn't mention:
 
-- For 1.4: What happens when the remainder is zero (the division comes out even, e.g. 8 ÷ 2)? The manual (p.22) implies the "r" only appears *if* there's a remainder — does your criteria say so explicitly?
-- For 3.1: What happens when a curator tries to add an **eleventh** problem to a set that already holds ten? The manual (p.23) caps the Memory Bank at ten; the story needs to say what the system does when someone hits that ceiling, not just that the ceiling exists.
+- For 1.4: What happens when the remainder is zero (the division comes out even, e.g. 8 ÷ 2)? The manual (PDF p.5, printed p.3) implies the "r" only appears *if* there's a remainder — does your criteria say so explicitly?
+- For 3.1: What happens when a curator tries to add an **eleventh** problem to a set that already holds ten? The manual (PDF p.6, printed p.4; restated at PDF p.23, printed p.21) caps the Memory Bank at ten; the story needs to say what the system does when someone hits that ceiling, not just that the ceiling exists.
 
 ### Expected Output
 
@@ -404,7 +404,7 @@ Write 2 non-functional stories for behaviors the manual specifies as limits rath
 **Before Class:**
 - [ ] Confirm every student has their own Week 2 seeded backlog and Week 3 transcript notes accessible
 - [ ] Print or project `Story_Quality_Checklist.md`
-- [ ] Have `DATAMAN_MANUAL_TRANSCRIPT.md` pp.21–26 ready to project for Part 3 (the "r" remainder wording on p.22, the Memory Bank cap and Atom Clock wording on p.23)
+- [ ] Have `DATAMAN_MANUAL_TRANSCRIPT.md` PDF pp.21–26 (printed pp.19–24) ready to project for Part 3 (the "r" remainder wording at PDF p.5, printed p.3; the Memory Bank cap and Atom Clock wording at PDF p.23, printed p.21)
 - [ ] Prepare the six Part 1 quotes on slides or handout, without the A/B/C answers visible
 
 **During Class:**

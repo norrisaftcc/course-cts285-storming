@@ -50,12 +50,12 @@ For every difference you found:
 
 - [ ] Open `DATAMAN_MANUAL_TRANSCRIPT.md` and look for the specific behavior in question
 - [ ] If the manual states it plainly, **cite the page** and name which implementation is wrong. This is a defect report, not an ADR subject.
-- [ ] If the behavior would live in pp.7–18, say so explicitly — those pages are not transcribed (issue #18), and neither of you can settle the question by reading. Record that as its own finding, not silence.
+- [ ] If the behavior would live in PDF pp.7–18, say so explicitly — those pages are not transcribed (issue #18), and neither of you can settle the question by reading. Record that as its own finding, not silence.
 
 **Reference citations for common disagreements** (use these as a starting point, not a substitute for checking the actual page yourself):
-- Two tries, then the answer is revealed — manual pp.4–5, detailed pp.20, 22
-- The memory bank holds up to ten problems — manual p.4 and p.21 (also restated p.19's parent/teacher guidance)
-- Division answers are given as a whole number with a remainder shown separately — manual p.5, detailed p.22
+- Two tries, then the answer is revealed — manual PDF p.5 (printed p.3); detail at PDF p.22 (printed p.20)
+- The memory bank holds up to ten problems — manual PDF p.6 (printed p.4); restated at PDF p.23 (printed p.21)
+- Division answers are given as a whole number with a remainder shown separately — manual PDF p.5 (printed p.3)
 
 ### 4. If the manual is silent, flag it as an ADR subject — not a defect
 
@@ -113,9 +113,9 @@ Ordinary code review sorts feedback into **Must Fix / Should Fix / Nitpick**. Th
 
 **Example comments:**
 
-> **Must Fix**: Your Answer Checker reveals the answer after 3 tries, not 2. Manual p.20 is explicit: two tries, then reveal. Line 42 of `answer_checker.py` increments the counter after the correctness check instead of before it.
+> **Must Fix**: Your Answer Checker reveals the answer after 3 tries, not 2. Manual PDF p.22 (printed p.20) is explicit: two tries, then reveal. Line 42 of `answer_checker.py` increments the counter after the correctness check instead of before it.
 
-> **ADR Subject**: My division mode returns `{"quotient": 3, "remainder": 1}` and yours returns `"3 r 1"` as a formatted string. I checked p.22 — the manual shows the *display* format but doesn't specify the *data* representation. Both of ours pass the same manual-derived test. This is worth its own ADR, not a fix on either side.
+> **ADR Subject**: My division mode returns `{"quotient": 3, "remainder": 1}` and yours returns `"3 r 1"` as a formatted string. I checked PDF p.22 (printed p.20) — the manual shows the *display* format but doesn't specify the *data* representation. Both of ours pass the same manual-derived test. This is worth its own ADR, not a fix on either side.
 
 > **Nitpick**: `chk()` could be `check_answer()` — minor, doesn't block anything.
 

@@ -262,14 +262,14 @@ Start with your Week 4 Must-Have stories (capped at 8 — that cap gives you a n
 Sprint 2 Capacity: 16 story points (Sprint 1 velocity was 18, adjusted down —
 first time on the actual stack)
 
-Story 1.1 — Check my answer (5 pts, Must Have) → Total: 5
-Story 1.2 — Two tries, then show me the answer (5 pts, Must Have) → Total: 10
-Story 1.5 — Refuse negative results (2 pts, Must Have) → Total: 12
-Story 2.1 — Score after a round (3 pts, Must Have) → Total: 15
+Story 1.1 — Check my answer (5 story points, Must Have) → Running total: 5
+Story 1.2 — Two tries, then show me the answer (5 story points, Must Have) → Running total: 10
+Story 1.5 — Refuse negative results (2 story points, Must Have) → Running total: 12
+Story 2.1 — Score after a round (3 story points, Must Have) → Running total: 15
 
-Stop here. 15 points is within 16 capacity.
+Stop here. 15 story points is within a capacity of 16.
 
-Stretch (not committed): Story 7.1 — Auto-stop after idle (1 pt)
+Stretch (not committed): Story 7.1 — Auto-stop after idle (1 story point)
 ```
 
 **Step 3: Update your board (5 minutes)**
@@ -280,7 +280,7 @@ These stories are already sitting in **To Do** since Week 2 — nothing new to c
 
 Pick your highest-priority selected stories. Break each into 1-3 hour tasks.
 
-**Example — Story 1.2: Two tries, then show me the answer (5 pts)**
+**Example — Story 1.2: Two tries, then show me the answer (5 story points)**
 
 **Tasks:**
 1. Model ATTEMPT (try 1 / try 2, entered answer, is-correct) against the Reference ERD (2 hrs)

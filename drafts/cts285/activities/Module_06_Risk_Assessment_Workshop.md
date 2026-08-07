@@ -49,7 +49,7 @@
 
 **Materials Needed**:
 - Your Sprint 1 design package: ERD, `Dataman_Seeded_Backlog.md` classification, stakeholder transcripts <!-- PATHFORM: pending spine ruling -->
-- `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md` <!-- PATHFORM: pending spine ruling -->, pp.4–5 and pp.19–21 (Answer Checker detail, Hints for Parents and Teachers, Memory Bank & Timer)
+- `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md` <!-- PATHFORM: pending spine ruling -->, PDF pp.4–6 (printed pp.2–4) and PDF pp.21–23 (printed pp.19–21) — Answer Checker, Memory Bank, Hints for Parents and Teachers, and the Timer
 - `Risk Checklist Template` handout (`activities/handouts/Risk_Checklist_Template.md`)
 - `Risk_Register_Template.md` <!-- PATHFORM: pending spine ruling --> — the same template Week 6's graded register uses
 - Index cards, or your `risk-notes.md` scratch file
@@ -92,7 +92,7 @@ By the end, you'll have:
    - [ ] Your ERD and `Dataman_Seeded_Backlog.md` classification, open in front of you
    - [ ] Your three stakeholder transcripts, reread not just recalled
    - [ ] `Risk Checklist Template` handout
-   - [ ] DATAMAN_MANUAL_TRANSCRIPT.md pp.4–5 and pp.19–21 available
+   - [ ] DATAMAN_MANUAL_TRANSCRIPT.md PDF pp.4–6 (printed pp.2–4) and PDF pp.21–23 (printed pp.19–21) available
    - [ ] Index cards, or your scratch file open
 
 2. **Remember where you are in the story**:
@@ -141,10 +141,10 @@ By the end, you'll have:
 
 Read each of these slowly. Notice what each one traces to — a specific manual page, a specific schema decision, a specific gap in the source.
 
-1. **The two-tries rule is load-bearing in more than one place.** The manual gives the learner two attempts before revealing the answer (p.4–5, and again for the Memory Bank at p.19–21). If Answer Checker and the practice games each implement their own attempt-counting, the two copies will drift — a learner gets three tries in one place and one in another.
-2. **Division with remainder has no single settled representation.** The manual says a remainder shows as an "r" next to the whole-number answer (p.5) — but doesn't say what happens when the remainder is zero, or how your schema should store "answer with optional remainder" versus two plain integers. Where the manual is silent, you decide, and an undocumented decision is a risk.
-3. **The Memory Bank's ten-problem ceiling is a hard constraint.** The manual caps it at ten (p.19). Does your schema enforce that at the model layer, or does a curator only discover it when the eleventh problem silently fails to save?
-4. **The timer is specified as untestable.** The manual says DataMan's Atom Clock "may vary depending on how fresh the battery is, room temperature, etc." (p.21). A requirement that the source document itself calls variable cannot be pinned to an exact expected value — your test plan has to decide what "correct" even means here.
+1. **The two-tries rule is load-bearing in more than one place.** The manual gives the learner two attempts before revealing the answer (PDF p.5, printed p.3 — restated in detail at PDF p.22, printed p.20), and again for the Memory Bank (PDF p.6, printed p.4; detail at PDF p.23, printed p.21). If Answer Checker and the practice games each implement their own attempt-counting, the two copies will drift — a learner gets three tries in one place and one in another.
+2. **Division with remainder has no single settled representation.** The manual says a remainder shows as an "r" next to the whole-number answer (PDF p.5, printed p.3) — but doesn't say what happens when the remainder is zero, or how your schema should store "answer with optional remainder" versus two plain integers. Where the manual is silent, you decide, and an undocumented decision is a risk.
+3. **The Memory Bank's ten-problem ceiling is a hard constraint.** The manual caps it at ten (PDF p.6, printed p.4; restated at PDF p.23, printed p.21). Does your schema enforce that at the model layer, or does a curator only discover it when the eleventh problem silently fails to save?
+4. **The timer is specified as untestable.** The manual says DataMan's Atom Clock "may vary depending on how fresh the battery is, room temperature, etc." (PDF p.23, printed p.21). A requirement that the source document itself calls variable cannot be pinned to an exact expected value — your test plan has to decide what "correct" even means here.
 5. **The source you're building from is incomplete.** Pages 7–18 of the transcript are not transcribed. Anything you've inferred about the modes those pages would cover is an assumption wearing a requirement's clothes.
 
 None of these are on any generic software-risk checklist. All five come from actually having read the manual and actually having built the schema. That's the standard the rest of this workshop holds you to.
@@ -423,7 +423,7 @@ Find one risk in your list that actually belongs to two categories at once (a Sc
 **Before Class:**
 - [ ] Confirm every student has their own ERD, backlog classification, and transcripts accessible — this workshop fails if run against a shared example instead of each student's own build
 - [ ] Print or project `Risk_Checklist_Template.md`
-- [ ] Have `DATAMAN_MANUAL_TRANSCRIPT.md` pp.4–5 and pp.19–21 ready to project for Part 1's model risks
+- [ ] Have `DATAMAN_MANUAL_TRANSCRIPT.md` PDF pp.4–6 (printed pp.2–4) and PDF pp.21–23 (printed pp.19–21) ready to project for Part 1's model risks
 - [ ] Prepare the eight Part 1 sort statements on slides or handout, without the generic/specific answers visible
 
 **During Class:**

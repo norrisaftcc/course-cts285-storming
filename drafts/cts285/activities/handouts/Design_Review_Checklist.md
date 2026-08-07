@@ -32,7 +32,7 @@ Before anything else, run every ERD or wireframe through these three. They come 
 
 ### 1. Does the schema enforce the ten-problem ceiling?
 
-The Memory Bank Set is capped at **up to ten problems, no more** (manual p.6, p.21; Story 3.1 — Renee: *"punch in the five or six facts... swap them out"*).
+The Memory Bank Set is capped at **up to ten problems, no more** (manual PDF p.6, printed p.4; restated at PDF p.23, printed p.21; Story 3.1 — Renee: *"punch in the five or six facts... swap them out"*).
 
 - [ ] There is an entity (however named — Practice Set, Memory Bank Set) that groups problems together, separate from Problem itself
 - [ ] The cap is represented somewhere the design can point to — a stated field, a note, or a rule — not just true "in theory"
@@ -42,7 +42,7 @@ The Memory Bank Set is capped at **up to ten problems, no more** (manual p.6, p.
 
 ### 2. Does the model support two attempts per problem?
 
-Every problem gets **exactly two tries**, and the system must be able to tell the first try's outcome from the second's — that distinction is what lets an adult tell "knows it" from "guessed it" (Story 1.2; manual pp.5, 20, 22; the teacher's own stated reason).
+Every problem gets **exactly two tries**, and the system must be able to tell the first try's outcome from the second's — that distinction is what lets an adult tell "knows it" from "guessed it" (Story 1.2; manual PDF p.5, printed p.3; detail at PDF p.22, printed p.20; the teacher's own stated reason).
 
 - [ ] There is an entity or field that records **try number** (1 or 2), not just a final correct/incorrect flag
 - [ ] The design can represent: right on try 1, wrong-then-right on try 2, and wrong-on-both-with-reveal, as three distinguishable outcomes

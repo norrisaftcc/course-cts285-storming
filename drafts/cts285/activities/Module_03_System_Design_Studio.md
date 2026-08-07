@@ -44,7 +44,7 @@
 - Figma account (free at figma.com)
 - Your Week 4 Dataman backlog (or the seeded backlog if yours isn't finalized) — `drafts/cts285/shared-dataman-artifacts/Dataman_Seeded_Backlog.md` <!-- PATHFORM: pending spine ruling -->
 - The three Dataman stakeholder transcripts, already read in Week 3 — `drafts/cts285/shared-dataman-artifacts/Stakeholder_Transcript_Parent.md`, `..._Teacher.md`, `..._Retro_Collector.md` <!-- PATHFORM: pending spine ruling -->
-- `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md` <!-- PATHFORM: pending spine ruling -->, pp.1–6 and 21–26
+- `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md` <!-- PATHFORM: pending spine ruling -->, PDF pp.1–6 and 21–26 (printed: cover matter, pp.2–4, and pp.19–24)
 - `Design Review Checklist` handout (`activities/handouts/Design_Review_Checklist.md`)
 
 **Learning Objectives**:
@@ -95,7 +95,7 @@ Today's lab is a design studio, not a submission. You'll work in small groups th
 3. **Have your Dataman materials open**:
    - Your Week 4 backlog (or the seeded backlog)
    - The three stakeholder transcripts
-   - `DATAMAN_MANUAL_TRANSCRIPT.md` pp.1–6 and 21–26
+   - `DATAMAN_MANUAL_TRANSCRIPT.md` PDF pp.1–6 and 21–26 (printed: cover matter, pp.2–4, and pp.19–24)
 
 4. **Review today's studio deliverables** (practice drafts, not graded submissions):
    ```
@@ -222,10 +222,10 @@ You'll likely need at least one more to tie a group of attempts back to a summar
 
 For each entity, list attributes. Work from the manual and your backlog, not from memory of a generic app. A few load-bearing details, straight from the source material, that your attributes need to be able to represent:
 
-- A Problem's operands are one or two digits; its answer is one to three digits and never negative (manual pp.4–6, 20, 22)
-- A division Problem may have a remainder — represent it as its own field, not folded into the answer (Story 1.4; manual p.22)
-- An Attempt has a **try number** — this is not optional. Two tries per Problem, and the second try's outcome is what triggers the reveal (Story 1.2; manual pp.5, 20, 22). If your Attempt entity can't tell try 1 from try 2, you can't build Story 1.2 or the Week 4 teacher requirement about "knows it vs. guessed it."
-- A Practice Set holds **up to ten** Problems — put that constraint somewhere your model can enforce or at least declare (Story 3.1; manual p.6, p.21)
+- A Problem's operands are one or two digits; its answer is one to three digits and never negative (manual PDF pp.4–6, printed pp.2–4; restated at PDF pp.22–23, printed pp.20–21)
+- A division Problem may have a remainder — represent it as its own field, not folded into the answer (Story 1.4; manual PDF p.5, printed p.3)
+- An Attempt has a **try number** — this is not optional. Two tries per Problem, and the second try's outcome is what triggers the reveal (Story 1.2; manual PDF p.5, printed p.3; detail at PDF p.22, printed p.20). If your Attempt entity can't tell try 1 from try 2, you can't build Story 1.2 or the Week 4 teacher requirement about "knows it vs. guessed it."
+- A Practice Set holds **up to ten** Problems — put that constraint somewhere your model can enforce or at least declare (Story 3.1; manual PDF p.6, printed p.4; restated at PDF p.23, printed p.21)
 - A Curator needs to retrieve a Learner's Results *after the fact*, without having watched them practice (Story 4.1) — make sure your relationships actually support that query, not just that the data technically exists somewhere
 
 **Step 2: Identify relationships (10 minutes)**
@@ -297,7 +297,7 @@ Use the Entity-Relationship template in Draw.io.
 
 From your use case diagram and ERD, which screens are most critical? Pull from this list — you don't need all of them today, pick what your group's MVP covers:
 
-1. **Home / mode-select screen**: What a Learner sees first — power-on default is Answer Checker (manual p.4), with options to switch to Memory Bank or a game
+1. **Home / mode-select screen**: What a Learner sees first — power-on default is Answer Checker (manual PDF p.4, printed p.2), with options to switch to Memory Bank or a game
 2. **Answer Checker screen**: The core loop — enter a problem, enter an answer, see right/wrong feedback (the EEE signal on wrong, the light-show reward on right)
 3. **Curator Console: build a Practice Set**: A Curator adding problems to a set, with the ten-problem cap visibly enforced, not just documented
 4. **Session/Results view**: A completed round's right/tried (and ticks, if timed) — and, critically, a Curator's later view of a Learner's results, per Story 4.1
@@ -576,7 +576,7 @@ Show how the on-screen keypad and feedback area adapt to screen size. What chang
 **Before Class:**
 - [ ] Confirm every student has their own Week 3–4 materials (transcripts, backlog) accessible
 - [ ] Print or project `Design_Review_Checklist.md`
-- [ ] Have `DATAMAN_MANUAL_TRANSCRIPT.md` pp.1–6 and 21–26 ready to project
+- [ ] Have `DATAMAN_MANUAL_TRANSCRIPT.md` PDF pp.1–6 and 21–26 (printed: cover matter, pp.2–4, and pp.19–24) ready to project
 - [ ] Have `Dataman_Reference_ERD.md` open privately (instructor screen only) for calibration during circulation — never projected or shared with students during this session
 - [ ] Test that Draw.io and Figma work on the school network (no firewall blocks)
 
