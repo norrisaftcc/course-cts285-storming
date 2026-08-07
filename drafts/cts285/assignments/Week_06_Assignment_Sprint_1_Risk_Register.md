@@ -4,7 +4,7 @@
   The retrospective was deleted as a duplicate by the 1.0b sweep; the filename and title still named it.
   Risks re-anchored to the Dataman 2.0 build. Header 25 pts unchanged; rubric already sums to 25.
   Andrew's Note left in his words; one unverified past-student anecdote removed per non-negotiable #5
-  and marked for his sign-off — the surrounding note is untouched (non-negotiable #3, L0 per ADR-011).
+  and marked for his sign-off — the surrounding note is untouched (non-negotiable #3, L0 per ADR-012).
   status: draft; not student-facing until it graduates to a course repo.
 -->
 # Week 6 Assignment: Sprint 1 Risk Register
@@ -273,7 +273,7 @@ Students who write generic retrospectives ("I'll try harder") make the same mist
   The block was headed "Real Example from Past Student" and gave specific hours (3 vs 9, then 4
   with zero rework). Per non-negotiable #5 unverified past-student anecdotes are genericized or
   flagged rather than shipped; it is removed rather than reworded because rewriting Andrew's Note
-  is forbidden (non-negotiable #3, and it is the L0 voice per ADR-011).
+  is forbidden (non-negotiable #3, and it is the L0 voice per ADR-012).
   If the example is real it can be restored verbatim — nothing else in this note was touched.
   Original text is in git history at the commit preceding this one.
 -->
@@ -282,9 +282,9 @@ Students who write generic retrospectives ("I'll try harder") make the same mist
 
 Every professional dev team has one. You're practicing industry standard PM.
 
-I've watched students identify "deployment is harder than expected" as a risk, create mitigation plan (test deployment in Week 7 sandbox), and avoid the Week 15 panic when deployment actually IS hard.
+The pattern I want you to notice: a team that names "deployment is harder than expected" as a risk in Sprint 1, and books a throwaway deploy into the Sprint 2 sandbox to test it, is not surprised in Week 12 when the real deploy is hard. They already know where it breaks.
 
-**Students who skip risk planning end up firefighting in Week 14.** Students who plan risks handle them calmly because they already have mitigation strategies.
+**Skipping risk planning does not remove the risk. It moves the discovery later**, to the week you have the least room to absorb it. <!-- FIXED 2026-08-07 (F-006 class 7): prior text was an anecdote with invented particulars, and its week numbers came from a retired spine — it sent students to Weeks 14/15 for deployment, which is Week 12 here, and to two weeks that do not exist as files. -->
 
 **Which kind of student do you want to be?**
 

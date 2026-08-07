@@ -10,7 +10,7 @@
   so promotion is a forced trade. Ranking was assessed once and never revisited; refinement is where it
   gets hard, and Week 11 is where evidence exists and two weeks remain to act on it.
   Split is descriptive (ADR-002): Part 1 = 15 + 10, header and the 25/25 Part split unchanged (KEEP).
-  Andrew's Note carried over verbatim (non-negotiables #3, #5; L0 per ADR-011).
+  Andrew's Note carried over verbatim (non-negotiables #3, #5; L0 per ADR-012).
   status: draft; not student-facing until it graduates to a course repo.
 -->
 # Week 11 Assignment: Risk Mitigation & Quality Assurance
@@ -163,10 +163,14 @@ This runs **in class**, in one sitting, against a report you have not seen in ad
 
 You will receive a bug report written the way real ones arrive: from someone who is not a developer, describing a symptom rather than a cause, with details missing. Something like *"my daughter got a star for a wrong answer."*
 
+Not everyone in the room gets the same report, and they do not all resolve the same way. Some are real defects. At least one is not a fault at all — it is a decision somebody made deliberately and never wrote down. At least one cannot be reproduced. Deciding **which kind you have** is the exercise; assuming you have a defect because someone reported one is the most common way to get this wrong.
+
+<!-- INSTRUCTOR: the reports are in drafts/cts285/activities/handouts/Incident_Reports_Week11.md — three variants (A defect, B unrecorded decision, C not reproducible), with a per-variant instructor block to cut before printing. Distributing a mix is what makes the debrief work. -->
+
 Work the incident and write it up in `incident-log.md`:
 
 1. **Reproduce.** Can you make it happen? What exact sequence? If you cannot reproduce it, say so — that is a legitimate and common outcome, and what you do next matters more than the failure to reproduce.
-2. **Assess severity.** Use the impact scale from your Week 6 register. Some incidents are cosmetic. This one, if real, touches the one behavior with no acceptable failure mode.
+2. **Assess severity.** Use the impact scale from your Week 6 register. Some incidents are cosmetic; some touch the one behavior with no acceptable failure mode. Note when the reporter's *tone* and the actual severity disagree — a mild "not a big deal, thought you'd want to know" can sit on top of the worst thing in your backlog.
 3. **Diagnose.** Where is it, and what is the actual cause? Distinguish the symptom from the fault.
 4. **Decide: fix now, or mitigate and schedule.** Both are professional answers. State which and why. A hot fix at 11pm that you do not understand is not the safe option it feels like.
 5. **Write the timeline.** When reported, when reproduced, when diagnosed, when resolved. Plain, factual, no defensiveness.
