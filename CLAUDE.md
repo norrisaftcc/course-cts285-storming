@@ -73,15 +73,14 @@ You are an executor agent building Fall 2026 course material for **CTS-285** (Ca
 4. Commits carry a session trailer (`Claude-Session: <url>`). Run the Rule 6 acceptance checks (points, links, naming, voice, honesty, encoding, gate) before review.
 5. Fanning out? Rule 1a caps a wave at **7 agents**, per artifact, never per finding, never nested. Use `bounded-fanout`; it refuses rather than warns.
 
-## Current state (regenerated from the tree, 2026-08-06)
+## Current state (regenerated from the tree at `1079aba`, 2026-08-07)
 
-- **Phase 0: COMPLETE.** All canon in `phase0/`; ADR-001…005, 007, 008, 009 Accepted; **ADR-006 and ADR-010 Proposed** and blocking what they govern.
-- **Phase 1 (CTS-285 wks 1–12 Dataman conversion): IN PROGRESS.** A file existing in `drafts/cts285/assignments/` does **not** mean its conversion is done — read the per-week state before touching one:
-  - **Converted:** Week 01 (rewritten on the Dataman spine, B-004) · Weeks 03, 04 (task 1.4) · Weeks 05, 07 (task 1.5).
-  - **File exists, work outstanding:** Week 02 still sells project selection and awaits its rewrite on the seeded backlog (B-005) · Weeks 06 and 09 need finishing (B-006) · Weeks 11 and 12 need expansion, and Week 12 still has stubs (B-007).
-  - **Also built:** `knowledge-checks/` Module 01 Dataman document-analysis quiz (15 pts, 12 autograded items) + Modules 02–06; six planning-sheet templates + `WIRING_MANIFEST.md`; the 1.0a shared Dataman artifact set (3 stakeholder transcripts, reference ERD, seeded backlog, grading key); points-normalization conflict ledger; `drafts/spikes/datamon-virtual-pet-reskin.md`.
-- **Done and closed:** B-002 (draft-path consolidation), B-003 (47 reconciliation edits, audited 47/47 — planning/canon layer only, `drafts/cts285/**` never swept), B-004 (Week 1 + M1 quiz), B-024 (Rule 1a enforcement mechanism).
-- **Next up, in dependency order:** B-005 (Week 2 on the seeded backlog), B-006 (Weeks 6 and 9), B-007 (Weeks 11–12 expansion) — one controlled spine sequence, per backlog §8.
+- **Phase 0: COMPLETE.** All canon in `phase0/`; ADR-001…005, 007, 008, 009, 011 Accepted; **ADR-006 and ADR-010 Proposed** and blocking what they govern.
+- **Phase 1 (CTS-285 wks 1–12 Dataman conversion): COMPLETE.** All twelve weeks are converted and Dataman-anchored: Week 01 (B-004) · Week 02 (B-005) · Weeks 03, 04 (task 1.4) · Weeks 05, 07 (task 1.5) · Weeks 06, 09 (B-006) · Weeks 11, 12 (B-007). The declared spine sequence B-004 → B-007 is closed.
+  - **Also built:** `knowledge-checks/` Module 01 Dataman document-analysis quiz (15 pts, 12 autograded items) + Modules 02–06; six planning-sheet templates + `WIRING_MANIFEST.md`; the 1.0a shared Dataman artifact set (3 stakeholder transcripts, reference ERD, seeded backlog, grading key); points-normalization conflict ledger; `drafts/spikes/datamon-virtual-pet-reskin.md`; the `lore/` findings series (F-001…F-004).
+  - **Known gap inside the converted spine:** the ADR rail is built at Sprint 3 and consumed by Weeks 11–12, but its **Sprint 1 rung is missing** — `Week_05` still carries un-promoted "Design Rationale" prose and `grep -rn "ADR-lite" drafts/` returns 0, against the ramp promised in `PRISM_Course_Mapping.md` §CTS-285 evidence requirement. Zero point cost to close (ADR-002).
+- **Done and closed:** B-002 (draft-path consolidation), B-003 (47 reconciliation edits, audited 47/47 — planning/canon layer only, `drafts/cts285/**` never swept), B-004 (Week 1 + M1 quiz), **B-005** (Week 2 on the seeded backlog), **B-006** (Weeks 6 and 9), **B-007** (Weeks 11–12), B-024 (Rule 1a enforcement mechanism).
+- **Next up:** no B-ID is mid-flight. The unstarted backlog begins at B-008. Before dispatching from it, read `planning/REPOSITORY_INVENTORY_AND_PRIORITIZED_BACKLOG.md` **§7.5 Carried remainders** — obligations that outlived their owning task and are owned by nobody.
 - **Numbering trap:** the sprint assignments are week-paired — `Week_05` covers wks 5–6, `Week_07` covers 7–8, `Week_09` covers 9–10 — so there is no `Week_08` or `Week_10` file and creating one re-opens the collision NAMING_CANON's filename discipline exists to prevent. New files take module/sprint-based names.
 - **Not started:** activities and role cards (B-008), instructor guide M4–8 (B-009), weeks 13–16 (B-010…013), rebuilds and skin pass (B-014…016), the CSC-289 merge (B-017…019), cleanup and quality gates (B-020…023). No material has graduated to a course repo.
 

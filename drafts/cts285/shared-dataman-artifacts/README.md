@@ -8,15 +8,30 @@ One instructor-authored source set that every 26FA CTS-285 student analyzes, and
 
 ---
 
-## Dataman vs. Datamon (reproduced verbatim from `phase0/NAMING_CANON.md`)
+## Dataman vs. DataMon — what this folder needs to know
 
-The modernization **project is called Dataman everywhere and is never called "Datamon."** The token "Datamon" appears in this folder in exactly two kinds of place: (a) this disambiguation section — its heading, this sentence, and the verbatim block below, which necessarily reintroduces the token to define the distinction — and (b) the stretch-epic section of the seeded backlog and its grading key, where it credits the in-world homage. Any other occurrence — anywhere the modernization project or its data model is called "Datamon" — would be a naming error.
+**Canon lives in `phase0/NAMING_CANON.md` §"Dataman vs. DataMon". Read it there.** This section
+deliberately does **not** reproduce that table.
 
-| Term | Meaning | Where it lives |
-|---|---|---|
-| **Dataman** (also "Dataman/Datamon modernization") | The 26FA CTS-285 solo spine project: modernizing the retro handheld math toy through a full SDLC, weeks 1–12. Module 1 reads the Dataman PDF manual "like an analyst." | New 26FA material |
-| **Datamon (legacy game)** | The old week-5 creature-collection console game from the retired spine. | Legacy outline/roadmap/manifest |
-| Canonical interleave | Legacy Datamon *game* features (save/load, battles, encounters) are recast as **stretch-goal epics** in the week-2 seeded Dataman backlog — deliberate in-world homage, not a merge. | Wk 2 materials |
+<!-- CORRECTED 2026-08-07: this section previously claimed to reproduce NAMING_CANON.md "verbatim"
+     and reproduced a SUPERSEDED two-row version — heading "Dataman vs. Datamon", and the assertion
+     that the project "is never called 'Datamon'", both pre-ADR-004. A verbatim copy of canon inside
+     a draft is a second source of truth, and it desynchronized twice. Replaced with a pointer plus
+     the one fact this folder actually needs. Do not re-reproduce the table here. -->
+
+Three things bind the artifacts in this folder:
+
+1. **The exemplars here are Dataman.** Every worked example, transcript, ERD, and grading key in this
+   folder uses the **Dataman** basis — the 1977 physical calculator modernized into "Dataman 2.0."
+2. **DataMon is a live alternative student basis**, not a legacy curiosity. Per **ADR-004** a student
+   may build **"DataMon 2.0"** — the virtual-pet reskin — and the exercise is identical; only the
+   flavor differs. Nothing in this folder should read as though Dataman were the only option.
+3. **The lowercase "Datamon" is retired.** It survives only as DataMon's historical origin — the old
+   creature-collection game whose save/load, battles, and encounters seed the week-2 stretch epics.
+   It is not a live term for either project.
+
+The `man` / `Mon` swap is the search-and-replace hazard NAMING_CANON exists to prevent. Any agent
+editing these files must carry that table.
 
 ---
 
