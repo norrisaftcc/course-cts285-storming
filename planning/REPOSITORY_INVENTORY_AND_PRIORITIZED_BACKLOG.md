@@ -191,9 +191,9 @@ ADR-005 resolved the old prerequisite question. It is no longer a blocker.
 | ~~B-002~~ **DONE 2026-07-29** | Select one CTS-285 draft path and one relative link form. Move the planning sheets to that path. | None | ✅ One path exists (`drafts/cts285/`). ✅ Repo-internal references use the selected form (repo-root-relative, no leading slash). Course-repo PATHFORM remains open by design — see §4 note. |
 | B-003 | Reconcile the master plan, root README, source README, and old handoff notes with accepted ADRs and completed work. | B-002 | Status text matches the tree and Git history. Resolved blockers do not appear as open. |
 | B-004 | Rewrite Week 1 and create the 15-point Dataman document-analysis quiz. | ADR-005; Dataman transcript; B-001 for PDF release | The assignment uses configure-and-verify setup, the analyst read, the Media frame, and the canonical points. |
-| B-005 | Rewrite Week 2 around the paper simulation and seeded Dataman or DataMon backlog. | Shared Dataman artifacts | The assignment removes project selection and uses the canonical board and Trusted Workflow. |
-| B-006 | Finish Weeks 6 and 9. Add Dataman risks, shared review mechanics, and ORANGE ADR evidence. | B-002 | Both assignments use the common project and have no invented anecdotes. |
-| B-007 | Expand Weeks 11–12. Add QA, deploy, launch content, the incident exercise, and grouped presentations. | B-002 | Week 12 has no stubs. Both files use the struggle-pattern format. |
+| ~~B-005~~ **DONE 2026-08-06** | Rewrite Week 2 around the paper simulation and seeded Dataman or DataMon backlog. | Shared Dataman artifacts | ✅ Project selection deleted; runs on `Dataman_Seeded_Backlog.md`; canonical four board columns; Trusted Workflow. `601a214`, PR #49. |
+| ~~B-006~~ **DONE 2026-08-06** | Finish Weeks 6 and 9. Add Dataman risks, shared review mechanics, and ORANGE ADR evidence. | B-002 | ✅ Both rebuilt on the common project. Week 9 shipped the **full ORANGE ADR evidence** (worked example, `docs/adr/` deliverable, rubric row). `111d833`, PR #50. |
+| ~~B-007~~ **DONE 2026-08-06** | Expand Weeks 11–12. Add QA, deploy, launch content, the incident exercise, and grouped presentations. | B-002 | ✅ Week 11 269 lines, Week 12 286; stubs gone; both struggle-patterned; both consume the Week 9 ADR rail. `1079aba`, PR #51. |
 
 ### P1 — Complete CTS-285
 
@@ -239,10 +239,27 @@ ADR-005 resolved the old prerequisite question. It is no longer a blocker.
 - The **adversarial verifier role is the strongest candidate.** It has now been run twice and its highest-value behaviour is a repo-specific check that no general-purpose agent would invent: *is this passage deliberately historical?* Provenance headers, dated logs, superseded rows, and closed-task handoffs are records to be preserved, not drift to be fixed. On 2026-07-29 that check refuted **every** finding raised against the three handoff/ledger documents — the audit agent had read dated session records as live status. A reusable definition would carry that check and the "corrections get their own row" convention by default.
 - Corollary worth noting: the same run's audit stage should have been told the distinction up front. **Do not point a drift audit at a historical record without first teaching it that records are not status.** Whether that belongs in a skill, an agent definition, or Rule 3's context-package table is exactly what B-024 decides.
 
+## 7.5 Carried remainders
+
+*Added 2026-08-07. Obligations that outlived the task assigned to carry them.*
+
+**Why this section exists.** The backlog tracks **work units**, not **remainders**. When a task closes, any obligation it was carrying but did not ship vanishes with it — the handoff block recorded it correctly, and then the PR merged and took the record out of circulation. `B003_RECONCILIATION_WORKLIST.md:647` named the mechanism after it had already happened twice. This table is the home those obligations did not have. **A remainder is deliberately not a B-ID** — treating one as a work unit is the error that lost it.
+
+| Remainder | Origin task (closed) | Evidence it is still undone | Current owner | Carried since |
+|---|---|---|---|---|
+| ~~**ADR-003's rehearsal role card + live instructor-as-client brief**~~ **CLOSED 2026-08-07** | Task 1.4 (`fec3526`) → re-delegated to 1.3 (master plan `:99`, `:109`) → 1.3 shipped as B-005 (`601a214`) without it | ✅ Both authored: three role cards + `Client_Brief_Instructor_As_Client.md` in `shared-dataman-artifacts/`. Staging ruled **low-stakes instructor** (26FA). Guarantee 3 updated to hold by construction. **The Week_03:103 / Week_04 promise mismatch is a separate content fix and is NOT closed by this row.** | — | 2026-07-24 → closed |
+| **Daily Standup 3-question vs 4-section reconciliation** | "The Week_05 task" (`WIRING_MANIFEST.md:41`) — which closed before the manifest naming it was written | `Week_05:327` still says "answer these 3 questions"; `Daily_Standup_Template.md:37-38` still carries the bridging note and the unresolved `RECONCILIATION` comment | **Unassigned.** Cheapest home is B-008; that is a call, not an assumption. | 2026-07-24 |
+
+**The rule that populates it** (added to `CLAUDE_SUPPLEMENTARY.md` Rule 5): at **FINISH**, any `REMAINING:` item not covered by an open B-ID gets a row here before the PR is CLEARed. This attaches the obligation to a gate that already exists rather than inventing a new one.
+
+**One exit only.** A remainder leaves this table by being named in the *Done-when* of a closed B-ID. Strike rows through rather than deleting them, matching the `~~B-002~~ **DONE**` pattern above.
+
 ## 8. Next Work
 
-Start B-001 and B-002 at the same time. Then do B-004 through B-007 in one
-controlled CTS-285 spine sequence. Do not start the CSC-289 merge before B-013
+~~Start B-001 and B-002 at the same time. Then do B-004 through B-007 in one
+controlled CTS-285 spine sequence.~~ **COMPLETE 2026-08-06** — B-004 through B-007
+all merged; CTS-285 weeks 1–12 exist. The unstarted backlog now begins at B-008.
+**Read §7.5 (Carried remainders) before dispatching from it.** Do not start the CSC-289 merge before B-013
 defines the handoff package.
 
 **B-002 is complete** (2026-07-29). **B-003 is complete** (2026-07-31): the
