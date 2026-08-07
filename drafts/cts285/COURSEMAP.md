@@ -326,6 +326,8 @@ CTS-285 supports Drew Norris AI/IT Program outcomes:
 | **Total** | **750** | **100%** | |
 
 > **Task 1.0b scope note:** the **authoritative** grade table above is normalized to the canonical 750-point regime. The per-assessment and per-component point figures in the **Module Breakdown** section above (e.g. Week-2 assignment points, the per-module "Knowledge Check … bonus" lines, and the Sprint-1 Technical/PM/Communication component split) are **not** normalized here — they are rebuilt from the canonical spine by task **2.5** (COURSEMAP rebuild), together with the QM-section removal and the PO2-mapping fix (both deferred per the canonical table). Until 2.5 runs, treat this grade table as authoritative over the Module Breakdown figures.
+>
+> **Addendum, 2026-08-07 — the QM-section removal named above has since been executed** and is no longer pending. The note above is left as written, per non-negotiable #8: it was correct on the day 1.0b wrote it, and this line records the change rather than editing the record of it. The **PO2-mapping fix and every point figure in Module Breakdown remain 2.5's** and are untouched.
 
 ### Grading Philosophy
 
@@ -364,39 +366,33 @@ CTS-285 supports Drew Norris AI/IT Program outcomes:
 
 ## Quality Assurance
 
-### Quality Matters Standards Addressed
+<!--
+  QM STRIP, 2026-08-07. Ordered by phase0/QM_Retirement_Note.md ("all QM references in COURSEMAP
+  (§Quality Assurance), README certification statements, rubrics FAQ, and instructor guides"),
+  tracked as Deferred in points-normalization/CONFLICT_LEDGER.md under "QM-retirement task",
+  and unexecuted until now. The rubrics FAQ and README targets were already clean when checked;
+  this file was the last one carrying live QM doctrine.
+  What stood here: a claim that "CTS-285 addresses 22/22 QM standards (full audit in separate
+  document)", followed by four scored blocks. Removed rather than rewritten, because the claim
+  asserts certification against a framework withdrawn program-wide, and the "separate document"
+  it cites is a retired audit that named a nonexistent "QM 8th Edition" and carried a name on
+  work that person did not perform.
+  Replaced by the gate that actually applies. The underlying practices were never the problem
+  and are not lost - measurable objectives, aligned assessments, provided rubrics and varied
+  materials are documented where they are actually done, in the CLO/MLO tables above and in the
+  assessment rubrics.
+-->
 
-CTS-285 addresses 22/22 QM standards (full audit in separate document):
+### The current quality gate
 
-**Course Overview & Introduction (8/8)**:
-- Clear learning objectives (CLOs with Bloom's levels)
-- Course structure explained (8 modules, role progression)
-- Prerequisites stated
-- Instructor contact and response time
-- Technology requirements listed
-- Accessibility statement
-- Academic integrity policy
-- Netiquette guidelines
+Quality Matters has been **withdrawn program-wide**. The provider is moving to an in-house online course quality process, and its criteria do not exist yet. Until they do, rebuilt material is checked against four things:
 
-**Learning Objectives (5/5)**:
-- CLOs measurable and aligned to assessments
-- Module learning objectives (MLOs) link to CLOs
-- Bloom's taxonomy applied appropriately
-- Learning objectives guide course activities
-- Assessment criteria align with objectives
+1. **Link check** — every referenced path resolves to a file that exists
+2. **Points check** — every figure matches the canonical points table, and assignment headers sum to 750
+3. **Adversarial continuity review** — a walk of the student journey, looking for what the materials promise and do not deliver
+4. **RSI-mechanism verification** — the interaction mechanisms are present and running
 
-**Assessment & Measurement (5/5)**:
-- Multiple assessment types (assignments, sprints, presentations, knowledge checks)
-- Clear grading criteria (rubrics provided)
-- Timely feedback mechanisms (office hours, GitHub comments)
-- Self-assessment opportunities (retrospectives, knowledge checks with unlimited attempts)
-- Assessment security (academic integrity policy, process evidence required)
-
-**Instructional Materials (4/4)**:
-- Varied materials (assignments, activities, planning sheets, reference materials, PM mini-lessons)
-- Materials align with CLOs
-- Appropriate technical level for community college students
-- Materials accommodate different learning styles (visual, hands-on, reflective)
+**RSI is not part of that withdrawal and never was.** Regular and Substantive Interaction is federal distance-education compliance under 34 CFR § 600.2 — it is law rather than course-quality doctrine, and its mechanisms survive every restructure. See the instructor guide for what they are and when they run.
 
 ---
 
@@ -463,7 +459,7 @@ Designed for SME (Subject Matter Expert) instructors without teaching training:
 ### Planned Updates (Version 1.1 - Feb 2026)
 
 - Complete remaining 11 assignments (Weeks 6-16, excluding Sprint 1)
-- Full quality audits (QM, CourseForge, RSI)
+- Quality gate applied per the four checks in §Quality Assurance <!-- QM strip 2026-08-07: read "Full quality audits (QM, CourseForge, RSI)". The QM and CourseForge audits are retired (INGESTION_MANIFEST); RSI verification survives and is one of the four checks. -->
 - PM mini-lessons 2-4
 - Dashboard integration finalization
 
@@ -480,13 +476,12 @@ Designed for SME (Subject Matter Expert) instructors without teaching training:
 
 This course has been designed to meet:
 - ✅ NCCCS CTS-285 Combined Course Library standards
-- ✅ Quality Matters higher education rubric
 - ✅ FTCC program outcomes for AI/IT pathway
 - ✅ Industry-relevant PM and systems analysis practices
 - ✅ Preparation for CSC-289 capstone requirements
 
 **Course Designer**: Andrew Norris
-**Academic Oversight**: Angela Westmoreland
+**Academic Oversight**: Angela Westmoreland <!-- INSTRUCTOR SIGN-OFF NEEDED, 2026-08-07: left exactly as inherited, deliberately. phase0/QM_Retirement_Note.md records this name appearing on a generated QM audit as work she did not perform. That is a finding about the audit, NOT about this line — she may well be the actual academic oversight for 26FA, and removing a real person's attribution on suspicion would be its own error. Confirm, correct, or remove on instruction. -->
 **Effective Date**: Fall 2026
 
 ---
