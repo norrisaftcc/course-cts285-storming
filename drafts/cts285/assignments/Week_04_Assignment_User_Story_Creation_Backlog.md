@@ -53,7 +53,7 @@ Three things worth knowing before you start:
 - **A question that can only be answered "yes" costs you a turn.** *"Would reporting be useful?"* gets you *"Yes."* Ask what she would need to **see**, and when.
 - **Write it down as you go.** Anything said in the room that nobody records did not happen, as far as your backlog is concerned. This is the same rule your Sprint work runs on.
 
-**If you would rather not be interviewed than interview** — some rounds run peer-to-peer, and playing a stakeholder is opt-in. Taking the interviewer seat both rounds is a full participation path, and so is handing the character to a voice agent. Ask; nobody is required to perform.
+**If you'd rather ask the questions than answer them** — some rounds run peer-to-peer, and playing a stakeholder is opt-in. Taking the interviewer seat every round is a full participation path, and so is handing the character to a voice agent. Ask; nobody is required to perform.
 
 <!--
   26FA FIX 2026-08-07 — Week_03:103 promised students a live Week 4 interview and this Part
@@ -67,7 +67,7 @@ Three things worth knowing before you start:
   Points untouched: header 50, Interview Notes row stays 5 (ADR-002).
 -->
 
-**Instructor note:** the rehearsal runs from `drafts/cts285/shared-dataman-artifacts/Role_Card_Teacher_Alvarez.md` <!-- PATHFORM: pending spine ruling -->, Zone A only. See `Role_Card_HOWTO.md` for staging and the voice-agent path.
+**Instructor note:** the rehearsal runs from `drafts/cts285/shared-dataman-artifacts/Role_Card_Teacher_Alvarez.md` <!-- PATHFORM: pending spine ruling -->, Zone A only. See `drafts/cts285/shared-dataman-artifacts/Role_Card_HOWTO.md` <!-- PATHFORM: pending spine ruling --> for staging and the voice-agent path.
 
 ### Post-Interview Document: `interview-notes.md` (5 points)
 
