@@ -42,6 +42,7 @@ editing these files must carry that table.
 | `Stakeholder_Transcript_Parent.md` | Fictional parent interview (at-home buyer/supervisor). Analyst source. |
 | `Stakeholder_Transcript_Teacher.md` | Fictional classroom-teacher interview (power curator, classroom scale). Analyst source. |
 | `Stakeholder_Transcript_Retro_Collector.md` | Fictional vintage-collector interview (fidelity advisor, secondary audience). Analyst source. |
+| `Role_Card_HOWTO.md` | **Instructor-facing.** How to run a card: levers/buttons/constraints, the opt-in rule, the voice-agent path, ungraded. Read first. |
 | `Role_Card_Parent_Renee.md` | **Instructor-facing.** Play sheet for Renee. Zone A playable/leak-free; Zone B is the answer key. |
 | `Role_Card_Teacher_Alvarez.md` | **Instructor-facing.** The **rehearsal** round (ADR-003). Transcript not handed out for this round. |
 | `Role_Card_Collector_Dale.md` | **Instructor-facing.** Play sheet for Dale. |

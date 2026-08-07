@@ -91,6 +91,36 @@ guarantee, and it holds regardless of how the questions above are answered.
 
 ---
 
+### Rulings received 2026-08-07, after this section was drafted
+
+Appended rather than folded in, so the questions and their answers stay separable.
+
+| Question in §1 | Ruled |
+|---|---|
+| Opt-in? | **Acting is opt-in.** Three equal paths: play it, hand it to a voice agent (any phone), or take the interviewer seat. |
+| Graded? | **Not graded — improv is practice**, on LPAA terms. No points-table row; the 750 stays closed. |
+| Can students play the client? | **No.** Unchanged — `ADR-003:35`. |
+| Card format | **Constraints, buttons and levers — options, not "say stuff."** This was a redesign, not a refinement, and the cards were rebuilt. |
+
+**The reframe that came with it, and it is the useful part:** *playing the customer is less roleplay
+than practice from the other side.* That reads down the accessibility worry in §1 item 2 without
+dismissing it — the student in the customer seat is not doing a soft version of the exercise, they
+are doing the half that is normally invisible, watching an interview happen *to* them. The opt-in
+rule still holds; the framing just stops treating the customer seat as the lesser one.
+
+**The voice-agent path resolves more than it was asked to.** It is simultaneously the opt-out for a
+student who will not perform, the demonstration vehicle (a voice agent plays the character while the
+instructor interviews, so students see the mechanic before running it), and the reason the
+levers/buttons format is right — a control panel is promptable in a way that prose improvisation is
+not. One decision, three problems.
+
+**Still open from §1:** which round students play relative to the instructor's, and rotation so
+nobody analyses the character they played. Both are in `Role_Card_HOWTO.md` as flagged, not decided.
+
+**Also settled:** the Canvas M1 item in §4 is **not ours**. An external markdown→Canvas-HTML skill
+exists and is tested on another repo; this repo is not responsible for that implementation and
+should not build a second path.
+
 ## 2. Held, awaiting confirmation — the retired-outline re-point
 
 The instructor ruled that the three dangling `CTS285_COURSE_OUTLINE.md` citations re-point at
