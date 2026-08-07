@@ -282,9 +282,9 @@ Students who write generic retrospectives ("I'll try harder") make the same mist
 
 Every professional dev team has one. You're practicing industry standard PM.
 
-I've watched students identify "deployment is harder than expected" as a risk, create mitigation plan (test deployment in Week 7 sandbox), and avoid the Week 15 panic when deployment actually IS hard.
+The pattern I want you to notice: a team that names "deployment is harder than expected" as a risk in Sprint 1, and books a throwaway deploy into the Sprint 2 sandbox to test it, is not surprised in Week 12 when the real deploy is hard. They already know where it breaks.
 
-**Students who skip risk planning end up firefighting in Week 14.** Students who plan risks handle them calmly because they already have mitigation strategies.
+**Skipping risk planning does not remove the risk. It moves the discovery later**, to the week you have the least room to absorb it. <!-- FIXED 2026-08-07 (F-006 class 7): prior text was an anecdote with invented particulars, and its week numbers came from a retired spine — it sent students to Weeks 14/15 for deployment, which is Week 12 here, and to two weeks that do not exist as files. -->
 
 **Which kind of student do you want to be?**
 
