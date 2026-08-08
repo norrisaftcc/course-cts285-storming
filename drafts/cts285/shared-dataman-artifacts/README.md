@@ -59,7 +59,7 @@ The value of this set is that a rubric can point at a source for every claim. Ve
 1. **Every entity in `Dataman_Reference_ERD.md` is derivable from at least one transcript** (matrix in Grading Key Part 4 — all eight entities covered).
 2. **Every top-of-backlog (core) user story has a named motivating source** — transcript-derived stories name a stakeholder; Epic 8 explicitly traces to the manual Appendix as a modernization/NFR exception.
 3. **No core story is motivated only by the deferred instructor-as-client persona** — that persona is intentionally not written here (see `phase0/ADR-003-instructor-as-client-persona.md`), so nothing depends on it.
-4. **Every stretch-goal epic traces to the legacy-game feature list recorded in `phase0/NAMING_CANON.md` §“Dataman vs. DataMon”.**
+4. **Every stretch-goal epic traces to the legacy-game seed features (save/load, battles, encounters, creature collection) noted in `phase0/NAMING_CANON.md` §“Dataman vs. DataMon”.**
 5. **No orphan core stories** — every core story has a motivating source; Epic 8 is explicitly Appendix-derived rather than transcript-derived.
 
 ---
