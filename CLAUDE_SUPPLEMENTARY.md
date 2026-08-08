@@ -87,6 +87,8 @@ CANON-TOUCHED: <any phase0/ or bible edit proposed — or "none">
 
 A fresh session resumes from the issue + handoff block + CLAUDE.md read-first list. Nothing lives only in a session's memory.
 
+**Carried remainders (added 2026-08-07).** At **FINISH**, any `REMAINING:` item **not covered by an open B-ID** gets a row in `planning/REPOSITORY_INVENTORY_AND_PRIORITIZED_BACKLOG.md` §7.5 *before* the PR is CLEARed. The handoff block was never the failure — `REMAINING` was written correctly both times this went wrong. The failure is that a handoff block dies with its PR, so an obligation assigned to "whichever task does X" survives the closure of every task that could have done it. ADR-003's role card was lost this way twice.
+
 **Session ledger:** every session that writes to this repo also appends a row to `planning/SESSIONS.md` (part of its final commit) and respects the WRITE TOKEN recorded there — one writer at a time; push after writing, pull before starting. Read the ledger before your first commit.
 
 ## Rule 6 — Acceptance criteria (every PR, before review)
@@ -111,6 +113,6 @@ At the end of each master-plan phase, before the next fans out: run the **contin
 
 ## Current status (update this section as phases close)
 
-- **Phase 0: COMPLETE** (all foundation artifacts in `phase0/`).
-- **Phase 1 (CTS-285 wks 1–12 Dataman conversion): OPEN.** Recommended first wave: (a) shared Dataman class artifacts — stakeholder transcripts, reference ERD, seeded backlog with Datamon-game stretch epics (unblocks most other Phase 1 tasks and doubles as grading keys); (b) points normalization sweep (pure Sonnet-mechanical); (c) the four missing planning-sheet templates. Wk-1 content waits on the Dataman PDF if it's not yet in `reference/`.
-- Phases 2–5: see master plan §3 for the full breakdown and sequencing (0 → (1 ∥ 2) → 3 → 4 → 5).
+- **Phase 0: COMPLETE** (all foundation artifacts in `phase0/`; ADR-006 and ADR-010 remain *Proposed* and block what they govern).
+- **Phase 1 (CTS-285 wks 1–12 Dataman conversion): COMPLETE** (2026-08-07, verified at `1079aba`). All twelve weeks are converted and Dataman-anchored; the declared spine sequence **B-004 → B-007 is closed** — B-005 (Week 2) at `601a214`, B-006 (Weeks 6, 9) at `111d833`, B-007 (Weeks 11–12) at `1079aba`. Also built: the 1.0a shared artifact set, six planning-sheet templates, M1 quiz + M2–M6 knowledge checks, and the `lore/` findings series. **Two things remain true and are worth carrying forward:** the ADR rail's Sprint 1 rung is still missing (built at Sprint 3, consumed by Weeks 11–12), and `drafts/cts285/**` has never had a reconciliation sweep — B-003's audit covered the planning and canon layer only.
+- Phases 2–5: see master plan §3 for the full breakdown and sequencing (0 → (1 ∥ 2) → 3 → 4 → 5), and the backlog's B-IDs for dispatchable units.

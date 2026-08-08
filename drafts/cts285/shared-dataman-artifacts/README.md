@@ -8,15 +8,29 @@ One instructor-authored source set that every 26FA CTS-285 student analyzes, and
 
 ---
 
-## Dataman vs. DataMon (from `phase0/NAMING_CANON.md`)
+## Dataman vs. DataMon — what this folder needs to know
 
-The modernization **project is called Dataman everywhere and is never called "Datamon."** `DataMon` is the adopted virtual-pet alternative basis; lowercase `Datamon` is retained only when naming the retired legacy game. `DataMan` preserves the historical product spelling in manual-derived quotations; `Dataman` names the modernization project.
+**Canon lives in `phase0/NAMING_CANON.md` §"Dataman vs. DataMon". Read it there.** This section
+deliberately does **not** reproduce that table.
 
-| Term | Meaning | Where it lives |
-|---|---|---|
-| **Dataman** | The 1977 physical calculator and the student modernization project based on it ("Dataman 2.0"). Instructor exemplars use Dataman. | Spine + exemplars |
-| **DataMon** | A virtual-pet reskin and alternative student project basis ("DataMon 2.0"). | Alt basis; `drafts/spikes/datamon-virtual-pet-reskin.md` |
-| **Legacy "Datamon" game** | The retired creature-collection console game; its save/load, battles, and encounters seed the stretch epics. | Historical source only |
+<!-- CORRECTED 2026-08-07: this section previously claimed to reproduce NAMING_CANON.md "verbatim"
+     and reproduced a SUPERSEDED two-row version — heading "Dataman vs. Datamon", and the assertion
+     that the project "is never called 'Datamon'", both pre-ADR-004. A verbatim copy of canon inside
+     a draft is a second source of truth, and it desynchronized twice. Replaced with a pointer plus
+     the one fact this folder actually needs. Do not re-reproduce the table here. -->
+
+Three things bind the artifacts in this folder:
+
+1. **The exemplars here are Dataman.** Every worked example, transcript, ERD, and grading key in this
+   folder uses the **Dataman** basis — the 1977 physical calculator modernized into "Dataman 2.0."
+2. **DataMon is a live alternative student basis**, not a legacy curiosity. Per **ADR-004** a student
+   may build **"DataMon 2.0"** — the virtual-pet reskin — and the exercise is identical; only the
+   flavor differs. Nothing in this folder should read as though Dataman were the only option.
+3. **The lowercase "Datamon" is retired.** It survives only as DataMon's historical origin — the old
+   creature-collection game whose save/load, battles, and encounters seed the week-2 stretch epics.
+   It is not a live term for either project.
+The `man` / `Mon` swap is the search-and-replace hazard NAMING_CANON exists to prevent. Any agent
+editing these files must carry that table.
 
 ---
 
@@ -27,6 +41,11 @@ The modernization **project is called Dataman everywhere and is never called "Da
 | `Stakeholder_Transcript_Parent.md` | Fictional parent interview (at-home buyer/supervisor). Analyst source. |
 | `Stakeholder_Transcript_Teacher.md` | Fictional classroom-teacher interview (power curator, classroom scale). Analyst source. |
 | `Stakeholder_Transcript_Retro_Collector.md` | Fictional vintage-collector interview (fidelity advisor, secondary audience). Analyst source. |
+| `Role_Card_HOWTO.md` | **Instructor-facing.** How to run a card: levers/buttons/constraints, the opt-in rule, the voice-agent path, ungraded. Read first. |
+| `Role_Card_Parent_Renee.md` | **Instructor-facing.** Play sheet for Renee. Zone A playable/leak-free; Zone B is the answer key. |
+| `Role_Card_Teacher_Alvarez.md` | **Instructor-facing.** The **rehearsal** round (ADR-003). Transcript not handed out for this round. |
+| `Role_Card_Collector_Dale.md` | **Instructor-facing.** Play sheet for Dale. |
+| `Client_Brief_Instructor_As_Client.md` | **Instructor-facing.** The live client, played not distributed — the graded RSI anchor. Adds no core story by design. |
 | `Dataman_Reference_ERD.md` | Known-correct data model (Mermaid + prose table) + degraded variants with keys. |
 | `Dataman_Seeded_Backlog.md` | Seeded epics → user stories → acceptance criteria; core MVP + below-the-line stretch. |
 | `Grading_Key.md` | **Instructor-only.** Planted hazards, cross-transcript conflicts, intended MoSCoW, entity implications, traceability guarantees. |
@@ -57,18 +76,18 @@ Board columns everywhere: **To Do → In Progress → In Review → Done**. Any 
 The value of this set is that a rubric can point at a source for every claim. Verified in `Grading_Key.md` Parts 4–5:
 
 1. **Every entity in `Dataman_Reference_ERD.md` is derivable from at least one transcript** (matrix in Grading Key Part 4 — all eight entities covered).
-2. **Every top-of-backlog (core) user story has a named motivating source** — transcript-derived stories name a stakeholder; Epic 8 explicitly traces to the manual Appendix as a modernization/NFR exception.
-3. **No core story is motivated only by the deferred instructor-as-client persona** — that persona is intentionally not written here (see `phase0/ADR-003-instructor-as-client-persona.md`), so nothing depends on it.
-4. **Every stretch-goal epic traces to the legacy-game seed features (save/load, battles, encounters, creature collection) noted in `phase0/NAMING_CANON.md` §“Dataman vs. DataMon”.**
-5. **No orphan core stories** — every core story has a motivating source; Epic 8 is explicitly Appendix-derived rather than transcript-derived.
+2. **Every top-of-backlog (core) user story has a named motivating source** — transcript-derived core stories carry a `↳ Traces to:` line naming the stakeholder need; Epic 8 explicitly traces to the manual Appendix as a modernization/NFR exception rather than a transcript stakeholder.
+3. **No core story is motivated only by the instructor-as-client persona** — the brief now exists (`Client_Brief_Instructor_As_Client.md`) and is written to commission the modernization without requesting features, so the guarantee holds by construction rather than by the persona's absence. See `Grading_Key.md` Part 5 and `phase0/ADR-003-instructor-as-client-persona.md`.
+4. **Every stretch-goal epic traces to a named feature of the retired legacy creature-collection game** — specifically text-based creature collection, save/load game state, turn-based battles, and random encounters/progression, as recorded in `phase0/NAMING_CANON.md` §"Dataman vs. DataMon" (legacy-game row) and ruled by `phase0/ADR-004-two-modernization-bases.md`.
+5. **No orphan stories** — every core story has a motivating source; Epic 8 is explicitly Appendix-derived rather than transcript-derived, and every stretch story names its legacy-game feature.
 
 ---
 
 ## Honesty and scope notes
 
 - The three stakeholders are **fictional in-world personas**, each labeled a class artifact in its own header. No real person, family, semester, or "past student" is referenced. No invented statistics or testimonials appear. No claim is made about real TI sales/production/history beyond what the manual and period ad support.
-- Every device-specific claim traces to `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md`; the four Epic 8 modernization/NFR stories are Appendix-derived and do not claim transcript stakeholder support.
-- **Not decided here (out of scope):** the Week 1–2 module architecture, the wk-1/wk-2 assignment split, and sprint/week-numbering are spine decisions (Rule 1) and are deliberately untouched. The instructor-as-client stakeholder is deferred to an ADR (Rule 8).
+- Every device-specific claim traces to `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md`; the four Epic 8 modernization/NFR stories are explicitly Appendix-derived rather than stakeholder-derived, and there are no unverifiable hardware claims to hedge.
+- **Not decided here (out of scope):** the Week 1–2 module architecture, the wk-1/wk-2 assignment split, and sprint/week-numbering are spine decisions (Rule 1) and are deliberately untouched. **Resolved elsewhere:** the instructor-as-client stakeholder was ruled by ADR-003 and authored 2026-08-07 as `Client_Brief_Instructor_As_Client.md`; rehearsal staging is **low-stakes instructor** for 26FA.
 
 ---
 
