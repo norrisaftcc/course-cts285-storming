@@ -109,7 +109,7 @@ The seeded backlog leaves Priority unassigned on purpose; this is the instructor
 Stated so a rubric can verify them:
 
 1. **Every reference-ERD entity is derivable from ≥1 transcript.** See Part 4 (all eight covered).
-2. **Every top-of-backlog (core) story traces to a named stakeholder need.** Each core story carries a `↳ Traces to:` line naming the stakeholder(s) and manual page. No core story is motivated by device behavior alone with no stakeholder.
+2. **Every transcript-derived core story traces to a named stakeholder need.** Each transcript-derived core story carries a `↳ Traces to:` line naming the stakeholder(s) and manual page; Epic 8 is Appendix-derived and does not claim stakeholder motivation.
 3. **No core story is motivated only by the deferred instructor-as-client persona.** That persona was intentionally **not** written as a transcript (see `phase0/ADR-003-instructor-as-client-persona.md`); accordingly, no story in this backlog depends on it. If a future instructor-as-client artifact is added, any story it uniquely motivates must be added then, not now.
 4. **Every stretch epic traces to the legacy-game feature list recorded in `phase0/NAMING_CANON.md` §“Dataman vs. DataMon”.**
 5. **No orphan core stories.** Every core story has a motivating source; Epic 8 is explicitly Appendix-derived rather than transcript-derived.
