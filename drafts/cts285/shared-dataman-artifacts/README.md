@@ -4,7 +4,7 @@ One instructor-authored source set that every 26FA CTS-285 student analyzes, and
 
 **Nothing here is student-facing until it graduates to a course repo.** These are *inputs* to the Week 1–4 assignments, not the assignments themselves.
 
-**Project framing:** the 26FA CTS-285 solo spine is **Dataman** — modernizing Texas Instruments' 1977 handheld math toy *DataMan* into a web/app learning system across a full SDLC (weeks 1–12). Every entity, stakeholder need, and backlog item in this folder traces to the transcribed manual at `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md` — the product source of truth.
+**Project framing:** the 26FA CTS-285 solo spine is **Dataman** — modernizing Texas Instruments' 1977 handheld math toy *DataMan* into a web/app learning system across a full SDLC (weeks 1–12). Device-specific claims in this folder trace to the transcribed manual at `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md`; stakeholder needs and the below-the-line stretch homage have their own sources identified in the artifacts.
 
 ---
 
@@ -29,7 +29,6 @@ Three things bind the artifacts in this folder:
 3. **The lowercase "Datamon" is retired.** It survives only as DataMon's historical origin — the old
    creature-collection game whose save/load, battles, and encounters seed the week-2 stretch epics.
    It is not a live term for either project.
-
 The `man` / `Mon` swap is the search-and-replace hazard NAMING_CANON exists to prevent. Any agent
 editing these files must carry that table.
 
@@ -77,18 +76,18 @@ Board columns everywhere: **To Do → In Progress → In Review → Done**. Any 
 The value of this set is that a rubric can point at a source for every claim. Verified in `Grading_Key.md` Parts 4–5:
 
 1. **Every entity in `Dataman_Reference_ERD.md` is derivable from at least one transcript** (matrix in Grading Key Part 4 — all eight entities covered).
-2. **Every top-of-backlog (core) user story traces to a named stakeholder need** — each carries a `↳ Traces to:` line; none is motivated by device behavior with no stakeholder.
-3. **No core story is motivated only by the instructor-as-client persona** — the brief exists as of 2026-08-07 (`Client_Brief_Instructor_As_Client.md`) and is written to commission the modernization without requesting features, so the guarantee holds by construction rather than by the persona's absence. See `Grading_Key.md` Part 5 and `ADR-003:48`.
-4. **Every stretch-goal epic traces to a named feature of the legacy creature-collection game** — recorded in `phase0/NAMING_CANON.md` §"Dataman vs. DataMon" (legacy-game row), ruled by `ADR-004`. *(Re-pointed 2026-08-07 from the retired `CTS285_COURSE_OUTLINE.md`, which exists nowhere in the tree.)*
-5. **No orphan stories** — nothing in the backlog lacks a motivating transcript (or, for stretch, a named legacy-game feature).
+2. **Every top-of-backlog (core) user story has a named motivating source** — transcript-derived core stories carry a `↳ Traces to:` line naming the stakeholder need; Epic 8 explicitly traces to the manual Appendix as a modernization/NFR exception rather than a transcript stakeholder.
+3. **No core story is motivated only by the instructor-as-client persona** — the brief now exists (`Client_Brief_Instructor_As_Client.md`) and is written to commission the modernization without requesting features, so the guarantee holds by construction rather than by the persona's absence. See `Grading_Key.md` Part 5 and `phase0/ADR-003-instructor-as-client-persona.md`.
+4. **Every stretch-goal epic traces to a named feature of the retired legacy creature-collection game** — specifically text-based creature collection, save/load game state, turn-based battles, and random encounters/progression, as recorded in `phase0/NAMING_CANON.md` §"Dataman vs. DataMon" (legacy-game row) and ruled by `phase0/ADR-004-two-modernization-bases.md`.
+5. **No orphan stories** — every core story has a motivating source; Epic 8 is explicitly Appendix-derived rather than transcript-derived, and every stretch story names its legacy-game feature.
 
 ---
 
 ## Honesty and scope notes
 
 - The three stakeholders are **fictional in-world personas**, each labeled a class artifact in its own header. No real person, family, semester, or "past student" is referenced. No invented statistics or testimonials appear. No claim is made about real TI sales/production/history beyond what the manual and period ad support.
-- Every device-specific claim traces to `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md`; there are no unverifiable hardware claims to hedge.
-- **Not decided here (out of scope):** the Week 1–2 module architecture, the wk-1/wk-2 assignment split, and sprint/week-numbering are spine decisions (Rule 1) and are deliberately untouched. ~~The instructor-as-client stakeholder is deferred to an ADR (Rule 8).~~ **Resolved:** ruled by `ADR-003` (2026-07-23) and authored 2026-08-07 as `Client_Brief_Instructor_As_Client.md`; rehearsal staging ruled **low-stakes instructor** for 26FA.
+- Every device-specific claim traces to `reference/dataman/DATAMAN_MANUAL_TRANSCRIPT.md`; the four Epic 8 modernization/NFR stories are explicitly Appendix-derived rather than stakeholder-derived, and there are no unverifiable hardware claims to hedge.
+- **Not decided here (out of scope):** the Week 1–2 module architecture, the wk-1/wk-2 assignment split, and sprint/week-numbering are spine decisions (Rule 1) and are deliberately untouched. **Resolved elsewhere:** the instructor-as-client stakeholder was ruled by ADR-003 and authored 2026-08-07 as `Client_Brief_Instructor_As_Client.md`; rehearsal staging is **low-stakes instructor** for 26FA.
 
 ---
 

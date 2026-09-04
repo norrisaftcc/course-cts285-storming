@@ -1,6 +1,6 @@
 # HANDOFF — Task 1.0a: Shared Dataman Class Artifacts
 
-Branch: `task/1-0a-dataman-artifacts`. Nothing committed or pushed — everything is staged in the working tree for coordinator review, per the task instruction.
+Branch: `task/1-0a-dataman-artifacts`. The original task artifacts were staged for coordinator review; the independent continuity audit is recorded in the follow-up commit.
 
 ## DONE
 
@@ -17,8 +17,19 @@ Verification run: in the shipped student-facing artifacts, `grep` confirms `Data
 
 ## REMAINING
 
-- Nothing required to close 1.0a. The instructor-as-client (fourth stakeholder) is intentionally deferred to ADR-003 and to tasks 1.3/1.4 (author it as a live-play role brief, not a canned transcript) — not this task's work.
+- The core 1.0a artifact set needs no content rework. The instructor-as-client (fourth stakeholder) is intentionally deferred to ADR-003 and to tasks 1.3/1.4 (author it as a live-play role brief, not a canned transcript) — not this task's work.
+- **Continuity audit qualification:** Epic 8 stories 8.1–8.4 are Appendix-derived modernization/NFR stories and have no transcript stakeholder trace. The core-story guarantee is explicitly qualified in the README and grading key; do not mark these as transcript-derived.
 - Downstream (other tasks, not blockers): tasks 1.3/1.4 wire these into the Week 2/3/4 assignments; Sprint 1 (wk5–6) builds ERD knowledge-check items from the degraded variants.
+
+## CONTINUITY AUDIT — 2026-08-02
+
+- **Confirmed:** every ERD entity is implied by at least one transcript; the entity matrix and transcript language reconcile.
+- **Confirmed:** every transcript-derived core story has a named stakeholder trace; no core story is motivated only by the deferred instructor-as-client.
+- **Qualified:** Epic 8 stories 8.1–8.4 are intentionally sourced from manual Appendix p.26 rather than a stakeholder transcript.
+- **Confirmed:** the ERD, transcripts, and core backlog reconcile on Learner, Curator, Game, Session, Attempt, Score, Problem, and MemoryBankSet.
+- **Confirmed:** device behaviors used by the core artifacts (answer checking, two tries, score/reward, memory bank, remainder, limits, timer, games, and power/error behavior) trace to the cited manual pages.
+- **Confirmed:** the parent leaderboard vs. teacher no-ranking conflict, Atom-Clock timing conflict, audience conflict, and identity/data-visibility conflict are explicit and keyed; planted hazards are present and keyed.
+- **Independent checks:** fictional-persona labeling, no invented real-world testimonials/statistics, naming hazards, voice/register, and UTF-8 encoding passed. Epic 8's deliberate non-transcript provenance is the sole traceability qualification.
 
 ## DECIDED (in-session micro-decisions, not in phase0/)
 
@@ -29,10 +40,9 @@ Verification run: in the shipped student-facing artifacts, `grep` confirms `Data
 
 ## BLOCKED-ON
 
-- **Instructor-as-client persona (ADR-003).** Genuine canon gap surfaced, not decided: (a) 3 vs 4 transcripts, (b) canned vs live-play, (c) L2 client vs L0 OOC register. Proposal: 3 canned + 1 live role brief, neutral L2 register, no new named persona (lexicon lock). Needs instructor ruling.
 - **Dataman manual rights/permission** — unchanged open human blocker (CLAUDE.md §Open blockers). Content existence is satisfied (manual is transcribed and was the product source of truth for this task); redistribution rights are not. No scans published from this task.
 - **Not blocking here, noted:** Week 1–2 module architecture and sprint/week-numbering are spine (Rule 1) and were left untouched; teacher's "aligned to district standards" and the account/permission model are open requirements deliberately surfaced (not resolved) in the artifacts.
 
 ## CANON-TOUCHED
 
-- **New file `phase0/ADR-003-instructor-as-client-persona.md`** — a *proposal* only (status: Proposed, `needs-instructor`); decides nothing until the instructor signs off. No existing phase0 doc edited. No changes proposed to NAMING_CANON, the Bible, or the points table.
+- **No canon files edited by this audit.** ADR-003 is now accepted and governs the deferred instructor-as-client live role brief; the audit preserves that ruling.
