@@ -1,6 +1,6 @@
 # Dataman Seeded Product Backlog
 
-> **CLASS ARTIFACT — instructor-provided starting backlog.** The seed the Week 2 *Agile Simulation & Dataman Backlog Initialization* (35 pts, 4.7% of 750) hands students, and the reference the Week 4 *User Stories & Product Backlog* (50 pts, 6.7% of 750) and Module 4 *Sprint Planning Simulation* build on. Every top-of-backlog story traces to a named stakeholder need (see the trace line on each story and the companion `Grading_Key.md`).
+> **CLASS ARTIFACT — instructor-provided starting backlog.** The seed the Week 2 *Agile Simulation & Dataman Backlog Initialization* (35 pts, 4.7% of 750) hands students, and the reference the Week 4 *User Stories & Product Backlog* (50 pts, 6.7% of 750) and Module 4 *Sprint Planning Simulation* build on. Every top-of-backlog story has a named motivating source; transcript-derived stories name a stakeholder, while Epic 8 is the explicit Appendix-derived modernization/NFR exception (see the trace line on each story and the companion `Grading_Key.md`).
 >
 > **Classification is the student's job.** The **Priority (MoSCoW)** and **Story Points** fields are carried on every story but left **unassigned** for the core stories — classifying and estimating them is the graded exercise. The instructor's intended MoSCoW lives **only** in `Grading_Key.md`. Stretch epics are the exception: they are marked below-the-line by design, not as a graded classification.
 >
@@ -12,7 +12,7 @@
 
 ## How to read the trace line
 
-Each story carries `↳ Traces to:` — the stakeholder(s) and manual/device behavior that motivate it. **A story with no stakeholder in its trace line does not belong in this backlog.** (That property is what makes this a grading key: see `Grading_Key.md` §Traceability.)
+Each story carries `↳ Traces to:` — the stakeholder(s) and manual/device behavior that motivate it. Core stories normally name a stakeholder; Epic 8 is the explicit Appendix-derived modernization/NFR exception. (That distinction is part of the grading key: see `Grading_Key.md` §Traceability.)
 
 ---
 
@@ -208,7 +208,7 @@ Each story carries `↳ Traces to:` — the stakeholder(s) and manual/device beh
 
 **Priority:** _(unassigned)_
 **Story Points:** _(estimate in class)_
-**Notes:** Requires the ATTEMPT entity (see Reference ERD). `↳ Traces to:` Teacher ("down to the individual attempt... first-try vs second-try"); manual pp.20, 23.
+**Notes:** Requires the ATTEMPT entity (see Reference ERD). `↳ Traces to:` Teacher ("down to the individual attempt... first-try vs second-try"); manual p.22.
 
 ### Story 4.3 — Assign different sets to different students
 **As a** teacher
@@ -344,7 +344,7 @@ Each story carries `↳ Traces to:` — the stakeholder(s) and manual/device beh
 
 **Priority:** _(unassigned)_
 **Story Points:** _(estimate in class)_
-**Notes:** **Open design tension** (surface it, don't pre-decide): the collector wants ticks kept deliberately imprecise as "character"; the teacher wants consistent, fair timing for classroom use. See `Grading_Key.md` §Conflicts. `↳ Traces to:` Collector; Teacher; manual p.23.
+**Notes:** **Open design tension** (surface it, don't pre-decide): the collector wants ticks kept deliberately imprecise as "character"; classroom use may favor pressure-free drill rather than a race. See `Grading_Key.md` §Conflicts. `↳ Traces to:` Collector; Teacher (timer-pressure concern); manual p.23.
 
 ---
 
@@ -407,7 +407,7 @@ Each story carries `↳ Traces to:` — the stakeholder(s) and manual/device beh
 
 # STRETCH-GOAL EPICS — Below the line (beyond MVP; in-world homage)
 
-> **Not part of the faithful-Dataman MVP.** These epics recast features of the retired legacy creature-collection console game — **text-based creature collection, save/load game state, turn-based battle system, random encounters and progression**, the four named in `phase0/NAMING_CANON.md` §"Dataman vs. DataMon" (legacy-game row) and ruled subsumed by `ADR-004` — as an **optional legacy entertainment module** — a deliberate in-world homage, *not* a merge of the two projects and *not* something students are expected to build. They gesture at an aspirational engagement / virtual-pet direction (explored separately in `drafts/spikes/datamon-virtual-pet-reskin.md`) that must stay clearly beyond the MVP and must not contaminate the faithful-Dataman core above. Treat these as **Won't-Have-this-semester** by default.
+> **Not part of the faithful-Dataman MVP.** These epics recast features of the retired legacy **Datamon** creature-collection console game — **text-based creature collection, save/load game state, turn-based battle system, random encounters and progression**, the four named in `phase0/NAMING_CANON.md` §"Dataman vs. DataMon" (legacy-game row) and ruled subsumed by `phase0/ADR-004-two-modernization-bases.md` — as an **optional legacy entertainment module** — a deliberate in-world homage, *not* a merge of the two projects and *not* something students are expected to build. They gesture at an aspirational engagement / virtual-pet direction (explored separately in `drafts/spikes/datamon-virtual-pet-reskin.md`) that must stay clearly beyond the MVP and must not contaminate the faithful-Dataman core above. Treat these as **Won't-Have-this-semester** by default.
 
 ## Stretch Epic S1 — Legacy Entertainment Module: creature companion
 *An optional unlockable that turns correct-answer practice into progression for a collectible math companion. Aspirational; below the line.*
