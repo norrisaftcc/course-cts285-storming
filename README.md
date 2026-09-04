@@ -9,6 +9,7 @@ This repo holds planning artifacts and net-new material drafts. Finished materia
 - `planning/26FA_Consolidation_Master_Plan.md` — the master plan (v1.1): assessment verdicts for both pipelines, the 16-week CTS-285 spine, the phased agent-fleet execution plan, interleave map, and agent intelligence digest. **Start here.**
 - `planning/REPOSITORY_INVENTORY_AND_PRIORITIZED_BACKLOG.md` — file-tree inventory, project history, source map, gaps, and dependency-based backlog. **Counts are a snapshot (accurate as of commit `499c15e`), not a live index** — regenerate from the tree before relying on them.
 - `planning/ASSESSMENT_NOTES.md` — condensed candid findings from the four assessment agents, including the full legacy-asset → 26FA-week interleave table.
+- `planning/EXTERNAL_TRUTH_RECONCILIATION_PLAN.md` — issue #67 drift snapshot and reconciliation plan for `AMLW05/cts-285_SOURCE` and `AMLW05/cts-285-course-simulations`.
 - `phase0/` — Phase 0 foundation artifacts (12 files; all Accepted except ADR-006, which is **Proposed**):
   - `CTS285_Canonical_Points_Table.md` — **the** single source of truth for CTS-285 points (750 total). Assignment-header values are the binding arithmetic (ADR-002); sub-items below a header are descriptive.
   - `SHODANN_Character_Bible.md` — character canon + Media-skin voice template. Required context for every skin-pass task; §7 governs automated (velocity-bot) feedback tone.
